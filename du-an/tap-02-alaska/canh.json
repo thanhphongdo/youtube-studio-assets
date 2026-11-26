@@ -1,0 +1,2721 @@
+{
+  "phien_ban": 1,
+  "tong_thoi_luong": 512.482,
+  "canh": [
+    {
+      "id": "k1c01",
+      "so": 1,
+      "idx": 0,
+      "khoi": 1,
+      "t0": 0.0,
+      "t1": 14.405,
+      "buoc": 2,
+      "muc": "Mở",
+      "loi": [
+        {
+          "t0": 0.0,
+          "t1": 5.091,
+          "text": "Năm một nghìn tám trăm sáu mươi bảy, nước Nga bán đi một vùng đất rộng một triệu bảy trăm hai mươi ba nghìn cây số vuông."
+        },
+        {
+          "t0": 5.351,
+          "t1": 7.675,
+          "text": "Giá bán: bảy triệu hai trăm nghìn đô la."
+        },
+        {
+          "t0": 7.935,
+          "t1": 13.855,
+          "text": "Tính ra chưa tới hai xu một mẫu Anh — nghĩa là với số tiền bằng một cốc trà đá bây giờ, bạn mua được gần bốn nghìn mét vuông đất."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k1c01.jpg"
+    },
+    {
+      "id": "k1c02",
+      "so": 2,
+      "idx": 1,
+      "khoi": 1,
+      "t0": 14.405,
+      "t1": 20.238,
+      "buoc": 0,
+      "muc": "Mở",
+      "loi": [
+        {
+          "t0": 14.405,
+          "t1": 19.978,
+          "text": "Vậy làm thế quái nào mà một đế quốc mất gần một trăm năm mới bò được tới Bắc Mỹ, lại bán chỗ đó đi với cái giá ấy?"
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k1c02.jpg"
+    },
+    {
+      "id": "k1c03",
+      "so": 3,
+      "idx": 2,
+      "khoi": 1,
+      "t0": 20.238,
+      "t1": 24.828,
+      "buoc": 0,
+      "muc": "Mở",
+      "loi": [
+        {
+          "t0": 20.238,
+          "t1": 24.278,
+          "text": "Và nếu hôm đó sa hoàng không hạ bút, thì bản đồ thế giới hôm nay sẽ khác đi thế nào?"
+        }
+      ],
+      "anh": [
+        "k1-pheduyet.jpg"
+      ],
+      "thumb": "thumb/k1c03.jpg"
+    },
+    {
+      "id": "k1c04",
+      "so": 4,
+      "idx": 3,
+      "khoi": 1,
+      "t0": 24.828,
+      "t1": 30.652,
+      "buoc": 0,
+      "muc": "Mở",
+      "loi": [
+        {
+          "t0": 24.828,
+          "t1": 30.102,
+          "text": "Câu trả lời, hoá ra, nằm ở một con vật biết nằm ngửa trên mặt nước và lấy đá đập vỏ sò trên bụng mình."
+        }
+      ],
+      "anh": [
+        "k1-raica.jpg",
+        "k1-raica2.jpg"
+      ],
+      "thumb": "thumb/k1c04.jpg"
+    },
+    {
+      "id": "k1c05",
+      "so": 5,
+      "idx": 4,
+      "khoi": 1,
+      "t0": 30.652,
+      "t1": 34.023,
+      "buoc": 0,
+      "muc": "Mở",
+      "loi": [
+        {
+          "t0": 30.652,
+          "t1": 32.623,
+          "text": "Xin chào, rất vui được gặp lại các bạn."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k1c05.jpg"
+    },
+    {
+      "id": "k1c06",
+      "so": 6,
+      "idx": 5,
+      "khoi": 1,
+      "t0": 34.023,
+      "t1": 36.81,
+      "buoc": 0,
+      "muc": "Alaska to cỡ nào",
+      "loi": [
+        {
+          "t0": 34.023,
+          "t1": 36.26,
+          "text": "Trước khi tiếc, thì phải biết là tiếc cái gì đã."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k1c06.jpg"
+    },
+    {
+      "id": "k1c07",
+      "so": 7,
+      "idx": 6,
+      "khoi": 1,
+      "t0": 36.81,
+      "t1": 39.906,
+      "buoc": 0,
+      "muc": "Alaska to cỡ nào",
+      "loi": [
+        {
+          "t0": 36.81,
+          "t1": 39.646,
+          "text": "A-lát-ka rộng một triệu bảy trăm hai mươi ba nghìn cây số vuông."
+        }
+      ],
+      "anh": [
+        "k1-leu-khong.jpg"
+      ],
+      "thumb": "thumb/k1c07.jpg"
+    },
+    {
+      "id": "k1c08",
+      "so": 8,
+      "idx": 7,
+      "khoi": 1,
+      "t0": 39.906,
+      "t1": 42.902,
+      "buoc": 0,
+      "muc": "Alaska to cỡ nào",
+      "loi": [
+        {
+          "t0": 39.906,
+          "t1": 42.642,
+          "text": "Con số đó không nói lên gì cả, nên ta đi tìm thước đo."
+        }
+      ],
+      "anh": [
+        "k1-rung.jpg"
+      ],
+      "thumb": "thumb/k1c08.jpg"
+    },
+    {
+      "id": "k1c09",
+      "so": 9,
+      "idx": 8,
+      "khoi": 1,
+      "t0": 42.902,
+      "t1": 44.023,
+      "buoc": 0,
+      "muc": "Alaska to cỡ nào",
+      "loi": [
+        {
+          "t0": 42.902,
+          "t1": 43.763,
+          "text": "Lấy Hà Nội đi."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k1c09.jpg"
+    },
+    {
+      "id": "k1c10",
+      "so": 10,
+      "idx": 9,
+      "khoi": 1,
+      "t0": 44.023,
+      "t1": 46.779,
+      "buoc": 0,
+      "muc": "Alaska to cỡ nào",
+      "loi": [
+        {
+          "t0": 44.023,
+          "t1": 46.519,
+          "text": "A-lát-ka rộng bằng khoảng năm trăm hai mươi cái Hà Nội."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k1c10.jpg"
+    },
+    {
+      "id": "k1c11",
+      "so": 11,
+      "idx": 10,
+      "khoi": 1,
+      "t0": 46.779,
+      "t1": 52.89,
+      "buoc": 0,
+      "muc": "Alaska to cỡ nào",
+      "loi": [
+        {
+          "t0": 46.779,
+          "t1": 52.34,
+          "text": "Mà năm trăm hai mươi cái Hà Nội thì cũng là một con số không ai hình dung nổi — đếm tới cái thứ ba mươi là các bạn bỏ cuộc rồi."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k1c11.jpg"
+    },
+    {
+      "id": "k1c12",
+      "so": 12,
+      "idx": 11,
+      "khoi": 1,
+      "t0": 52.89,
+      "t1": 54.518,
+      "buoc": 0,
+      "muc": "Alaska to cỡ nào",
+      "loi": [
+        {
+          "t0": 52.89,
+          "t1": 54.258,
+          "text": "Vậy thì lấy hẳn một đất nước."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k1c12.jpg"
+    },
+    {
+      "id": "k1c13",
+      "so": 13,
+      "idx": 12,
+      "khoi": 1,
+      "t0": 54.518,
+      "t1": 57.246,
+      "buoc": 0,
+      "muc": "Alaska to cỡ nào",
+      "loi": [
+        {
+          "t0": 54.518,
+          "t1": 56.986,
+          "text": "Việt Nam rộng ba trăm ba mươi mốt nghìn cây số vuông."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k1c13.jpg"
+    },
+    {
+      "id": "k1c14",
+      "so": 14,
+      "idx": 13,
+      "khoi": 1,
+      "t0": 57.246,
+      "t1": 59.568,
+      "buoc": 0,
+      "muc": "Alaska to cỡ nào",
+      "loi": [
+        {
+          "t0": 57.246,
+          "t1": 59.308,
+          "text": "A-lát-ka rộng gấp hơn năm lần cả nước mình."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k1c14.jpg"
+    },
+    {
+      "id": "k1c15",
+      "so": 15,
+      "idx": 14,
+      "khoi": 1,
+      "t0": 59.568,
+      "t1": 60.983,
+      "buoc": 0,
+      "muc": "Alaska to cỡ nào",
+      "loi": [
+        {
+          "t0": 59.568,
+          "t1": 60.723,
+          "text": "Và nó chỉ là một bang."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k1c15.jpg"
+    },
+    {
+      "id": "k1c16",
+      "so": 16,
+      "idx": 15,
+      "khoi": 1,
+      "t0": 60.983,
+      "t1": 63.798,
+      "buoc": 0,
+      "muc": "Alaska to cỡ nào",
+      "loi": [
+        {
+          "t0": 60.983,
+          "t1": 63.248,
+          "text": "Bang thứ bốn mươi chín, bang vào sau gần hết."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k1c16.jpg"
+    },
+    {
+      "id": "k1c17",
+      "so": 17,
+      "idx": 16,
+      "khoi": 1,
+      "t0": 63.798,
+      "t1": 66.082,
+      "buoc": 0,
+      "muc": "Alaska to cỡ nào",
+      "loi": [
+        {
+          "t0": 63.798,
+          "t1": 65.822,
+          "text": "Thử tầng cuối: so với chính nước Mỹ."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k1c17.jpg"
+    },
+    {
+      "id": "k1c18",
+      "so": 18,
+      "idx": 17,
+      "khoi": 1,
+      "t0": 66.082,
+      "t1": 68.954,
+      "buoc": 0,
+      "muc": "Alaska to cỡ nào",
+      "loi": [
+        {
+          "t0": 66.082,
+          "t1": 68.694,
+          "text": "Texas là bang mà người Mỹ hay đem ra khoe là to."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k1c18.jpg"
+    },
+    {
+      "id": "k1c19",
+      "so": 19,
+      "idx": 18,
+      "khoi": 1,
+      "t0": 68.954,
+      "t1": 71.25,
+      "buoc": 0,
+      "muc": "Alaska to cỡ nào",
+      "loi": [
+        {
+          "t0": 68.954,
+          "t1": 70.99,
+          "text": "A-lát-ka rộng gấp hai lần rưỡi Texas."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k1c19.jpg"
+    },
+    {
+      "id": "k1c20",
+      "so": 20,
+      "idx": 19,
+      "khoi": 1,
+      "t0": 71.25,
+      "t1": 76.503,
+      "buoc": 0,
+      "muc": "Alaska to cỡ nào",
+      "loi": [
+        {
+          "t0": 71.25,
+          "t1": 76.243,
+          "text": "Nếu đặt A-lát-ka vào giữa bản đồ nước Mỹ, nó phủ từ bờ Đại Tây Dương sang gần tới bờ Thái Bình Dương."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k1c20.jpg"
+    },
+    {
+      "id": "k1c21",
+      "so": 21,
+      "idx": 20,
+      "khoi": 1,
+      "t0": 76.503,
+      "t1": 84.061,
+      "buoc": 0,
+      "muc": "Alaska to cỡ nào",
+      "loi": [
+        {
+          "t0": 76.503,
+          "t1": 82.661,
+          "text": "Bằng khoảng một phần năm toàn bộ phần lục địa của nước Mỹ — và chỗ đó, năm một nghìn tám trăm sáu mươi bảy, được bán với giá bảy triệu hai."
+        }
+      ],
+      "anh": [
+        "k1-hiep-uoc.jpg"
+      ],
+      "thumb": "thumb/k1c21.jpg"
+    },
+    {
+      "id": "k1c22",
+      "so": 22,
+      "idx": 21,
+      "khoi": 1,
+      "t0": 84.061,
+      "t1": 86.923,
+      "buoc": 0,
+      "muc": "Nhưng khoan đã",
+      "loi": [
+        {
+          "t0": 84.061,
+          "t1": 86.373,
+          "text": "Nghe tới đây thì ai cũng muốn mắng sa hoàng một câu."
+        }
+      ],
+      "anh": [
+        "k1-sahoang.jpg"
+      ],
+      "thumb": "thumb/k1c22.jpg"
+    },
+    {
+      "id": "k1c23",
+      "so": 23,
+      "idx": 22,
+      "khoi": 1,
+      "t0": 86.923,
+      "t1": 88.934,
+      "buoc": 0,
+      "muc": "Nhưng khoan đã",
+      "loi": [
+        {
+          "t0": 86.923,
+          "t1": 88.384,
+          "text": ">> Bán làm gì!"
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k1c23.jpg"
+    },
+    {
+      "id": "k1c24",
+      "so": 24,
+      "idx": 23,
+      "khoi": 1,
+      "t0": 88.934,
+      "t1": 90.201,
+      "buoc": 0,
+      "muc": "Nhưng khoan đã",
+      "loi": [
+        {
+          "t0": 88.934,
+          "t1": 89.941,
+          "text": "Cơ mà bình tĩnh đã."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k1c24.jpg"
+    },
+    {
+      "id": "k1c25",
+      "so": 25,
+      "idx": 24,
+      "khoi": 1,
+      "t0": 90.201,
+      "t1": 93.95,
+      "buoc": 0,
+      "muc": "Nhưng khoan đã",
+      "loi": [
+        {
+          "t0": 90.201,
+          "t1": 93.4,
+          "text": "A-lát-ka năm một nghìn tám trăm sáu mươi bảy không phải A-lát-ka bây giờ."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k1c25.jpg"
+    },
+    {
+      "id": "k1c26",
+      "so": 26,
+      "idx": 25,
+      "khoi": 1,
+      "t0": 93.95,
+      "t1": 95.671,
+      "buoc": 0,
+      "muc": "Nhưng khoan đã",
+      "loi": [
+        {
+          "t0": 93.95,
+          "t1": 95.411,
+          "text": "Dầu thì chưa ai biết là có."
+        }
+      ],
+      "anh": [
+        "k1-dongbang.jpg"
+      ],
+      "thumb": "thumb/k1c26.jpg"
+    },
+    {
+      "id": "k1c27",
+      "so": 27,
+      "idx": 26,
+      "khoi": 1,
+      "t0": 95.671,
+      "t1": 98.793,
+      "buoc": 0,
+      "muc": "Nhưng khoan đã",
+      "loi": [
+        {
+          "t0": 95.671,
+          "t1": 98.533,
+          "text": "Mỏ Prút-hô Bây phải hơn một trăm năm sau mới tìm ra."
+        }
+      ],
+      "anh": [
+        "k1-prudhoe.jpg"
+      ],
+      "thumb": "thumb/k1c27.jpg"
+    },
+    {
+      "id": "k1c28",
+      "so": 28,
+      "idx": 27,
+      "khoi": 1,
+      "t0": 98.793,
+      "t1": 101.722,
+      "buoc": 0,
+      "muc": "Nhưng khoan đã",
+      "loi": [
+        {
+          "t0": 98.793,
+          "t1": 101.462,
+          "text": "Vàng thì phải gần ba mươi năm sau mới có người đãi được."
+        }
+      ],
+      "anh": [
+        "k1-nome.jpg"
+      ],
+      "thumb": "thumb/k1c28.jpg"
+    },
+    {
+      "id": "k1c29",
+      "so": 29,
+      "idx": 28,
+      "khoi": 1,
+      "t0": 101.722,
+      "t1": 102.956,
+      "buoc": 0,
+      "muc": "Nhưng khoan đã",
+      "loi": [
+        {
+          "t0": 101.722,
+          "t1": 102.696,
+          "text": "Đường thì không có."
+        }
+      ],
+      "anh": [
+        "k1-chocho.jpg"
+      ],
+      "thumb": "thumb/k1c29.jpg"
+    },
+    {
+      "id": "k1c30",
+      "so": 30,
+      "idx": 29,
+      "khoi": 1,
+      "t0": 102.956,
+      "t1": 107.929,
+      "buoc": 0,
+      "muc": "Nhưng khoan đã",
+      "loi": [
+        {
+          "t0": 102.956,
+          "t1": 107.379,
+          "text": "Dân Nga sống ở đó, lúc đông nhất, chưa tới một nghìn người — ít hơn một cái chung cư ở Linh Đàm."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k1c30.jpg"
+    },
+    {
+      "id": "k1c31",
+      "so": 31,
+      "idx": 30,
+      "khoi": 1,
+      "t0": 107.929,
+      "t1": 112.449,
+      "buoc": 0,
+      "muc": "Nhưng khoan đã",
+      "loi": [
+        {
+          "t0": 107.929,
+          "t1": 111.899,
+          "text": "Thứ duy nhất A-lát-ka có vào lúc đó, thì người Nga vừa mới vét sạch trong tám mươi năm."
+        }
+      ],
+      "anh": [
+        "k1-sitka.jpg"
+      ],
+      "thumb": "thumb/k1c31.jpg"
+    },
+    {
+      "id": "k1c32",
+      "so": 32,
+      "idx": 31,
+      "khoi": 1,
+      "t0": 112.449,
+      "t1": 116.442,
+      "buoc": 1,
+      "muc": "Nhưng khoan đã",
+      "loi": [
+        {
+          "t0": 112.449,
+          "t1": 112.773,
+          "text": "Rồi."
+        },
+        {
+          "t0": 113.033,
+          "t1": 116.182,
+          "text": "A-lát-ka vừa to, vừa rẻ, mà lúc bán thì lại chẳng đáng mấy."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k1c32.jpg"
+    },
+    {
+      "id": "k1c33",
+      "so": 33,
+      "idx": 32,
+      "khoi": 1,
+      "t0": 116.442,
+      "t1": 118.38,
+      "buoc": 0,
+      "muc": "Nhưng khoan đã",
+      "loi": [
+        {
+          "t0": 116.442,
+          "t1": 118.12,
+          "text": "Cả ba điều đó đều đúng cùng một lúc."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k1c33.jpg"
+    },
+    {
+      "id": "k1c34",
+      "so": 34,
+      "idx": 33,
+      "khoi": 1,
+      "t0": 118.38,
+      "t1": 124.867,
+      "buoc": 0,
+      "muc": "Nhưng khoan đã",
+      "loi": [
+        {
+          "t0": 118.38,
+          "t1": 124.317,
+          "text": "Nên câu hỏi không phải là \"sao Nga dại thế\", mà là: nếu Nga giữ lại, thì giữ bằng cách nào, và giữ được bao lâu?"
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k1c34.jpg"
+    },
+    {
+      "id": "k1c35",
+      "so": 35,
+      "idx": 34,
+      "khoi": 1,
+      "t0": 124.867,
+      "t1": 129.032,
+      "buoc": 0,
+      "muc": "Nhưng khoan đã",
+      "loi": [
+        {
+          "t0": 124.867,
+          "t1": 127.632,
+          "text": "Để trả lời, ta lùi về năm một nghìn bảy trăm bốn mươi mốt."
+        }
+      ],
+      "anh": [
+        "k1-petro1755.jpg"
+      ],
+      "thumb": "thumb/k1c35.jpg"
+    },
+    {
+      "id": "k1c36",
+      "so": 36,
+      "idx": 35,
+      "khoi": 1,
+      "t0": 129.032,
+      "t1": 136.254,
+      "buoc": 0,
+      "muc": "Vì sao Nga có Alaska",
+      "loi": [
+        {
+          "t0": 129.032,
+          "t1": 135.994,
+          "text": "Năm một nghìn bảy trăm bốn mươi mốt, Vitus Bê-rinh — một người Đan Mạch đi làm thuê cho hải quân Nga — dong thuyền về phía đông để xem bên kia biển có gì."
+        }
+      ],
+      "anh": [
+        "k1-bando-bering.jpg"
+      ],
+      "thumb": "thumb/k1c36.jpg"
+    },
+    {
+      "id": "k1c37",
+      "so": 37,
+      "idx": 36,
+      "khoi": 1,
+      "t0": 136.254,
+      "t1": 139.487,
+      "buoc": 0,
+      "muc": "Vì sao Nga có Alaska",
+      "loi": [
+        {
+          "t0": 136.254,
+          "t1": 139.227,
+          "text": "Chuyến đi đó giết gần hết thuỷ thủ đoàn, kể cả chính Bê-rinh."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k1c37.jpg"
+    },
+    {
+      "id": "k1c38",
+      "so": 38,
+      "idx": 37,
+      "khoi": 1,
+      "t0": 139.487,
+      "t1": 144.449,
+      "buoc": 0,
+      "muc": "Vì sao Nga có Alaska",
+      "loi": [
+        {
+          "t0": 139.487,
+          "t1": 143.899,
+          "text": "Ông chết trên một hòn đảo hoang, mà sau này người ta lấy tên ông đặt cho cả cái biển lẫn cái eo."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k1c38.jpg"
+    },
+    {
+      "id": "k1c39",
+      "so": 39,
+      "idx": 38,
+      "khoi": 1,
+      "t0": 144.449,
+      "t1": 148.464,
+      "buoc": 1,
+      "muc": "Vì sao Nga có Alaska",
+      "loi": [
+        {
+          "t0": 144.449,
+          "t1": 146.399,
+          "text": "Nhưng những người sống sót mang về được một thứ."
+        },
+        {
+          "t0": 146.659,
+          "t1": 148.204,
+          "text": "Không phải vàng, không phải gia vị."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k1c39.jpg"
+    },
+    {
+      "id": "k1c41",
+      "so": 40,
+      "idx": 39,
+      "khoi": 1,
+      "t0": 148.464,
+      "t1": 150.5,
+      "buoc": 0,
+      "muc": "Vì sao Nga có Alaska",
+      "loi": [
+        {
+          "t0": 148.464,
+          "t1": 149.95,
+          "text": "Là mấy bộ da rái cá biển."
+        }
+      ],
+      "anh": [
+        "k1-raica.jpg"
+      ],
+      "thumb": "thumb/k1c41.jpg"
+    },
+    {
+      "id": "k2c01",
+      "so": 41,
+      "idx": 40,
+      "khoi": 2,
+      "t0": 150.5,
+      "t1": 153.247,
+      "buoc": 0,
+      "muc": "Vì sao Nga có Alaska",
+      "loi": [
+        {
+          "t0": 150.5,
+          "t1": 152.987,
+          "text": "Và cái tin đó làm cả vùng Siberia bỏ việc."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k2c01.jpg"
+    },
+    {
+      "id": "k2c02",
+      "so": 42,
+      "idx": 41,
+      "khoi": 2,
+      "t0": 153.247,
+      "t1": 156.181,
+      "buoc": 0,
+      "muc": "Vì sao Nga có Alaska",
+      "loi": [
+        {
+          "t0": 153.247,
+          "t1": 155.921,
+          "text": "Thợ săn Nga vượt biển sang, lập trạm, rồi lập làng."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k2c02.jpg"
+    },
+    {
+      "id": "k2c03",
+      "so": 43,
+      "idx": 42,
+      "khoi": 2,
+      "t0": 156.181,
+      "t1": 162.253,
+      "buoc": 0,
+      "muc": "Vì sao Nga có Alaska",
+      "loi": [
+        {
+          "t0": 156.181,
+          "t1": 161.993,
+          "text": "Đến năm một nghìn bảy trăm chín mươi chín, Nga hoàng cấp phép cho Công ty Nga–Mỹ, trao cho nó quyền độc quyền trên toàn bộ vùng đất ấy."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k2c03.jpg"
+    },
+    {
+      "id": "k2c04",
+      "so": 44,
+      "idx": 43,
+      "khoi": 2,
+      "t0": 162.253,
+      "t1": 167.4,
+      "buoc": 0,
+      "muc": "Vì sao Nga có Alaska",
+      "loi": [
+        {
+          "t0": 162.253,
+          "t1": 167.14,
+          "text": "Nói là công ty, nhưng thực chất nó là chính quyền: nó có tàu, có súng, có quyền xử người."
+        }
+      ],
+      "anh": [
+        "k2-con-dau.png",
+        "k2-nha-buon.jpg"
+      ],
+      "thumb": "thumb/k2c04.jpg"
+    },
+    {
+      "id": "k2c05",
+      "so": 45,
+      "idx": 44,
+      "khoi": 2,
+      "t0": 167.4,
+      "t1": 171.452,
+      "buoc": 0,
+      "muc": "Vì sao Nga có Alaska",
+      "loi": [
+        {
+          "t0": 167.4,
+          "t1": 170.902,
+          "text": "Thủ phủ đặt ở Novo-Arkhangelsk, mà bây giờ người ta gọi là Xít-ca."
+        }
+      ],
+      "anh": [
+        "k2-novo-1837.jpg"
+      ],
+      "thumb": "thumb/k2c05.jpg"
+    },
+    {
+      "id": "k2c06",
+      "so": 46,
+      "idx": 45,
+      "khoi": 2,
+      "t0": 171.452,
+      "t1": 175.523,
+      "buoc": 0,
+      "muc": "Vì sao Nga có Alaska",
+      "loi": [
+        {
+          "t0": 171.452,
+          "t1": 175.263,
+          "text": "Có điều, từ đầu tới cuối, A-lát-ka với nước Nga chưa bao giờ là một vùng đất."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k2c06.jpg"
+    },
+    {
+      "id": "k2c07",
+      "so": 47,
+      "idx": 46,
+      "khoi": 2,
+      "t0": 175.523,
+      "t1": 177.86,
+      "buoc": 0,
+      "muc": "Vì sao Nga có Alaska",
+      "loi": [
+        {
+          "t0": 175.523,
+          "t1": 176.46,
+          "text": "Nó là một cái kho."
+        }
+      ],
+      "anh": [
+        "k2-sitka-kho.jpg"
+      ],
+      "thumb": "thumb/k2c07.jpg"
+    },
+    {
+      "id": "k2c08",
+      "so": 48,
+      "idx": 47,
+      "khoi": 2,
+      "t0": 177.86,
+      "t1": 182.98,
+      "buoc": 1,
+      "muc": "Vì sao một bộ lông lại đắt đến thế",
+      "loi": [
+        {
+          "t0": 177.86,
+          "t1": 181.246,
+          "text": ">> Mà da rái cá thì liên quan gì tới bản đồ thế giới?"
+        },
+        {
+          "t0": 181.506,
+          "t1": 182.43,
+          "text": "Lông thú thôi mà."
+        }
+      ],
+      "anh": [
+        "k2-raica-steller.jpg"
+      ],
+      "thumb": "thumb/k2c08.jpg"
+    },
+    {
+      "id": "k2c09",
+      "so": 49,
+      "idx": 48,
+      "khoi": 2,
+      "t0": 182.98,
+      "t1": 185.642,
+      "buoc": 0,
+      "muc": "Vì sao một bộ lông lại đắt đến thế",
+      "loi": [
+        {
+          "t0": 182.98,
+          "t1": 185.092,
+          "text": "Thôi bạn ơi, thế là bạn lại không biết rồi."
+        }
+      ],
+      "anh": [
+        "k2-bering-chandung.jpg"
+      ],
+      "thumb": "thumb/k2c09.jpg"
+    },
+    {
+      "id": "k2c10",
+      "so": 50,
+      "idx": 49,
+      "khoi": 2,
+      "t0": 185.642,
+      "t1": 190.239,
+      "buoc": 1,
+      "muc": "Vì sao một bộ lông lại đắt đến thế",
+      "loi": [
+        {
+          "t0": 185.642,
+          "t1": 187.616,
+          "text": "Giới động vật có dăm bảy kiểu áo mùa đông."
+        },
+        {
+          "t0": 187.876,
+          "t1": 189.979,
+          "text": "Cá voi thì chọn mỡ, dày tới nửa mét."
+        }
+      ],
+      "anh": [
+        "k2-ca-voi.jpg"
+      ],
+      "thumb": "thumb/k2c10.jpg"
+    },
+    {
+      "id": "k2c11",
+      "so": 51,
+      "idx": 50,
+      "khoi": 2,
+      "t0": 190.239,
+      "t1": 192.286,
+      "buoc": 0,
+      "muc": "Vì sao một bộ lông lại đắt đến thế",
+      "loi": [
+        {
+          "t0": 190.239,
+          "t1": 192.026,
+          "text": "Gấu Bắc Cực thì chọn cả mỡ lẫn lông."
+        }
+      ],
+      "anh": [
+        "k2-gau.jpg"
+      ],
+      "thumb": "thumb/k2c11.jpg"
+    },
+    {
+      "id": "k2c12",
+      "so": 52,
+      "idx": 51,
+      "khoi": 2,
+      "t0": 192.286,
+      "t1": 193.458,
+      "buoc": 0,
+      "muc": "Vì sao một bộ lông lại đắt đến thế",
+      "loi": [
+        {
+          "t0": 192.286,
+          "t1": 193.198,
+          "text": "Hải cẩu cũng mỡ."
+        }
+      ],
+      "anh": [
+        "k2-hai-cau.jpg"
+      ],
+      "thumb": "thumb/k2c12.jpg"
+    },
+    {
+      "id": "k2c13",
+      "so": 53,
+      "idx": 52,
+      "khoi": 2,
+      "t0": 193.458,
+      "t1": 196.811,
+      "buoc": 0,
+      "muc": "Vì sao một bộ lông lại đắt đến thế",
+      "loi": [
+        {
+          "t0": 193.458,
+          "t1": 196.261,
+          "text": "Còn rái cá biển thì không có lấy một gam mỡ cách nhiệt nào."
+        }
+      ],
+      "anh": [
+        "k2-raica-noi.jpg"
+      ],
+      "thumb": "thumb/k2c13.jpg"
+    },
+    {
+      "id": "k2c14",
+      "so": 54,
+      "idx": 53,
+      "khoi": 2,
+      "t0": 196.811,
+      "t1": 198.62,
+      "buoc": 0,
+      "muc": "Vì sao một bộ lông lại đắt đến thế",
+      "loi": [
+        {
+          "t0": 196.811,
+          "t1": 198.36,
+          "text": "Nó bù lại bằng cách nhồi lông."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k2c14.jpg"
+    },
+    {
+      "id": "k2c15",
+      "so": 55,
+      "idx": 54,
+      "khoi": 2,
+      "t0": 198.62,
+      "t1": 203.438,
+      "buoc": 0,
+      "muc": "Vì sao một bộ lông lại đắt đến thế",
+      "loi": [
+        {
+          "t0": 198.62,
+          "t1": 203.178,
+          "text": "Nhồi tới mức trên một mẩu da bằng con tem, nó có nhiều sợi lông hơn toàn bộ số tóc trên đầu bạn."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k2c15.jpg"
+    },
+    {
+      "id": "k2c16",
+      "so": 56,
+      "idx": 55,
+      "khoi": 2,
+      "t0": 203.438,
+      "t1": 207.623,
+      "buoc": 0,
+      "muc": "Vì sao một bộ lông lại đắt đến thế",
+      "loi": [
+        {
+          "t0": 203.438,
+          "t1": 207.073,
+          "text": "Đây là bộ lông dày nhất trong toàn bộ giới động vật, không có con nào thứ hai."
+        }
+      ],
+      "anh": [
+        "k2-raica-boi.jpg"
+      ],
+      "thumb": "thumb/k2c16.jpg"
+    },
+    {
+      "id": "k2c17",
+      "so": 57,
+      "idx": 56,
+      "khoi": 2,
+      "t0": 207.623,
+      "t1": 212.207,
+      "buoc": 0,
+      "muc": "Vì sao một bộ lông lại đắt đến thế",
+      "loi": [
+        {
+          "t0": 207.623,
+          "t1": 211.947,
+          "text": "Mà bộ lông dày nhất giới động vật thì ở thế kỷ mười tám nó có một cái tên khác: tiền."
+        }
+      ],
+      "anh": [
+        "k2-da-cao.jpg",
+        "k2-tien-da.jpg"
+      ],
+      "thumb": "thumb/k2c17.jpg"
+    },
+    {
+      "id": "k2c18",
+      "so": 58,
+      "idx": 57,
+      "khoi": 2,
+      "t0": 212.207,
+      "t1": 216.153,
+      "buoc": 0,
+      "muc": "Vì sao một bộ lông lại đắt đến thế",
+      "loi": [
+        {
+          "t0": 212.207,
+          "t1": 215.893,
+          "text": "Giới quý tộc ở Bắc Kinh trả giá cho nó cao tới mức người ta gọi luôn là \"vàng mềm\"."
+        }
+      ],
+      "anh": [
+        "k2-cankinh.jpg"
+      ],
+      "thumb": "thumb/k2c18.jpg"
+    },
+    {
+      "id": "k2c19",
+      "so": 59,
+      "idx": 58,
+      "khoi": 2,
+      "t0": 216.153,
+      "t1": 218.464,
+      "buoc": 0,
+      "muc": "Vì sao một bộ lông lại đắt đến thế",
+      "loi": [
+        {
+          "t0": 216.153,
+          "t1": 217.914,
+          "text": "Một bộ da đổi được cả gia tài nhỏ."
+        }
+      ],
+      "anh": [
+        "k2-hieu-long.jpg"
+      ],
+      "thumb": "thumb/k2c19.jpg"
+    },
+    {
+      "id": "k2c20",
+      "so": 60,
+      "idx": 59,
+      "khoi": 2,
+      "t0": 218.464,
+      "t1": 223.414,
+      "buoc": 0,
+      "muc": "Vì sao một bộ lông lại đắt đến thế",
+      "loi": [
+        {
+          "t0": 218.464,
+          "t1": 223.154,
+          "text": "Và đó là lý do một con vật ba chục cân quyết định số phận của một vùng đất rộng bằng năm lần Việt Nam."
+        }
+      ],
+      "anh": [
+        "k2-raica-doi.jpg"
+      ],
+      "thumb": "thumb/k2c20.jpg"
+    },
+    {
+      "id": "k2c21",
+      "so": 61,
+      "idx": 60,
+      "khoi": 2,
+      "t0": 223.414,
+      "t1": 230.149,
+      "buoc": 1,
+      "muc": "Vì sao một bộ lông lại đắt đến thế",
+      "loi": [
+        {
+          "t0": 223.414,
+          "t1": 225.478,
+          "text": "Vì cả vùng đất ấy chỉ bán đúng một mặt hàng."
+        },
+        {
+          "t0": 225.738,
+          "t1": 228.749,
+          "text": "Mà cái gì chỉ bán một mặt hàng thì nó sống chết theo mặt hàng đó."
+        }
+      ],
+      "anh": [
+        "k2-da-cao.jpg"
+      ],
+      "thumb": "thumb/k2c21.jpg"
+    },
+    {
+      "id": "k2c22",
+      "so": 62,
+      "idx": 61,
+      "khoi": 2,
+      "t0": 230.149,
+      "t1": 231.894,
+      "buoc": 0,
+      "muc": "Vì sao Nga bán",
+      "loi": [
+        {
+          "t0": 230.149,
+          "t1": 231.344,
+          "text": "Và mặt hàng đó thì hết."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k2c22.jpg"
+    },
+    {
+      "id": "k2c23",
+      "so": 63,
+      "idx": 62,
+      "khoi": 2,
+      "t0": 231.894,
+      "t1": 236.407,
+      "buoc": 0,
+      "muc": "Vì sao Nga bán",
+      "loi": [
+        {
+          "t0": 231.894,
+          "t1": 236.147,
+          "text": "Săn tám mươi năm không nghỉ, đàn rái cá biển từ chỗ hàng trăm nghìn con tụt xuống gần như sạch."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k2c23.jpg"
+    },
+    {
+      "id": "k2c24",
+      "so": 64,
+      "idx": 63,
+      "khoi": 2,
+      "t0": 236.407,
+      "t1": 238.898,
+      "buoc": 0,
+      "muc": "Vì sao Nga bán",
+      "loi": [
+        {
+          "t0": 236.407,
+          "t1": 238.638,
+          "text": "Có vùng thợ săn đi cả mùa không gặp một con."
+        }
+      ],
+      "anh": [
+        "k2-aleut-kayak.jpg"
+      ],
+      "thumb": "thumb/k2c24.jpg"
+    },
+    {
+      "id": "k2c25",
+      "so": 65,
+      "idx": 64,
+      "khoi": 2,
+      "t0": 238.898,
+      "t1": 239.644,
+      "buoc": 0,
+      "muc": "Vì sao Nga bán",
+      "loi": [
+        {
+          "t0": 238.898,
+          "t1": 239.384,
+          "text": "Kho rỗng."
+        }
+      ],
+      "anh": [
+        "k2-sitka-kho.jpg"
+      ],
+      "thumb": "thumb/k2c25.jpg"
+    },
+    {
+      "id": "k2c26",
+      "so": 66,
+      "idx": 65,
+      "khoi": 2,
+      "t0": 239.644,
+      "t1": 244.405,
+      "buoc": 0,
+      "muc": "Vì sao Nga bán",
+      "loi": [
+        {
+          "t0": 239.644,
+          "t1": 243.855,
+          "text": "Mà kho rỗng thì cái kho không còn là tài sản nữa — nó thành tiền thuê phải trả hàng năm."
+        }
+      ],
+      "anh": [
+        "k2-kho-sitka.jpg"
+      ],
+      "thumb": "thumb/k2c26.jpg"
+    },
+    {
+      "id": "k2c27",
+      "so": 67,
+      "idx": 66,
+      "khoi": 2,
+      "t0": 244.405,
+      "t1": 248.552,
+      "buoc": 0,
+      "muc": "Vì sao Nga bán",
+      "loi": [
+        {
+          "t0": 244.405,
+          "t1": 248.292,
+          "text": "Bước ngoặt thứ hai đến vào năm một nghìn tám trăm năm mươi sáu, khi Nga thua Chiến tranh Krym."
+        }
+      ],
+      "anh": [
+        "k2-krym-malakhov.jpg"
+      ],
+      "thumb": "thumb/k2c27.jpg"
+    },
+    {
+      "id": "k2c28",
+      "so": 68,
+      "idx": 67,
+      "khoi": 2,
+      "t0": 248.552,
+      "t1": 252.785,
+      "buoc": 0,
+      "muc": "Vì sao Nga bán",
+      "loi": [
+        {
+          "t0": 248.552,
+          "t1": 252.525,
+          "text": "Thua thì thua ở Biển Đen, nhưng cái mất lớn nhất lại hiện ra ở đầu bên kia địa cầu."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k2c28.jpg"
+    },
+    {
+      "id": "k2c29",
+      "so": 69,
+      "idx": 68,
+      "khoi": 2,
+      "t0": 252.785,
+      "t1": 257.945,
+      "buoc": 0,
+      "muc": "Vì sao Nga bán",
+      "loi": [
+        {
+          "t0": 252.785,
+          "t1": 257.685,
+          "text": "Nga nhìn ra một chuyện rất khó chịu: nếu hải quân Anh muốn lấy A-lát-ka, Nga không có cách nào ngăn."
+        }
+      ],
+      "anh": [
+        "k2-petropavlovsk.jpg"
+      ],
+      "thumb": "thumb/k2c29.jpg"
+    },
+    {
+      "id": "k2c30",
+      "so": 70,
+      "idx": 69,
+      "khoi": 2,
+      "t0": 257.945,
+      "t1": 261.067,
+      "buoc": 0,
+      "muc": "Vì sao Nga bán",
+      "loi": [
+        {
+          "t0": 257.945,
+          "t1": 260.807,
+          "text": "Không có hạm đội ở Thái Bình Dương, không có đường bộ, không có tiền."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k2c30.jpg"
+    },
+    {
+      "id": "k2c31",
+      "so": 71,
+      "idx": 70,
+      "khoi": 2,
+      "t0": 261.067,
+      "t1": 264.873,
+      "buoc": 0,
+      "muc": "Vì sao Nga bán",
+      "loi": [
+        {
+          "t0": 261.067,
+          "t1": 264.323,
+          "text": "Quân Nga muốn tới A-lát-ka thì phải đi vòng gần nửa vòng Trái Đất."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k2c31.jpg"
+    },
+    {
+      "id": "k2c32",
+      "so": 72,
+      "idx": 71,
+      "khoi": 2,
+      "t0": 264.873,
+      "t1": 267.252,
+      "buoc": 0,
+      "muc": "Vì sao Nga bán",
+      "loi": [
+        {
+          "t0": 264.873,
+          "t1": 266.992,
+          "text": "Và đây là mắt xích thứ ba, mắt xích lạnh nhất."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k2c32.jpg"
+    },
+    {
+      "id": "k2c33",
+      "so": 73,
+      "idx": 72,
+      "khoi": 2,
+      "t0": 267.252,
+      "t1": 270.574,
+      "buoc": 0,
+      "muc": "Vì sao Nga bán",
+      "loi": [
+        {
+          "t0": 267.252,
+          "t1": 270.314,
+          "text": "Ngay cạnh A-lát-ka là Ca-na-đa, mà Ca-na-đa lúc đó là của Anh."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k2c33.jpg"
+    },
+    {
+      "id": "k2c34",
+      "so": 74,
+      "idx": 73,
+      "khoi": 2,
+      "t0": 270.574,
+      "t1": 274.483,
+      "buoc": 0,
+      "muc": "Vì sao Nga bán",
+      "loi": [
+        {
+          "t0": 270.574,
+          "t1": 274.223,
+          "text": "Nghĩa là A-lát-ka không phải \"có thể mất\" — nó là \"sẽ mất, chỉ chưa biết hôm nào\"."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k2c34.jpg"
+    },
+    {
+      "id": "k2c35",
+      "so": 75,
+      "idx": 74,
+      "khoi": 2,
+      "t0": 274.483,
+      "t1": 276.742,
+      "buoc": 0,
+      "muc": "Vì sao Nga bán",
+      "loi": [
+        {
+          "t0": 274.483,
+          "t1": 276.482,
+          "text": "Mất vào tay Anh thì Nga không được một xu."
+        }
+      ],
+      "anh": [
+        "k2-tien-da.jpg"
+      ],
+      "thumb": "thumb/k2c35.jpg"
+    },
+    {
+      "id": "k2c36",
+      "so": 76,
+      "idx": 75,
+      "khoi": 2,
+      "t0": 276.742,
+      "t1": 282.191,
+      "buoc": 0,
+      "muc": "Vì sao Nga bán",
+      "loi": [
+        {
+          "t0": 276.742,
+          "t1": 281.641,
+          "text": "Bán cho Mỹ thì vừa có tiền, vừa kẹp được một nước Mỹ đang lớn vào giữa Anh và vùng Thái Bình Dương của Nga."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k2c36.jpg"
+    },
+    {
+      "id": "k2c37",
+      "so": 77,
+      "idx": 76,
+      "khoi": 2,
+      "t0": 282.191,
+      "t1": 285.848,
+      "buoc": 0,
+      "muc": "Vì sao Nga bán",
+      "loi": [
+        {
+          "t0": 282.191,
+          "t1": 285.588,
+          "text": "Nên cái chữ ký năm một nghìn tám trăm sáu mươi bảy không phải một phút dại dột."
+        }
+      ],
+      "anh": [
+        "k2-ky-ket.jpg"
+      ],
+      "thumb": "thumb/k2c37.jpg"
+    },
+    {
+      "id": "k2c38",
+      "so": 78,
+      "idx": 77,
+      "khoi": 2,
+      "t0": 285.848,
+      "t1": 289.659,
+      "buoc": 0,
+      "muc": "Vì sao Nga bán",
+      "loi": [
+        {
+          "t0": 285.848,
+          "t1": 288.259,
+          "text": "Nó là một nước cờ của người biết mình sắp thua quân đó."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k2c38.jpg"
+    },
+    {
+      "id": "k2c39",
+      "so": 79,
+      "idx": 78,
+      "khoi": 2,
+      "t0": 289.659,
+      "t1": 294.18,
+      "buoc": 1,
+      "muc": "Nếu chữ ký ấy không hạ xuống",
+      "loi": [
+        {
+          "t0": 289.659,
+          "t1": 292.008,
+          "text": "Đến đây thì chuyện đã xong, và bản đồ đã vẽ."
+        },
+        {
+          "t0": 292.268,
+          "t1": 293.63,
+          "text": "Nhưng câu chuyện chưa dừng ở đó."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k2c39.jpg"
+    },
+    {
+      "id": "k2c40",
+      "so": 80,
+      "idx": 79,
+      "khoi": 2,
+      "t0": 294.18,
+      "t1": 296.789,
+      "buoc": 0,
+      "muc": "Nếu chữ ký ấy không hạ xuống",
+      "loi": [
+        {
+          "t0": 294.18,
+          "t1": 296.529,
+          "text": "Từ chỗ này trở đi, ta bước sang phần giả định."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k2c40.jpg"
+    },
+    {
+      "id": "k2c41",
+      "so": 81,
+      "idx": 80,
+      "khoi": 2,
+      "t0": 296.789,
+      "t1": 303.751,
+      "buoc": 0,
+      "muc": "Nếu chữ ký ấy không hạ xuống",
+      "loi": [
+        {
+          "t0": 296.789,
+          "t1": 303.201,
+          "text": "Nên nói rõ luật chơi: cái gì đã có người tính rồi thì tôi nói rõ là ai tính; cái gì chỉ đoán được, tôi sẽ nói thẳng là đoán."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k2c41.jpg"
+    },
+    {
+      "id": "k2c42",
+      "so": 82,
+      "idx": 81,
+      "khoi": 2,
+      "t0": 303.751,
+      "t1": 306.251,
+      "buoc": 0,
+      "muc": "Nếu chữ ký ấy không hạ xuống",
+      "loi": [
+        {
+          "t0": 303.751,
+          "t1": 305.991,
+          "text": "Giả sử sa hoàng A-lếch-xan-đơ đệ nhị gác bút."
+        }
+      ],
+      "anh": [
+        "k2-alexandr2.jpg"
+      ],
+      "thumb": "thumb/k2c42.jpg"
+    },
+    {
+      "id": "k2c43",
+      "so": 83,
+      "idx": 82,
+      "khoi": 2,
+      "t0": 306.251,
+      "t1": 307.723,
+      "buoc": 0,
+      "muc": "Nếu chữ ký ấy không hạ xuống",
+      "loi": [
+        {
+          "t0": 306.251,
+          "t1": 307.463,
+          "text": "A-lát-ka vẫn là đất Nga."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k2c43.jpg"
+    },
+    {
+      "id": "k2c44",
+      "so": 84,
+      "idx": 83,
+      "khoi": 2,
+      "t0": 307.723,
+      "t1": 310.112,
+      "buoc": 0,
+      "muc": "Nếu chữ ký ấy không hạ xuống",
+      "loi": [
+        {
+          "t0": 307.723,
+          "t1": 308.712,
+          "text": "Chuyện gì xảy ra tiếp?"
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k2c44.jpg"
+    },
+    {
+      "id": "k2c45",
+      "so": 85,
+      "idx": 84,
+      "khoi": 2,
+      "t0": 310.112,
+      "t1": 312.948,
+      "buoc": 0,
+      "muc": "Mắt xích thứ nhất: vàng",
+      "loi": [
+        {
+          "t0": 310.112,
+          "t1": 312.398,
+          "text": "Hệ quả đầu tiên tới sau đó chưa đầy ba mươi năm."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k2c45.jpg"
+    },
+    {
+      "id": "k2c46",
+      "so": 86,
+      "idx": 85,
+      "khoi": 2,
+      "t0": 312.948,
+      "t1": 316.419,
+      "buoc": 0,
+      "muc": "Mắt xích thứ nhất: vàng",
+      "loi": [
+        {
+          "t0": 312.948,
+          "t1": 316.159,
+          "text": "Năm một nghìn tám trăm chín mươi sáu, người ta tìm ra vàng ở Clon-đai."
+        }
+      ],
+      "anh": [
+        "k2-vang-cuc.jpg"
+      ],
+      "thumb": "thumb/k2c46.jpg"
+    },
+    {
+      "id": "k2c47",
+      "so": 87,
+      "idx": 86,
+      "khoi": 2,
+      "t0": 316.419,
+      "t1": 319.366,
+      "buoc": 0,
+      "muc": "Mắt xích thứ nhất: vàng",
+      "loi": [
+        {
+          "t0": 316.419,
+          "t1": 319.106,
+          "text": "Mà nói ngay cho rõ, vì chỗ này rất nhiều người nhầm:"
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k2c47.jpg"
+    },
+    {
+      "id": "k2c48",
+      "so": 88,
+      "idx": 87,
+      "khoi": 2,
+      "t0": 319.366,
+      "t1": 321.234,
+      "buoc": 0,
+      "muc": "Mắt xích thứ nhất: vàng",
+      "loi": [
+        {
+          "t0": 319.366,
+          "t1": 320.974,
+          "text": "Clon-đai không nằm ở A-lát-ka."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k2c48.jpg"
+    },
+    {
+      "id": "k2c49",
+      "so": 89,
+      "idx": 88,
+      "khoi": 2,
+      "t0": 321.234,
+      "t1": 323.882,
+      "buoc": 0,
+      "muc": "Mắt xích thứ nhất: vàng",
+      "loi": [
+        {
+          "t0": 321.234,
+          "t1": 323.332,
+          "text": "Nó nằm ở Yu-công, tức là đất Ca-na-đa."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k2c49.jpg"
+    },
+    {
+      "id": "k2c50",
+      "so": 90,
+      "idx": 89,
+      "khoi": 2,
+      "t0": 323.882,
+      "t1": 330.966,
+      "buoc": 0,
+      "muc": "Mắt xích thứ nhất: vàng",
+      "loi": [
+        {
+          "t0": 323.882,
+          "t1": 330.706,
+          "text": "Có điều, muốn tới được Clon-đai thì gần như ai cũng phải đổ bộ qua hai cái cảng tên là Skagway và Dyea, rồi leo bộ qua đèo."
+        }
+      ],
+      "anh": [
+        "k2-chilkoot.jpg",
+        "k2-skagway.jpg"
+      ],
+      "thumb": "thumb/k2c50.jpg"
+    },
+    {
+      "id": "k2c51",
+      "so": 91,
+      "idx": 90,
+      "khoi": 2,
+      "t0": 330.966,
+      "t1": 333.66,
+      "buoc": 0,
+      "muc": "Mắt xích thứ nhất: vàng",
+      "loi": [
+        {
+          "t0": 330.966,
+          "t1": 333.11,
+          "text": "Và hai cái cảng đó thì nằm trong A-lát-ka."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k2c51.jpg"
+    },
+    {
+      "id": "k3c01",
+      "so": 92,
+      "idx": 91,
+      "khoi": 3,
+      "t0": 333.66,
+      "t1": 336.501,
+      "buoc": 0,
+      "muc": "Mắt xích thứ nhất: vàng",
+      "loi": [
+        {
+          "t0": 333.66,
+          "t1": 336.241,
+          "text": "Khoảng một trăm nghìn người bỏ nhà bỏ cửa đi về phía bắc."
+        }
+      ],
+      "anh": [
+        "k3-chilkoot.jpg"
+      ],
+      "thumb": "thumb/k3c01.jpg"
+    },
+    {
+      "id": "k3c02",
+      "so": 93,
+      "idx": 92,
+      "khoi": 3,
+      "t0": 336.501,
+      "t1": 340.435,
+      "buoc": 0,
+      "muc": "Mắt xích thứ nhất: vàng",
+      "loi": [
+        {
+          "t0": 336.501,
+          "t1": 340.175,
+          "text": "Trong thế giới này, cả trăm nghìn con người đó đang xếp hàng đi qua cửa nhà Nga hoàng."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k3c02.jpg"
+    },
+    {
+      "id": "k3c03",
+      "so": 94,
+      "idx": 93,
+      "khoi": 3,
+      "t0": 340.435,
+      "t1": 347.463,
+      "buoc": 0,
+      "muc": "Mắt xích thứ nhất: vàng",
+      "loi": [
+        {
+          "t0": 340.435,
+          "t1": 346.913,
+          "text": "Rồi ba năm sau, năm một nghìn tám trăm chín mươi chín, người ta tìm thấy vàng ngay trên bãi biển Nôm — lần này thì đúng là trong lòng A-lát-ka thật."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k3c03.jpg"
+    },
+    {
+      "id": "k3c04",
+      "so": 95,
+      "idx": 94,
+      "khoi": 3,
+      "t0": 347.463,
+      "t1": 349.334,
+      "buoc": 0,
+      "muc": "Mắt xích thứ nhất: vàng",
+      "loi": [
+        {
+          "t0": 347.463,
+          "t1": 349.074,
+          "text": "Và Nga sẽ xử lý bằng cách nào?"
+        }
+      ],
+      "anh": [
+        "k3-nga-quan.jpg"
+      ],
+      "thumb": "thumb/k3c04.jpg"
+    },
+    {
+      "id": "k3c05",
+      "so": 96,
+      "idx": 95,
+      "khoi": 3,
+      "t0": 349.334,
+      "t1": 351.518,
+      "buoc": 0,
+      "muc": "Mắt xích thứ nhất: vàng",
+      "loi": [
+        {
+          "t0": 349.334,
+          "t1": 351.258,
+          "text": "Đồn gần nhất cách đó hàng nghìn cây số."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k3c05.jpg"
+    },
+    {
+      "id": "k3c06",
+      "so": 97,
+      "idx": 96,
+      "khoi": 3,
+      "t0": 351.518,
+      "t1": 353.072,
+      "buoc": 0,
+      "muc": "Mắt xích thứ nhất: vàng",
+      "loi": [
+        {
+          "t0": 351.518,
+          "t1": 352.812,
+          "text": "Người của công ty thì đã rút."
+        }
+      ],
+      "anh": [
+        "k3-sitka.jpg"
+      ],
+      "thumb": "thumb/k3c06.jpg"
+    },
+    {
+      "id": "k3c07",
+      "so": 98,
+      "idx": 97,
+      "khoi": 3,
+      "t0": 353.072,
+      "t1": 355.656,
+      "buoc": 0,
+      "muc": "Mắt xích thứ nhất: vàng",
+      "loi": [
+        {
+          "t0": 353.072,
+          "t1": 355.106,
+          "text": "Muốn đưa quân tới thì mất nhiều tháng đường biển."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k3c07.jpg"
+    },
+    {
+      "id": "k3c08",
+      "so": 99,
+      "idx": 98,
+      "khoi": 3,
+      "t0": 355.656,
+      "t1": 359.84,
+      "buoc": 0,
+      "muc": "Mắt xích thứ nhất: vàng",
+      "loi": [
+        {
+          "t0": 355.656,
+          "t1": 359.58,
+          "text": "Nga từng đi hết Siberia bằng thuyền và lập đồn, nên đừng nói là Nga không biết làm."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k3c08.jpg"
+    },
+    {
+      "id": "k3c09",
+      "so": 100,
+      "idx": 99,
+      "khoi": 3,
+      "t0": 359.84,
+      "t1": 361.925,
+      "buoc": 0,
+      "muc": "Mắt xích thứ nhất: vàng",
+      "loi": [
+        {
+          "t0": 359.84,
+          "t1": 361.665,
+          "text": "Có điều đi để thu thì Nga làm được."
+        }
+      ],
+      "anh": [
+        "k3-kholong.jpg"
+      ],
+      "thumb": "thumb/k3c09.jpg"
+    },
+    {
+      "id": "k3c10",
+      "so": 101,
+      "idx": 100,
+      "khoi": 3,
+      "t0": 361.925,
+      "t1": 368.661,
+      "buoc": 0,
+      "muc": "Mắt xích thứ nhất: vàng",
+      "loi": [
+        {
+          "t0": 361.925,
+          "t1": 368.111,
+          "text": "Đi để giữ, trước một đám đông nói tiếng Anh đông gấp trăm lần số dân mình có ở đó, thì Nga chưa từng làm được ở A-lát-ka bao giờ."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k3c10.jpg"
+    },
+    {
+      "id": "k3c11",
+      "so": 102,
+      "idx": 101,
+      "khoi": 3,
+      "t0": 368.661,
+      "t1": 372.495,
+      "buoc": 0,
+      "muc": "Mắt xích thứ nhất: vàng",
+      "loi": [
+        {
+          "t0": 368.661,
+          "t1": 372.235,
+          "text": "Vậy nên khả năng cao nhất là cái mà sử gia hay gọi là \"chiếm đóng trên giấy\":"
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k3c11.jpg"
+    },
+    {
+      "id": "k3c12",
+      "so": 103,
+      "idx": 102,
+      "khoi": 3,
+      "t0": 372.495,
+      "t1": 379.756,
+      "buoc": 0,
+      "muc": "Mắt xích thứ nhất: vàng",
+      "loi": [
+        {
+          "t0": 372.495,
+          "t1": 378.356,
+          "text": "A-lát-ka vẫn mang màu Nga trên bản đồ, nhưng người sống trong đó, tiền tiêu trong đó, và luật chạy trong đó, đều là của Mỹ."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k3c12.jpg"
+    },
+    {
+      "id": "k3c13",
+      "so": 104,
+      "idx": 103,
+      "khoi": 3,
+      "t0": 379.756,
+      "t1": 381.821,
+      "buoc": 0,
+      "muc": "Mắt xích thứ hai: cái biên giới không ai ngủ nổi",
+      "loi": [
+        {
+          "t0": 379.756,
+          "t1": 381.271,
+          "text": "Và hệ quả còn chưa dừng ở đó."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k3c13.jpg"
+    },
+    {
+      "id": "k3c14",
+      "so": 105,
+      "idx": 104,
+      "khoi": 3,
+      "t0": 381.821,
+      "t1": 384.28,
+      "buoc": 0,
+      "muc": "Mắt xích thứ hai: cái biên giới không ai ngủ nổi",
+      "loi": [
+        {
+          "t0": 381.821,
+          "t1": 384.02,
+          "text": "Năm một nghìn chín trăm mười bảy, nước Nga đổi chủ."
+        }
+      ],
+      "anh": [
+        "k3-1917.jpg"
+      ],
+      "thumb": "thumb/k3c14.jpg"
+    },
+    {
+      "id": "k3c15",
+      "so": 106,
+      "idx": 105,
+      "khoi": 3,
+      "t0": 384.28,
+      "t1": 386.976,
+      "buoc": 0,
+      "muc": "Mắt xích thứ hai: cái biên giới không ai ngủ nổi",
+      "loi": [
+        {
+          "t0": 384.28,
+          "t1": 386.716,
+          "text": "Nếu A-lát-ka vẫn thuộc Nga, thì nó thành đất Liên Xô."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k3c15.jpg"
+    },
+    {
+      "id": "k3c16",
+      "so": 107,
+      "idx": 106,
+      "khoi": 3,
+      "t0": 386.976,
+      "t1": 394.154,
+      "buoc": 0,
+      "muc": "Mắt xích thứ hai: cái biên giới không ai ngủ nổi",
+      "loi": [
+        {
+          "t0": 386.976,
+          "t1": 393.604,
+          "text": "Và bây giờ, mời các bạn làm một việc: hãy xoá cái đường biên giữa A-lát-ka và Ca-na-đa đi, rồi tô cả vùng đó cùng một màu với Liên Xô."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k3c16.jpg"
+    },
+    {
+      "id": "k3c17",
+      "so": 108,
+      "idx": 107,
+      "khoi": 3,
+      "t0": 394.154,
+      "t1": 398.299,
+      "buoc": 0,
+      "muc": "Mắt xích thứ hai: cái biên giới không ai ngủ nổi",
+      "loi": [
+        {
+          "t0": 394.154,
+          "t1": 398.039,
+          "text": "Cái bạn vừa nhìn thấy là thứ mà không một tổng thống Mỹ nào của thế kỷ hai mươi ngủ ngon nổi."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k3c17.jpg"
+    },
+    {
+      "id": "k3c18",
+      "so": 109,
+      "idx": 108,
+      "khoi": 3,
+      "t0": 398.299,
+      "t1": 403.598,
+      "buoc": 0,
+      "muc": "Mắt xích thứ hai: cái biên giới không ai ngủ nổi",
+      "loi": [
+        {
+          "t0": 398.299,
+          "t1": 403.048,
+          "text": "Một biên giới đất liền với Liên Xô, dài gần hai nghìn năm trăm cây số, nằm ngay trên lục địa Bắc Mỹ."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k3c18.jpg"
+    },
+    {
+      "id": "k3c19",
+      "so": 110,
+      "idx": 109,
+      "khoi": 3,
+      "t0": 403.598,
+      "t1": 411.219,
+      "buoc": 0,
+      "muc": "Mắt xích thứ hai: cái biên giới không ai ngủ nổi",
+      "loi": [
+        {
+          "t0": 403.598,
+          "t1": 410.959,
+          "text": "Năm một nghìn chín trăm sáu mươi hai, người Mỹ trải qua mười ba ngày khủng hoảng vì Liên Xô đặt tên lửa ở Cuba, cách bờ Florida khoảng một trăm năm mươi cây số."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k3c19.jpg"
+    },
+    {
+      "id": "k3c20",
+      "so": 111,
+      "idx": 110,
+      "khoi": 3,
+      "t0": 411.219,
+      "t1": 413.806,
+      "buoc": 0,
+      "muc": "Mắt xích thứ hai: cái biên giới không ai ngủ nổi",
+      "loi": [
+        {
+          "t0": 411.219,
+          "t1": 413.256,
+          "text": "Trong thế giới này, Liên Xô không cần Cuba."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k3c20.jpg"
+    },
+    {
+      "id": "k3c21",
+      "so": 112,
+      "idx": 111,
+      "khoi": 3,
+      "t0": 413.806,
+      "t1": 414.74,
+      "buoc": 0,
+      "muc": "Mắt xích thứ hai: cái biên giới không ai ngủ nổi",
+      "loi": [
+        {
+          "t0": 413.806,
+          "t1": 414.48,
+          "text": "Rồi còn dầu."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k3c21.jpg"
+    },
+    {
+      "id": "k3c22",
+      "so": 113,
+      "idx": 112,
+      "khoi": 3,
+      "t0": 414.74,
+      "t1": 419.462,
+      "buoc": 0,
+      "muc": "Mắt xích thứ hai: cái biên giới không ai ngủ nổi",
+      "loi": [
+        {
+          "t0": 414.74,
+          "t1": 419.202,
+          "text": "Năm một nghìn chín trăm sáu mươi tám, người ta tìm ra Prút-hô Bây, mỏ dầu lớn nhất Bắc Mỹ."
+        }
+      ],
+      "anh": [
+        "k3-prudhoe.jpg"
+      ],
+      "thumb": "thumb/k3c22.jpg"
+    },
+    {
+      "id": "k3c23",
+      "so": 114,
+      "idx": 113,
+      "khoi": 3,
+      "t0": 419.462,
+      "t1": 425.07,
+      "buoc": 0,
+      "muc": "Mắt xích thứ hai: cái biên giới không ai ngủ nổi",
+      "loi": [
+        {
+          "t0": 419.462,
+          "t1": 424.81,
+          "text": "Trong thế giới này, chỗ dầu đó chảy vào ngân sách Liên Xô, đúng vào quãng Liên Xô bắt đầu sống bằng tiền bán dầu."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k3c23.jpg"
+    },
+    {
+      "id": "k3c24",
+      "so": 115,
+      "idx": 114,
+      "khoi": 3,
+      "t0": 425.07,
+      "t1": 428.731,
+      "buoc": 0,
+      "muc": "Mắt xích thứ hai: cái biên giới không ai ngủ nổi",
+      "loi": [
+        {
+          "t0": 425.07,
+          "t1": 428.471,
+          "text": "Liên Xô sụp đổ có một phần vì giá dầu lao dốc giữa thập niên tám mươi."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k3c24.jpg"
+    },
+    {
+      "id": "k3c25",
+      "so": 116,
+      "idx": 115,
+      "khoi": 3,
+      "t0": 428.731,
+      "t1": 435.526,
+      "buoc": 0,
+      "muc": "Mắt xích thứ hai: cái biên giới không ai ngủ nổi",
+      "loi": [
+        {
+          "t0": 428.731,
+          "t1": 434.126,
+          "text": "Thêm một mỏ lớn như vậy thì Liên Xô có trụ được không — chỗ này thì tôi đoán, và ai nói chắc chắn là người đó nói quá."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k3c25.jpg"
+    },
+    {
+      "id": "k3c26",
+      "so": 117,
+      "idx": 116,
+      "khoi": 3,
+      "t0": 435.526,
+      "t1": 440.962,
+      "buoc": 0,
+      "muc": "Chỉ có điều",
+      "loi": [
+        {
+          "t0": 435.526,
+          "t1": 440.412,
+          "text": "Chỉ có điều, cả cái chuỗi vừa rồi dựa trên một giả định rất lớn: rằng Nga giữ được A-lát-ka."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k3c26.jpg"
+    },
+    {
+      "id": "k3c27",
+      "so": 118,
+      "idx": 117,
+      "khoi": 3,
+      "t0": 440.962,
+      "t1": 444.322,
+      "buoc": 0,
+      "muc": "Chỉ có điều",
+      "loi": [
+        {
+          "t0": 440.962,
+          "t1": 444.062,
+          "text": "Mà chính người Nga năm một nghìn tám trăm sáu mươi bảy không tin vào điều đó."
+        }
+      ],
+      "anh": [
+        "k3-stoeckl.jpg"
+      ],
+      "thumb": "thumb/k3c27.jpg"
+    },
+    {
+      "id": "k3c28",
+      "so": 119,
+      "idx": 118,
+      "khoi": 3,
+      "t0": 444.322,
+      "t1": 446.008,
+      "buoc": 0,
+      "muc": "Chỉ có điều",
+      "loi": [
+        {
+          "t0": 444.322,
+          "t1": 445.458,
+          "text": "Đó là lý do họ bán."
+        }
+      ],
+      "anh": [
+        "k3-phieuchi.jpg"
+      ],
+      "thumb": "thumb/k3c28.jpg"
+    },
+    {
+      "id": "k3c29",
+      "so": 120,
+      "idx": 119,
+      "khoi": 3,
+      "t0": 446.008,
+      "t1": 449.33,
+      "buoc": 0,
+      "muc": "Chỉ có điều",
+      "loi": [
+        {
+          "t0": 446.008,
+          "t1": 449.07,
+          "text": "Nên có một khả năng khác, và không ít nhà sử học nghiêng về nó hơn."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k3c29.jpg"
+    },
+    {
+      "id": "k3c30",
+      "so": 121,
+      "idx": 120,
+      "khoi": 3,
+      "t0": 449.33,
+      "t1": 455.221,
+      "buoc": 0,
+      "muc": "Chỉ có điều",
+      "loi": [
+        {
+          "t0": 449.33,
+          "t1": 454.961,
+          "text": "Là A-lát-ka vẫn rời khỏi tay Nga, chỉ là muộn hơn, ồn ào hơn, và có thể là bằng súng chứ không bằng một cây bút."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k3c30.jpg"
+    },
+    {
+      "id": "k3c31",
+      "so": 122,
+      "idx": 121,
+      "khoi": 3,
+      "t0": 455.221,
+      "t1": 457.167,
+      "buoc": 0,
+      "muc": "Chỉ có điều",
+      "loi": [
+        {
+          "t0": 455.221,
+          "t1": 456.907,
+          "text": "Anh có thể lấy nó trong một cuộc chiến."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k3c31.jpg"
+    },
+    {
+      "id": "k3c32",
+      "so": 123,
+      "idx": 122,
+      "khoi": 3,
+      "t0": 457.167,
+      "t1": 459.693,
+      "buoc": 0,
+      "muc": "Chỉ có điều",
+      "loi": [
+        {
+          "t0": 457.167,
+          "t1": 459.433,
+          "text": "Mỹ có thể mua nó vào một lúc khác với giá khác."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k3c32.jpg"
+    },
+    {
+      "id": "k3c33",
+      "so": 124,
+      "idx": 123,
+      "khoi": 3,
+      "t0": 459.693,
+      "t1": 464.785,
+      "buoc": 0,
+      "muc": "Chỉ có điều",
+      "loi": [
+        {
+          "t0": 459.693,
+          "t1": 464.235,
+          "text": "Hoặc chính những người đi đào vàng năm một nghìn tám trăm chín mươi sáu tự dựng lấy chính quyền của họ ở đó."
+        }
+      ],
+      "anh": [
+        "k3-nome-leu.jpg"
+      ],
+      "thumb": "thumb/k3c33.jpg"
+    },
+    {
+      "id": "k3c34",
+      "so": 125,
+      "idx": 124,
+      "khoi": 3,
+      "t0": 464.785,
+      "t1": 467.644,
+      "buoc": 0,
+      "muc": "Chỉ có điều",
+      "loi": [
+        {
+          "t0": 464.785,
+          "t1": 467.384,
+          "text": "Thành ra câu hỏi thật của tập này không phải là \"Nga mất gì\"."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k3c34.jpg"
+    },
+    {
+      "id": "k3c35",
+      "so": 126,
+      "idx": 125,
+      "khoi": 3,
+      "t0": 467.644,
+      "t1": 476.705,
+      "buoc": 0,
+      "muc": "Chỉ có điều",
+      "loi": [
+        {
+          "t0": 467.644,
+          "t1": 475.305,
+          "text": "Mà là: một vùng đất không có người ở, không có đường, và chỉ bán được đúng một mặt hàng, thì nó thuộc về ai — người cắm cờ trước, hay người đến sau mà ở lại?"
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k3c35.jpg"
+    },
+    {
+      "id": "k3c36",
+      "so": 127,
+      "idx": 126,
+      "khoi": 3,
+      "t0": 476.705,
+      "t1": 486.664,
+      "buoc": 0,
+      "muc": "Đóng",
+      "loi": [
+        {
+          "t0": 476.705,
+          "t1": 486.114,
+          "text": "Và thật thú vị khi nhận ra rằng thứ từng kéo người Nga đi hết nửa vòng Trái Đất, rồi lại đẩy họ ra khỏi đúng chỗ ấy, là một con vật nặng chừng ba chục cân, suốt ngày nằm ngửa đập vỏ sò trên bụng mình."
+        }
+      ],
+      "anh": [
+        "k3-raica-nam.jpg"
+      ],
+      "thumb": "thumb/k3c36.jpg"
+    },
+    {
+      "id": "k3c37",
+      "so": 128,
+      "idx": 127,
+      "khoi": 3,
+      "t0": 486.664,
+      "t1": 488.361,
+      "buoc": 0,
+      "muc": "Đóng",
+      "loi": [
+        {
+          "t0": 486.664,
+          "t1": 488.101,
+          "text": "Nó hết, nên cái kho rỗng."
+        }
+      ],
+      "anh": [
+        "k3-dalong.jpg"
+      ],
+      "thumb": "thumb/k3c37.jpg"
+    },
+    {
+      "id": "k3c38",
+      "so": 129,
+      "idx": 128,
+      "khoi": 3,
+      "t0": 488.361,
+      "t1": 490.466,
+      "buoc": 0,
+      "muc": "Đóng",
+      "loi": [
+        {
+          "t0": 488.361,
+          "t1": 490.206,
+          "text": "Kho rỗng, nên vùng đất thành gánh nặng."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k3c38.jpg"
+    },
+    {
+      "id": "k3c39",
+      "so": 130,
+      "idx": 129,
+      "khoi": 3,
+      "t0": 490.466,
+      "t1": 494.403,
+      "buoc": 0,
+      "muc": "Đóng",
+      "loi": [
+        {
+          "t0": 490.466,
+          "t1": 493.853,
+          "text": "Thành gánh nặng, nên nó được bán đi với giá chưa tới hai xu một mẫu."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k3c39.jpg"
+    },
+    {
+      "id": "k3c40",
+      "so": 131,
+      "idx": 130,
+      "khoi": 3,
+      "t0": 494.403,
+      "t1": 500.584,
+      "buoc": 0,
+      "muc": "Đóng",
+      "loi": [
+        {
+          "t0": 494.403,
+          "t1": 500.034,
+          "text": "Và đó, thưa quý vị và các bạn, là cách mà một con rái cá biển đã góp phần quyết định hình dáng của thế kỷ hai mươi."
+        }
+      ],
+      "anh": [
+        "k3-raica-vong.jpg"
+      ],
+      "thumb": "thumb/k3c40.jpg"
+    },
+    {
+      "id": "k3c41",
+      "so": 132,
+      "idx": 131,
+      "khoi": 3,
+      "t0": 500.584,
+      "t1": 502.343,
+      "buoc": 0,
+      "muc": "Đóng",
+      "loi": [
+        {
+          "t0": 500.584,
+          "t1": 502.083,
+          "text": "Hy vọng anh chị em thích tập này."
+        }
+      ],
+      "anh": [
+        "k3-bien.jpg"
+      ],
+      "thumb": "thumb/k3c41.jpg"
+    },
+    {
+      "id": "k3c42",
+      "so": 133,
+      "idx": 132,
+      "khoi": 3,
+      "t0": 502.343,
+      "t1": 504.44,
+      "buoc": 0,
+      "muc": "Đóng",
+      "loi": [
+        {
+          "t0": 502.343,
+          "t1": 504.18,
+          "text": "Nhớ để lại một lượt thích để chúng tớ biết."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k3c42.jpg"
+    },
+    {
+      "id": "k3c43",
+      "so": 134,
+      "idx": 133,
+      "khoi": 3,
+      "t0": 504.44,
+      "t1": 510.25,
+      "buoc": 0,
+      "muc": "Đóng",
+      "loi": [
+        {
+          "t0": 504.44,
+          "t1": 509.99,
+          "text": "Còn nếu anh chị em nghĩ rằng Nga vẫn sẽ mất A-lát-ka theo một cách khác, thì mời viết xuống bình luận — chúng tớ đọc hết."
+        }
+      ],
+      "anh": [],
+      "thumb": "thumb/k3c43.jpg"
+    },
+    {
+      "id": "k3c44",
+      "so": 135,
+      "idx": 134,
+      "khoi": 3,
+      "t0": 510.25,
+      "t1": 512.482,
+      "buoc": 0,
+      "muc": "Đóng",
+      "loi": [
+        {
+          "t0": 510.25,
+          "t1": 512.482,
+          "text": "Còn bây giờ, xin chào, và hẹn gặp lại."
+        }
+      ],
+      "anh": [
+        "k3-raica-bay.jpg"
+      ],
+      "thumb": "thumb/k3c44.jpg"
+    }
+  ]
+}

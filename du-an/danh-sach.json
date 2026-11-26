@@ -1,0 +1,38 @@
+[
+  {
+    "id": "tap-02-alaska",
+    "ten": "Nếu Nga không bán Alaska cho Mỹ",
+    "tap": 2,
+    "trang_thai": "ban-nhap",
+    "vong": 1,
+    "so_canh": 135,
+    "thoi_luong": 512.482
+  },
+  {
+    "id": "tap-03-mat-trang",
+    "ten": "Nếu Mặt Trăng biến mất",
+    "tap": 3,
+    "trang_thai": "dang-review",
+    "vong": 1,
+    "so_canh": 139,
+    "thoi_luong": 560.752
+  },
+  {
+    "id": "tap-04-muoi",
+    "ten": "Nếu không còn con muỗi nào",
+    "tap": 4,
+    "trang_thai": "ban-nhap",
+    "vong": 1,
+    "so_canh": 150,
+    "thoi_luong": 651.706
+  },
+  {
+    "id": "tap-05-trinh-hoa",
+    "ten": "Nếu Trịnh Hoà đi tiếp",
+    "tap": 5,
+    "trang_thai": "ban-nhap",
+    "vong": 1,
+    "so_canh": 0,
+    "thoi_luong": 0
+  }
+]
