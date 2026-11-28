@@ -1351,6 +1351,17 @@ function nhipVideo(s, lt) {
 window.__khungSanSang = () => Promise.all([
   ...[...document.querySelectorAll(".canh.active img")]
       .filter(i => !i.complete || !i.naturalWidth).map(i => i.decode().catch(() => {})),
+  /* VÁ 28/11 (người dựng khối 2 báo): thẻ <image> của SVG KHÔNG phải <img>, nên
+     querySelectorAll("img") không thấy nó. Cảnh nào vẽ quả cầu bằng <image> thì
+     khung ĐẦU chụp ra một đĩa TRỐNG, và không sinh dòng lỗi nào. SVGImageElement
+     không có .decode(), nên ta chờ gián tiếp qua một Image() cùng href — ảnh đã
+     nằm trong bộ nhớ đệm của trình duyệt nên không tải lại lần nữa. */
+  ...[...document.querySelectorAll(".canh.active image")].map(el => {
+      const u = el.getAttribute("href") || el.getAttribute("xlink:href");
+      if (!u) return Promise.resolve();
+      const im = new Image(); im.src = u;
+      return im.decode().catch(() => {});
+  }),
   ...[...document.querySelectorAll(".canh.active video")].map(v => v.readyState >= 2 && !v.seeking
       ? Promise.resolve()
       : new Promise(ok => { const xong = () => ok();

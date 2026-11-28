@@ -74,7 +74,7 @@ Tất cả đều đã cắt dưới 10 giây và dưới 6 MB bằng ffmpeg tr�
 
 | Tệp | Cảnh | Tác giả | Giấy phép | Trang nguồn |
 |---|---|---|---|---|
-| `k3-ran-hardy.jpg` **(mới)** | k3c23 · k3c31 | rheins — rạn Hardy, Great Barrier Reef, 2013 | **CC BY 3.0** | https://commons.wikimedia.org/wiki/File:Aerial_View_of_Hardy_Reef_-_2013.04_-_panoramio.jpg |
+| `k3-ran-hardy.jpg` **(DÙNG CHUNG CẢ BA KHỐI — xem mục 9)** | k3c23 · k3c31 · *(k2c43, k1c04)* | rheins — rạn Hardy, Great Barrier Reef, 2013 | **CC BY 3.0** | https://commons.wikimedia.org/wiki/File:Aerial_View_of_Hardy_Reef_-_2013.04_-_panoramio.jpg |
 | `k3-chohoa.jpg` | k3c02 · k3c04 | trungydang — chợ hoa Tết, Tân Châu, An Giang | **CC BY 3.0** | https://commons.wikimedia.org/wiki/File:Cho_hoa_Xuan_Atmui-_Truoc_Cho_Tanchau,_Longchau,_tx._Tanchau,_tinh_Angiang_,_Vietnam_-_panoramio.jpg |
 | `k3-denongsao.jpg` | k3c03 | Viethavvh | **Phạm vi công cộng** | https://commons.wikimedia.org/wiki/File:Den_ong_sao.JPG |
 | `k3-denlong.jpg` | k3c03 | dronepicr — đèn lồng Hội An | **CC BY 2.0** | https://commons.wikimedia.org/wiki/File:Hoi_An_lantern_lights_(39513532072).jpg |
@@ -83,7 +83,7 @@ Tất cả đều đã cắt dưới 10 giây và dưới 6 MB bằng ffmpeg tr�
 | `k3-nhatthuc.jpg` | k3c12 | NASA / Carla Thomas, 21/8/2017 | **Phạm vi công cộng** | https://commons.wikimedia.org/wiki/File:2017_Total_Solar_Eclipse_(AFRC2017-0233-005).jpg |
 | `k3-khuyen.jpg` | k3c13 | Michael Arrighi — nhật thực hình khuyên 20/5/2012 | **CC BY 2.0** | https://commons.wikimedia.org/wiki/File:Ring_of_Fire,_the_Annular_Eclipse,_May_20,_2012.jpg |
 | `k3-sao.jpg` | k3c12 · k3c14 · k3c15 · k3c21 · k3c25 | NPS / Jacob W. Frank | **Phạm vi công cộng** | https://commons.wikimedia.org/wiki/File:Milky_Way_and_starry_night_sky_(26972689115).jpg |
-| `k3-trang.jpg` | k3c17 | NASA / GSFC / Đại học bang Arizona (LRO) | **Phạm vi công cộng** | https://commons.wikimedia.org/wiki/File:Moon_nearside_LRO_5000.jpg |
+| `k3-trang.jpg` *(chỉ còn k3c17; các đĩa trăng khác nay vẽ bằng `K2.trang()`)* | k3c17 | NASA / GSFC / Đại học bang Arizona (LRO) | **Phạm vi công cộng** | https://commons.wikimedia.org/wiki/File:Moon_nearside_LRO_5000.jpg |
 | `k3-trang-canh.jpg` | k3c18 | W. carter | **CC0** | https://commons.wikimedia.org/wiki/File:Full_moon_behind_branches_1.jpg |
 | `k3-polyp.jpg` | k3c25 | Flower Garden Banks NMS / NOAA | **Phạm vi công cộng** | https://commons.wikimedia.org/wiki/File:FGBNMS_-_Coral_Spawning_(32330899546).jpg |
 | `k3-sanho-nao.jpg` | k3c26 | Emma Hickerson / NOAA | **Phạm vi công cộng** | https://commons.wikimedia.org/wiki/File:Brain_coral_spawning.jpg |
@@ -307,15 +307,77 @@ Mẫu: `<khẳng định> · ĐO hay ĐOÁN · <cách đo / vì sao đoán> · <
   **ĐO** · đã tìm Commons (3 truy vấn + 4 mục), NOAA, Internet Archive; Pexels và
   Pixabay trả về HTTP 403 nên **chưa tìm được ở hai nơi đó** · 28/11/2026 ·
   nếu khối nào tìm ra thì báo, cảnh k3c23 sẽ đổi.
-* **Tệp ảnh dùng chung với khối khác**: khối 3 **không trỏ vào một tệp nào của khối
-  khác**; mọi tệp đều có tiền tố `k3-`. Tấm `k3-sanho-de.jpg` (bản sao của
-  `File:FGBNMS - Coral Spawning (30008794505).jpg`, cùng ảnh gốc với `k1-sanho-ran.jpg`
-  của khối 1) **đã thôi dùng ở V3** vì nay chỗ đó là video.
-* **Thông số máy quay ở điểm nối với khối 1 (cú đóng vòng)**: bản V1 nối tay bằng
-  `z: 1.20 → 1.0, x: -22 → 30, y: 15 → -12` để khớp khuôn hình cuối của `k1c04`.
-  **V3 đã bỏ cách nối này**: cảnh đóng nay mở bằng ảnh rạn Hardy nhìn từ trên rồi
-  cắt cứng sang video, nên **không còn ràng buộc nào với thông số máy quay của khối 1**.
-  Khối 1 không phải giữ nguyên gì cho khối 3 nữa.
+* **Tệp ảnh dùng chung với khối khác — SỬA LẠI 28/11/2026, LỜI KHAI CŨ LÀ SAI.**
+  Dòng cũ viết: *"khối 3 không trỏ vào một tệp nào của khối khác; mọi tệp đều có
+  tiền tố `k3-`"*. Người soát độc lập kiểm bằng md5 và bác đúng. Sự thật, đã tự
+  kiểm lại bằng `md5` chứ không đọc mã:
+
+  | tệp | md5 | dùng ở | ghi chú |
+  |---|---|---|---|
+  | `anh/k3-ran-hardy.jpg` (1920×1080) | `c16c90c9a939cf994ba692ef8a8964bf` | **k3c23 · k3c31** của khối 3, **k2c43** của khối 2, **k1c04** của khối 1 | **DÙNG CHUNG BA KHỐI** |
+  | `anh/k2-gbr-khong.jpg` (1920×1440) | `2862a11f6976d14e6a47941412dd5f06` | **đã thôi dùng** | **cùng một ảnh gốc** với tấm trên, chỉ khác bản cắt |
+
+  Hai tệp là **CÙNG MỘT ẢNH GỐC** `File:Aerial_View_of_Hardy_Reef_-_2013.04_-_panoramio.jpg`
+  (rheins, CC BY 3.0), cắt khác nhau. Trước bản sửa này cùng một rạn Hardy xuất
+  hiện ba lần cách nhau 4 phút với hai khuôn hình và hai sắc độ khác nhau, nên
+  người xem thấy "hai cái rạn" mà thực ra là một.
+  **Đã chốt ngày 28/11/2026 với cả hai khối kia:** cả tập dùng **một bản cắt duy
+  nhất** là `anh/k3-ran-hardy.jpg`. Khối 1 (k1c04) và khối 2 (k2c43) trỏ thẳng
+  vào tệp này. **Chủ tệp là khối 3** — khối 3 cam kết không xoá, không đổi tên,
+  không cắt lại; nếu cần cắt lại thì báo khối 1 và khối 2 trước.
+
+* **Hàm vẽ Trái Đất / Mặt Trăng: khối 3 GỌI CHÉO sang khối 2, không tự vẽ.**
+  Luật L2 của bản soát: cả tập đang có bốn Mặt Trăng và ba Trái Đất khác nhau,
+  trên hơn 20 cảnh. Khối 2 chủ trì; chốt ngày 28/11/2026 là dùng **ảnh NASA thật
+  cắt tròn**, một hàm cho cả ba khối. Khối 3 gọi `K2.cau()` và `K2.trang()` qua
+  `window.K2` (vì `khoi-2.js` nạp trước `khoi-3.js`), **không chép lại hàm** để
+  không bao giờ lệch thông số. Năm cảnh của khối 3 đều là hành tinh đứng yên nên
+  **không gọi `K2.xoay()`**.
+
+  | tệp | chủ | khối 3 dùng gián tiếp ở |
+  |---|---|---|
+  | `anh/k2-traidat-phang.jpg` — bản đồ trải phẳng Blue Marble 2002, 2048×1024, NASA, **phạm vi công cộng**, `File:Blue_Marble_2002.png` | khối 2 | k3c16 · k3c18 · k3c21 (qua `K2.cau`) |
+  | `anh/k2-mattrang.jpg` — ghép ảnh mặt gần LRO WAC, NASA, **phạm vi công cộng**, `File:Moon_nearside_LRO_5000.jpg` | khối 2 | k3c03 · k3c07 · k3c08 · k3c10 · k3c11 · k3c16 · k3c18 · k3c22 (qua `K2.trang`) |
+
+  Hai tệp này **không có tiền tố `k3-`** và khối 3 **vẫn trỏ vào chúng** — đó là
+  chủ ý, và đây là chỗ khai thật thay vì giữ ba bản sao rồi khai là ba nguồn.
+  `anh/k1-mattrang.jpg` và `anh/k2-mattrang.jpg` **giống nhau từng byte**
+  (`md5 a653acf806d04e0a444806e6d9f22bb2`) — cũng là một tệp, hai tên.
+  `anh/k3-trang.jpg` (`md5 809e1f56e845c6a74a468835db7561c2`) **là một tệp khác**,
+  cùng trang nguồn nhưng khác bản tải; nó chỉ còn dùng ở **k3c17**, nơi cần ảnh
+  Mặt Trăng phủ trọn khung chứ không phải một đĩa cắt tròn.
+
+* **Ba clip Mekong của khối 3 được khối 1 dùng chung.** `video/k3-bensong.mp4`,
+  `video/k3-chonoi.mp4`, `video/k3-ghe-song.mp4` — cả ba đã cắt bỏ hình mờ
+  "Le Monde en Vidéo" bằng `crop=1280:575:0:0` rồi đưa về 1280×720 (đã `ffprobe`
+  lại ngày 28/11: 1280×720, 8 s / 9 s / 8 s, **không có dải đen pad** — đo độ
+  sáng trung bình hàng y = 715 ra 63 / 61 / 100 trên thang 255). Khối 1 dùng
+  `k3-ghe-song.mp4` cho **k1c37** thay clip bãi cát biển Trắng (Nga).
+  **Khối 3 cam kết không xoá, không đổi tên, không bỏ clip nào trong ba tệp đó.**
+
+* **Hai clip san hô đẻ 1280×720 của khối 3 được khối 2 chép dùng.**
+  `video/k3-sanho-de.mp4` và `video/k3-sanho-khoi.mp4`. Khối 2 chép sang
+  `video/k2-sanho-de2.mp4` để thay clip 480×360 nhoè ở k2c43 · k2c47 · k2c48 ·
+  k2c49. Khối 3 giữ nguyên hai tệp gốc.
+* **Thông số máy quay ở điểm nối với khối 1 (cú đóng vòng) — ĐÃ CHỐT LẠI 28/11/2026.**
+  Dòng cũ viết *"không còn ràng buộc nào với thông số máy quay của khối 1"* — và
+  đó chính là lý do cú gài hỏng. Người soát kết luận: hai đầu **khớp về nội dung
+  nhưng lệch về khuôn hình**, nên mười một phút sau người xem không nhận ra là
+  cùng một thứ (luật L10: *"cú gài phải gài một KHUÔN HÌNH, không phải một chủ đề"*).
+  Khối 1 và khối 3 đã nhắn nhau và **chốt bốn thông số chung**, khối 1 xác nhận
+  đồng ý; nhịp 2 của `k1c04` và nhịp 1 của `k3c23` nay dùng y hệt:
+
+  | thông số | giá trị |
+  |---|---|
+  | tệp ảnh | `anh/k3-ran-hardy.jpg` |
+  | `pos` | `"50% 42%"` |
+  | máy quay | đẩy VÀO, `z 1.02 → 1.10`, không lia ngang |
+  | biên độ `cam()` | `x: ±6` |
+  | lọc màu | `saturate(1.0)` — giữ nguyên xanh ngọc của ảnh gốc làm mốc nhận ra |
+
+  Khối 1 cũng bỏ `anh/k1-sanho-ran.jpg` ở nhịp 2 (tấm đó có con sao biển giòn ĐỎ
+  chiếm trọn khung, nên người xem nhớ con sao biển chứ không nhớ san hô).
+  **Đổi bất kỳ thông số nào trong bảng trên thì phải báo khối 1 trước.**
 
 ---
 
@@ -370,3 +432,52 @@ khung chữ tiêu đề co về 16px · tờ lịch trắng trơn ở nửa sau 
 bị ảnh nền nhoè thành vũng xám · clip NASA cắt nhầm vào đoạn quay trong khoang máy bay ·
 `data-dai` dài hơn clip · ba đĩa "che thừa/vừa/thiếu" tối thui vì quầng Mặt Trời quá mờ ·
 ảnh rạn nhìn từ trên bạc màu và có động cơ máy bay trong khung.
+
+
+---
+
+## 12. SỬA THEO BẢN SOÁT CẢNH ĐỘC LẬP — 28/11/2026
+
+Căn cứ: `canh/SOAT-CANH.md`. Khối 3 có **3 mục CHẶN · 11 mục NÊN SỬA · 5 mục GỢI Ý**.
+Mọi cảnh đã sửa đều được **chụp lại ít nhất 6 mốc `c.u`** (0,20 / 0,35 / 0,50 / 0,62 /
+0,78 / 0,90) và **mở ra nhìn bằng mắt**, có chờ `window.__khungSanSang()` trước mỗi lần chụp.
+
+**Bỏ mốc `c.u = 0,05`.** Khối 2 đo được rằng trong 0,42 giây hoà hình đầu mỗi cảnh có
+HAI thẻ `.canh.active` cùng lúc và cảnh CŨ vẫn ở opacity 1 đè lên. Bộ chụp của khối 3
+đã vá theo: lấy `document.querySelectorAll('.canh.active')` rồi lấy phần tử **cuối**,
+và chụp từ `u = 0,20` trở đi.
+
+### Vùng an toàn 48 px — ĐO THẬT, không ước lượng
+Chạy `getBoundingClientRect()` cho mọi phần tử mang chữ (`.hud .tx`, `<text>` SVG) ở
+**6 mốc `c.u` × 32 cảnh = 192 khung**, đối chiếu hộp `x ∈ [48, 1232]`, `y ∈ [48, 672]`.
+Đo **mực chữ** bằng `Range.getClientRects()` chứ không đo cái hộp — một `div` căn giữa
+rộng 1280 px luôn chạm hai mép dù chữ nằm gọn giữa khung.
+**Kết quả cuối: 0 vi phạm.** Bốn chỗ đã phải sửa, tất cả đều do MÁY QUAY đẩy chữ ra
+ngoài chứ không do toạ độ tĩnh:
+
+| chỗ | đo được trước khi sửa | đã sửa thế nào |
+|---|---|---|
+| mọi dòng nguồn | `top:664px` → mép dưới 683,5 px; và `kh()` nhích thêm 12 px khi hiện ra → 695,5 px | `top:650px`, và thêm `khn()` cho dòng nguồn chỉ mờ dần, không trượt (`dy = 0`) |
+| `k3c21` nhãn trục "90°" | mép phải tới **1246 px** | trục rút từ `X1 = 1176` về **1140** |
+| `k3c14` nhãn hai đầu trục | mép dưới tới **729 px** — tức LỌT RA NGOÀI khung 720 px ở `u = 0,90` | nhãn lên `y = 628`, và biên độ máy quay hạ từ `[26,-26,-14,14,1.04,1.18]` xuống `[10,-10,-6,6,1.0,1.06]` |
+| `k3c14` dấu "?" | mép phải tới **1341 px**, ngoài cả khung | dời về `(1120, 176)`, cỡ 108 → 92 px |
+
+### Sàn độ sáng / độ bão hoà (luật L9 đề xuất của bản soát)
+Đo trung vị độ sáng (điểm không tối, `v ≥ 0,12`) và trung vị độ bão hoà (điểm **có màu**,
+`s ≥ 0,18`) trên khung thật, ngưỡng `[0,18 ; 0,82]` và `[0,22 ; 0,78]`.
+Bốn cảnh sơ đồ mà bản soát chê nhạt/quá bão hoà, trước → sau:
+
+| cảnh | trước | sau |
+|---|---|---|
+| k3c11 | sáng **0,89** · bão hoà 0,23 — quá trắng | sáng **0,81** · bão hoà **0,33** |
+| k3c16 | sáng **0,94** · bão hoà 0,88 — khung nhạt nhất cả tập, đúng như bản soát nói | sáng **0,26** · bão hoà **0,61** |
+| k3c19 · k3c20 | sáng **0,84** · bão hoà 0,26 | sáng **0,80** · bão hoà **0,29** |
+| k3c30 | bão hoà **0,91** — vượt hẳn trần 0,78, đúng là "xanh neon" | bão hoà **0,70** · sáng 0,39 |
+
+(Bốn dòng "trước" đo bằng cách tạm khôi phục đúng mã cũ, chụp lại, đo, rồi trả mã về —
+không phải con số nhớ lại.)
+
+Các khung còn nằm ngoài ngưỡng đều là **tư liệu thật**, không phải đồ hoạ tự dựng:
+video nhật thực của NASA (nền trời đen, `k3c09` `k3c13` `k3c17`) và mặt sông Cửu Long
+xám đục (`k3c01` `k3c05` `k3c23`). Kéo chúng vào ngưỡng là nói sai về đoạn phim, nên
+để nguyên — nếu điều phối muốn đổi thì báo.

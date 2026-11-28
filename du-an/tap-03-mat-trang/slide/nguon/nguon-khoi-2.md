@@ -4,18 +4,20 @@ Dựng lại từ đầu ngày 28/11/2026 theo **PHẦN 15** của `HUONG-DAN-DU
 Bản cũ nằm ở `canh/.cu-v1/khoi-2.js`; kịch bản đã viết lại nên chỉ còn bộ đồ nghề
 đồ hoạ là dùng lại được, toàn bộ 49 cảnh là mới.
 
-**22 tệp tư liệu thật: 15 ảnh + 7 video** (một vài tệp dùng ở nhiều cảnh).
-Giấy phép: **8 phạm vi công cộng · 3 CC0 · 11 CC BY**.
+**25 tệp tư liệu thật: 18 ảnh + 7 video** (một vài tệp dùng ở nhiều cảnh).
+Giấy phép: **11 phạm vi công cộng · 3 CC0 · 11 CC BY**.
+Trong đó **một tệp DÙNG CHUNG với khối khác**: `anh/k3-ran-hardy.jpg` là của khối 3,
+khối 2 trỏ thẳng vào chứ không giữ bản sao — xem mục 8.
 **Không tệp nào CC BY-SA, CC BY-NC hay CC BY-ND.** Mọi tệp đã được MỞ RA NHÌN
 trước khi dùng (bẫy §11.10) — xem mục "Kiểm bằng mắt" ở cuối.
 
-**Xét theo QUYỀN, không theo tên giấy phép** (§15.1 bản sửa 28/11/2026). Cả 22 tệp
+**Xét theo QUYỀN, không theo tên giấy phép** (§15.1 bản sửa 28/11/2026). Cả 25 tệp
 đều đạt đủ ba điều kiện: cho dùng thương mại · cho sửa đổi · không đòi chia sẻ tương tự.
 Phạm vi công cộng và CC0 thì hiển nhiên đạt. CC BY 2.0 / 2.5 / 3.0 / 4.0 đạt cả ba,
 chỉ buộc ghi công — đã ghi đủ **tên tác giả + tên giấy phép + liên kết trang gốc**
 trong bảng dưới, và những cảnh thấy rõ ảnh thì còn có dòng nguồn hiện ngay trên hình.
 
-**Khối 2 KHÔNG dùng tệp nào của Pexels, Pixabay hay Coverr** — cả 22 tệp đều tải từ
+**Khối 2 KHÔNG dùng tệp nào của Pexels, Pixabay hay Coverr** — cả 25 tệp đều tải từ
 Wikimedia Commons, lọc giấy phép bằng trường `extmetadata.LicenseShortName` của API
 Commons. Vì vậy ở đây không có điều khoản kho ảnh nào phải chép nguyên văn. Nếu sau
 này khối 2 có bổ sung clip từ ba kho đó thì phải chép điều khoản kèm ngày đọc vào
@@ -36,8 +38,15 @@ Trang gọi bằng `VID()`; **không cảnh nào gọi `play()`** — harness t�
 | `k2-trang-may.mp4` | 9,0 s · 1,2 MB | k2c35 · k2c46 | Mây trôi qua mặt trăng tròn, quay ban đêm | Johann Mynhardt | CC BY 3.0 | https://commons.wikimedia.org/wiki/File:Clouds_over_full_moon_at_night_(Free_HD_stock_video).webm |
 | `k2-bohung.mp4` | 9,0 s · 2,0 MB | k2c39 | Bọ hung lăn viên phân trên cát, Valencia | MdeVicente | CC0 | https://commons.wikimedia.org/wiki/File:Escarabajo_pelotero.webm |
 | `k2-ran-gbr.mp4` | 8,0 s · 4,7 MB | k2c42 · k2c49 | Khảo sát rạn ở đảo Lady Musgrave, **rạn Great Barrier**, 2022 | Adam Fish | CC BY 3.0 | https://commons.wikimedia.org/wiki/File:Lady_Musgrave_Island_coral_survey_2022.webm |
-| `k2-sanho-de.mp4` | 8,0 s · 3,3 MB | k2c43 · k2c47 · k2c48 · k2c49 | San hô *Pocillopora meandrina* ở đảo Lizard, **rạn Great Barrier** (phụ lục bài PLOS ONE về sinh sản của loài này) | Schmidt-Roach, Miller, Woolsey, Gerlach, Baird | CC BY 2.5 | https://commons.wikimedia.org/wiki/File:Spawning_Pocillopora_meandrina_-_pone.0050847.s002.ogv |
+| `k2-sanho-de2.mp4` | 9,01 s · 4,8 MB | k2c43 · k2c47 · k2c48 · k2c49 | San hô nhả trứng đồng loạt, quay ở **khu bảo tồn biển quốc gia Flower Garden Banks, vịnh Mexico**. Bản sao của `video/k3-sanho-de.mp4` của khối 3, 1280×720 quay thật | NOAA Ocean Today, tập *Coral Spawning* | phạm vi công cộng (công vụ chính phủ Mỹ) | — (khối 3 tải về, xem `nguon-khoi-3.md` mục 1) |
 
+> **ĐÃ BỊ LOẠI VÌ QUÁ NHOÈ, VÒNG SỬA 28/11 (xem mục 8):**
+> `k2-sanho-de.mp4` — *Spawning Pocillopora meandrina*, CC BY 2.5, quay tại đảo
+> Lizard trên chính rạn Great Barrier, giấy phép sạch và địa điểm khớp lời dẫn.
+> Nhưng **tệp gốc trên Commons chỉ 480×360**; bản trong kho đã được phóng lên
+> 1280×720 nên trông như đủ phân giải, mà chi tiết thì không có thật. Tệp vẫn
+> nằm trong `video/`, **không cảnh nào của bản hiện tại gọi tới**.
+>
 > **Đã bị LOẠI vì giấy phép**, ghi lại để người sau khỏi mất công tìm lại:
 > `Dung beetle dance (short) from journal.pone.0030211.ogv` (CC BY-**SA** 2.5) —
 > đây đúng là clip của chính nhóm Dacke, tiếc là SA; `Dung beetle working-001.ogv`
@@ -52,25 +61,33 @@ Trang gọi bằng `VID()`; **không cảnh nào gọi `play()`** — harness t�
 | tệp | cảnh dùng | nội dung | tác giả | giấy phép | trang gốc |
 |---|---|---|---|---|---|
 | `k2-mattroi.jpg` | k2c02 · k2c03 · k2c05 · k2c14 | Mặt Trời ở bước sóng 131 và 171 Å, pháo sáng lớp M6.5 | NASA/SDO | phạm vi công cộng | https://commons.wikimedia.org/wiki/File:This_image_shows_a_combination_of_light_in_wavelengths_of_131_and_171_Angstroms.jpg |
-| `k2-mattrang.jpg` | k2c02 · k2c28 · k2c31 · k2c34 | Mặt gần của Mặt Trăng, ghép ảnh LRO Wide Angle Camera | NASA/GSFC/Arizona State University | phạm vi công cộng | https://commons.wikimedia.org/wiki/File:Moon_nearside_LRO_5000.jpg |
-| `k2-trieu-day.jpg` | k2c07 | Alma, vịnh Fundy, **lúc nước lớn** | Dylan Kereluk | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Bay_of_Fundy_-_Tide_In.jpg |
-| `k2-trieu-can.jpg` | k2c16 | Alma, vịnh Fundy, **lúc nước ròng**, thuyền nằm trên bùn | Dylan Kereluk | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Bay_of_Fundy_-_Tide_Out.jpg |
+| `k2-mattrang.jpg` | k2c02 · k2c28 · k2c31 · k2c34, **và mọi đĩa Mặt Trăng** (qua `K2.trang`) | Mặt gần của Mặt Trăng, ghép ảnh LRO Wide Angle Camera | NASA/GSFC/Arizona State University | phạm vi công cộng | https://commons.wikimedia.org/wiki/File:Moon_nearside_LRO_5000.jpg |
+| `k2-trieu-day.jpg` | k2c07 (nửa trái khung) | Alma, vịnh Fundy, **lúc nước lớn** | Dylan Kereluk | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Bay_of_Fundy_-_Tide_In.jpg |
+| `k2-trieu-can.jpg` | k2c07 (nửa phải khung) | Alma, vịnh Fundy, **lúc nước ròng**, thuyền nằm trên bùn | Dylan Kereluk | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Bay_of_Fundy_-_Tide_Out.jpg |
 | `k2-mua-gat.jpg` | k2c17 · k2c20 | Gặt lúa mì ở Brownsburg, bang Indiana, 28/6/2021 | USDA / NRCS, ảnh Brandon O'Connor | phạm vi công cộng | https://commons.wikimedia.org/wiki/File:Indiana_Wheat_Harvest_(20210628-NRCS-BJOC-007).jpg |
 | `k2-bao.jpg` | k2c33 | Bão Soudelor nhìn từ Trạm Vũ trụ Quốc tế, 5/8/2015 | NASA's Earth Observatory | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Typhoon_Soudelor_Seen_from_the_ISS_(19839740193).jpg |
-| `k2-bien-dem.jpg` | k2c36 | Hàng cây bên biển trong đêm trăng tròn, quần đảo Andaman | Vyacheslav Argenberg | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Andaman_Islands,_Trees_by_the_sea_at_night,_Full_moon_night.jpg |
-| `k2-demram.jpg` | k2c37 | Rừng ven biển trong đêm trăng tròn, quần đảo Andaman | Vyacheslav Argenberg | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Andaman_Islands,_Full_moon_night,_Forest_by_the_sea_at_night.jpg |
+| `k2-bien-dem.jpg` | k2c36 · k2c37 (nửa trái khung) | Hàng cây bên biển trong đêm trăng tròn, quần đảo Andaman | Vyacheslav Argenberg | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Andaman_Islands,_Trees_by_the_sea_at_night,_Full_moon_night.jpg |
+| `k2-demram.jpg` | k2c37 (nửa phải khung) | Rừng ven biển trong đêm trăng tròn, quần đảo Andaman | Vyacheslav Argenberg | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Andaman_Islands,_Full_moon_night,_Forest_by_the_sea_at_night.jpg |
 | `k2-tranh-ram.jpg` | k2c38 | «Làng dưới trăng tròn», tranh sơn dầu | Joos de Momper con / Jan Brueghel cha | phạm vi công cộng | https://commons.wikimedia.org/wiki/File:Joos_de_Momper_(II)_-_Village_at_Full_Moon_-_WGA16138.jpg |
 | `k2-cua-cong.jpg` | k2c38 | Cua còng trên bãi bùn triều, khu bảo tồn vịnh Suncheon | lumoplank | CC0 | https://commons.wikimedia.org/wiki/File:Suncheon_Bay_Natural_Reserve_-_SuncheonBNG2975.jpg |
 | `k2-bohung.jpg` | k2c40 | Bọ hung lăn viên phân, Guatemala | Alex Wild | CC0 | https://commons.wikimedia.org/wiki/File:Dung_Beetle1.jpg |
 | `k2-bohung2.jpg` | k2c40 · k2c41 | Bọ hung lăn phân bò, thung lũng Ojén, tây nam Tây Ban Nha | Dr Mary Gillham Archive Project | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Dung_beetle_rolling_cow_dung_ball._Ojen_valley._Southwest_Spain_(37498376970).jpg |
-| `k2-gbr-khong.jpg` | k2c43 | Hardy Reef nhìn từ trực thăng, **rạn Great Barrier**, Queensland | rheins | CC BY 3.0 | https://commons.wikimedia.org/wiki/File:Aerial_View_of_Hardy_Reef_-_2013.04_-_panoramio.jpg |
+| `k3-ran-hardy.jpg` **(của khối 3, dùng chung)** | k2c43 | Hardy Reef nhìn từ trực thăng, **rạn Great Barrier**, Queensland — bản cắt 16:9 | rheins | CC BY 3.0 | https://commons.wikimedia.org/wiki/File:Aerial_View_of_Hardy_Reef_-_2013.04_-_panoramio.jpg |
+| `k2-nganha.jpg` | k2c18 | Dải Ngân Hà trên sân kính thiên văn VLT, đài thiên văn Paranal, Chile | ESO / H.H. Heyer | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Milky_Way_above_the_VLT_platform_(img_4586).jpg |
+| `k2-hau.jpg` | k2c16 | Rạn hàu ở mức nước giữa triều, Hunting Island, South Carolina | Jstuby (English Wikipedia) | phạm vi công cộng | https://commons.wikimedia.org/wiki/File:Oyster_reef_Hunting_Island_SC.jpg |
 | `k2-sanho-canh.jpg` | k2c45 · k2c46 | Cận cảnh polyp san hô sừng hươu | NOAA | phạm vi công cộng | https://commons.wikimedia.org/wiki/File:Staghorn_coral_closeup.jpg |
+| `k2-traidat-phang.jpg` | **mọi quả cầu Trái Đất** (19 cảnh, qua `K2.cau`) | Bản đồ Trái Đất NASA Blue Marble 2002 **trải phẳng** (equirectangular), 2048 × 1024 | NASA / MODIS trên vệ tinh Terra | phạm vi công cộng | https://commons.wikimedia.org/wiki/File:Blue_Marble_2002.png |
 | `k2-sanho-de.jpg` | k2c45 | San hô đang phóng bó trứng, khu bảo tồn biển Flower Garden Banks | National Marine Sanctuaries (NOAA) | phạm vi công cộng | https://commons.wikimedia.org/wiki/File:Coral_Spawning_(38797556434).jpg |
 
-*(`k2-traidat.jpg`, `k2-hau.jpg`, `k2-terminator.jpg`, `k2-kenh-mekong.jpg`,
-`k2-ruong-mekong.jpg`, `k2-dbscl-vetinh.jpg`, `k2-chonoi.jpg`, `k2-ruong-bac-thang.jpg`
-còn nằm trong `anh/` từ bản V1 nhưng **bản V3 không cảnh nào gọi tới** — kịch bản mới
-đã bỏ hẳn đoạn đồng bằng sông Cửu Long khỏi khối 2. Không xoá, để khối khác dùng nếu cần.)*
+*(`k2-traidat.jpg`, `k2-terminator.jpg`, `k2-kenh-mekong.jpg`, `k2-ruong-mekong.jpg`,
+`k2-dbscl-vetinh.jpg`, `k2-chonoi.jpg`, `k2-ruong-bac-thang.jpg` còn nằm trong `anh/`
+từ bản V1 nhưng **bản V3 không cảnh nào gọi tới** — kịch bản mới đã bỏ hẳn đoạn đồng
+bằng sông Cửu Long khỏi khối 2. Không xoá, để khối khác dùng nếu cần.*
+*Riêng `k2-traidat.jpg` (ảnh ĐĨA Trái Đất) cố ý không dùng: quả cầu của cả tập nay
+lấy chất liệu từ bản đồ TRẢI PHẲNG `k2-traidat-phang.jpg` để còn cuộn được — nếu
+chỗ nào dùng ảnh đĩa thì cả tập lại có hai Trái Đất khác nhau, đúng lỗi L2 đang chữa.
+`k2-hau.jpg` và `k2-nganha.jpg` trước nằm không, vòng sửa 28/11 đã gọi lại; khai
+nguồn lấy từ `canh/.cu-v1/nguon-khoi-2.md` của bản V1.)*
 
 ### Lỗi khớp ngữ cảnh — chỗ đã phải cân nhắc (bẫy §11.9)
 
@@ -86,6 +103,48 @@ Tương tự, clip bọ hung là của **Tây Ban Nha** còn nghiên cứu Dacke
 **Nam Phi**. Dòng nguồn trên hình tách bạch hai thứ: *"Dacke và cộng sự · Nature 424,
 33 (2003) · clip: MdeVicente · CC0"* — nghiên cứu một dòng, nguồn clip một dòng.
 Clip đúng loài bọ hung của nhóm Dacke có trên Commons nhưng là CC BY-SA, không dùng được.
+
+### Kiểu vẽ Trái Đất và Mặt Trăng — ĐÃ CHỐT VỚI KHỐI 1 ngày 28/11/2026
+
+Khối 1 hỏi sang để cả tập không có ba bốn kiểu quả cầu khác nhau. Chốt: **ảnh thật
+của NASA, không còn hành tinh vẽ tay.** Khối 2 đã sửa `K2.cau()` và `K2.trang()`.
+
+Có **đúng hai cách**, và chúng không chỏi nhau vì dùng cho hai việc khác nhau:
+
+| việc | dùng gì | khối nào |
+|---|---|---|
+| Trái Đất **đứng yên**, nhìn như một hành tinh ngoài không gian | ảnh đĩa thật đặt thẳng (Apollo 17 `k1-traidat.jpg`, hoặc clip DSCOVR `k2-traidat-quay.mp4`) | khối 1 · khối 2 (k2c04 · k2c26 · k2c30) |
+| Trái Đất **phải quay**, hoặc phải nghiêng/lắc theo sơ đồ | đĩa tròn tô bằng **bản đồ NASA trải phẳng**, hai bản cạnh nhau cuộn ngang trong `<clipPath>` | khối 2 (19 cảnh) |
+
+**Vì sao không dùng thẳng ảnh đĩa cho cả hai:** 16 trên 19 cảnh có quả cầu của khối 2
+đang cho Trái Đất quay (`K2.xoay`). Một tấm ảnh **đĩa** không quay được — cuộn nó là
+lòi mép đen. Bản đồ **trải phẳng** thì nối vòng liền mạch, quay bao lâu cũng không có
+đường ghép; đã kiểm bằng cách chụp k2c27 (cảnh quay nhanh nhất, 44 độ/giây) ở sáu mốc
+liên tiếp: châu Mỹ → Đại Tây Dương → châu Phi, không thấy mối nối.
+Đĩa chỉ lấy **dải vĩ độ giữa** (hệ số `CAO = 2r × 1,46`) để hai cực khỏi bị kéo giãn
+thành vệt trắng.
+
+**Mặt Trăng:** `k2-mattrang.jpg` cắt tròn, không cần trải phẳng vì không cảnh nào
+cho Mặt Trăng quay. Tấm này **đúng cùng một ảnh gốc** với `k1-mattrang.jpg` của khối 1
+(ghép ảnh mặt gần từ LRO Wide Angle Camera). Hai khối giữ hai bản sao riêng theo đúng
+luật tiền tố tệp — **không trỏ chéo**, vì trỏ chéo thì ai sửa ảnh là hỏng khối kia mà
+không ai biết.
+
+**Ba lớp phủ rìa — thông số CHUNG, sửa ở đây thì phải báo khối 1:**
+
+| lớp | hình | kiểu | tham số |
+|---|---|---|---|
+| (a) bóng ngày–đêm | tròn bán kính `r` | `linearGradient` từ `(cx−r, cy)` tới `(cx+r, cy)` | `0 → #04060E mờ 0` · `0,40 → #04060E mờ 0` · `0,66 → #04060E mờ 0,54` · `1 → #04060E mờ 0,93` |
+| (c) tối rìa | tròn bán kính `r` | `radialGradient` tâm `(cx − 0,34r, cy − 0,38r)` bán kính `1,75r` | `0 → mờ 0` · `0,62 → mờ 0` · `1 → #04060E mờ 0,55` |
+| (b) vành khí quyển | tròn bán kính `1,3r`, **`mix-blend-mode: screen`** | `radialGradient` tâm `(cx, cy)` bán kính `1,3r` | `0,74 → #9BE0FA mờ 0` · `0,93 → #9BE0FA mờ 0,34` · `1 → #9BE0FA mờ 0` |
+
+Mặt Trăng dùng y hệt (c) và (b), **bỏ (a)**, và đổi màu lớp (b) thành `#DDE6EC` mờ tối
+đa **0,18** — Mặt Trăng không có khí quyển, vành ở đó chỉ là chút tán sáng bạc.
+
+Bản đồ Blue Marble vốn rất tối ở phần đại dương, cộng thêm (a) và (c) nữa thì đĩa chìm
+hẳn. Nâng sáng **ngay trên thẻ `<image>`** (`brightness(1.34) saturate(1.12)
+contrast(1.04)`; Mặt Trăng `brightness(1.18) contrast(1.06) saturate(.7)`), **không**
+nâng bằng cách hạ lớp phủ — lớp phủ là thông số chung với khối 1.
 
 ---
 
@@ -211,6 +270,12 @@ trong cảnh, đúng như cách §11.11 định nghĩa "lần đổi hình".
 6. k2c20 — y hệt lỗi (3) ở mốc cắt thứ hai. → tắt hẳn.
 7. k2c22 — 24 "lần chạy" bị gom vào đúng **3 bán kính** nên nhìn ra chỉ có 3 đường. → rải bán kính theo từng lần chạy.
 8. k2c25 — hai quả cầu quá nhỏ, khung gần như trống, và hai nhãn *Nature 1993* / *Icarus 2012* rơi khỏi mép dưới. → phóng to quả cầu và vành quạt, nâng nhãn, thêm phần tô mờ cho hai dải.
+   **⚠ DÒNG KHAI NÀY TỪNG SAI, SỬA 28/11.** Người soát độc lập chụp khung và thấy hai
+   nhãn vẫn bị cắt; tôi đo lại bằng `getBoundingClientRect()` ở 10 mốc `c.u` và xác nhận
+   **họ đúng, phần "nâng nhãn" chưa bao giờ được thực hiện**: đáy chữ rơi tới y = 742 và
+   y = 744, tức ra hẳn ngoài khung 720 px. Bài học: nhãn bị cắt ở đây **không phải** do
+   toạ độ tĩnh sai mà do `cam()` đẩy chữ ra, nên sửa toạ độ rồi vẫn tái phát nếu không
+   kẹp biên độ máy quay. Nay k2c25 đã dựng lại hẳn (xem mục 8) và số đo là **0 vi phạm**.
 9. k2c31 — chỉ có đồ hoạ trên nền trơn, sát ranh giới "cảnh rỗng" §15.2. → thêm lớp ảnh Mặt Trăng thật làm chất liệu nền.
 10. k2c34 — lớp ảnh Mặt Trăng nền tối tới mức không nhìn ra. → nâng độ sáng 0,3 → 0,6.
 11. k2c35 — **lỗi nặng nhất**: cái đĩa dùng để "xoá" Mặt Trăng đứng yên tại một toạ độ cố định, trong khi Mặt Trăng trong clip thì **di chuyển theo máy quay**, nên nó không bao giờ bị xoá; chữa tạm bằng cách tắt clip thì nửa sau thành một khung đen trơn. → dựng lại: cắt cứng sang **clip trời sao thật**, chỗ Mặt Trăng để trống, có ba vòng tìm kiếm rỗng.
@@ -281,5 +346,245 @@ lộ đúng như trước.
 | Trên Wikimedia Commons, clip bọ hung **đúng của nhóm Dacke** tồn tại nhưng là CC BY-SA, không dùng được cho tập này | ĐO | tra `extmetadata.LicenseShortName` qua API Commons | 28/11/2026 | chỉ khối 2 |
 | `url(#id)` tra theo **cả tài liệu**, không theo từng `<svg>`; và `K2.nen()` / `NEN()` là **hai** `.lop` chứ không phải một | ĐO | khối 1 tìm ra, khối 2 soát lại bằng máy trên 97 id và 2 chỗ lấy lớp theo chỉ số — tìm thêm được một trùng `k2c33-cp` | 28/11/2026 | **khối 1 tìm ra, khối 2 xác nhận** — đúng cho cả ba khối |
 | Khối 2 không dùng tệp nào của Pexels / Pixabay / Coverr; cả 22 tệp từ Wikimedia Commons | ĐO | liệt kê lại toàn bộ `K2.anh` và `K2.vid` trong mã nguồn | 28/11/2026 | chỉ khối 2 |
-| Tệp dùng chung với khối khác | — | khối 2 **không** dùng chung tệp nào với khối 1 hay khối 3: mọi tệp của tôi đều mang tiền tố `k2-`, kể cả khi nội dung trùng đề tài (khối 1 có `k1-sanho-de.jpg`, khối 3 có `k3-sanho-de.jpg` và `k3-sanho-de.mp4` — **ba tệp khác nhau, ba nguồn khác nhau**, đừng ai gộp) | 28/11/2026 | mời khối 1 và khối 3 xác nhận |
+| Kiểu vẽ Trái Đất / Mặt Trăng cả tập: **ảnh thật NASA**, hai cách dùng cho hai việc (đĩa thật khi đứng · bản đồ trải phẳng cắt tròn khi phải quay); ba lớp phủ rìa a/b/c dùng chung thông số | ĐO | khối 1 hỏi, khối 2 trả lời và đã sửa `K2.cau` + `K2.trang`; kiểm bằng 6 khung liên tiếp của k2c27 xem có mối nối không | 28/11/2026 | **khối 2 đề xuất, chờ khối 1 xác nhận** — nếu khối 1 thấy ba thông số phủ rìa không khớp cảnh của họ thì KHỐI 1 LÀ CHUẨN (14 cảnh ảnh thật, nhiều hơn), khối 2 chỉnh theo |
+| `k1-mattrang.jpg` và `k2-mattrang.jpg` là **cùng một ảnh gốc** (LRO WAC nearside mosaic, phạm vi công cộng); hai khối giữ hai bản sao riêng, không trỏ chéo | ĐO | so trang gốc Commons của hai tệp | 28/11/2026 | **mời khối 1 xác nhận** |
+| Tệp dùng chung với khối khác — **DÒNG CŨ SAI, ĐÃ VIẾT LẠI 28/11** | ĐO | Bản cũ khai "khối 2 không dùng chung tệp nào với khối 1 hay khối 3 … ba tệp khác nhau, ba nguồn khác nhau, đừng ai gộp". **Sai.** Người soát đối chiếu md5 và tôi đã chạy lại xác nhận: `anh/k2-sanho-de.jpg` và `anh/k1-sanho-de.jpg` **trùng nhau TỪNG BYTE**, md5 `96e8b79fe6ac2b70585352cc115410dc`, cùng 1920×1276, cùng gốc Commons `File:Coral_Spawning_(38797556434).jpg` — hai khối cùng tải bản thu nhỏ 1920 px của cùng một tệp NOAA. Chỉ `k3-sanho-de.jpg` (md5 khác) mới thật sự là tệp khác. Tiền tố tên tệp KHÔNG chứng minh được nội dung khác nhau, và cả ba file nguồn đã khai sai cùng một kiểu vì cùng suy từ tên tệp. **Nay khối 2 có đúng ba quan hệ dùng chung, khai hết:** (1) `k2-sanho-de.jpg` ≡ `k1-sanho-de.jpg` (trùng byte); (2) `anh/k3-ran-hardy.jpg` — khối 2 **trỏ thẳng** vào tệp của khối 3 ở k2c43, chủ tệp là khối 3, họ cam kết không xoá/đổi tên/cắt lại; (3) `video/k2-sanho-de2.mp4` là **bản sao từng byte** của `video/k3-sanho-de.mp4`. | 28/11/2026 | **khối 1 và khối 3 đã xác nhận**; người dựng khối 2 bản trước cũng tự chạy md5 và nhận là mình khai sai |
+| Bản cắt rạn Hardy: cả tập dùng **một** bản duy nhất | ĐO | `anh/k2-gbr-khong.jpg` (1920×1440) và `anh/k3-ran-hardy.jpg` (1920×1080) là **cùng một ảnh gốc**, hai bản cắt khác nhau, nên md5 khác mà mắt thì thấy "hai cái rạn" trong cùng một tập. Đã chốt dùng bản 16:9 của khối 3 cho cả k2c43, k3c23 và k3c31. `k2-gbr-khong.jpg` còn trong kho nhưng không cảnh nào gọi. | 28/11/2026 | **khối 3 đã đồng ý**, khối 1 đã biết |
 | Thông số máy quay ở điểm nối | — | cảnh **cuối** của khối 2 (k2c49, giây 532,9–538,8) kết ở `x = +12, z = 1,20`, nền là clip rạn san hô **đã rút gần hết màu** (`saturate .42`). Khối 3 mở ngay sau đó, nên nếu khối 3 mở bằng một khung rực màu thì cú nối sẽ giật. | 28/11/2026 | **mời khối 3 xác nhận** |
+
+---
+
+## 8. VÒNG SỬA THEO BẢN SOÁT ĐỘC LẬP — 28/11/2026
+
+Sửa theo `canh/SOAT-CANH.md`. Khối 2 bị chấm **6 mục CHẶN** và **16 mục NÊN SỬA**.
+Người soát chụp 860 khung và xem hết, nên mọi mục dưới đây đều là thứ nhìn thấy
+bằng mắt, không suy từ mã.
+
+**Bàn giao giữa chừng:** file này và `canh/khoi-2.js` đổi người giữ lúc 15:41 —
+phiên dựng gốc `t3-khoi-2` ngừng ghi, phiên sửa nhận lại. Phần `K2.cau()` /
+`K2.trang()` (quả cầu ảnh thật) là của người dựng gốc và được **giữ nguyên hướng**,
+chỉ chỉnh hai thông số lớp phủ, lý do ghi ở mục 8.2.
+
+### 8.1 Ba mục CHỮ BỊ MÉP KHUNG CẮT — đo thật, không ước lượng
+
+Người soát đề nghị vùng an toàn **48 px**: mọi chữ phải nằm trong
+`x ∈ [48, 1232]`, `y ∈ [48, 672]` ở **mọi** mốc `c.u`.
+Đã viết một bộ đo chạy `getBoundingClientRect()` cho mọi `<text>` và mọi `.tx`
+của cả 49 cảnh ở **10 mốc `c.u`**, có hai điều chỉnh quan trọng:
+
+* **Đo VẾT MỰC bằng `Range.getClientRects()`, không đo hộp phần tử.** Mấy `.tx`
+  của khối 2 rộng nguyên 1280 px và căn giữa, đo hộp thì báo vi phạm giả ở 26 chỗ.
+* **Phải đo ở nhiều mốc.** Gần như mọi vi phạm thật là do `cam()` đẩy chữ ra, chứ
+  không phải toạ độ tĩnh sai. Đó chính là lý do lỗi k2c25 "sửa rồi vẫn tái phát".
+
+Kết quả lần đo đầu: **57 phần tử chữ vượt khung**. Sau khi sửa: **0**.
+
+| chỗ | số đo trước | cách chữa |
+|---|---|---|
+| **k2c25** «Nature 1993» / «Icarus 2012» | dưới mép **70 px** và **72 px** (ra hẳn ngoài khung 720) | dựng lại cảnh (mục 8.3), biên độ lia về `x ±9` |
+| **k2c40** «trăng phân cực · 1 : 1.000.000» | trái **26 px** + dưới **51 px** | cụm dời vào trong (y 592→470, x 170→232), lia về `x ±9`, đẩy `z` 1,21→1,13 |
+| **k2c40** «nắng phân cực» | trái **17 px** | như trên |
+| **k2c46** «nắng» | phải **60 px** | trục thu từ 940 px còn 780 px căn giữa, nhãn đặt **lùi vào trong** đầu trục |
+| **k2c46** «10⁵» | phải **45 px** | như trên |
+| **k2c32** «6–8» | trên **58 px** | dải y của cụm dời xuống (mục 8.3) |
+| **k2c30** «24» trên mặt đồng hồ | trên **33 px** | hạ tâm đồng hồ 330→352, thu bán kính 222→204 |
+| **k2c30** «24 h» … «5,6 h» | dưới **6 px** | nâng con số 596→560 |
+| **25 dòng `.nguon`** của cả khối | dưới **20–28 px**, lệch trái/phải **12 px** | sửa **một dòng** trong `K2.nguon()` |
+
+**Hai chỗ người soát nói chưa chính xác, nêu kèm bằng chứng:**
+
+* **k2c46 — sai vế trục.** Báo cáo ghi *"nhãn trục 10⁻¹ bị mép TRÁI cắt"*. Số đo
+  cho thấy ngược lại: đầu TRÁI của trục nằm trong khung ở cả 10 mốc; cái bị cắt là
+  đầu PHẢI — «nắng» (60 px) và «10⁵» (45 px). Phần còn lại của nhận xét thì đúng,
+  và cách chữa họ đề nghị (thu bề ngang trục, đưa nhãn vào trong) đúng cho cả hai vế.
+* **k2c30 và k2c32 bị bỏ sót.** Ba chỗ nữa vượt khung mà báo cáo không nêu, trong đó
+  «6–8» của k2c32 lòi lên trên tới 58 px — nặng hơn hai trong ba mục họ xếp mức CHẶN.
+
+**Còn một chỗ chưa khớp, cần điều phối quyết:** chốt 16.10 của điều phối đặt dòng
+nguồn ở `y = 650` cho cả ba khối, nhưng đo mực chữ thì đáy rơi ở y ≈ 674–675, tức
+**vượt hộp an toàn 2–3 px** (vẫn còn trong khung 720, không chữ nào bị cắt). Khối 2
+**theo chốt 16.10** vì đó là quyết định ràng buộc cả ba khối. Muốn thoả cả luật L3
+thì đổi `y = 650` thành `y = 646` ở cả ba khối — sửa một dòng mỗi khối.
+
+### 8.2 Kiểu Trái Đất / Mặt Trăng — khối 2 chủ trì, đã chốt và đã phát cho hai khối
+
+Người soát đếm được **bốn Mặt Trăng và ba Trái Đất khác nhau** trong một tập 12
+phút, có chỗ cách nhau chưa đầy 10 giây. Đây là lỗi duy nhất không người dựng nào
+tự thấy được, vì ai cũng chỉ nhìn khối mình.
+
+**Kiểu đã chốt: ảnh NASA thật cắt tròn.** Khác đề nghị của người soát một chỗ, và
+đây là lý do: họ đề nghị `anh/k2-traidat.jpg`, nhưng đó là ảnh **đĩa** Trái Đất, mà
+16 trên 19 cảnh có quả cầu của khối 2 **cho Trái Đất quay** — cuộn một tấm ảnh đĩa
+là lòi mép đen. Nên chất liệu là **bản đồ trải phẳng** `k2-traidat-phang.jpg`, đặt
+hai bản cạnh nhau rồi cuộn ngang trong khuôn tròn, nối vòng liền mạch. Mặt Trăng
+không quay ở cảnh nào nên dùng thẳng đĩa `k2-mattrang.jpg`.
+
+Hai thông số đã chỉnh sau khi **chụp khung ra nhìn**, và đã báo cả hai khối kia:
+
+* **vành khí quyển** thu từ `r × 1,30` còn `r × 1,22`, đỉnh độ mờ từ 0,34 xuống 0,22.
+  Lý do: trên nền GIẤY SÁNG của k2c21 (xem 8.4) vành dày đọc ra như một cái quầng
+  trắng dán quanh đĩa. Trên nền tối thì không lộ, nên chỉ chụp đủ loại nền mới thấy.
+* **tối rìa** từ 0,55 lên 0,64 và kéo chặng vào gần tâm, vì ảnh đã nâng sáng 1,34
+  nên đĩa đọc ra hơi phẳng.
+* Mặt Trăng dùng quầng **bạc 0,14**, không phải vành khí quyển lam — Mặt Trăng
+  không có khí quyển, và chỗ này lộ ngay khi hai thiên thể đứng cạnh nhau.
+
+`window.K2` đã được mở ra ở cuối `khoi-2.js`. **Khối 3 gọi chéo `K2.cau()` và
+`K2.trang()` ở 12 chỗ trên 8 cảnh** thay vì chép lại hàm — nên **đổi chữ ký hai hàm
+đó từ nay là làm hỏng cảnh của khối 3, phải nhắn họ trước.** Khối 1 đã nhận thông
+số và giữ quyền quyết định cuối: nếu ba lớp phủ không khớp cảnh của họ thì **khối 1
+là chuẩn** (họ có 14 cảnh ảnh thật, nhiều hơn), khối 2 chỉnh theo.
+
+**Một lỗi câm tìm ra trong lúc làm việc này:** `__khungSanSang()` của harness chỉ
+chờ thẻ `img` và `video`, nó **không biết tới `<image>` của SVG**. Mọi cảnh có quả
+cầu sẽ chụp ra **đĩa TRỐNG ở khung đầu** mà không sinh một dòng lỗi nào — tức lọt
+qua `soat-khoi.py` và lọt luôn vào MP4. Điều phối đã vá thẳng `tap03-full.html`.
+
+### 8.3 Sáu mục CHẶN
+
+| cảnh | hỏng gì | đã làm gì |
+|---|---|---|
+| **k2c34** — *cảnh rỗng rõ nhất cả tập* | 8,2 giây hiện **tám tấm thẻ TRỐNG TRƠN**, bên trong chỉ mấy thanh xám giữ chỗ, không một chữ; trông hệt màn hình đang tải, và rơi đúng vào câu tuyên bố về tính trung thực của kênh | Bỏ hẳn tám thẻ. Dựng **hai cột có tiêu đề thật**: trái **"ĐO ĐƯỢC"** nét liền với ba dòng số đã nói trong tập (3,8 cm mỗi năm · 2,2 lần · 23,4°), phải **"TÔI SUY RA"** nét đứt với hai dòng (còn 1 / 3,2 · một ngày dài bao nhiêu), mỗi dòng phải mang một dấu **"?"** (luật L4: khung trống không phải một ký hiệu). Nâng sáng lớp nền Mặt Trăng từ 0,60 lên 0,92 và hạ độ mờ lớp chuyển sắc đè lên nó 0,74 → 0,62, nên mặt trăng thật hiện rõ làm chất liệu |
+| **k2c15** | câu là "thắng **không nhờ to xác**" nhưng hình vẽ Mặt Trăng to gần bằng Trái Đất và Mặt Trời đã trôi hẳn khỏi khung — cảnh nói về kích thước mà vẽ sai kích thước, lại bỏ mất vật để so | Dựng lại: đủ **ba vật** trong khung cuối. Mặt Trời là một cung sáng bán kính 620 px tâm ngoài khung, chỉ thấy phần rìa (to mà xa); Trái Đất **150 px**; Mặt Trăng **40 px** ngồi sát Trái Đất. Hai nhãn "to · xa" và "nhỏ · gần" |
+| **k2c25** | hai nhãn rơi khỏi mép dưới (mục 8.1), **và** cùng một sự thật được vẽ bằng hai ngữ pháp hình khác nhau ở k2c25 và k3c21 | Dựng lại bằng **thanh ngang có trục độ**, chép đúng hình học k3c21 của khối 3 (`px(d) = 316 + 824·d/90`, trục ở y = 552, vạch mỗi 15°) nên hai cảnh nay khớp từng pixel. Màu giữ cặp của khối 2 (`#EE7B5E` Laskar · `#6FC3E8` Lissauer), khối 3 đổi nền của họ sang tông tối cho khớp |
+| **k2c40** | dòng chữ bị cắt cả mép trái lẫn mép dưới | xem mục 8.1 |
+| **k2c46** | nhãn "nắng" và nhãn trục bị cắt | xem mục 8.1; thêm một **thẻ nền tối** dưới cả thang, vì nửa sau cảnh là ảnh polyp rực sáng và nhãn trục xám-lam đặt thẳng lên đó gần như không đọc được |
+| **k2c06 + 13 cảnh quả cầu vector** | hai phong cách Trái Đất/Mặt Trăng cách nhau 10 giây | xem mục 8.2 — sửa **một hàm**, chữa 19 cảnh |
+
+### 8.4 Quy ước ngữ pháp hình đã chốt với khối 3
+
+Người soát đòi "chọn MỘT" cho cuộc tranh luận Laskar/Lissauer. Đã chốt chia theo
+**việc**, chứ không theo cảnh — như vậy người xem vẫn chỉ học một quy ước cho mỗi việc:
+
+* **so hai KHOẢNG đã công bố với nhau** → **thanh ngang có trục độ** (k2c25, k3c21);
+* **độ nghiêng của một cái trục ĐANG LẮC trên quả cầu** → **vành quạt** (k2c18–k2c24),
+  vì ở đó cái quạt dính vào trục đang lắc thật, thanh ngang không thay được.
+
+Tương tự, glyph protein **cryptochrome** nay là **hai cánh cửa** dùng chung cho
+k2c45 và k3c25, chép đúng thông số khối 3 đã dựng (hai `rect` 96×220 bo rx 22, mở
+92 px mỗi bên trên bề ngang cụm 208 px = **88 %**, thừa mức 40 % người soát đòi).
+Bản cũ của khối 2 là hình nơ bướm, đọc ra giống biểu tượng Bluetooth.
+
+### 8.5 Màu — phá chuỗi chín cảnh navy (mục F)
+
+Cả tập đạt chuẩn, nhưng **riêng khối 2 là 64,5 % lam** vì k2c17–k2c25 là chín cảnh
+liên tiếp, 61,5 giây, dùng chung một nền navy. Đã phá ở **năm** chỗ (người soát đòi
+ba), và thêm một chỗ nữa cho luật L6:
+
+| cảnh | nền cũ | nền mới | vì sao chỗ đó |
+|---|---|---|---|
+| k2c18 | navy vẽ | **ảnh thật** bầu trời đêm trên đài thiên văn Paranal | cảnh nói về một bài báo thiên văn; bỏ luôn lớp sao vẽ tay vì ảnh có sao thật |
+| k2c19 · k2c20 | navy | **đỏ đất** `#4A2518` | sắc này đã khai ở đầu `khoi-2.js` ("đỏ đất trục nghiêng") mà chưa cảnh nào dùng; hai cảnh này nói về trục ngả tới 85° nên tông nóng cũng hợp nghĩa |
+| k2c21 | navy | **giấy sáng** `#E8DCC2` | đây là KHÚC NGOẶT của lập luận ("con số ấy về sau đã bị phản biện") — đổi nền ở đúng chỗ lập luận quay đầu thì cú đổi màu tự nó mang nghĩa. Nét vẽ của cảnh đổi sang nâu sẫm, vì nét bạc biến mất trên giấy |
+| k2c22 | navy `#16263C` | **lục thẫm** `#143634` | luật L6 cấm quá hai cảnh liền dùng chung một nền, mà c22–c23–c24 trước là ba cảnh cùng một màu y hệt |
+| k2c25 | navy | **tím than** `#2A2233` | kết chuỗi bằng một tông khác hẳn |
+| k2c16 | — | đổi ảnh sang **bãi hàu** vàng lục | kéo thêm một dải màu vào khối, và tấm "nước ròng" cũ nay đã đứng cạnh tấm "nước lớn" ở k2c07 nên dùng lại là lặp |
+
+**Số đo, cùng thuật toán của `dung/do-mau.py`** (bỏ điểm tối `v < 0,12` và điểm xám
+`s < 0,18`, 12 dải sắc độ 30°), chạy trên **143 khung chụp thẳng từ trang, 1 khung
+mỗi 2 giây**, phủ trọn 285 giây của khối — chưa có MP4 bản V3 nên đo như người soát đã làm:
+
+```
+                        trước (bản soát)   sau
+   dải cao nhất (lam)        64,5 %        48,4 %
+   số dải ≥ 5 %                 4             5
+   điểm ảnh có màu                         62,3 %
+```
+
+Dải lam giảm **16 điểm phần trăm**, và khối có thêm một dải thứ năm (ngọc 6,2 %).
+Nay khối 2 đạt cả hai ngưỡng **ngay cả khi đo riêng khối**, không chỉ khi đo cả tập.
+
+### 8.6 Hai khối đánh giá ngược nhau về clip *Pocillopora* — quyết định và lý do
+
+Khối 3 **loại** `Spawning Pocillopora meandrina` vì "chỉ 480×360, quá thấp"; khối 2
+**dùng** chính clip đó ở bốn cảnh, tổng 24,7 giây.
+
+**Quyết định: khối 3 đúng, bỏ clip.** Không quyết theo lời ai, mà cắt **hai khung
+cùng một cỡ** (640×360, cùng giây 4, cùng vùng ảnh) của hai clip rồi mở ra đặt cạnh
+nhau nhìn: bản cũ nhoè nhão thấy rõ, mất hẳn chi tiết polyp; bản NOAA sắc nét, thấy
+được từng bó trứng. Đánh giá của khối 3 khớp với cái nhìn thấy.
+
+Đã chép `video/k3-sanho-de.mp4` → `video/k2-sanho-de2.mp4` (1280×720 quay thật,
+9,01 s, 4,8 MB, NOAA, phạm vi công cộng) và thay ở cả bốn cảnh.
+
+**Cái phải đánh đổi, nói thẳng:** clip cũ quay ở **đảo Lizard trên chính rạn Great
+Barrier**, tức khớp đúng địa danh mà câu 43 nêu; clip mới quay ở **vịnh Mexico**.
+Xử lý theo §16.7 — ghi **thẳng nơi quay** lên màn hình: *"San hô nhả trứng — khu bảo
+tồn biển Flower Garden Banks, vịnh Mexico · NOAA · phạm vi công cộng"*. Và **nhịp 1
+của k2c43 vẫn là chính rạn Great Barrier** (ảnh rạn Hardy), nên vế địa danh của câu
+vẫn có hình thật đỡ; đoạn phim chỉ minh hoạ **hành vi** đẻ đồng loạt.
+Hai cảnh k2c47 và k2c49 trước **không có dòng nguồn nào** dù chiếu clip thật nhiều
+giây — nay đã có.
+
+### 8.7 Mười sáu mục NÊN SỬA
+
+| cảnh | đã làm gì |
+|---|---|
+| k2c07 | đặt **hai ảnh vịnh Fundy cạnh nhau** ngay trong cảnh (nước lớn \| nước ròng), cùng khuôn hình, một vạch trắng chia đôi, hai nhãn. Trước đó tấm đối chứng nằm mãi ở k2c16 cách 50 giây nên không ai ghép được. **KHÔNG** vẽ vạch ngang nối hai mực nước như người soát đề nghị: hai tấm chụp từ hai điểm nhìn khác nhau, không có thước chung nào đặt lên được (đúng luật L5 của chính bản soát), và một vạch NGANG chạy qua cả hai nửa lại nói rằng hai bên **cùng** một mực — ngược hẳn ý cảnh |
+| k2c16 | đổi sang ảnh bãi hàu giữa triều (xem 8.5) |
+| k2c17–k2c25 | phá chuỗi navy (xem 8.5) |
+| k2c20 | vùng cực nay là một **chỏm cầu** cắt theo đúng khuôn tròn quả cầu, có viền nét đứt, đổi **màu** giữa hai nhịp (vàng nắng ↔ đen) kèm hai nhãn "6 tháng nắng" / "6 tháng tối" trên thẻ nền tối. Nhịp 3 "mùa màng không còn": bỏ cách rút `saturate` về 0 (đọc ra là "ảnh đen trắng"), nay ảnh **khô sang nâu xám** bằng `sepia(.95) hue-rotate(-26°) brightness(.54)`. **KHÔNG** vẽ vết nứt đất như người soát đề nghị — đã dựng thử và chụp ra nhìn: tấm ảnh là lúa mì **đang đứng**, mặt đất không lộ ra, nên mấy đường nứt chạy thẳng lên trời và đọc ra như vết xước, đúng loại nét vẽ tay mà chính bản soát chê ở chỗ khác |
+| k2c22 | xem mục 8.8 |
+| k2c28 | **bỏ thanh đo khỏi ảnh bề mặt Mặt Trăng** (luật L5: thước chỉ đặt lên thứ nó đo được; ở đó 490 px ứng với hàng trăm km). Con số nay nằm trong một **thẻ riêng**, cạnh một **con tem** vẽ đúng cỡ làm thước so — con tem là cú đã gài ở k1c01 |
+| k2c31 | nâng sáng lớp ảnh Mặt Trăng 0,44 → 0,84, hạ độ mờ lớp chuyển sắc 0,80 → 0,56, thêm quầng sáng sau mặt đồng hồ. Chụp lại: mặt trăng thật hiện rõ, hết "sát ranh giới cảnh rỗng" |
+| k2c32 | mỗi ô nguồn rỗng nay mang một dấu **"?"** (luật L4); bỏ hẳn quả cầu bé xíu nằm dưới đáy không làm gì; thêm dòng kết cấu "không tìm được nguồn"; cụm số dời xuống giữa khung. **Toạ độ 14 bản sao đặt TAY** sau hai lần thử hỏng: `rn()` dồn cục, rồi `(i·a) % m` cho cả x lẫn y làm hai toạ độ **tương quan tuyến tính** nên 14 bản xếp thành một vệt chéo — chỉ nhìn khung chụp mới thấy |
+| k2c33 | ảnh bão: `contrast` 1,12 → **1,22**, `saturate` 1,06 → **1,10**, `brightness` 0,82 → **0,80**, thêm một lớp chuyển sắc lam thẫm phủ hai góc trên |
+| k2c36 | nền sáng hơn một bậc (0,80 → 0,88) và chỉ rút tới 0,56 thay vì 0,28 — hết bốn giây gần đen tuyền |
+| k2c37 | **chia đôi khung**: trái là đêm không trăng (chính tấm của k2c36 kéo tối hẳn), phải là đêm rằm, hai nhãn. Một cảnh nay nói trọn cả phép so sánh của câu, và hết chuyện hai cảnh liền nhau trông như một |
+| k2c41 | con bọ hung vẽ tay (hai vòng tròn và mấy sợi râu) thay bằng **một mảnh cắt tròn từ chính tấm ảnh bọ hung thật** đang làm nền nửa đầu cảnh (§15.4 cấm vẽ tay biểu tượng) |
+| k2c43 · c47 · c48 · c49 | đổi clip san hô (xem 8.6) và đổi ảnh rạn sang bản cắt dùng chung của khối 3 |
+| k2c44 | lấy lại **dãy lịch 30 đêm** của cuối k2c43, thu nhỏ đặt dưới đĩa trăng trên một thẻ nền tối, và một dấu **"?"** lớn **nảy dọc** theo dãy. Trước đó chỉ có hai vòng tròn nét đứt, không nói gì về ngày tháng |
+
+Bốn mục **GỢI Ý** cũng làm luôn: **k2c08** ba tấm thẻ giống hệt nhau → ba hình khác
+hẳn nhau, mỗi hình báo trước đúng một cảnh sắp tới (chùm tia toả · nón ánh sáng ·
+hai mũi tên lệch chiều dài); **k2c14** gạch trắng dài 960 px đè ngang mặt Mặt Trời
+(đọc ra là gạch xoá, tức nghĩa ngược) → một gạch chân ngắn 180 px màu vàng **dưới**
+đĩa; **k2c26** gạch đỏ chéo trôi ở góc → **hai má phanh** kẹp vào rìa quả cầu, nhấp
+nháy đỏ, kèm vạch tốc độ ngắn dần; **k2c45** glyph nơ bướm → hai cánh cửa (mục 8.4).
+
+### 8.8 k2c22 — cảnh người dựng tự khai là yếu nhất, và đúng là yếu thật
+
+24 "lần chạy" của Lissauer hiện ra thành **một búi cung tròn lam nhạt lơ lửng** phía
+trên bên phải Trái Đất, không dính vào trục. **Nguyên nhân** (bản soát không nêu,
+tìm ra khi đọc lại mã): mỗi lần chạy được vẽ bằng một **vệt đuôi** chạy theo thời
+gian, mỗi vệt ở **một bán kính riêng** — 24 vệt ở 24 bán kính thì đương nhiên thành
+24 cung tròn đồng tâm. Đó là lỗi *thiết kế hình*, không phải lỗi tham số, nên vòng
+sửa trước (rải lại bán kính) không chữa được.
+
+Nay mỗi lần chạy là **một đường trục THẲNG** xuất phát từ trong đĩa Trái Đất đi ra —
+24 cây kim của một chiếc quạt, mỗi cây một điều kiện đầu trong dải 0–85°, cùng lắc
+theo thời gian. Trước mốc cắt chỉ hiện 6 cây ("vài lần chạy"), sau mốc đủ 24. Quả
+cầu phóng từ R = 96 lên **R = 150**.
+
+Và đây là **cảnh duy nhất trong cụm Laskar/Lissauer trước đây không có dòng nguồn
+trên hình**, trong khi nó nhắc đích danh Lissauer, NASA và năm 2012 — nay đã có
+`Lissauer, Barnes & Chambers · Icarus 217, 77 (2012)`, ghi đúng như k2c23.
+
+### 8.9 Một bẫy chụp khung, đúng cho cả ba khối
+
+Trong **0,42 giây hoà hình** đầu mỗi cảnh có **HAI** thẻ `.canh.active` cùng lúc, và
+cảnh **cũ** vẫn ở `opacity: 1` đè lên cảnh mới. Đo tại `u = 0,02 / 0,05 / 0,10` thì
+cả ba mốc đều còn hai cảnh active; tới `u = 0,20` mới sạch.
+
+Hệ quả: **khung chụp ở `u = 0,05` không phải cảnh ta tưởng — nó là khung cuối của
+cảnh TRƯỚC.** Bản soát độc lập chụp bốn mốc 0,05 / 0,35 / 0,62 / 0,90, nên mọi nhận
+xét của họ gắn với mốc 0,05 thật ra đang mô tả cảnh liền trước. Và
+`document.querySelector('.canh.active')` trả về phần tử **đầu** trong DOM, tức cảnh
+cũ — phải lấy phần tử **cuối** của `querySelectorAll`. Đã báo cả ba khối; khối 3 xác
+nhận bẫy này đã suýt làm họ kết luận sai về một cảnh.
+
+### 8.10 Tự kiểm vòng này
+
+* `node --check canh/khoi-2.js` — sạch.
+* `python3 dung/soat-khoi.py` — **SẠCH**: khối 2 báo 49 cảnh · 49 câu (giao 49),
+  vẽ thử 122 cảnh × 4 mốc không cảnh nào chết, không lỗi JS.
+* Bộ đo vùng an toàn 48 px, 49 cảnh × 10 mốc `c.u`: **57 vi phạm → 0**
+  (còn 3 dòng nguồn vượt 2–3 px do chốt `y = 650`, xem cuối mục 8.1).
+* Chụp lại **49 cảnh × 3 mốc** (`u` = 0,20 / 0,50 / 0,80 — bỏ hẳn mốc 0,05 vì mục
+  8.9), có chờ `__khungSanSang()` trước mỗi lần chụp, rồi **mở từng bảng ra nhìn**.
+  Năm chỗ chỉ phát hiện được bằng mắt và đã sửa tiếp trong chính vòng này: vành khí
+  quyển quá dày trên nền sáng · chỏm cực k2c20 tô màu tối thì biến mất trên đại
+  dương xanh thẫm · thang log k2c46 không đọc được trên ảnh polyp rực sáng · dãy
+  lịch k2c44 chìm nghỉm trên mặt trăng sáng · cánh cửa trái k2c45 bị mép trái cắt
+  khi cửa mở hết.
+* Đo màu riêng khối: **48,4 % dải cao nhất · 5 dải ≥ 5 %** (xem 8.5).

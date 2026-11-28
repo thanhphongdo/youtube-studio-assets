@@ -87,7 +87,7 @@
       ],
       "anh": [
         "k1-sanho-de.jpg",
-        "k1-sanho-ran.jpg"
+        "k3-ran-hardy.jpg"
       ],
       "thumb": "thumb/k1c04.jpg"
     },
@@ -308,9 +308,7 @@
           "text": "Thở phào là đúng, vì Mặt Trăng sẽ không biến mất."
         }
       ],
-      "anh": [
-        "k1-mattrang.jpg"
-      ],
+      "anh": [],
       "thumb": "thumb/k1c15.jpg"
     },
     {
@@ -330,7 +328,7 @@
         }
       ],
       "anh": [
-        "k1-mattrang.jpg"
+        "k1-traidat.jpg"
       ],
       "thumb": "thumb/k1c16.jpg"
     },
@@ -371,9 +369,7 @@
           "text": "Cho nên tôi xin nói trước, phần còn lại của tập này là một phép trừ chứ không phải lời tiên tri."
         }
       ],
-      "anh": [
-        "k1-mattrang.jpg"
-      ],
+      "anh": [],
       "thumb": "thumb/k1c18.jpg"
     },
     {
@@ -772,7 +768,8 @@
         }
       ],
       "anh": [
-        "video/k1-trieu-len.mp4"
+        "k1-cuulong.jpg",
+        "video/k3-bensong.mp4"
       ],
       "thumb": "thumb/k1c37.jpg"
     },
@@ -793,7 +790,7 @@
         }
       ],
       "anh": [
-        "video/k1-ruong-lua.mp4"
+        "video/k3-ghe-song.mp4"
       ],
       "thumb": "thumb/k1c38.jpg"
     },
@@ -835,7 +832,7 @@
         }
       ],
       "anh": [
-        "k1-bobien-vn.jpg",
+        "k3-bentre.jpg",
         "video/k1-ruong-lua.mp4"
       ],
       "thumb": "thumb/k1c40.jpg"
@@ -1003,6 +1000,7 @@
         }
       ],
       "anh": [
+        "k2-trieu-can.jpg",
         "k2-trieu-day.jpg"
       ],
       "thumb": "thumb/k2c07.jpg"
@@ -1184,7 +1182,7 @@
         }
       ],
       "anh": [
-        "k2-trieu-can.jpg"
+        "k2-hau.jpg"
       ],
       "thumb": "thumb/k2c16.jpg"
     },
@@ -1225,7 +1223,9 @@
           "text": "Năm một nghìn chín trăm chín mươi ba, nhà thiên văn người Pháp Jacques Laskar cùng đồng nghiệp đăng trên tạp chí Nature một mô phỏng khiến cả giới giật mình."
         }
       ],
-      "anh": [],
+      "anh": [
+        "k2-nganha.jpg"
+      ],
       "thumb": "thumb/k2c18.jpg"
     },
     {
@@ -1606,6 +1606,7 @@
         }
       ],
       "anh": [
+        "k2-bien-dem.jpg",
         "k2-demram.jpg"
       ],
       "thumb": "thumb/k2c37.jpg"
@@ -1735,8 +1736,8 @@
         }
       ],
       "anh": [
-        "k2-gbr-khong.jpg",
-        "video/k2-sanho-de.mp4"
+        "k3-ran-hardy.jpg",
+        "video/k2-sanho-de2.mp4"
       ],
       "thumb": "thumb/k2c43.jpg"
     },
@@ -1822,7 +1823,7 @@
         }
       ],
       "anh": [
-        "video/k2-sanho-de.mp4"
+        "video/k2-sanho-de2.mp4"
       ],
       "thumb": "thumb/k2c47.jpg"
     },
@@ -1843,7 +1844,7 @@
         }
       ],
       "anh": [
-        "video/k2-sanho-de.mp4"
+        "video/k2-sanho-de2.mp4"
       ],
       "thumb": "thumb/k2c48.jpg"
     },
@@ -1865,7 +1866,7 @@
       ],
       "anh": [
         "video/k2-ran-gbr.mp4",
-        "video/k2-sanho-de.mp4"
+        "video/k2-sanho-de2.mp4"
       ],
       "thumb": "thumb/k2c49.jpg"
     },

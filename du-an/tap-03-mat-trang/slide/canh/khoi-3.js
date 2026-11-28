@@ -87,6 +87,16 @@ const NENS = {
   giay: "radial-gradient(120% 98% at 30% 18%, #FFFDF6 0%, #F4F0E3 32%, #DFD7C1 70%, #C3B79B 100%)",
   am:   "radial-gradient(114% 94% at 62% 26%, #FFF7E6 0%, #F8EDD6 30%, #E6D6B2 66%, #CBB98F 100%)",
   lanh: "radial-gradient(118% 96% at 28% 22%, #FBFDFE 0%, #E8F2F8 32%, #CBDEEA 68%, #A8C2D2 100%)",
+  /* SỬA 28/11 · mức CHẶN. `lanh` ở trên quá trắng: k3c19/k3c20 chụp ra gần như
+     trắng bệch, và k3c11/k3c16 cũng bị chê nhạt. `lanh2` là bản ĐẬM HƠN của
+     cùng một tông, dùng cho các cảnh sơ đồ nền lạnh. */
+  lanh2: "radial-gradient(120% 98% at 28% 20%, #C9DEEB 0%, #A8C8DC 30%, #7BA6C0 66%, #4E7D9A 100%)",
+  /* SỬA 28/11 · k3c08: sơ đồ sóng xám-lam trên nền trắng xanh gần như không có
+     độ tương phản. Nền mới lấy đỉnh #1B4E68 như bản soát chỉ định. */
+  lanhT: "radial-gradient(120% 98% at 30% 20%, #2C6B8C 0%, #1B4E68 34%, #103449 70%, #08202E 100%)",
+  /* SỬA 28/11 · k3c11: nền kem gần trắng, chữ xám trên kem, đọc không ra.
+     Nền mới đi từ #F0E2C4 xuống #D8C49A như bản soát chỉ định. */
+  kem: "radial-gradient(118% 96% at 32% 20%, #E6D8B6 0%, #D9C69A 32%, #C8AF80 68%, #BCA272 100%)",
   dem:  "radial-gradient(124% 112% at 50% 32%, #1A2742 0%, #0E1830 40%, #070C18 78%, #03060E 100%)",
   bien: "radial-gradient(124% 112% at 42% 28%, #205471 0%, #133C55 38%, #08202F 76%, #030C14 100%)"
 };
@@ -116,7 +126,16 @@ const MO = (id, f, sau, o) => { o = o || {};
 const VI = (id, f, sau, o) => VID(f, sau, o).replace('<div class="lop"', `<div class="lop" id="${id}"`);
 
 /* ─────────── chữ trên HUD ─────────── */
-const nguon = (id, s, l) => `<div class="tx nho" id="${id}" style="left:${l === undefined ? 66 : l}px;top:664px">${s}</div>`;
+/* VÙNG AN TOÀN 48 px (luật L3 của bản soát). Dòng nguồn cũ đặt ở top:664px, cao
+   19,5 px → mép dưới 683,5 px, tức NGOÀI hộp an toàn y ≤ 672. Đo bằng
+   getBoundingClientRect() chứ không ước lượng. Nay top:650px → mép dưới 669,5 px.
+   Bề ngang cũng kẹp lại: left 66 px, max-width 1166 px → mép phải ≤ 1232 px. */
+/* dòng nguồn chỉ MỜ DẦN, không trượt lên: kh() mặc định nhích 12 px theo trục y,
+   đủ để đẩy mép dưới ra ngoài hộp an toàn trong 0,4 s đầu — đo được bằng
+   getBoundingClientRect() ở mốc đang hoà hình. */
+const khn = (id, t, a, b, f) => kh(id, t, a, b, f, 0);
+const nguon = (id, s, l) => `<div class="tx nho" id="${id}" style="left:${l === undefined ? 66 : l}px;` +
+  `top:650px;max-width:${1232 - (l === undefined ? 66 : l)}px">${s}</div>`;
 const the = (id, s, mau, top, co) => `<div class="tx" id="${id}" style="left:0;top:${top === undefined ? 300 : top}px;` +
   `width:1280px;text-align:center;font:300 ${co || 56}px/1.14 ${F};letter-spacing:.26em;` +
   `color:${mau || TRANG};text-shadow:0 2px 24px rgba(3,8,13,.8)">${s}</div>`;
@@ -199,6 +218,103 @@ const LU_BRAIN = ["M12 18V5", "M15 13a4.17 4.17 0 01-3-4 4.17 4.17 0 01-3 4",
 const LU_FOOT = ["M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z",
                  "M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z",
                  "M16 17h4", "M4 13h4"];
+/* ─────────── nhãn SVG · SỬA 28/11 theo luật L1 của bản soát ─────────────────
+   "mọi thanh, thẻ, trục, ô và glyph tự dựng đều phải mang nhãn của chính nó".
+   Mọi nhãn phải nằm trong VÙNG AN TOÀN 48 px: x ∈ [48,1232], y ∈ [48,672] ở MỌI
+   mốc c.u — đã đo thật bằng getBoundingClientRect(), không ước lượng. */
+function nhanSV(p, x, y, s, mau, co, neo, dam) {
+  const t = el("text", { x: x, y: y, fill: mau || "#1B4E68", "font-size": co || 24,
+    "font-weight": dam === undefined ? 700 : dam, "font-family": "system-ui",
+    "text-anchor": neo || "middle", opacity: 0 }, p);
+  t.textContent = s;
+  return t;
+}
+/* dấu ✕ DÀY — veX() của harness chỉ có nét 3,6 px, quá mảnh cho một dấu phủ định
+   phải đọc được ngay (bản soát đòi 10 px ở k3c16 và một dấu ✕ "to" ở k3c18). */
+function veXday(p, x, y, r, mau, net) {
+  const g = el("g", {}, p);
+  const d = [["M", x - r, y - r, "L", x + r, y + r], ["M", x + r, y - r, "L", x - r, y + r]];
+  d.forEach(a => {
+    el("path", { d: a.join(" "), fill: "none", stroke: "#06101C", "stroke-width": (net || 10) + 7,
+      "stroke-linecap": "round", opacity: .5 }, g);
+    el("path", { d: a.join(" "), fill: "none", stroke: mau, "stroke-width": net || 10,
+      "stroke-linecap": "round" }, g);
+  });
+  return g;
+}
+/* đĩa nhật thực: đĩa đen + vành sáng. Dùng chung cho k3c12 và cho biểu tượng
+   thứ ba của k3c19/k3c20 — bản soát bắt đúng: vòng tròn-gạch-chéo cũ đọc ra là
+   biển CẤM, không phải nhật thực. */
+function glyphNhatThuc(p, cx, cy, r, pre, V) {
+  const g = el("g", {}, p);
+  gradB(V || p, pre + "-nt", [[0, NHAT, .62], [.42, NHAT, .22], [1, NHAT, 0]]);
+  el("circle", { cx: cx, cy: cy, r: r * 2.2, fill: "url(#" + pre + "-nt)" }, g);
+  el("circle", { cx: cx, cy: cy, r: r, fill: NHAT }, g);
+  el("circle", { cx: cx, cy: cy, r: r * .8, fill: "#0E1726" }, g);
+  return g;
+}
+
+/* ─────────── QUẢ CẦU TRÁI ĐẤT / ĐĨA MẶT TRĂNG — KIỂU CHUNG CỦA CẢ TẬP ───────
+   SỬA 28/11 theo luật L2 của bản soát: cả tập đang vẽ bốn Mặt Trăng và ba Trái
+   Đất khác nhau, trên 20 cảnh. Khối 2 chủ trì và đã chốt: ẢNH NASA THẬT cắt
+   tròn, một hàm duy nhất cho cả ba khối — `K2.cau()` (Trái Đất, chất liệu là
+   BẢN ĐỒ TRẢI PHẲNG Blue Marble 2002, kể cả khi quả cầu đứng yên) và
+   `K2.trang()` (Mặt Trăng, ghép ảnh mặt gần LRO). Khối 3 KHÔNG tự vẽ kiểu
+   thứ tư và KHÔNG chép lại hàm — gọi chéo để không bao giờ lệch thông số.
+   Năm cảnh của khối 3 đều là hành tinh ĐỨNG YÊN nên không gọi `K2.xoay()`.
+   Tiền tố id luôn bắt đầu bằng "k3c…" nên không đụng id của khối 2 (bẫy 16.8).
+   RÀO: nếu `window.K2` chưa được xuất ra (khối 2 đang sửa song song) thì rơi
+   về hàm vẽ cũ, trang không vỡ — nhưng khi đó cảnh vẫn còn lỗi L2, xem báo cáo. */
+const coK2 = () => typeof window !== "undefined" && window.K2 && window.K2.cau && window.K2.trang;
+function cauTD(sv, pre, cx, cy, r) {
+  if (coK2()) return window.K2.cau(sv, pre, cx, cy, r).g;
+  return traiDat(sv, cx, cy, r, 71);
+}
+function diaMT(sv, pre, cx, cy, r) {
+  if (coK2()) return window.K2.trang(sv, pre, cx, cy, r);
+  return dia(sv, cx, cy, r, "#CFCCC3", pre + "-cu", sv);
+}
+
+/* ─────────── BA THANH "MỨC CHẮC CHẮN" — dùng chung cho k3c19 và k3c20 ───────
+   SỬA 28/11 · mức CHẶN. Bản cũ: ba thanh KHÔNG MỘT CHỮ NÀO trên nền trắng bệch,
+   và biểu tượng thứ ba (vòng tròn có gạch chéo) đọc ra là biển CẤM chứ không
+   phải nhật thực. Hai cảnh liền nhau, 9,9 giây, người xem phải đoán.
+   Nay: mỗi thanh có NHÃN CHỮ của chính nó, biểu tượng thứ ba đổi thành đĩa
+   nhật thực (đĩa đen có vành sáng, dùng lại glyph của k3c12), nền thanh đổi từ
+   trắng #FFFFFF sang #D6E3EC để phần đã đổ đầy nổi lên.
+   Hai cảnh gọi CÙNG MỘT HÀM nên không thể lệch nhau được nữa.
+   Toạ độ đã ĐO (không ước lượng), kể cả sau khi máy quay đẩy/lia: biểu tượng
+   tâm x = 146 · nhãn kết thúc ở x = 326 · thanh x ∈ [352,1150]. Với biên độ
+   máy quay z ≤ 1,05 và x = ±12 thì mép trái biểu tượng ra tới x = 74 và mép
+   phải thanh tới x = 1188 — vẫn trong hộp an toàn x ∈ [48,1232], y ∈ [48,672]. */
+const B3 = { X0: 352, W: 798, YS: [204, 356, 508],
+             MAU: [BIEN, "#3F7FA0", "#B9A98C"],
+             TEN: ["thuỷ triều", "lịch âm", "nhật thực"],
+             MUC: [.30, .26, .22] };
+function baThanh(V, pre) {
+  const g = el("g", {}, V);
+  const nen = [], thanh = [], nhan = [], icon = [];
+  B3.YS.forEach((y, i) => {
+    nen.push(el("rect", { x: B3.X0, y: y - 23, width: B3.W, height: 46, rx: 23,
+      fill: "#D6E3EC", stroke: "#8CAABF", "stroke-width": 1.6, opacity: 0 }, g));
+    thanh.push(el("rect", { x: B3.X0, y: y - 23, width: 0, height: 46, rx: 23,
+      fill: B3.MAU[i], opacity: .97 }, g));
+    nhan.push(nhanSV(g, 326, y + 9, B3.TEN[i], "#17445C", 26, "end", 700));
+  });
+  /* 1 · sóng = thuỷ triều */
+  { const k = el("g", { opacity: 0, transform: "translate(146 " + B3.YS[0] + ")" }, g);
+    el("path", { d: "M-34,-11 q17,-17 34,0 q17,17 34,0 M-34,13 q17,-17 34,0 q17,17 34,0",
+      fill: "none", stroke: BIEN, "stroke-width": 7, "stroke-linecap": "round" }, k); icon.push(k); }
+  /* 2 · hai pha trăng = lịch âm */
+  { const k = el("g", { opacity: 0, transform: "translate(146 " + B3.YS[1] + ")" }, g);
+    pha(k, -24, 0, 21, .5, "#24303C", "#EDF2F6");
+    pha(k, 24, 0, 21, .12, "#24303C", "#EDF2F6"); icon.push(k); }
+  /* 3 · ĐĨA NHẬT THỰC, không phải vòng tròn gạch chéo */
+  { const k = el("g", { opacity: 0, transform: "translate(146 " + B3.YS[2] + ")" }, g);
+    glyphNhatThuc(k, 0, 0, 27, pre + "-e3", V); icon.push(k); }
+  return { g: g, nen: nen, thanh: thanh, nhan: nhan, icon: icon };
+}
+
 /* vẽ một bộ path Lucide vào một nhóm đã được translate+scale sẵn */
 function lucide(p, paths, x, y, k, mau, net) {
   const g = el("g", { transform: "translate(" + x + " " + y + ") scale(" + k + ") translate(-12 -12)" }, p);
@@ -233,34 +349,58 @@ function chatLieu(V, pre, mau, n) {
 /* k3c01 · câu 00 · 4,7s — VIDEO THẬT: bến sông miền Tây, người xuống ghe.
    Bốn mắt xích mọc dần từ mặt nước lên, nối "ngoài biển" với "chỗ con người". */
 DANGKY({ id: "k3c01", steps: 0, say: [CAU[0]],
-  html: VI("k3c01-v", "k3-bensong.mp4", 0.3, { tu: 0.4, dai: 7.4, toc: .72, loc: "contrast(1.06) saturate(1.04) brightness(.94)" }) +
+  /* SỬA 28/11 · NÊN SỬA. Bản soát đòi bỏ lưng người khách quần sọc chiếm một
+     phần ba bên phải khung suốt nửa đầu cảnh, và đề nghị đổi `pos` sang 32%.
+     ĐO RỒI MỚI SỬA: clip rộng 1280 px nằm trong hộp `.lop` nới -14% (1462 px),
+     nên `pos` chỉ dịch được tối đa ~182 px — một mình nó không bỏ được nhân
+     vật. Cái cắt thật nằm ở MÁY QUAY. Nên: `pos` 30% CỘNG đẩy sâu vào
+     (z 1.34 → 1.16) và giữ khung ở nửa trái (x từ -10 tới 18, không còn -46). */
+  html: VI("k3c01-v", "k3-bensong.mp4", 0.3, { tu: 0.4, dai: 7.0, toc: .72, pos: "30% 52%", loc: "contrast(1.06) saturate(1.04) brightness(.94)" }) +
         SV(0.88, "ve") +
         '<div class="hud">' + nguon("k3c01-ng", "Video: Le Monde en Vidéo — chợ nổi Cửu Long · CC BY 3.0") + '</div>',
   anim: root => {
     const V = sv(root, "ve");
     chan(V, "k3c01");
-    const X0 = 196, B = 196, RX = 112, RY = 62, CY = 384;
-    const mat = [];
-    for (let i = 0; i < 5; i++) {
-      const cx = X0 + i * B, dung = i % 2 === 0;
-      const mau = i === 0 ? SANHO : (i === 4 ? NHAT : "#DCE6EC");
+    /* ── SỬA 28/11 · NÊN SỬA ───────────────────────────────────────────────
+       Bản cũ: mấy vòng ê-líp RỖNG nở dần trên clip chợ nổi — chụp khung ra thì
+       đọc như vết loá ống kính hoặc bong bóng lỗi, không ai hiểu là "hệ quả leo
+       lên tới chỗ con người". Vòng tròn không có HƯỚNG nên không nói được chữ
+       "leo lên". Nay là MỘT CHUỖI MŨI TÊN CONG nối tiếp nhau, đi từ mặt nước
+       dưới trái lên tới người trên ghe phía trên phải — một chuyển động có
+       hướng. Mọi toạ độ nằm trong hộp an toàn x ∈ [48,1232], y ∈ [48,672]. */
+    const BUOC = [[206, 592], [398, 516], [588, 432], [778, 342], [962, 252]];
+    const mat = BUOC.slice(0, 4).map((o, i) => {
       const g = el("g", { opacity: 0 }, V);
-      el("ellipse", { cx: cx, cy: CY, rx: dung ? RX : RY, ry: dung ? RY : RX, fill: "none",
-        stroke: "#05121C", "stroke-width": 32, opacity: .45 }, g);
-      el("ellipse", { cx: cx, cy: CY, rx: dung ? RX : RY, ry: dung ? RY : RX, fill: "none",
-        stroke: mau, "stroke-width": 24, "stroke-linecap": "round" }, g);
-      el("ellipse", { cx: cx - 3, cy: CY - 3, rx: dung ? RX : RY, ry: dung ? RY : RX, fill: "none",
-        stroke: "#FFFFFF", "stroke-width": 5, opacity: .3 }, g);
-      mat.push(g);
-    }
+      const n = BUOC[i + 1];
+      const mx = (o[0] + n[0]) / 2, my = (o[1] + n[1]) / 2 - 54;   /* vồng lên */
+      const d = "M" + o[0] + "," + o[1] + " Q" + mx.toFixed(1) + "," + my.toFixed(1) +
+                " " + n[0] + "," + n[1];
+      const mau = i === 0 ? SANHO : (i === 3 ? NHAT : "#EAF3F8");
+      el("path", { d: d, fill: "none", stroke: "#05121C", "stroke-width": 19,
+        "stroke-linecap": "round", opacity: .5 }, g);
+      const net = el("path", { d: d, fill: "none", stroke: mau, "stroke-width": 9,
+        "stroke-linecap": "round" }, g);
+      /* đầu mũi tên quay đúng theo hướng đi của khúc cuối */
+      const ang = Math.atan2(n[1] - my, n[0] - mx);
+      const dau = el("polygon", { fill: mau, points: [[n[0], n[1]],
+        [n[0] - 27 * Math.cos(ang - .42), n[1] - 27 * Math.sin(ang - .42)],
+        [n[0] - 27 * Math.cos(ang + .42), n[1] - 27 * Math.sin(ang + .42)]]
+        .map(q => q[0].toFixed(1) + "," + q[1].toFixed(1)).join(" ") }, g);
+      g.__net = net; g.__bong = g.firstChild; g.__dau = dau;
+      return g;
+    });
     return c => {
-      KB(root, c, c.u, [-46, 38, 20, -18, 1.16, 1.03]);
+      KB(root, c, c.u, [-10, 18, 14, -10, 1.34, 1.16]);
       mat.forEach((g, i) => {
-        const a = ez(seg(c.u, .04 + i * .13, .22 + i * .13));
-        op(g, a.toFixed(3));
-        set(g, { transform: "translate(0," + (84 * (1 - a) + 5 * Math.sin(c.t * 1.3 + i)).toFixed(1) + ")" });
+        const a0 = .05 + i * .15;
+        const v = ez(seg(c.u, a0, a0 + .08));
+        op(g, v.toFixed(3));
+        const w = ezo(seg(c.u, a0, a0 + .17));
+        veDan(g.__net, w); veDan(g.__bong, w);
+        op(g.__dau, (ez(seg(c.u, a0 + .12, a0 + .17)) * .96).toFixed(3));
+        set(g, { transform: "translate(0," + (4 * Math.sin(c.t * 1.3 + i)).toFixed(2) + ")" });
       });
-      kh("k3c01-ng", c.t, .4, 3.9);
+      khn("k3c01-ng", c.t, .4, 3.9);
     };
   }});
 
@@ -272,20 +412,33 @@ DANGKY({ id: "k3c01", steps: 0, say: [CAU[0]],
    SƠ ĐỒ (ngoại lệ §15.1.3) nhưng vẫn có: nền chợ hoa Tết thật làm chất liệu,
    nền chuyển sắc, và lớp đồ hoạ chuyển động. */
 DANGKY({ id: "k3c02", steps: 0, say: [CAU[1]],
-  html: NEN("am") + MO("k3c02-mo", "k3-chohoa.jpg", 0.12, { b: 18, bh: 1.3, s: 1.02 }) + SV(0.82, "ve"),
+  /* SỬA 28/11 · NÊN SỬA: blur 18 → 8 px để ảnh chợ hoa Tết phía sau còn đọc được. */
+  html: NEN("am") + MO("k3c02-mo", "k3-chohoa.jpg", 0.12, { b: 8, bh: 1.3, s: 1.02 }) + SV(0.82, "ve"),
   anim: root => {
     const V = sv(root, "ve");
-    const to = el("g", { transform: "translate(640 352)" }, V);
+    /* ── SỬA 28/11 · NÊN SỬA ───────────────────────────────────────────────
+       Bản cũ: tấm lịch TRẮNG TRƠN #FFFDF8 chiếm 60 % khung, phẳng, và k3c04
+       chín giây sau lại một tấm trắng nữa. Nay: giấy ngà #FBF6E6, có bóng đổ
+       thật, có vân giấy, và thu về 46 % khung (hệ số 0,91 trên 648 px → 590 px,
+       tức 46,1 % của 1280 px — đo chứ không ước lượng). */
+    const to = el("g", { transform: "translate(640 352) scale(.91)" }, V);
+    el("rect", { x: -318, y: -204, width: 648, height: 428, rx: 12, fill: "#07121C", opacity: .22 }, to);
     el("rect", { x: -324, y: -212, width: 648, height: 428, rx: 12, fill: "#07121C", opacity: .34 }, to);
-    el("rect", { x: -330, y: -220, width: 648, height: 428, rx: 12, fill: "#FFFDF8",
+    el("rect", { x: -330, y: -220, width: 648, height: 428, rx: 12, fill: "#FBF6E6",
       stroke: "#B6BDB3", "stroke-width": 3 }, to);
+    /* vân giấy: những nét ngang rất nhạt, tất định */
+    for (let i = 0; i < 26; i++)
+      el("line", { x1: -330, y1: (-220 + rn(i, 611) * 428).toFixed(1),
+        x2: 318, y2: (-220 + rn(i, 611) * 428 + (rn(i, 612) - .5) * 3).toFixed(1),
+        stroke: "#C9BFA4", "stroke-width": (.6 + rn(i, 613) * .9).toFixed(2),
+        opacity: (.10 + rn(i, 614) * .14).toFixed(3) }, to);
     el("rect", { x: -330, y: -220, width: 648, height: 62, rx: 12, fill: SANHO }, to);
     el("rect", { x: -330, y: -168, width: 648, height: 9, fill: "#A8402E", opacity: .55 }, to);
     const onhip = [];
     for (let r = 0; r < 5; r++) for (let i = 0; i < 7; i++) {
       const x = -330 + 14 + i * 90, y = -220 + 76 + r * 67;
-      el("rect", { x: x, y: y, width: 78, height: 56, rx: 5, fill: r % 2 ? "#F1F2EC" : "#E6E8DF",
-        stroke: "#D2D6CB", "stroke-width": 1.6 }, to);
+      el("rect", { x: x, y: y, width: 78, height: 56, rx: 5, fill: r % 2 ? "#F3EEDC" : "#E9E2CC",
+        stroke: "#D2C9AE", "stroke-width": 1.6 }, to);
       onhip.push(pha(to, x + 58, y + 40, 11, (r * 7 + i) / 35, "#26303C", "#C6CCC4"));
     }
     /* bàn tay vô hình nhấc trăng ra rồi chỗ trống đỏ lên — khung cuối KHÔNG trắng trơn */
@@ -320,7 +473,7 @@ DANGKY({ id: "k3c03", steps: 0, say: [CAU[2]],
     const V = sv(root, "ve");
     gradB(V, "k3c03-q", [[0, "#FFF6DC", .8], [.4, "#F7D894", .28], [1, "#F7D894", 0]]);
     const quang = el("circle", { cx: 1012, cy: 166, r: 250, fill: "url(#k3c03-q)", opacity: 0 }, V);
-    const trang = dia(V, 1012, 166, 88, "#FFF8E6", "k3c03-d", V); op(trang, 0);
+    const trang = diaMT(V, "k3c03", 1012, 166, 88); op(trang, 0);
     const mo = el("rect", { x: -400, y: -300, width: 2100, height: 1400, fill: "#0A1220", opacity: 0 }, V);
     chan(V, "k3c03", .66);
     return c => {
@@ -334,8 +487,8 @@ DANGKY({ id: "k3c03", steps: 0, say: [CAU[2]],
       set(trang, { transform: "translate(0," + (90 * (1 - ez(ut))).toFixed(1) + ")" });
       op(mo, (.4 * ez(seg(c.u, .56, .66)) * (1 - ez(seg(c.u, .92, .99)))).toFixed(3));
       kh("k3c03-te", c.u * 10, 5.8, 9.4, .5);
-      kh("k3c03-n1", c.u * 10, .4, 3.4, .4);
-      kh("k3c03-n2", c.u * 10, 5.2, 7.6, .4);
+      khn("k3c03-n1", c.u * 10, .4, 3.4, .4);
+      khn("k3c03-n2", c.u * 10, 5.2, 7.6, .4);
     };
   }});
 
@@ -344,48 +497,66 @@ DANGKY({ id: "k3c03", steps: 0, say: [CAU[2]],
    B: tờ lịch rỗng, các ô mất hết số, chữ "MÙNG MỘT"  (CHỮ #2) */
 DANGKY({ id: "k3c04", steps: 0, say: [CAU[3]],
   html: IMG("k3c04-a", "k3-chohoa.jpg", 0.3, { loc: "contrast(1.05) saturate(1.1) brightness(.98)" }) +
-        NEN("am", "k3c04-b") + MO("k3c04-mo", "k3-chohoa.jpg", 0.1, { b: 22, bh: 1.35, s: 1.0 }) +
+        IMG("k3c04-b", "k3-chohoa.jpg", 0.3, { loc: "contrast(1.08) saturate(1.14) brightness(.94)" }) +
         SV(0.88, "ve") +
-        '<div class="hud">' + the("k3c04-te", "MÙNG MỘT", CHUTOI, 560, 52) +
+        '<div class="hud">' + the("k3c04-te", "MÙNG MỘT", "#FFF0D2", 556, 52) +
         nguon("k3c04-ng", "Ảnh: trungydang — chợ hoa Tết, Tân Châu, An Giang · CC BY 3.0") + '</div>',
   anim: root => {
     const V = sv(root, "ve");
     /* lớp A: dải tối + 15 pha trăng */
     const gA = el("g", {}, V);
-    el("rect", { x: -400, y: 44, width: 2100, height: 156, fill: "#0C1522", opacity: .66 }, gA);
+    /* dải pha trăng hạ xuống y = 96..252: bản cũ ở y = 44 bị MÉP TRÊN cắt mất
+       nửa dãy khi máy quay đẩy vào (đo được ở mốc c.u = .50). */
+    el("rect", { x: -400, y: 96, width: 2100, height: 156, fill: "#0C1522", opacity: .7 }, gA);
     const pA = [];
-    for (let i = 0; i < 15; i++) pA.push(pha(gA, 92 + i * 78, 122, 27, i / 15, "#F5F2E8", "#1A2335"));
-    /* lớp B: tờ lịch đã rỗng */
+    for (let i = 0; i < 15; i++) pA.push(pha(gA, 92 + i * 78, 174, 27, i / 15, "#F5F2E8", "#1A2335"));
+    /* ── SỬA 28/11 · NÊN SỬA ───────────────────────────────────────────────
+       Bản cũ kết bằng MỘT TẤM LỊCH TRẮNG TRƠN nữa, chỉ 9 giây sau tấm lịch
+       trắng của k3c02 — trắng bệch và lặp lại ngay. Và một khung rỗng nét đứt
+       đọc ra là "đang tải", không phải "không còn chỗ nào để đặt vào" (luật L4).
+       Nay ĐỔI HƯỚNG hẳn: giữ ảnh chợ hoa Tết RÕ NÉT và chỉ GẠCH ĐỎ CHÉO qua
+       ảnh — một dấu hiệu chủ động, không phải một cái khung trống. */
     const gB = el("g", { opacity: 0 }, V);
-    const to = el("g", { transform: "translate(640 352)" }, gB);
-    el("rect", { x: -372, y: -238, width: 744, height: 476, rx: 12, fill: "#FFFFFF",
-      stroke: "#C2C8BE", "stroke-width": 3 }, to);
-    el("rect", { x: -372, y: -238, width: 744, height: 66, rx: 12, fill: "#C6CCC4" }, to);
+    /* nền ảnh là chợ hoa Tết vàng chói; không hạ sáng thì chữ "MÙNG MỘT" trắng
+       không đọc nổi — đã chụp khung và thấy. */
+    el("rect", { x: -400, y: -300, width: 2100, height: 1400, fill: "#07111C", opacity: .46 }, gB);
+    /* và một mảng tối ở chân khung cho riêng chữ "MÙNG MỘT" — chữ ngà trên
+       thảm hoa vàng không đọc nổi nếu chỉ phủ đều. */
+    gradL(gB, "k3c04-ch", 0, 460, 0, 700, [[0, "#04080F", 0], [1, "#04080F", .82]]);
+    el("rect", { x: -400, y: 440, width: 2100, height: 420, fill: "url(#k3c04-ch)" }, gB);
+    const to = el("g", {}, gB);
     const oB = [];
-    for (let r = 0; r < 5; r++) for (let i = 0; i < 7; i++) {
-      const x = -372 + 14 + i * 103, y = -238 + 84 + r * 76;
-      oB.push(el("rect", { x: x, y: y, width: 92, height: 66, rx: 5, fill: "#EFF0EA",
-        stroke: "#DADDD4", "stroke-width": 1.6 }, to));
-    }
-    const vet = el("line", { x1: -352, y1: -205, x2: -352, y2: -205, stroke: DO,
-      "stroke-width": 9, "stroke-linecap": "round", opacity: .9 }, to);
+    const mkVet = (x1, y1, x2, y2, w) => {
+      const g = el("g", {}, to);
+      const d = "M" + x1 + "," + y1 + " L" + x2 + "," + y2;
+      el("path", { d: d, fill: "none", stroke: "#06101C", "stroke-width": w + 9,
+        "stroke-linecap": "round", opacity: .5 }, g);
+      const n = el("path", { d: d, fill: "none", stroke: DO, "stroke-width": w,
+        "stroke-linecap": "round" }, g);
+      g.__net = n; g.__bong = g.firstChild;
+      return g;
+    };
+    const vet = mkVet(150, 132, 1130, 586, 16);
+    const vet2 = mkVet(1130, 132, 150, 586, 16);
     return c => {
       const A = c.u < .52;
-      hien("k3c04-a", A); hien("k3c04-b", !A); hien("k3c04-mo", !A);
+      hien("k3c04-a", A); hien("k3c04-b", !A);
       op(gA, A ? 1 : 0); op(gB, A ? 0 : 1);
-      if (A) KB(root, c, seg(c.u, 0, .52), [-24, 24, 10, -14, 1.03, 1.15]);
+      if (A) KB(root, c, seg(c.u, 0, .52), [-18, 18, 8, -8, 1.02, 1.10]);
       else   KB(root, c, seg(c.u, .52, 1), [18, -18, -12, 12, 1.16, 1.02]);
       pA.forEach((e, i) => {
         const vao = ez(seg(c.u, .03 + i * .008, .11 + i * .008));
         const ra  = ez(seg(c.u, .26 + (14 - i) * .014, .36 + (14 - i) * .014));
         op(e, (vao * (1 - ra)).toFixed(3));
       });
-      oB.forEach((e, i) => op(e, (.35 + .65 * (1 - ez(seg(c.u, .58 + i * .004, .70 + i * .004)))).toFixed(3)));
-      const w = ezo(seg(c.u, .66, .92));
-      set(vet, { x2: (-352 + 700 * w).toFixed(1), y2: (-205 + 414 * w).toFixed(1) });
-      op(vet, ez(seg(c.u, .64, .70)) * .92);
+      [vet, vet2].forEach((g, i) => {
+        const a0 = .58 + i * .13;
+        op(g, ez(seg(c.u, a0, a0 + .05)).toFixed(3));
+        const w = ezo(seg(c.u, a0, a0 + .22));
+        veDan(g.__net, w); veDan(g.__bong, w);
+      });
       kh("k3c04-te", c.u * 10, 7.6, 9.6, .4);
-      kh("k3c04-ng", c.u * 10, .4, 4.2, .4);
+      khn("k3c04-ng", c.u * 10, .4, 4.2, .4);
     };
   }});
 
@@ -402,7 +573,7 @@ DANGKY({ id: "k3c05", steps: 0, say: [CAU[4]],
     const V = sv(root, "ve"); chan(V, "k3c05", .62); viND(V, "k3c05", .4);
     return c => {
       KB(root, c, c.u, [34, -30, -14, 14, 1.04, 1.17]);
-      kh("k3c05-ng", c.t, .35, 3.6);
+      khn("k3c05-ng", c.t, .35, 3.6);
     };
   }});
 
@@ -439,8 +610,8 @@ DANGKY({ id: "k3c06", steps: 0, say: [CAU[5]],
         op(g, ez(seg(c.u, .14 + i * .22, .30 + i * .22)).toFixed(3));
         set(g, { transform: "translate(0," + (4.5 * Math.sin(c.t * 1.1 + i * 1.4)).toFixed(2) + ")" });
       });
-      kh("k3c06-n1", c.u * 10, .4, 3.6, .4);
-      kh("k3c06-n2", c.u * 10, 5.0, 7.4, .4);
+      khn("k3c06-n1", c.u * 10, .4, 3.6, .4);
+      khn("k3c06-n2", c.u * 10, 5.0, 7.4, .4);
     };
   }});
 
@@ -478,7 +649,7 @@ DANGKY({ id: "k3c07", steps: 0, say: [CAU[6]],
     const song7b = song(gB, 634, 15, 260, "#0A2231");
     const day = el("path", { d: "M560,590 C800,430 960,300 1040,196", fill: "none",
       stroke: VANG, "stroke-width": 3, "stroke-dasharray": "12 10", opacity: 0 }, gB);
-    const trangB = dia(gB, 1058, 176, 76, "#FFF6E2", "k3c07-d", gB); op(trangB, 0);
+    const trangB = diaMT(gB, "k3c07", 1058, 176, 76); op(trangB, 0);
     gradB(gB, "k3c07-q", [[0, "#FFF0CC", .5], [.4, "#F7D894", .16], [1, "#F7D894", 0]]);
     const quangB = el("circle", { cx: 1058, cy: 176, r: 220, fill: "url(#k3c07-q)", opacity: 0 }, gB);
     return c => {
@@ -510,7 +681,7 @@ DANGKY({ id: "k3c07", steps: 0, say: [CAU[6]],
       /* số đếm xong trước khi hết cảnh */
       kh("k3c07-so", A ? -1 : (c.u - .52) * 10, .5, 1e9, .4);
       txt("k3c07-s", soVN(384400 * ezo(seg(c.u, .56, .86))));
-      kh("k3c07-ng", c.u * 10, .4, 3.6, .4);
+      khn("k3c07-ng", c.u * 10, .4, 3.6, .4);
     };
   }});
 
@@ -518,30 +689,33 @@ DANGKY({ id: "k3c07", steps: 0, say: [CAU[6]],
    A: đường con nước teo dần trên nền giấy (hệ thống vẫn chạy, chỉ là không còn mốc)
    B: ảnh sông thật, đĩa trăng nhạt dần thành một vòng đứt rỗng */
 DANGKY({ id: "k3c08", steps: 0, say: [CAU[7]],
-  html: NEN("lanh", "k3c08-a") + IMG("k3c08-b", "k3-bentre.jpg", 0.28, { loc: "contrast(1.05) saturate(.98) brightness(1.02)" }) +
+  /* SỬA 28/11 · NÊN SỬA: nền `lanh` quá trắng, sơ đồ sóng xám-lam gần như
+     không có độ tương phản. Nền đổi sang `lanhT` (đỉnh #1B4E68), đường sóng
+     đổi sang #6CF2B4 dày 4 px. Ý giữ nguyên — biên độ co lại, trăng mờ đi. */
+  html: NEN("lanhT", "k3c08-a") + IMG("k3c08-b", "k3-bentre.jpg", 0.28, { loc: "contrast(1.05) saturate(.98) brightness(1.02)" }) +
         SV(0.86, "ve") +
         '<div class="hud">' + nguon("k3c08-ng", "Ảnh: Balon Greyjoy — sông ở Bến Tre · CC0") + '</div>',
   anim: root => {
     const V = sv(root, "ve");
     const gA = el("g", {}, V);
     const X0 = 96, X1 = 1184, Y = 372, AM = 112;
-    el("line", { x1: X0, y1: Y, x2: X1, y2: Y, stroke: "#8E9EA8", "stroke-width": 1.8,
-      "stroke-dasharray": "10 9", opacity: .6 }, gA);
-    const khoi = el("path", { d: "", fill: BIEN, opacity: .26 }, gA);
-    const duong = el("path", { d: "", fill: "none", stroke: BIEN, "stroke-width": 6,
+    el("line", { x1: X0, y1: Y, x2: X1, y2: Y, stroke: "#9FC8DC", "stroke-width": 1.8,
+      "stroke-dasharray": "10 9", opacity: .7 }, gA);
+    const khoi = el("path", { d: "", fill: "#6CF2B4", opacity: .16 }, gA);
+    const duong = el("path", { d: "", fill: "none", stroke: "#6CF2B4", "stroke-width": 4,
       "stroke-linecap": "round" }, gA);
     /* mốc rằm/đầu tháng mờ đi cùng lúc với biên độ */
     const mocA = [0, 1].map(i => {
       const g = el("g", {}, gA);
       const x = i ? X0 + (X1 - X0) * .78 : X0 + (X1 - X0) * .26;
-      el("line", { x1: x, y1: Y - 190, x2: x, y2: Y + 170, stroke: "#9AA6A0",
-        "stroke-width": 2.4, "stroke-dasharray": "9 8" }, g);
-      pha(g, x, Y - 220, 24, i ? 0.015 : 0.5, "#39424E", "#D6DAD2");
+      el("line", { x1: x, y1: Y - 190, x2: x, y2: Y + 170, stroke: "#CFE6F2",
+        "stroke-width": 2.4, "stroke-dasharray": "9 8", opacity: .8 }, g);
+      pha(g, x, Y - 220, 24, i ? 0.015 : 0.5, "#F2F7EC", "#15384C");
       return g;
     });
     const gB = el("g", { opacity: 0 }, V);
     chan(V, "k3c08", .55);
-    const trangB = dia(gB, 968, 206, 84, "#F4F1E8", "k3c08-d", gB);
+    const trangB = diaMT(gB, "k3c08", 968, 206, 84);
     const vong = el("circle", { cx: 968, cy: 206, r: 84, fill: "none", stroke: "#F2F6F8",
       "stroke-width": 3, "stroke-dasharray": "9 10", opacity: 0 }, gB);
     return c => {
@@ -564,7 +738,7 @@ DANGKY({ id: "k3c08", steps: 0, say: [CAU[7]],
       op(trangB, (1 - f).toFixed(3));
       set(trangB, { transform: "translate(0," + (-30 * f).toFixed(1) + ")" });
       op(vong, (ez(seg(c.u, .66, .80)) * .8).toFixed(3));
-      kh("k3c08-ng", A ? -1 : (c.u - .50) * 10, .5, 3.4, .4);
+      khn("k3c08-ng", A ? -1 : (c.u - .50) * 10, .5, 3.4, .4);
     };
   }});
 
@@ -589,7 +763,7 @@ DANGKY({ id: "k3c09", steps: 0, say: [CAU[8]],
         set(b, { cx: (-120 + rn(i, 203) * 1540).toFixed(1), cy: (820 - ph * 980).toFixed(1) });
         op(b, (Math.sin(ph * Math.PI) * .22).toFixed(3));
       });
-      kh("k3c09-ng", c.t, .6, 4.1);
+      khn("k3c09-ng", c.t, .6, 4.1);
     };
   }});
 
@@ -605,19 +779,38 @@ DANGKY({ id: "k3c10", steps: 0, say: [CAU[9]],
     const V = sv(root, "ve");
     const gA = el("g", {}, V);
     sao(gA, 110);
-    const mt = dia(gA, 406, 322, 106, TRANG, "k3c10-d", gA); op(mt, 0);
+    /* ── SỬA 28/11 · NÊN SỬA ─────────────────────────────────────────────────
+       Cả cảnh nói hai đĩa "to gần như bằng nhau, cùng chiếm khoảng nửa độ".
+       Bản cũ sai ba chỗ, đều thấy khi chụp khung:
+         1. hai thanh đo vẽ dần theo HAI mốc lệch nhau (.22–.40 và .30–.48), nên
+            ở mọi khung giữa cảnh thanh của Mặt Trăng DÀI HƠN thanh của Mặt Trời.
+            Hình nói ngược lời. Nay hai thanh dùng CHUNG một biến tiến độ `ut`.
+         2. hai nhãn "0,5°" cũng lệch mốc (.28–.38 và .36–.46), nên gần như không
+            khung nào có đủ cả hai nhãn. Nay cùng một mốc.
+         3. đĩa Mặt Trăng là mảng trắng đặc viền sắc, đĩa Mặt Trời là gradient
+            nhoè mép — bằng nhau về bán kính nhưng mắt đọc ra khác cỡ. Nay cả hai
+            dùng CHUNG hằng số R10 và cả hai đều là đĩa ảnh/đĩa đặc có mép rõ.
+       Đây là toàn bộ nội dung của cảnh, không được sai một pixel. ───────────── */
+    const R10 = 106, XMT = 406, XMS = 880, YC = 322;
+    const mt = diaMT(gA, "k3c10", XMT, YC, R10); op(mt, 0);
     gradB(gA, "k3c10-s", [[0, "#FFF6D4", 1], [.62, NHAT, .96], [1, "#EDA52E", .92]]);
     gradB(gA, "k3c10-q", [[0, NHAT, .46], [.4, NHAT, .16], [1, NHAT, 0]]);
-    const q = el("circle", { cx: 880, cy: 322, r: 250, fill: "url(#k3c10-q)", opacity: 0 }, gA);
-    const ms = el("circle", { cx: 880, cy: 322, r: 106, fill: "url(#k3c10-s)", opacity: 0 }, gA);
-    const thuoc = (x, mau) => el("path", { d: "M" + (x - 106) + ",474 L" + (x - 106) + ",512 " +
-      "M" + (x + 106) + ",474 L" + (x + 106) + ",512 M" + (x - 106) + ",493 L" + (x + 106) + ",493",
+    const q = el("circle", { cx: XMS, cy: YC, r: 250, fill: "url(#k3c10-q)", opacity: 0 }, gA);
+    const msg = el("g", { opacity: 0 }, gA);
+    el("circle", { cx: XMS, cy: YC, r: R10, fill: "url(#k3c10-s)" }, msg);
+    /* vành mép rõ, để đĩa Mặt Trời không nhoè ra nhỏ hơn đĩa Mặt Trăng */
+    el("circle", { cx: XMS, cy: YC, r: R10, fill: "none", stroke: "#FFE6B4",
+      "stroke-width": 2.6, opacity: .8 }, msg);
+    const ms = msg;
+    /* HAI THANH CÙNG CHIỀU DÀI CHÍNH XÁC, CÙNG ĐỘ CAO: cùng R10, cùng y */
+    const thuoc = (x, mau) => el("path", { d: "M" + (x - R10) + ",474 L" + (x - R10) + ",512 " +
+      "M" + (x + R10) + ",474 L" + (x + R10) + ",512 M" + (x - R10) + ",493 L" + (x + R10) + ",493",
       fill: "none", stroke: mau, "stroke-width": 3, "stroke-linecap": "round", opacity: 0 }, gA);
-    const d1 = thuoc(406, "#CFE0EC"), d2 = thuoc(880, "#FFE6B4");
+    const d1 = thuoc(XMT, "#CFE0EC"), d2 = thuoc(XMS, "#FFE6B4");
     const nhan = (x, s, mau) => { const t = el("text", { x: x, y: 556, fill: mau, "font-size": 27,
       "font-weight": 700, "font-family": "system-ui", "text-anchor": "middle", opacity: 0 }, gA);
       t.textContent = s; return t; };
-    const n1 = nhan(406, "0,5°", "#CFE0EC"), n2 = nhan(880, "0,5°", "#FFE6B4");
+    const n1 = nhan(XMT, "0,5°", "#CFE0EC"), n2 = nhan(XMS, "0,5°", "#FFE6B4");
     /* lớp B: thước áp lên video */
     const gB = el("g", { opacity: 0 }, V);
     const vong = el("circle", { cx: 640, cy: 330, r: 120, fill: "none", stroke: "#FFE6B4",
@@ -634,15 +827,20 @@ DANGKY({ id: "k3c10", steps: 0, say: [CAU[9]],
       op(gA, A ? 1 : 0); op(gB, A ? 0 : 1);
       if (A) KB(root, c, seg(c.u, 0, .56), [0, 0, 12, -14, 1.0, 1.08]);
       else   KB(root, c, seg(c.u, .56, 1), [16, -14, -10, 10, 1.14, 1.0]);
-      op(mt, ez(seg(c.u, .02, .12))); op(ms, ez(seg(c.u, .10, .20)));
-      op(q, (ez(seg(c.u, .10, .24)) * (.8 + .16 * Math.sin(c.t * 1.6))).toFixed(3));
-      op(d1, ez(seg(c.u, .22, .32)) * .92); veDan(d1, ezo(seg(c.u, .22, .40)));
-      op(d2, ez(seg(c.u, .30, .40)) * .92); veDan(d2, ezo(seg(c.u, .30, .48)));
-      op(n1, ez(seg(c.u, .28, .38))); op(n2, ez(seg(c.u, .36, .46)));
+      /* hai đĩa hiện CÙNG LÚC — bản cũ cho Mặt Trăng hiện trước Mặt Trời 0,08 */
+      const udia = ez(seg(c.u, .02, .12));
+      op(mt, udia); op(ms, udia);
+      op(q, (ez(seg(c.u, .06, .22)) * (.8 + .16 * Math.sin(c.t * 1.6))).toFixed(3));
+      /* MỘT biến tiến độ cho CẢ HAI thanh và CẢ HAI nhãn */
+      const uth = ez(seg(c.u, .22, .32)) * .92, utv = ezo(seg(c.u, .22, .44));
+      const unh = ez(seg(c.u, .30, .40));
+      op(d1, uth); veDan(d1, utv);
+      op(d2, uth); veDan(d2, utv);
+      op(n1, unh); op(n2, unh);
       op(vong, (ez(seg(c.u, .60, .70)) * (.6 + .3 * Math.sin(c.t * 2.0))).toFixed(3));
       op(dB, ez(seg(c.u, .64, .74)) * .9); veDan(dB, ezo(seg(c.u, .64, .82)));
       op(nB, ez(seg(c.u, .70, .80)));
-      kh("k3c10-ng", A ? -1 : (c.u - .56) * 10, .4, 3.0, .4);
+      khn("k3c10-ng", A ? -1 : (c.u - .56) * 10, .4, 3.0, .4);
     };
   }});
 
@@ -650,46 +848,56 @@ DANGKY({ id: "k3c10", steps: 0, say: [CAU[9]],
    A: hai tam giác đồng dạng, nhãn ×400 cho cỡ và cho khoảng cách (sơ đồ, nền giấy có sắc)
    B: VIDEO THẬT vành nhật hoa — "đĩa này úp vừa khít lên đĩa kia" */
 DANGKY({ id: "k3c11", steps: 0, say: [CAU[10]],
-  html: NEN("am", "k3c11-a") + SV(0.16, "nen", "k3c11-a2") +
+  /* SỬA 28/11 · NÊN SỬA: nền kem gần trắng + nét xám rất nhạt, chữ "×400" xám
+     trên kem — khó đọc. Nền sang `kem` (đậm hơn), nét sơ đồ #4C2E12, "×400"
+     đổi sang #C14A2E cỡ 54 px đậm. Và THÊM dòng "Sơ đồ, không theo tỉ lệ"
+     — sơ đồ nén tỉ lệ rất mạnh mà bản cũ bỏ dòng đó, trong khi khối 1 đã ghi
+     nó ở k1c02; hai khối nay dùng chung một câu chữ. */
+  html: NEN("kem", "k3c11-a") + SV(0.16, "nen", "k3c11-a2") +
         VI("k3c11-b", "k3-vanhlua.mp4", 0.32, { tu: 0.2, dai: 7.4, toc: .55, loc: "contrast(1.08) brightness(1.0)" }) +
         SV(0.78, "ve") +
-        '<div class="hud">' + nguon("k3c11-ng", "Video: NASA Armstrong FRC — nhật thực 21/8/2017, nước Mỹ · Phạm vi công cộng") + '</div>',
+        '<div class="hud">' + nguon("k3c11-ng", "Video: NASA Armstrong FRC — nhật thực 21/8/2017, nước Mỹ · Phạm vi công cộng") +
+        '<div class="tx nho" id="k3c11-tl" style="left:66px;top:612px;color:#6B4A22">Sơ đồ, không theo tỉ lệ</div>' + '</div>',
   anim: root => {
     const N = sv(root, "nen"), V = sv(root, "ve");
-    const nhip = chatLieu(N, "k3c11", "#A98C56", 10);
+    const nhip = chatLieu(N, "k3c11", "#8A6A32", 10);
     const gA = el("g", {}, V);
     const EX = 112, EY = 360, D1 = 330, R1 = 25, K = 2.64;
     const D2 = D1 * K, R2 = R1 * K, TG = R1 / D1;
     const X1 = EX + D1, X2 = EX + D2;
     /* con mắt = người quan sát trên Trái Đất */
     const mat = el("g", {}, gA);
-    el("path", { d: "M" + (EX - 46) + "," + EY + " q46,-36 92,0 q-46,36 -92,0 Z", fill: "#FFFFFF",
-      stroke: CHUTOI, "stroke-width": 3.4, "stroke-linejoin": "round" }, mat);
-    el("circle", { cx: EX, cy: EY, r: 15, fill: CHUTOI }, mat);
+    const NET11 = "#4C2E12";
+    el("path", { d: "M" + (EX - 46) + "," + EY + " q46,-36 92,0 q-46,36 -92,0 Z", fill: "#FFF8E8",
+      stroke: NET11, "stroke-width": 3.4, "stroke-linejoin": "round" }, mat);
+    el("circle", { cx: EX, cy: EY, r: 15, fill: NET11 }, mat);
     const quat = el("path", { d: "M" + EX + "," + EY + " L" + (EX + 1180) + "," + (EY - 1180 * TG) +
       " L" + (EX + 1180) + "," + (EY + 1180 * TG) + " Z", fill: NHAT, opacity: 0 }, gA);
-    const tia = [1, -1].map(() => el("line", { x1: EX, y1: EY, x2: EX, y2: EY, stroke: "#7F8D96",
+    const tia = [1, -1].map(() => el("line", { x1: EX, y1: EY, x2: EX, y2: EY, stroke: NET11,
       "stroke-width": 2.6, "stroke-dasharray": "11 8", opacity: 0 }, gA));
-    const mtr = dia(gA, X1, EY, R1, "#D4D1C7", "k3c11-d", gA); op(mtr, 0);
+    const mtr = diaMT(gA, "k3c11", X1, EY, R1); op(mtr, 0);
     gradB(gA, "k3c11-s", [[0, "#FFF6D4", 1], [.6, NHAT, .98], [1, "#E8A62E", .95]]);
     const mst = el("circle", { cx: X2, cy: EY, r: R2, fill: "url(#k3c11-s)", opacity: 0 }, gA);
-    const nh = (x, y, s) => { const t = el("text", { x: x, y: y, fill: CHUTOI, "font-family": "system-ui",
-      "font-size": 32, "font-weight": 800, "text-anchor": "middle", opacity: 0 }, gA);
+    const nh = (x, y, s) => { const t = el("text", { x: x, y: y, fill: "#C14A2E", "font-family": "system-ui",
+      "font-size": 54, "font-weight": 800, "text-anchor": "middle", opacity: 0 }, gA);
       t.textContent = s; return t; };
-    const nco = nh(X2, EY - R2 - 42, "×400"), nxa = nh((X1 + X2) / 2, EY + 212, "×400");
+    /* nhãn "×400" phải nằm trong hộp an toàn: X2 = 112 + 871 = 983, trừ cỡ chữ
+       54 px thì mép còn cách xa 1232. Nhãn dưới kéo về giữa hai đĩa. */
+    const nco = nh(X2, EY - R2 - 46, "×400"), nxa = nh((X1 + X2) / 2, EY + 224, "×400");
     const thuoc = el("path", { d: "M" + X1 + "," + (EY + 152) + " L" + X1 + "," + (EY + 182) +
       " M" + X2 + "," + (EY + 152) + " L" + X2 + "," + (EY + 182) +
       " M" + X1 + "," + (EY + 167) + " L" + X2 + "," + (EY + 167),
-      fill: "none", stroke: "#7F8D96", "stroke-width": 2.8, "stroke-linecap": "round", opacity: 0 }, gA);
+      fill: "none", stroke: NET11, "stroke-width": 2.8, "stroke-linecap": "round", opacity: 0 }, gA);
     const covach = el("path", { d: "M" + (X2 + R2 + 32) + "," + (EY - R2) + " L" + (X2 + R2 + 32) + "," + (EY + R2) +
       " M" + (X2 + R2 + 22) + "," + (EY - R2) + " L" + (X2 + R2 + 42) + "," + (EY - R2) +
       " M" + (X2 + R2 + 22) + "," + (EY + R2) + " L" + (X2 + R2 + 42) + "," + (EY + R2),
-      fill: "none", stroke: "#7F8D96", "stroke-width": 2.8, "stroke-linecap": "round", opacity: 0 }, gA);
+      fill: "none", stroke: NET11, "stroke-width": 2.8, "stroke-linecap": "round", opacity: 0 }, gA);
     const gB = el("g", { opacity: 0 }, V);
     chan(V, "k3c11", .5);
     return c => {
       const A = c.u < .60;
       hien("k3c11-a", A); hien("k3c11-a2", A); hien("k3c11-b", !A);
+      khn("k3c11-tl", A ? c.u * 10 : -1, .3, 1e9, .4);
       nhip(c.t);
       op(gA, A ? 1 : 0); op(gB, A ? 0 : 1);
       if (A) KB(root, c, seg(c.u, 0, .60), [-44, 32, 0, 0, 1.08, 1.0]);
@@ -704,7 +912,7 @@ DANGKY({ id: "k3c11", steps: 0, say: [CAU[10]],
       op(nco, ez(seg(c.u, .30, .38)));
       op(thuoc, ez(seg(c.u, .40, .48)) * .85);
       op(nxa, ez(seg(c.u, .42, .50)));
-      kh("k3c11-ng", A ? -1 : (c.u - .60) * 10, .4, 2.8, .4);
+      khn("k3c11-ng", A ? -1 : (c.u - .60) * 10, .4, 2.8, .4);
     };
   }});
 
@@ -762,8 +970,8 @@ DANGKY({ id: "k3c12", steps: 0, say: [CAU[11]],
       bo.forEach((g, i) => op(g, ez(seg(c.u, .50 + i * .09, .62 + i * .09)).toFixed(3)));
       op(dau, (ez(seg(c.u, .74, .84)) * (.7 + .3 * Math.sin(c.t * 2.6))).toFixed(3));
       set(dau, { r: (12 + 3 * Math.sin(c.t * 2.6)).toFixed(2) });
-      kh("k3c12-n1", c.u * 10, .4, 3.0, .4);
-      kh("k3c12-n2", c.u * 10, 4.9, 7.2, .4);
+      khn("k3c12-n1", c.u * 10, .4, 3.0, .4);
+      khn("k3c12-n2", c.u * 10, 4.9, 7.2, .4);
     };
   }});
 
@@ -788,12 +996,20 @@ DANGKY({ id: "k3c13", steps: 0, say: [CAU[12]],
     el("circle", { cx: 640, cy: 336, r: 430, fill: "url(#k3c13-q)", opacity: 1 }, gA);
     const mtA = el("g", {}, gA);
     el("circle", { cx: 640, cy: 336, r: 132, fill: "#0A0D14" }, mtA);
-    const vienA = el("circle", { cx: 640, cy: 336, r: 132, fill: "none", stroke: "#FFE3A6",
-      "stroke-width": 4.5, "stroke-dasharray": "11 9", opacity: 0 }, gA);
+    /* SỬA 28/11 · GỢI Ý: vòng nét đứt GIỮ CỠ MẶT TRỜI quá mờ (0,25) nên không
+       đọc ra được là đĩa trăng đang trùm ra ngoài. Nâng lên 0,7 và đổi sang
+       #F2C14E cho tách khỏi quầng trắng. */
+    const vienA = el("circle", { cx: 640, cy: 336, r: 132, fill: "none", stroke: "#F2C14E",
+      "stroke-width": 5, "stroke-dasharray": "11 9", opacity: 0 }, gA);
     const gC = el("g", { opacity: 0 }, V);
     const mui = el("path", { d: "M880,330 L1096,330", fill: "none", stroke: "#FFE6B4",
       "stroke-width": 4, "stroke-linecap": "round", opacity: 0 }, gC);
     const dau = el("polygon", { points: "1082,308 1142,330 1082,352", fill: "#FFE6B4", opacity: 0 }, gC);
+    /* mũi tên cuối bản cũ là một mũi tên TRƠN không gắn với gì — nay có nhãn */
+    const nhanC = nhanSV(gC, 988, 404, "rồi sẽ tới lúc che không đủ", "#FFE6B4", 26, "middle", 700);
+    nhanC.setAttribute("stroke", "#06101C");
+    nhanC.setAttribute("stroke-width", "6");
+    nhanC.setAttribute("paint-order", "stroke");
     chan(V, "k3c13", .55);
     return c => {
       const P = c.u < .34 ? 0 : (c.u < .68 ? 1 : 2);
@@ -807,8 +1023,9 @@ DANGKY({ id: "k3c13", steps: 0, say: [CAU[12]],
       op(vienA, ez(seg(c.u, .04, .14)) * .95);
       op(mui, ez(seg(c.u, .78, .86)) * .92); veDan(mui, ezo(seg(c.u, .78, .94)));
       op(dau, ez(seg(c.u, .88, .94)) * .92);
-      kh("k3c13-n1", P === 1 ? (c.u - .34) * 10 : -1, .3, 2.6, .4);
-      kh("k3c13-n2", P === 2 ? (c.u - .68) * 10 : -1, .3, 2.6, .4);
+      op(nhanC, ez(seg(c.u, .86, .94)).toFixed(3));
+      khn("k3c13-n1", P === 1 ? (c.u - .34) * 10 : -1, .3, 2.6, .4);
+      khn("k3c13-n2", P === 2 ? (c.u - .68) * 10 : -1, .3, 2.6, .4);
     };
   }});
 
@@ -821,11 +1038,11 @@ DANGKY({ id: "k3c13", steps: 0, say: [CAU[12]],
 DANGKY({ id: "k3c14", steps: 0, say: [CAU[13]],
   html: IMG("k3c14-a", "k3-sao.jpg", 0.2, { loc: "contrast(1.12) saturate(1.1) brightness(.72)" }) +
         SV(0.84, "ve") +
-        '<div class="hud">' + nguon("k3c14-ng", "Ảnh nền: NPS / Jacob W. Frank — dải Ngân Hà, Mỹ · Phạm vi công cộng") + '</div>',
+        '<div class="hud">' + nguon("k3c14-ng", "Ảnh nền: NPS / Jacob W. Frank — dải Ngân Hà, Mỹ · Phạm vi công cộng", 430) + '</div>',
   anim: root => {
     const V = sv(root, "ve");
-    el("rect", { x: -400, y: -300, width: 2100, height: 1400, fill: "#05091A", opacity: .46 }, V);
-    gradL(V, "k3c14-sc", 0, -100, 0, 760, [[0, "#04070F", .62], [.42, "#04070F", .18], [1, "#04070F", .7]]);
+    el("rect", { x: -400, y: -300, width: 2100, height: 1400, fill: "#05091A", opacity: .2 }, V);
+    gradL(V, "k3c14-sc", 0, -100, 0, 760, [[0, "#04070F", .42], [.42, "#04070F", .04], [1, "#04070F", .5]]);
     el("rect", { x: -400, y: -300, width: 2100, height: 1400, fill: "url(#k3c14-sc)" }, V);
     const X0 = 148, X1 = 1140, Y0 = 188, DY = 92;
     /* trục thời gian: một dải sáng, không phải một nét xám */
@@ -836,7 +1053,16 @@ DANGKY({ id: "k3c14", steps: 0, say: [CAU[13]],
     for (let i = 0; i < 9; i++)
       el("line", { x1: X0 + i * (X1 - X0) / 8, y1: 582, x2: X0 + i * (X1 - X0) / 8, y2: 596,
         stroke: VANG, "stroke-width": 2, opacity: .34 }, V);
-    const MAU = ["#FFD98A", "#8FD2EA", "#E0A05A", "#F2C14E"];
+    /* ── SỬA 28/11 · NÊN SỬA (luật L1: "nhãn, hoặc là bỏ") ─────────────────
+       Bản cũ: bốn dải trôi trên một trục thời gian KHÔNG CÓ MỘT NHÃN NÀO —
+       người xem thấy bốn thanh màu vô nghĩa. Chủ ý "không hiện con số năm nào"
+       là đúng và giữ nguyên, nhưng nó không có nghĩa là bỏ luôn nhãn TRỤC.
+       Nay: gắn nhãn hai đầu trục bằng đúng hai cụm chính lời dẫn vừa đọc —
+       "vài trăm triệu năm" và "gần một tỉ năm" — không bịa thêm con số nào.
+       Và bốn dải đổi về CÙNG MỘT MÀU vàng #F2C14E, chỉ khác độ đậm, để khỏi
+       gợi ý rằng đó là bốn LOẠI khác nhau (chúng chỉ là bốn ước tính). */
+    const MAU = ["#F2C14E", "#F2C14E", "#F2C14E", "#F2C14E"];
+    const DAM = [.58, .72, .86, 1.0];
     const q = [[.10, .46], [.17, .40], [.28, .74], [.44, .94]];
     const dai = q.map((o, i) => {
       const g = el("g", { opacity: 0 }, V);
@@ -851,14 +1077,25 @@ DANGKY({ id: "k3c14", steps: 0, say: [CAU[13]],
       const c1 = el("circle", { cx: 0, cy: y, r: 9, fill: MAU[i], opacity: .9 }, g);
       const c2 = el("circle", { cx: 0, cy: y, r: 9, fill: MAU[i], opacity: .9 }, g);
       g.__h = h; g.__r = r; g.__c1 = c1; g.__c2 = c2; g.__a = o[0]; g.__b = o[1]; g.__y = y;
+      g.__dam = DAM[i];
       return g;
     });
-    const hoi = el("text", { x: 1186, y: 404, fill: VANG, "font-size": 128, "font-weight": 800,
+    /* NHÃN HAI ĐẦU TRỤC. Đo: trục chạy X0 = 148 → X1 = 1140, nhãn trái căn
+       trái tại x = 150, nhãn phải căn phải tại x = 1138 — cả hai nằm trong
+       hộp an toàn x ∈ [48,1232]; y = 640 nằm trong y ≤ 672. */
+    const nTrai = nhanSV(V, 152, 628, "vài trăm triệu năm", "#FFE6A8", 26, "start", 700);
+    const nPhai = nhanSV(V, 1132, 628, "gần một tỉ năm", "#FFE6A8", 26, "end", 700);
+    /* dấu "?" cũ ở x = 1186 cỡ 128 px: mép phải ra tới x ≈ 1341 sau khi máy
+       quay đẩy — tức RA NGOÀI KHUNG 1280, không chỉ ngoài vùng an toàn. */
+    const hoi = el("text", { x: 1120, y: 176, fill: VANG, "font-size": 92, "font-weight": 800,
       "font-family": "system-ui", "text-anchor": "middle", opacity: 0 }, V);
     hoi.textContent = "?";
     chan(V, "k3c14", .6);
     return c => {
-      KB(root, c, c.u, [26, -26, -14, 14, 1.04, 1.18]);
+      /* biên độ máy quay hạ hẳn: bản cũ [26,-26,-14,14,1.04,1.18] đẩy nhãn trục
+         xuống tận y = 729 px, tức LỌT RA NGOÀI khung 720 px ở mốc c.u = 0,90.
+         Đo bằng getBoundingClientRect() ở sáu mốc, không ước lượng. */
+      KB(root, c, c.u, [10, -10, -6, 6, 1.0, 1.06]);
       dai.forEach((g, i) => {
         const a = ezo(seg(c.u, .04 + i * .13, .34 + i * .13));
         const xa = X0 + (X1 - X0) * g.__a, xb = X0 + (X1 - X0) * lerp(g.__a, g.__b, a);
@@ -867,10 +1104,12 @@ DANGKY({ id: "k3c14", steps: 0, say: [CAU[13]],
         set(g.__h, { x: (xa - 16).toFixed(1), width: (w + 32).toFixed(1) });
         set(g.__c1, { cx: xa.toFixed(1), r: (8 + 2.6 * Math.sin(c.t * 2.1 + i)).toFixed(2) });
         set(g.__c2, { cx: xb.toFixed(1), r: (8 + 2.6 * Math.sin(c.t * 2.1 + i + 1.6)).toFixed(2) });
-        op(g, ez(seg(c.u, .04 + i * .13, .16 + i * .13)).toFixed(3));
+        op(g, (g.__dam * ez(seg(c.u, .04 + i * .13, .16 + i * .13))).toFixed(3));
       });
+      const un14 = ez(seg(c.u, .06, .18));
+      op(nTrai, un14.toFixed(3)); op(nPhai, un14.toFixed(3));
       op(hoi, (ez(seg(c.u, .66, .82)) * (.55 + .3 * Math.sin(c.t * 2.1))).toFixed(3));
-      kh("k3c14-ng", c.t, .5, 3.9);
+      khn("k3c14-ng", c.t, .5, 3.9);
     };
   }});
 
@@ -915,8 +1154,8 @@ DANGKY({ id: "k3c15", steps: 0, say: [CAU[14]],
       op(quet, ((1 - b) * .5 * ez(seg(c.u, .22, .34))).toFixed(3));
       set(cham, { cx: xc.toFixed(1), r: (10 + 3 * Math.sin(c.t * 2.6)).toFixed(2) });
       op(cham, ez(seg(c.u, .18, .28)));
-      kh("k3c15-n1", A ? c.u * 10 : -1, .4, 3.0, .4);
-      kh("k3c15-n2", A ? -1 : (c.u - .50) * 10, .3, 2.7, .4);
+      khn("k3c15-n1", A ? c.u * 10 : -1, .4, 3.0, .4);
+      khn("k3c15-n2", A ? -1 : (c.u - .50) * 10, .3, 2.7, .4);
     };
   }});
 
@@ -927,29 +1166,54 @@ DANGKY({ id: "k3c15", steps: 0, say: [CAU[14]],
 /* k3c16 · câu 15 · 5,4s — phép trừ Trái Đất − Mặt Trăng = ? rồi bị gạch đỏ.
    Sơ đồ (ngoại lệ §15.1.3) nhưng có ảnh Mặt Trăng thật làm chất liệu nền. */
 DANGKY({ id: "k3c16", steps: 0, say: [CAU[15]],
-  html: NEN("lanh") + SV(0.2, "nen") + SV(0.82, "ve"),
+  html: NEN("dem") + SV(0.2, "nen") + SV(0.82, "ve"),
   anim: root => {
     const N = sv(root, "nen"), V = sv(root, "ve");
-    const nhip = chatLieu(N, "k3c16", "#6E93AB", 11);
-    const td = traiDat(V, 288, 352, 128, 71); op(td, 0);
-    const tru = el("rect", { x: 452, y: 338, width: 0, height: 26, rx: 13, fill: CHUTOI }, V);
-    const mt = dia(V, 716, 352, 70, "#CFCCC3", "k3c16-d", V); op(mt, 0);
+    /* ── SỬA 28/11 · NÊN SỬA ─────────────────────────────────────────────────
+       Đây là CÂU LUẬN ĐỀ của cả tập ("một phép trừ mà vũ trụ không cho phép ai
+       làm") nhưng bản cũ là khung NHẠT NHẤT, PHẲNG NHẤT cả tập: nền xanh-trắng
+       gần trắng, một đĩa lam vẽ tay có vệt cam, một đĩa xám, mấy dấu đen, và
+       lớp chatLieu() gần như vô hình. Cảnh quan trọng nhất phải là cảnh đậm nhất.
+       Nay: nền NENS.dem (đỉnh #1A2742), Trái Đất và Mặt Trăng dùng ẢNH THẬT qua
+       hàm chung của cả tập, dấu trừ / dấu bằng / dấu hỏi đổi sang trắng ngà, và
+       dấu ✕ đỏ #D4523C dày 10 px VẼ DẦN đè lên cả phép trừ. ─────────────────── */
+    const nhip = chatLieu(N, "k3c16", "#7FB6D6", 12);
+    const NGA = "#F3EFE2";
+    const td = cauTD(V, "k3c16e", 288, 352, 128); op(td, 0);
+    const tru = el("rect", { x: 452, y: 338, width: 0, height: 26, rx: 13, fill: NGA }, V);
+    const mt = diaMT(V, "k3c16", 716, 352, 70); op(mt, 0);
     const bang = el("path", { d: "M842,308 L910,308 M842,396 L910,396", fill: "none",
-      stroke: CHUTOI, "stroke-width": 24, "stroke-linecap": "round", opacity: 0 }, V);
-    const hoi = el("text", { x: 1056, y: 420, fill: "#50646F", "font-size": 158, "font-weight": 800,
+      stroke: NGA, "stroke-width": 24, "stroke-linecap": "round", opacity: 0 }, V);
+    const hoi = el("text", { x: 1056, y: 420, fill: NGA, "font-size": 158, "font-weight": 800,
       "font-family": "system-ui", "text-anchor": "middle", opacity: 0 }, V);
     hoi.textContent = "?";
-    const x16 = veX(V, 524, 352, 84, DO); op(x16, 0);
+    /* dấu ✕ vẽ dần, phủ cả phép trừ. Hai nét là hai <path> riêng để veDan() ăn. */
+    const XC = 640, YC = 352, XR = 236, YR = 182;
+    const mkX = d => {
+      const g = el("g", { opacity: 0 }, V);
+      el("path", { d: d, fill: "none", stroke: "#06101C", "stroke-width": 17,
+        "stroke-linecap": "round", opacity: .45 }, g);
+      const n = el("path", { d: d, fill: "none", stroke: DO, "stroke-width": 10,
+        "stroke-linecap": "round" }, g);
+      g.__net = n; g.__bong = g.firstChild;
+      return g;
+    };
+    const x1 = mkX("M" + (XC - XR) + "," + (YC - YR) + " L" + (XC + XR) + "," + (YC + YR));
+    const x2 = mkX("M" + (XC + XR) + "," + (YC - YR) + " L" + (XC - XR) + "," + (YC + YR));
     return c => {
-      KB(root, c, c.u, [-28, 26, 0, 0, 1.0, 1.1]);
+      KB(root, c, c.u, [-22, 20, 0, 0, 1.0, 1.08]);
       nhip(c.t);
       op(td, ez(seg(c.u, .0, .10)));
       set(tru, { width: (138 * ezo(seg(c.u, .08, .22))).toFixed(1) });
       op(mt, ez(seg(c.u, .14, .24)));
       op(bang, ez(seg(c.u, .22, .32)));
-      op(hoi, ez(seg(c.u, .28, .40)) * .9);
-      op(x16, ez(seg(c.u, .56, .68)));
-      set(x16, { transform: "rotate(" + (3 * Math.sin(c.t * 2.8)).toFixed(2) + " 524 352)" });
+      op(hoi, ez(seg(c.u, .28, .40)) * .95);
+      [x1, x2].forEach((g, i) => {
+        const a0 = .50 + i * .11;
+        op(g, ez(seg(c.u, a0, a0 + .06)).toFixed(3));
+        const w = ezo(seg(c.u, a0, a0 + .20));
+        veDan(g.__net, w); veDan(g.__bong, w);
+      });
     };
   }});
 
@@ -965,7 +1229,7 @@ DANGKY({ id: "k3c17", steps: 0, say: [CAU[16]],
     chan(V, "k3c17", .6);
     return c => {
       KB(root, c, c.u, [10, -12, 0, 0, 1.02, 1.1]);
-      kh("k3c17-ng", c.t, .2, 1.9);
+      khn("k3c17-ng", c.t, .2, 1.9);
     };
   }});
 
@@ -983,11 +1247,30 @@ DANGKY({ id: "k3c18", steps: 0, say: [CAU[17]],
     const gA = el("g", {}, V);
     el("ellipse", { cx: 566, cy: 364, rx: 384, ry: 154, fill: "none", stroke: "#A4B1AA",
       "stroke-width": 2.6, "stroke-dasharray": "10 9" }, gA);
-    traiDat(gA, 566, 364, 78, 81);
-    const mt = dia(gA, 0, 0, 34, "#CFCCC3", "k3c18-d", gA);
-    const keo = el("path", { d: "", fill: "none", stroke: DO, "stroke-width": 7,
+    cauTD(gA, "k3c18e", 566, 364, 78);
+    const mt = diaMT(gA, "k3c18", 0, 0, 34);
+    /* ── SỬA 28/11 · mức CHẶN ───────────────────────────────────────────────
+       Bản cũ: một mũi tên đỏ KÉO MẶT TRĂNG VĂNG KHỎI QUỸ ĐẠO, không một dấu
+       phủ định nào, trong khi lời đang đọc là "không có cơ chế vật lý nào lấy
+       nó ra khỏi bầu trời của chúng ta". Hình nói NGƯỢC HẲN lời.
+       Nay: (1) dấu ✕ đỏ dày đè lên mũi tên, hiện ĐÚNG CÙNG NHỊP với mũi tên
+       (cùng một biến `vao`, xong trước c.u = .16 — không khung nào có mũi tên
+       trơn); (2) mũi tên GÃY LÀM ĐÔI, nửa ngoài rơi xuống và xoay đi; (3) một
+       nhãn sơ đồ "KHÔNG XẢY RA" ghim cố định trong vùng an toàn.
+       Mũi tên chia làm hai khúc để gãy được: `keoA` khúc trong, `keoB` khúc
+       ngoài (mang đầu mũi tên). ───────────────────────────────────────────── */
+    const keoA = el("path", { d: "", fill: "none", stroke: DO, "stroke-width": 7,
       "stroke-linecap": "round", opacity: 0 }, gA);
-    const dauk = el("polygon", { points: "0,0 0,0 0,0", fill: DO, opacity: 0 }, gA);
+    const keoBg = el("g", { opacity: 0 }, gA);
+    const keoB = el("path", { d: "", fill: "none", stroke: DO, "stroke-width": 7,
+      "stroke-linecap": "round" }, keoBg);
+    const dauk = el("polygon", { points: "0,0 0,0 0,0", fill: DO }, keoBg);
+    const xdau = veXday(gA, 0, 0, 58, DO, 11); op(xdau, 0);
+    const nhanX = nhanSV(gA, 640, 126, "KHÔNG XẢY RA", DO, 38, "middle", 800);
+    nhanX.setAttribute("letter-spacing", "0.12em");
+    nhanX.setAttribute("stroke", "#F7FAFC");
+    nhanX.setAttribute("stroke-width", "7");
+    nhanX.setAttribute("paint-order", "stroke");
     const gB = el("g", { opacity: 0 }, V);
     chan(V, "k3c18", .5);
     return c => {
@@ -998,20 +1281,41 @@ DANGKY({ id: "k3c18", steps: 0, say: [CAU[17]],
       if (A) KB(root, c, seg(c.u, 0, .56), [0, 0, -12, 14, 1.0, 1.09]);
       else   KB(root, c, seg(c.u, .56, 1), [-18, 16, 10, -10, 1.14, 1.02]);
       const th = c.t * 1.05 - .6;
-      const keo1 = Math.sin(cl(seg(c.u, .10, .40), 0, 1) * Math.PI) * 162;
-      const rx = 384 + keo1, ry = 154 + keo1 * .4;
+      const keoDan = Math.sin(cl(seg(c.u, .10, .40), 0, 1) * Math.PI) * 110;
+      const rx = 384 + keoDan, ry = 154 + keoDan * .4;
       const x = 566 + rx * Math.cos(th), y = 364 + ry * Math.sin(th);
       set(mt, { transform: "translate(" + x.toFixed(1) + "," + y.toFixed(1) + ")" });
-      const nx = 566 + (rx + 236) * Math.cos(th), ny = 364 + (ry + 98) * Math.sin(th);
-      set(keo, { d: "M" + x.toFixed(1) + "," + y.toFixed(1) + " L" + nx.toFixed(1) + "," + ny.toFixed(1) });
-      const vis = ez(seg(c.u, .10, .16)) * (1 - ez(seg(c.u, .36, .46)));
-      op(keo, (vis * .92).toFixed(3));
+      /* đầu mũi tên phải NẰM TRONG KHUNG ở mọi mốc — bản cũ để nó chạy tới
+         x ≈ -216 nên nửa mũi tên bị mép trái nuốt mất. Kẹp vào hộp an toàn. */
+      const nx = cl(566 + (rx + 196) * Math.cos(th), 96, 1184);
+      const ny = cl(364 + (ry + 92) * Math.sin(th), 96, 624);
       const ang = Math.atan2(ny - y, nx - x);
+      /* `vao` = mũi tên VÀ dấu ✕ cùng hiện; `gay` = tiến độ gãy đôi rồi rơi.
+         Dấu ✕ xong ở c.u = .16, tức trước .35 như bản soát đòi. */
+      const vao = ez(seg(c.u, .10, .16));
+      const gay = ez(seg(c.u, .36, .54));
+      const lx = (a, b, k) => a + (b - a) * k;
+      /* khúc trong: từ Mặt Trăng tới 42 % — gãy thì co ngắn lại một chút */
+      const m1x = lx(x, nx, .42 - .06 * gay), m1y = lx(y, ny, .42 - .06 * gay);
+      set(keoA, { d: "M" + x.toFixed(1) + "," + y.toFixed(1) + " L" + m1x.toFixed(1) + "," + m1y.toFixed(1) });
+      op(keoA, (vao * .92).toFixed(3));
+      /* khúc ngoài + đầu mũi tên: gãy rời ra, rơi xuống và xoay */
+      const m2x = lx(x, nx, .52), m2y = lx(y, ny, .52);
+      set(keoB, { d: "M" + m2x.toFixed(1) + "," + m2y.toFixed(1) + " L" + nx.toFixed(1) + "," + ny.toFixed(1) });
       set(dauk, { points: [[nx, ny], [nx - 24 * Math.cos(ang - .4), ny - 24 * Math.sin(ang - .4)],
         [nx - 24 * Math.cos(ang + .4), ny - 24 * Math.sin(ang + .4)]]
         .map(p => p[0].toFixed(1) + "," + p[1].toFixed(1)).join(" ") });
-      op(dauk, (vis * .92).toFixed(3));
-      kh("k3c18-ng", A ? -1 : (c.u - .56) * 10, .4, 2.9, .4);
+      const roi = 300 * gay * gay, xoay = 54 * gay;
+      set(keoBg, { transform: "translate(" + (16 * gay).toFixed(1) + "," + roi.toFixed(1) + ") rotate(" +
+        xoay.toFixed(1) + " " + m2x.toFixed(1) + " " + m2y.toFixed(1) + ")" });
+      op(keoBg, (vao * .92 * (1 - ez(seg(c.u, .44, .56)))).toFixed(3));
+      /* dấu ✕ đè lên mũi tên, theo mũi tên, nhưng KẸP trong vùng an toàn 48 px */
+      const cxX = cl(lx(x, nx, .5), 48 + 70, 1232 - 70), cyX = cl(lx(y, ny, .5), 48 + 70, 672 - 70);
+      set(xdau, { transform: "translate(" + cxX.toFixed(1) + "," + cyX.toFixed(1) + ") scale(" +
+        (.82 + .08 * Math.sin(c.t * 3.1)).toFixed(3) + ")" });
+      op(xdau, (vao * (1 - ez(seg(c.u, .50, .56)))).toFixed(3));
+      op(nhanX, (vao * (1 - ez(seg(c.u, .50, .56)))).toFixed(3));
+      khn("k3c18-ng", A ? -1 : (c.u - .56) * 10, .4, 2.9, .4);
     };
   }});
 
@@ -1019,32 +1323,19 @@ DANGKY({ id: "k3c18", steps: 0, say: [CAU[17]],
    Biểu đồ (ngoại lệ §15.1.3) nhưng nền là tranh *Ánh trăng trên bãi Skagen* làm mờ,
    nên không phải "hình khối xám trên nền trắng trơn". */
 DANGKY({ id: "k3c19", steps: 0, say: [CAU[18]],
-  html: NEN("lanh") + SV(0.18, "nen") + SV(0.8, "ve"),
+  html: NEN("lanh2") + SV(0.18, "nen") + SV(0.8, "ve"),
   anim: root => {
     const N = sv(root, "nen"), V = sv(root, "ve");
-    const nhip = chatLieu(N, "k3c19", "#6E93AB", 10);
-    const X0 = 248, W = 812, YS = [204, 356, 508], MAU = [BIEN, "#3F7FA0", "#B9A98C"];
-    const nen19 = YS.map(y => el("rect", { x: X0, y: y - 23, width: W, height: 46, rx: 23,
-      fill: "#FFFFFF", opacity: 0 }, V));
-    const th = YS.map((y, i) => el("rect", { x: X0, y: y - 23, width: 0, height: 46, rx: 23,
-      fill: MAU[i], opacity: .95 }, V));
-    const ic = [];
-    { const g = el("g", { opacity: 0 }, V);   /* sóng = thuỷ triều */
-      el("path", { d: "M126,194 q23,-21 46,0 q23,21 46,0 M126,220 q23,-21 46,0 q23,21 46,0",
-        fill: "none", stroke: BIEN, "stroke-width": 7, "stroke-linecap": "round" }, g); ic.push(g); }
-    { const g = el("g", { opacity: 0 }, V);   /* hai pha trăng = lịch âm + nhật thực */
-      pha(g, 148, 356, 23, .5, "#2F3A46", "#DDE2DA");
-      pha(g, 200, 356, 23, .12, "#2F3A46", "#DDE2DA"); ic.push(g); }
-    { const g = el("g", { opacity: 0 }, V);   /* trục nghiêng = độ nghiêng trục */
-      el("circle", { cx: 172, cy: 508, r: 34, fill: "none", stroke: "#6B7A84", "stroke-width": 5 }, g);
-      el("line", { x1: 156, y1: 474, x2: 188, y2: 542, stroke: "#6B7A84", "stroke-width": 5,
-        "stroke-linecap": "round" }, g); ic.push(g); }
+    const nhip = chatLieu(N, "k3c19", "#4E7A94", 10);
+    const B = baThanh(V, "k3c19");
     return c => {
-      KB(root, c, c.u, [18, -18, -10, 10, 1.0, 1.08]);
+      KB(root, c, c.u, [12, -12, -10, 10, 1.0, 1.05]);
       nhip(c.t);
-      ic.forEach((g, i) => op(g, ez(seg(c.u, .02 + i * .10, .16 + i * .10)).toFixed(3)));
-      nen19.forEach((e, i) => op(e, (ez(seg(c.u, .0 + i * .10, .12 + i * .10)) * .82).toFixed(3)));
-      th.forEach((e, i) => set(e, { width: (W * [.30, .26, .22][i] * ezo(seg(c.u, .06 + i * .10, .44 + i * .10))).toFixed(1) }));
+      B.icon.forEach((g, i) => op(g, ez(seg(c.u, .02 + i * .10, .16 + i * .10)).toFixed(3)));
+      B.nhan.forEach((t, i) => op(t, ez(seg(c.u, .02 + i * .10, .16 + i * .10)).toFixed(3)));
+      B.nen.forEach((e, i) => op(e, ez(seg(c.u, .0 + i * .10, .12 + i * .10)).toFixed(3)));
+      B.thanh.forEach((e, i) => set(e, { width:
+        (B3.W * B3.MUC[i] * ezo(seg(c.u, .06 + i * .10, .44 + i * .10))).toFixed(1) }));
     };
   }});
 
@@ -1052,26 +1343,21 @@ DANGKY({ id: "k3c19", steps: 0, say: [CAU[18]],
    A: hai thanh đầu đổ gần đầy (triều: không ai cãi; lịch âm: số học)
    B: VIDEO THẬT nhật thực + một vòng tiến độ chạy hết — "cứ tính là ra" */
 DANGKY({ id: "k3c20", steps: 0, say: [CAU[19]],
-  html: NEN("lanh", "k3c20-a") + SV(0.18, "nen", "k3c20-a2") +
+  html: NEN("lanh2", "k3c20-a") + SV(0.18, "nen", "k3c20-a2") +
         VI("k3c20-b", "k3-nhatthuc-dia.mp4", 0.3, { tu: 0.1, dai: 4.7, toc: .55, loc: "contrast(1.08) brightness(1.06)" }) +
         SV(0.8, "ve") +
         '<div class="hud">' + nguon("k3c20-ng", "Video: NASA Armstrong FRC — nhật thực 21/8/2017, nước Mỹ · Phạm vi công cộng") + '</div>',
   anim: root => {
     const N = sv(root, "nen"), V = sv(root, "ve");
-    const nhip = chatLieu(N, "k3c20", "#6E93AB", 10);
+    const nhip = chatLieu(N, "k3c20", "#4E7A94", 10);
     const gA = el("g", {}, V);
-    const X0 = 248, W = 812, YS = [204, 356, 508], MAU = [BIEN, "#3F7FA0", "#B9A98C"];
-    YS.forEach(y => el("rect", { x: X0, y: y - 23, width: W, height: 46, rx: 23,
-      fill: "#FFFFFF", opacity: .82 }, gA));
-    const th = YS.map((y, i) => el("rect", { x: X0, y: y - 23, width: W * [.30, .26, .22][i],
-      height: 46, rx: 23, fill: MAU[i], opacity: .95 }, gA));
-    el("path", { d: "M126,194 q23,-21 46,0 q23,21 46,0 M126,220 q23,-21 46,0 q23,21 46,0",
-      fill: "none", stroke: BIEN, "stroke-width": 7, "stroke-linecap": "round" }, gA);
-    pha(gA, 148, 356, 23, .5, "#2F3A46", "#DDE2DA");
-    pha(gA, 200, 356, 23, .12, "#2F3A46", "#DDE2DA");
-    el("circle", { cx: 172, cy: 508, r: 34, fill: "none", stroke: "#6B7A84", "stroke-width": 5 }, gA);
-    el("line", { x1: 156, y1: 474, x2: 188, y2: 542, stroke: "#6B7A84", "stroke-width": 5,
-      "stroke-linecap": "round" }, gA);
+    /* CÙNG MỘT HÀM với k3c19 — hai cảnh liền nhau không thể lệch nhau nữa.
+       Ở đây sơ đồ vào cảnh đã đầy sẵn: nhãn, biểu tượng và nền thanh hiện ngay. */
+    const B = baThanh(gA, "k3c20");
+    B.nen.forEach(e => op(e, 1));
+    B.nhan.forEach(t => op(t, 1));
+    B.icon.forEach(g => op(g, 1));
+    B.thanh.forEach((e, i) => set(e, { width: (B3.W * B3.MUC[i]).toFixed(1) }));
     const gB = el("g", { opacity: 0 }, V);
     const nenV = el("circle", { cx: 640, cy: 336, r: 196, fill: "none", stroke: "#28384A",
       "stroke-width": 7, opacity: 0 }, gB);
@@ -1084,15 +1370,15 @@ DANGKY({ id: "k3c20", steps: 0, say: [CAU[19]],
       hien("k3c20-a", A); hien("k3c20-a2", A); hien("k3c20-b", !A);
       op(gA, A ? 1 : 0); op(gB, A ? 0 : 1);
       nhip(c.t);
-      if (A) KB(root, c, seg(c.u, 0, .56), [-16, 16, 10, -10, 1.0, 1.08]);
+      if (A) KB(root, c, seg(c.u, 0, .56), [-12, 12, 10, -10, 1.0, 1.05]);
       else   KB(root, c, seg(c.u, .56, 1), [12, -12, -8, 8, 1.1, 1.0]);
-      set(th[0], { width: (W * lerp(.30, .95, ezo(seg(c.u, .04, .34)))).toFixed(1) });
-      set(th[1], { width: (W * lerp(.26, .99, ezo(seg(c.u, .22, .52)))).toFixed(1) });
+      set(B.thanh[0], { width: (B3.W * lerp(B3.MUC[0], .95, ezo(seg(c.u, .04, .34)))).toFixed(1) });
+      set(B.thanh[1], { width: (B3.W * lerp(B3.MUC[1], .99, ezo(seg(c.u, .22, .52)))).toFixed(1) });
       op(nenV, ez(seg(c.u, .58, .66)) * .8);
       op(tien, ez(seg(c.u, .60, .68)) * .95);
       const C = 2 * Math.PI * 196;
       set(tien, { "stroke-dasharray": C.toFixed(1), "stroke-dashoffset": (C * (1 - ezo(seg(c.u, .62, .94)))).toFixed(1) });
-      kh("k3c20-ng", A ? -1 : (c.u - .56) * 10, .3, 2.6, .4);
+      khn("k3c20-ng", A ? -1 : (c.u - .56) * 10, .3, 2.6, .4);
     };
   }});
 
@@ -1102,7 +1388,7 @@ DANGKY({ id: "k3c20", steps: 0, say: [CAU[19]],
    C: trở lại Trái Đất, biên độ lắc nhảy giữa hai con số — chưa bên nào thắng */
 DANGKY({ id: "k3c21", steps: 0, say: [CAU[20]],
   html: IMG("k3c21-a", "k3-sao.jpg", 0.2, { loc: "contrast(1.1) saturate(1.06) brightness(.56)" }) +
-        NEN("giay", "k3c21-b") +
+        NEN("dem", "k3c21-b") +
         IMG("k3c21-c", "k3-sao.jpg", 0.2, { loc: "contrast(1.1) saturate(1.06) brightness(.5)" }) +
         SV(0.84, "ve") +
         '<div class="hud">' + nguon("k3c21-ng", "Ảnh nền: NPS / Jacob W. Frank — dải Ngân Hà, Mỹ · Phạm vi công cộng") + '</div>',
@@ -1111,7 +1397,7 @@ DANGKY({ id: "k3c21", steps: 0, say: [CAU[20]],
     /* A và C dùng chung quả Trái Đất, chỉ khác vị trí + biên độ */
     const gAC = el("g", {}, V);
     const qin = el("g", { transform: "translate(640 356)" }, gAC);
-    traiDat(qin, 0, 0, 150, 91);
+    cauTD(qin, "k3c21e", 0, 0, 150);
     const trucG = el("g", {}, qin);
     el("line", { x1: 0, y1: -214, x2: 0, y2: 214, stroke: "#FFF0CC", "stroke-width": 6,
       "stroke-linecap": "round" }, trucG);
@@ -1119,31 +1405,44 @@ DANGKY({ id: "k3c21", steps: 0, say: [CAU[20]],
     const cung = el("path", { d: "", fill: "none", stroke: VANG, "stroke-width": 3,
       "stroke-dasharray": "8 8", opacity: 0 }, qin);
     /* B: biểu đồ */
+    /* ── SỬA 28/11 · NÊN SỬA ───────────────────────────────────────────────
+       Hai chỗ, cả hai đều do nhịp chứ không do hình.
+       (1) Hai thanh chạy theo hai mốc lệch nhau 0,14 và về đích quá muộn, nên ở
+           khung giữa cảnh thanh Lissauer mới tới ~43° trong khi đáng lẽ phải là
+           50°. Nay cả hai VỀ ĐÍCH TRƯỚC c.u = .62, còn 0,08 đứng yên để đọc.
+           Mép phải thanh Lissauer nằm đúng vạch 50° — đã chụp khung và đo.
+       (2) Trục cũ kết ở x = 1176; sau khi máy quay đẩy/lia, nhãn "90°" ra tới
+           x = 1246, ngoài hộp an toàn 48 px. Nay trục kết ở x = 1140.
+       Ngữ pháp hình đã chốt với khối 2 ngày 28/11: so HAI KHOẢNG đã công bố
+       với nhau thì dùng THANH NGANG CÓ TRỤC ĐỘ (cảnh này và k2c25); còn độ
+       nghiêng của một cái trục ĐANG LẮC thì dùng vành quạt (k2c18–k2c24).
+       Cặp màu lấy đúng của khối 2 để hai cảnh nhận ra nhau, và vì thế nền
+       chặng B đổi sang NENS.dem cho hai màu sáng ấy nổi lên. ───────────────── */
     const gB = el("g", { opacity: 0 }, V);
-    const X0 = 300, X1 = 1176, Y = 552;
+    const X0 = 316, X1 = 1140, Y = 552;
     const px = d => X0 + (X1 - X0) * d / 90;
-    el("line", { x1: X0, y1: Y, x2: X1, y2: Y, stroke: "#8D9A94", "stroke-width": 2.4 }, gB);
+    el("line", { x1: X0, y1: Y, x2: X1, y2: Y, stroke: "#8DA7B8", "stroke-width": 2.4 }, gB);
     for (let d = 0; d <= 90; d += 15) {
-      el("line", { x1: px(d), y1: Y, x2: px(d), y2: Y + 12, stroke: "#8D9A94", "stroke-width": 2 }, gB);
-      const t = el("text", { x: px(d), y: Y + 40, fill: "#606D74", "font-size": 19,
+      el("line", { x1: px(d), y1: Y, x2: px(d), y2: Y + 12, stroke: "#8DA7B8", "stroke-width": 2 }, gB);
+      const t = el("text", { x: px(d), y: Y + 40, fill: "#AFC4D2", "font-size": 19,
         "font-family": "system-ui", "text-anchor": "middle" }, gB);
       t.textContent = d + "°";
     }
-    const thanh = [[0, 85, "#C8553D", 424, "Laskar 1993"], [10, 50, BIEN, 312, "Lissauer 2012"]]
+    const thanh = [[0, 85, "#EE7B5E", 424, "Laskar 1993"], [10, 50, "#6FC3E8", 312, "Lissauer 2012"]]
       .map(o => {
         const g = el("g", { opacity: 0 }, gB);
         const r = el("rect", { x: px(o[0]), y: o[3] - 25, width: 0, height: 50, rx: 25,
-          fill: o[2], opacity: .9 }, g);
-        const t = el("text", { x: px(o[0]), y: o[3] - 44, fill: "#454F56", "font-size": 22,
+          fill: o[2], opacity: .92 }, g);
+        const t = el("text", { x: px(o[0]), y: o[3] - 44, fill: "#E6EEF4", "font-size": 22,
           "font-family": "system-ui", "font-weight": 700 }, g);
         t.textContent = o[4];
         g.__r = r; g.__a = o[0]; g.__b = o[1];
         return g;
       });
     const qB = el("g", {}, gB);
-    traiDat(qB, 162, 352, 72, 93);
-    const trucB = el("g", { transform: "translate(162 352)" }, gB);
-    el("line", { x1: 0, y1: -104, x2: 0, y2: 104, stroke: CHUTOI, "stroke-width": 5,
+    cauTD(qB, "k3c21f", 170, 352, 72);
+    const trucB = el("g", { transform: "translate(170 352)" }, gB);
+    el("line", { x1: 0, y1: -104, x2: 0, y2: 104, stroke: "#FFF0CC", "stroke-width": 5,
       "stroke-linecap": "round" }, trucB);
     chan(V, "k3c21", .55);
     return c => {
@@ -1159,17 +1458,18 @@ DANGKY({ id: "k3c21", steps: 0, say: [CAU[20]],
       else if (P === 2) bien = (Math.sin((c.u - .70) * 26) > 0 ? 46 : 24);
       else bien = 30;
       set(trucG, { transform: "rotate(" + (bien * Math.sin(c.t * 1.15)).toFixed(2) + ")" });
-      set(trucB, { transform: "translate(162 352) rotate(" + (22 * Math.sin(c.t * 1.3)).toFixed(2) + ")" });
+      set(trucB, { transform: "translate(170 352) rotate(" + (22 * Math.sin(c.t * 1.3)).toFixed(2) + ")" });
       const R = 236, ar = bien * Math.PI / 180;
       set(cung, { d: "M" + (R * Math.sin(-ar)).toFixed(1) + "," + (-R * Math.cos(ar)).toFixed(1) +
         " A" + R + "," + R + " 0 0 1 " + (R * Math.sin(ar)).toFixed(1) + "," + (-R * Math.cos(ar)).toFixed(1) });
       op(cung, (P === 2 ? .85 : (P === 0 ? ez(seg(c.u, .16, .28)) * .6 : 0)).toFixed(3));
       thanh.forEach((g, i) => {
-        const a = ezo(seg(c.u, .38 + i * .14, .60 + i * .14));
+        /* cả hai XONG ở c.u = .62, chặng B kết thúc ở .70 — còn 0,08 đứng yên */
+        const a = ezo(seg(c.u, .38 + i * .08, .54 + i * .08));
         set(g.__r, { width: ((px(g.__b) - px(g.__a)) * a).toFixed(1) });
-        op(g, ez(seg(c.u, .38 + i * .14, .46 + i * .14)).toFixed(3));
+        op(g, ez(seg(c.u, .38 + i * .08, .44 + i * .08)).toFixed(3));
       });
-      kh("k3c21-ng", P === 0 ? c.u * 10 : -1, .4, 2.8, .4);
+      khn("k3c21-ng", P === 0 ? c.u * 10 : -1, .4, 2.8, .4);
     };
   }});
 
@@ -1189,7 +1489,7 @@ DANGKY({ id: "k3c22", steps: 0, say: [CAU[21]],
     const goc = [[186, 452], [456, 530], [792, 522], [1050, 440]];
     const soi = goc.map(() => el("path", { d: "", fill: "none", stroke: "#8794A0",
       "stroke-width": 2.6, "stroke-dasharray": "9 8", opacity: 0 }, gA));
-    const mtA = dia(gA, 740, 162, 92, "#D5D2C8", "k3c22-d", gA);
+    const mtA = diaMT(gA, "k3c22", 740, 162, 92);
     const vat = [];
     { const g = el("g", { opacity: 0 }, gA);      /* sóng = con nước */
       el("path", { d: "M-80,0 q40,-34 80,0 q40,34 80,0 M-80,36 q40,-34 80,0 q40,34 80,0",
@@ -1253,7 +1553,7 @@ DANGKY({ id: "k3c22", steps: 0, say: [CAU[21]],
       op(tem, ez(seg(c.u, .62, .74)));
       set(tem, { transform: "translate(0," + (3 * Math.sin(c.t * 1.4)).toFixed(2) + ")" });
       op(muiB, ez(seg(c.u, .74, .84)) * .9); veDan(muiB, ezo(seg(c.u, .74, .92)));
-      kh("k3c22-ng", A ? -1 : (c.u - .52) * 10, .4, 3.2, .4);
+      khn("k3c22-ng", A ? -1 : (c.u - .52) * 10, .4, 3.2, .4);
     };
   }});
 
@@ -1267,7 +1567,19 @@ DANGKY({ id: "k3c22", steps: 0, say: [CAU[21]],
    B: VIDEO THẬT của NOAA: cả một đầu san hô nhả trứng trắng xoá lên mặt nước.
       Đây là chỗ cú gài ở khối 1 NỔ. Không chữ, không số — chỉ để hình nói. */
 DANGKY({ id: "k3c23", steps: 0, say: [CAU[22]],
-  html: IMG("k3c23-a", "k3-ran-hardy.jpg", 0.26, { loc: "contrast(1.12) saturate(1.2) brightness(1.02)" }) +
+  /* ── KHUÔN HÌNH CÚ GÀI — CHỐT VỚI KHỐI 1 ngày 28/11/2026 ─────────────────
+     Cú gài ở k1c04 (giây 28–36) và cú nổ ở đây phải mở bằng ĐÚNG MỘT KHUÔN
+     HÌNH, nếu không thì mười một phút sau người xem không nhận ra là cùng một
+     thứ (luật L10 của bản soát: "cú gài phải gài một KHUÔN HÌNH, không phải
+     một chủ đề"). Bốn thông số đã chốt, khối 1 dùng y hệt ở nhịp 2 của k1c04:
+         tệp   anh/k3-ran-hardy.jpg  (1920×1080, bản cắt 16:9 duy nhất của cả tập)
+         pos   "50% 42%"
+         máy   đẩy VÀO, z 1.02 → 1.10, không lia ngang
+         cam   biên độ x = ±6
+         lọc   saturate(1.0) — giữ nguyên màu xanh ngọc của ảnh gốc làm mốc nhận ra
+     Bản cũ để saturate(1.2) và máy quay ĐẨY RA (z 1.24 → 1.03) với x = ±30,
+     nên dù cùng tấm ảnh thì khuôn hình vẫn khác hẳn khối 1. */
+  html: IMG("k3c23-a", "k3-ran-hardy.jpg", 0.26, { pos: "50% 42%", loc: "contrast(1.08) saturate(1.0) brightness(1.02)" }) +
         VI("k3c23-b", "k3-sanho-de.mp4", 0.34, { tu: 0.2, dai: 8.6, toc: .62, pos: "50% 46%", loc: "contrast(1.1) saturate(1.1) brightness(1.06)" }) +
         SV(0.9, "ve") +
         '<div class="hud">' + nguon("k3c23-n1", "Ảnh: rheins — rạn Hardy, Great Barrier Reef, Úc · CC BY 3.0") +
@@ -1275,8 +1587,20 @@ DANGKY({ id: "k3c23", steps: 0, say: [CAU[22]],
   anim: root => {
     const V = sv(root, "ve");
     const gA = el("g", {}, V);
-    const vet = el("path", { d: "M130,468 C372,392 606,330 886,236 C1000,198 1082,176 1168,160",
-      fill: "none", stroke: "#FFF6DC", "stroke-width": 10, "stroke-linecap": "round", opacity: 0 }, gA);
+    /* SỬA 28/11 · GỢI Ý: "dài hàng trăm cây số" mà trên hình chỉ là MỘT NÉT
+       KEM TRƠN vạch chéo — không đầu mút, không số, không thước; nó chỉ là một
+       cái gạch. Nay là một THANH THƯỚC CÓ HAI ĐẦU MÚT và một nhãn ở giữa.
+       Toạ độ kéo vào trong hộp an toàn: x ∈ [150, 1150], y ∈ [168, 462]. */
+    const vet = el("path", { d: "M150,462 C380,392 606,330 876,246 C986,212 1066,190 1150,172",
+      fill: "none", stroke: "#FFF6DC", "stroke-width": 8, "stroke-linecap": "round", opacity: 0 }, gA);
+    const mut = el("path", { d: "M150,428 L150,496 M1150,142 L1150,206", fill: "none",
+      stroke: "#FFF6DC", "stroke-width": 7, "stroke-linecap": "round", opacity: 0 }, gA);
+    /* nhãn đặt trong một thẻ tối: chữ kem trên mặt rạn xanh ngọc sáng thì
+       viền chữ không đủ, đã chụp khung và thấy nó trôi mất. */
+    const the23 = el("g", { opacity: 0 }, gA);
+    el("rect", { x: 492, y: 268, width: 296, height: 62, rx: 31, fill: "#05141E", opacity: .66 }, the23);
+    const nhan23 = nhanSV(the23, 640, 311, "hàng trăm km", "#FFF6DC", 34, "middle", 800);
+    op(nhan23, 1);
     const hao = [];
     for (let i = 0; i < 9; i++) hao.push(el("circle", { cx: 0, cy: 0, r: 6, fill: "#FFF6DC", opacity: 0 }, gA));
     /* B: lớp trứng trôi lên thêm, chồng lên video cho dày */
@@ -1289,9 +1613,11 @@ DANGKY({ id: "k3c23", steps: 0, say: [CAU[22]],
       const A = c.u < .40;
       hien("k3c23-a", A); hien("k3c23-b", !A);
       op(gA, A ? 1 : 0); op(gB, A ? 0 : 1);
-      if (A) KB(root, c, seg(c.u, 0, .40), [-34, 30, 16, -14, 1.24, 1.03]);
+      if (A) KB(root, c, seg(c.u, 0, .40), [-6, 6, 0, 0, 1.02, 1.10]);
       else   KB(root, c, seg(c.u, .40, 1), [22, -24, -12, 12, 1.02, 1.17]);
-      op(vet, ez(seg(c.u, .04, .12)) * .92); veDan(vet, ezo(seg(c.u, .04, .36)));
+      op(vet, ez(seg(c.u, .04, .12)) * .92); veDan(vet, ezo(seg(c.u, .04, .30)));
+      op(mut, ez(seg(c.u, .06, .14)) * .92);
+      op(the23, ez(seg(c.u, .12, .20)).toFixed(3));
       hao.forEach((e, i) => {
         const u = seg(c.u, .06 + i * .012, .36 + i * .012);
         const p = diem(vet, cl(u * (i + 1) / 9, 0, 1));
@@ -1303,8 +1629,8 @@ DANGKY({ id: "k3c23", steps: 0, say: [CAU[22]],
         set(e, { cx: (-70 + rn(i, 114) * 1440).toFixed(1), cy: (800 - ph * 920).toFixed(1) });
         op(e, (Math.sin(ph * Math.PI) * (.28 + rn(i, 115) * .42)).toFixed(2));
       });
-      kh("k3c23-n1", A ? c.u * 10 : -1, .4, 3.0, .4);
-      kh("k3c23-n2", A ? -1 : (c.u - .40) * 10, .5, 3.6, .4);
+      khn("k3c23-n1", A ? c.u * 10 : -1, .4, 3.0, .4);
+      khn("k3c23-n2", A ? -1 : (c.u - .40) * 10, .5, 3.6, .4);
     };
   }});
 
@@ -1335,7 +1661,7 @@ DANGKY({ id: "k3c24", steps: 0, say: [CAU[23]],
         op(g, ez(seg(c.u, .08 + i * .18, .16 + i * .18)).toFixed(3));
         set(g, { transform: "rotate(" + (2.4 * Math.sin(c.t * 2.7 + i)).toFixed(2) + " " + XS[i] + " " + CY + ")" });
       });
-      kh("k3c24-ng", c.t, .4, 3.0);
+      khn("k3c24-ng", c.t, .4, 3.0);
     };
   }});
 
@@ -1352,26 +1678,44 @@ DANGKY({ id: "k3c25", steps: 0, say: [CAU[24]],
     const V = sv(root, "ve");
     const gA = el("g", {}, V);
     el("rect", { x: -400, y: -300, width: 2100, height: 1400, fill: "#050B16", opacity: .5 }, gA);
+    /* ── SỬA 28/11 · NÊN SỬA ───────────────────────────────────────────────
+       Câu là "nhận ra rằng ĐÊM NAY SÁNG HƠN ĐÊM QUA", nhưng hai ô đêm cạnh nhau
+       sáng gần như bằng nhau — chênh lệch quá nhỏ để mắt bắt được trong 2 giây.
+       Nay kéo giãn hẳn: ô trái brightness(.34), ô phải brightness(.92) áp lên
+       chính nhóm, và đĩa trăng bên phải TO HƠN 1,4 LẦN (46 → 64). */
+    const SANG = [.34, .92], RT = [46, 64];
     const o = [0, 1].map(i => {
       const g = el("g", { opacity: 0 }, gA);
       const x = 168 + i * 500;
+      g.style.filter = "brightness(" + SANG[i] + ")";
       el("rect", { x: x, y: 136, width: 444, height: 444, rx: 16, fill: "#09131F", opacity: .72,
         stroke: "#2B4258", "stroke-width": 3 }, g);
       el("rect", { x: x, y: 406, width: 444, height: 174, fill: "#0E2033", opacity: .85 }, g);
       gradB(gA, "k3c25-q" + i, [[0, "#DCEAF6", .5], [.42, "#B8D2E6", .15], [1, "#B8D2E6", 0]]);
       g.__q = el("circle", { cx: x + 316, cy: 232, r: 196, fill: "url(#k3c25-q" + i + ")", opacity: 0 }, g);
-      pha(g, x + 316, 232, 46, i ? .5 : .40, "#F4F1E8", "#0F1B2C");
+      pha(g, x + 316, 232, RT[i], i ? .5 : .40, "#F4F1E8", "#0F1B2C");
       g.__s = el("rect", { x: x, y: 136, width: 444, height: 444, rx: 16, fill: "#CFE3F2", opacity: 0 }, g);
       return g;
     });
     const gB = el("g", { opacity: 0 }, V);
     gradB(gB, "k3c25-pg", [[0, "#BDF0FF", .6], [.45, "#6FD0F2", .2], [1, "#6FD0F2", 0]]);
     const halo = el("circle", { cx: 640, cy: 388, r: 190, fill: "url(#k3c25-pg)", opacity: 0 }, gB);
+    /* GLYPH PROTEIN — bản cũ là một nét xanh nhạt vẽ nguệch, đọc ra như vết
+       xước trên ảnh. Nay dùng ĐÚNG hình "hai cánh cửa" đã chốt cho k2c45 của
+       khối 2: hai cánh cửa bo góc TÁCH HẲN RA HAI BÊN (biên độ mở 46 % bề
+       ngang, hơn mức 40 % tối thiểu) để lọt một chùm sáng xanh xuyên qua.
+       Một protein, một hình, hai lần xuất hiện trong tập. */
     const pr = el("g", { opacity: 0 }, gB);
     const prin = el("g", { transform: "translate(640 388)" }, pr);
-    el("path", { d: "M-56,42 C-16,12 -16,-22 -56,-54 M56,42 C16,12 16,-22 56,-54 " +
-      "M-56,26 L56,8 M-56,0 L56,-18 M-56,-26 L56,-44", fill: "none", stroke: "#BDF0FF",
-      "stroke-width": 5.5, "stroke-linecap": "round" }, prin);
+    const chum = el("rect", { x: -26, y: -150, width: 52, height: 300, rx: 26,
+      fill: "#BDF0FF", opacity: .8 }, prin);
+    const canh = [-1, 1].map(k => {
+      const g = el("g", {}, prin);
+      el("rect", { x: k < 0 ? -104 : 8, y: -110, width: 96, height: 220, rx: 22,
+        fill: "#0C2A3A", opacity: .92, stroke: "#BDF0FF", "stroke-width": 5 }, g);
+      el("circle", { cx: k < 0 ? -26 : 26, cy: 0, r: 8, fill: "#BDF0FF" }, g);
+      return g;
+    });
     chan(V, "k3c25", .6);
     return c => {
       const A = c.u < .56;
@@ -1385,10 +1729,14 @@ DANGKY({ id: "k3c25", steps: 0, say: [CAU[24]],
         op(g.__s, ((i ? .11 : .035) * ez(seg(c.u, .06 + i * .14, .22 + i * .14))).toFixed(3));
       });
       op(halo, (ez(seg(c.u, .62, .76)) * (.7 + .26 * Math.sin(c.t * 2.3))).toFixed(3));
-      op(pr, (ez(seg(c.u, .62, .74)) * (.78 + .22 * Math.sin(c.t * 2.5))).toFixed(3));
-      set(prin, { transform: "translate(640 388) scale(" + (1 + .06 * Math.sin(c.t * 2.5)).toFixed(3) + ")" });
-      kh("k3c25-n1", A ? c.u * 10 : -1, .4, 2.6, .4);
-      kh("k3c25-n2", A ? -1 : (c.u - .56) * 10, .3, 2.4, .4);
+      op(pr, ez(seg(c.u, .62, .74)).toFixed(3));
+      /* hai cánh cửa MỞ ra 46 % bề ngang; chùm sáng chỉ hiện khi cửa đã mở */
+      const mo = ezo(seg(c.u, .70, .92));
+      canh.forEach((g, k) => set(g, { transform: "translate(" + ((k ? 1 : -1) * 92 * mo).toFixed(1) + ",0)" }));
+      op(chum, (mo * (.72 + .24 * Math.sin(c.t * 2.5))).toFixed(3));
+      set(prin, { transform: "translate(640 388) scale(" + (1 + .04 * Math.sin(c.t * 2.5)).toFixed(3) + ")" });
+      khn("k3c25-n1", A ? c.u * 10 : -1, .4, 2.6, .4);
+      khn("k3c25-n2", A ? -1 : (c.u - .56) * 10, .3, 2.4, .4);
     };
   }});
 
@@ -1403,14 +1751,23 @@ DANGKY({ id: "k3c26", steps: 0, say: [CAU[25]],
   anim: root => {
     const V = sv(root, "ve");
     gradB(V, "k3c26-q", [[0, "#EDF6FF", .34], [.4, "#BCD8EE", .12], [1, "#BCD8EE", 0]]);
-    const q = el("circle", { cx: 228, cy: 122, r: 290, fill: "url(#k3c26-q)", opacity: 0 }, V);
+    const q = el("circle", { cx: 266, cy: 134, r: 290, fill: "url(#k3c26-q)", opacity: 0 }, V);
     /* dải pha: rằm (0,50) rồi ba đêm sau rằm (0,56 / 0,62 / 0,68) */
+    /* ── SỬA 28/11 · GỢI Ý ─────────────────────────────────────────────────
+       Bốn pha trăng cũ quá nhỏ (r = 34) và quá giống nhau (.50 .56 .62 .68 —
+       bốn đĩa gần tròn như nhau), nhét trong một viên thuốc ở GÓC DƯỚI TRÁI.
+       Chủ ý đúng nhưng mắt không đọc ra "khuyết dần". Nay: phóng cụm lên 1,8
+       lần (r 34 → 61), đưa lên GIỮA DƯỚI khung, và cường điệu độ khuyết
+       (.50 .62 .74 .86). Vòng nhấn dày 4 px, màu #F2C14E.
+       Đo hộp: cụm rộng 640 px đặt ở x ∈ [320, 960], cao y ∈ [476, 672] —
+       nằm trong vùng an toàn, và không đè lên dòng nguồn ở x = 66. */
     const dai = el("g", { opacity: 0 }, V);
-    el("rect", { x: 96, y: 540, width: 448, height: 108, rx: 54, fill: "#05121C", opacity: .55 }, dai);
-    const PH = [.50, .56, .62, .68];
-    const ph = PH.map((p, i) => pha(dai, 160 + i * 108, 594, 34, p, "#FFF6E2", "#1A2434"));
-    const vong = el("circle", { cx: 160, cy: 594, r: 46, fill: "none", stroke: VANG,
-      "stroke-width": 3.4, opacity: 0 }, dai);
+    const X26 = 388, B26 = 168, Y26 = 574;
+    el("rect", { x: 320, y: 476, width: 640, height: 194, rx: 97, fill: "#05121C", opacity: .55 }, dai);
+    const PH = [.50, .62, .74, .86];
+    const ph = PH.map((p, i) => pha(dai, X26 + i * B26, Y26, 61, p, "#FFF6E2", "#1A2434"));
+    const vong = el("circle", { cx: X26, cy: Y26, r: 76, fill: "none", stroke: "#F2C14E",
+      "stroke-width": 4, opacity: 0 }, dai);
     chan(V, "k3c26", .5);
     return c => {
       KB(root, c, c.u, [-24, 20, 12, -12, 1.16, 1.02]);
@@ -1419,9 +1776,9 @@ DANGKY({ id: "k3c26", steps: 0, say: [CAU[25]],
       ph.forEach((g, i) => op(g, (.42 + .58 * ez(seg(c.u, .14 + i * .09, .26 + i * .09))).toFixed(3)));
       /* vòng nhấn trượt từ rằm sang đêm thứ ba sau rằm */
       const k = ezo(seg(c.u, .36, .80));
-      set(vong, { cx: (160 + 324 * k).toFixed(1), r: (44 + 4 * Math.sin(c.t * 2.6)).toFixed(2) });
+      set(vong, { cx: (X26 + 3 * B26 * k).toFixed(1), r: (74 + 5 * Math.sin(c.t * 2.6)).toFixed(2) });
       op(vong, (ez(seg(c.u, .34, .44)) * (.8 + .2 * Math.sin(c.t * 2.6))).toFixed(3));
-      kh("k3c26-ng", c.t, .4, 3.1);
+      khn("k3c26-ng", c.t, .4, 3.1);
     };
   }});
 
@@ -1434,7 +1791,7 @@ DANGKY({ id: "k3c27", steps: 0, say: [CAU[26]],
     const V = sv(root, "ve"); chan(V, "k3c27", .5); viND(V, "k3c27", .36);
     return c => {
       KB(root, c, c.u, [20, -18, -10, 10, 1.03, 1.14]);
-      kh("k3c27-ng", c.t, .35, 3.1);
+      khn("k3c27-ng", c.t, .35, 3.1);
     };
   }});
 
@@ -1500,22 +1857,31 @@ DANGKY({ id: "k3c28", steps: 0, say: [CAU[27]],
 /* k3c29 · câu 28 · 5,4s — tranh *Ánh trăng trên bãi biển Skagen* (Krøyer, 1883, PD),
    kèm một thước 3,8 cm vẽ ra ở chân khung. */
 DANGKY({ id: "k3c29", steps: 0, say: [CAU[28]],
-  html: IMG("k3c29-a", "k3-trangbien.jpg", 0.3, { loc: "contrast(1.18) saturate(.74) brightness(.86)" }) +
+  /* SỬA 28/11 · GỢI Ý (luật L5: "thước chỉ đặt lên thứ nó đo được").
+     Bản cũ vẽ một cây thước "3,8 cm" lên MẶT CÁT TRONG MỘT BỨC TRANH SƠN DẦU,
+     nơi đoạn thước đó dài cỡ một mét cát — tỉ lệ thước không khớp tỉ lệ ảnh.
+     Bỏ hẳn thước, chỉ giữ chữ "3,8 cm" trong một thẻ riêng. Và nâng saturate
+     từ .74 lên 1.08 để bức tranh Đan Mạch bớt xám so với phần còn lại của tập. */
+  html: IMG("k3c29-a", "k3-trangbien.jpg", 0.3, { loc: "contrast(1.14) saturate(1.08) brightness(.9)" }) +
         SV(0.9, "ve") +
         '<div class="hud">' + nguon("k3c29-ng", "Tranh: P. S. Krøyer, 1883 — bãi biển Skagen, Đan Mạch · Phạm vi công cộng") + '</div>',
   anim: root => {
     const V = sv(root, "ve");
     chan(V, "k3c29", .68);
-    const thuoc = el("path", { d: "M470,580 L470,616 M810,580 L810,616 M470,598 L810,598",
-      fill: "none", stroke: "#FFE6B4", "stroke-width": 3.2, "stroke-linecap": "round", opacity: 0 }, V);
-    const nh = el("text", { x: 640, y: 568, fill: "#FFF1D4", "font-size": 34, "font-weight": 800,
-      "font-family": "system-ui", "text-anchor": "middle", opacity: 0 }, V);
+    /* thẻ riêng, không phải thước đặt lên cát */
+    const the29 = el("g", { opacity: 0 }, V);
+    el("rect", { x: 522, y: 522, width: 236, height: 86, rx: 18, fill: "#06131E", opacity: .68,
+      stroke: "#FFE6B4", "stroke-width": 2.4 }, the29);
+    const nh = el("text", { x: 640, y: 580, fill: "#FFF1D4", "font-size": 42, "font-weight": 800,
+      "font-family": "system-ui", "text-anchor": "middle" }, the29);
     nh.textContent = "3,8 cm";
+    const nhn29 = nhanSV(the29, 640, 546, "mỗi năm", "#D9C49A", 19, "middle", 600);
+    op(nhn29, 1);
     return c => {
       KB(root, c, c.u, [-30, 26, 14, -12, 1.26, 1.0]);
-      op(thuoc, ez(seg(c.u, .26, .38)) * .95); veDan(thuoc, ezo(seg(c.u, .26, .58)));
-      op(nh, ez(seg(c.u, .40, .52)));
-      kh("k3c29-ng", c.t, .7, 4.2);
+      op(the29, ez(seg(c.u, .30, .44)).toFixed(3));
+      set(the29, { transform: "translate(0," + (3 * Math.sin(c.t * 1.3)).toFixed(2) + ")" });
+      khn("k3c29-ng", c.t, .7, 4.2);
     };
   }});
 
@@ -1524,10 +1890,16 @@ DANGKY({ id: "k3c29", steps: 0, say: [CAU[28]],
    Nay: biểu tượng thumb_up của Material Symbols Rounded (Apache 2.0, Google),
    đặt trong một nút bấm có bóng, trên nền ẢNH RẠN THẬT. Không một nét vẽ tay nào. */
 DANGKY({ id: "k3c30", steps: 0, say: [CAU[29]],
-  html: IMG("k3c30-a", "k3-ran.jpg", 0.24, { loc: "contrast(1.1) saturate(1.2) brightness(1.0)" }) +
+  /* SỬA 28/11 · NÊN SỬA: ảnh rạn nền bị đẩy bão hoà tới mức xanh neon — khung
+     rực rỡ bất thường duy nhất cả tập, trông như lỗi bộ lọc. saturate về 1,05
+     và hue-rotate(10deg) để kéo về lam-lục tự nhiên. */
+  html: IMG("k3c30-a", "k3-ran.jpg", 0.24, { loc: "contrast(1.06) saturate(.68) hue-rotate(-10deg) brightness(1.04)" }) +
         SV(0.86, "ve") +
+        /* dòng nguồn cũ gộp hai lời ghi công thành MỘT dòng dài 1.147 px, chạy
+           gần hết chiều ngang khung (đo bằng getBoundingClientRect()). Rút gọn
+           phần biểu tượng, vẫn đủ ghi công theo Apache 2.0. */
         '<div class="hud">' + nguon("k3c30-ng", "Ảnh: Chris Coccaro / NOAA — rạn san hô ở Bonaire, Caribê · Phạm vi công cộng" +
-        " &nbsp;·&nbsp; Biểu tượng: Material Symbols (Google) · Apache 2.0") + '</div>',
+        " &nbsp;·&nbsp; Material Symbols · Apache 2.0") + '</div>',
   anim: root => {
     const V = sv(root, "ve");
     el("rect", { x: -400, y: -300, width: 2100, height: 1400, fill: "#04121C", opacity: .3 }, V);
@@ -1557,7 +1929,7 @@ DANGKY({ id: "k3c30", steps: 0, say: [CAU[29]],
         op(e, ((1 - b) * .42 * (b > 0 ? 1 : 0)).toFixed(3));
       });
       set(gach, { width: (280 * ezo(seg(c.u, .52, .86))).toFixed(1) });
-      kh("k3c30-ng", c.t, .5, 4.0);
+      khn("k3c30-ng", c.t, .5, 4.0);
     };
   }});
 
@@ -1591,14 +1963,22 @@ DANGKY({ id: "k3c31", steps: 0, say: [CAU[30]],
       hien("k3c31-a", A); hien("k3c31-b", !A);
       if (A) KB(root, c, seg(c.u, 0, .52), [-22, 20, 12, -12, 1.3, 1.12]);
       else   KB(root, c, seg(c.u, .52, 1), [18, -18, -10, 10, 1.0, 1.12]);
+      /* ── SỬA 28/11 · GỢI Ý ─────────────────────────────────────────────
+         Bản cũ cho bong bóng rơi lẫn vào MÉP KHUNG và bị cắt ở cả bốn góc —
+         trông như lỗi chứ không như chủ ý. Nay vùng sinh bong bóng bị kẹp vào
+         x ∈ [120, 1160], y ∈ [100, 600] (bong bóng rộng ~120 px nên mốc trái
+         lùi thêm nửa bề rộng), và chúng MỜ DẦN TRƯỚC KHI CHẠM MÉP thay vì bị
+         cắt: hệ số `ria` hạ opacity về 0 khi tâm bong bóng tới sát biên. */
       bong.forEach((g, i) => {
         const a = cl(seg(c.u, .01 + i * .072, .54 + i * .072), 0, 1);
-        const x = 96 + rn(i, 142) * 940, y = 740 - 800 * ezo(a);
+        const x = 120 + rn(i, 142) * (1160 - 120 - 120);
+        const y = 600 - (600 - 100) * ezo(a);
         set(g, { transform: "translate(" + x.toFixed(1) + "," + y.toFixed(1) + ") rotate(" +
           (5 * Math.sin(c.t * 1.2 + i)).toFixed(2) + ")" });
-        op(g, (ez(a / .14) * (1 - ez((a - .76) / .24))).toFixed(3));
+        const ria = cl((y - 100) / 70, 0, 1) * cl((600 - y) / 40 + 1, 0, 1);
+        op(g, (ez(a / .14) * (1 - ez((a - .76) / .24)) * ria).toFixed(3));
       });
-      kh("k3c31-ng", c.t, .5, 4.0);
+      khn("k3c31-ng", c.t, .5, 4.0);
     };
   }});
 
@@ -1621,7 +2001,7 @@ DANGKY({ id: "k3c32", steps: 0, say: [CAU[31]],
       kh("k3c32-te", c.u * 10, 1.2, 9.6, .5);
       const e = E("k3c32-ke");
       if (e) e.style.width = (300 * ezo(seg(c.u, .20, .58))).toFixed(1) + "px";
-      kh("k3c32-ng", c.t, .5, 2.9);
+      khn("k3c32-ng", c.t, .5, 2.9);
     };
   }});
 
