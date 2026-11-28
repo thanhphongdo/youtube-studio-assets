@@ -674,7 +674,7 @@ DANGKY({
    nằm trên thước. Đây là sơ đồ thước đo — §15.1 cho phép vẽ. ═════ */
 DANGKY({
   id: "k1c06", steps: 0,
-  say: ["Trước khi lo, chúng ta hãy xem ba phẩy tám cm mỗi năm là nhanh hay chậm."],
+  say: ["Trước khi lo lắng về chuyện Mặt Trăng rời xa chúng ta, hãy thử xem ba phẩy tám cm mỗi năm là nhanh hay chậm đã."],
   html: NEN("am") + LM(0.26, 'id="k1c06-nen"') + LM(0.62, 'id="k1c06-ve"') +
         LM(0.95, 'id="k1c06-vien"'),
   anim: root => {
@@ -1350,7 +1350,7 @@ DANGKY({
 /* ═════ CẢNH 23 — "BẮT ĐẦU TỪ NƯỚC" · 139,7 → 144,1s · VIDEO THẬT sóng vỗ bãi đá ═════ */
 DANGKY({
   id: "k1c23", steps: 0,
-  say: ["Để trả lời, ta bắt đầu từ nước."],
+  say: ["Để trả lời câu hỏi vừa rồi, chúng ta bắt đầu từ nước."],
   html: NEN("bien") + VIDL("k1-song-vo-da.mp4", 0.30, { dai:8.6, toc:0.65, pos:"50% 52%" }) +
         LM(0.80, 'id="k1c23-ve"') + LM(0.96, 'id="k1c23-vien"') +
         `<div class="hud">` +

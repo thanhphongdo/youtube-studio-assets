@@ -28,7 +28,7 @@ Xin chào, rất vui được gặp lại các bạn. //
 
 ## 3,8 cm là nhanh hay chậm
 
-Trước khi lo, chúng ta hãy xem 3,8 cm mỗi năm là nhanh hay chậm. //
+Trước khi lo lắng về chuyện Mặt Trăng rời xa chúng ta, hãy thử xem 3,8 cm mỗi năm là nhanh hay chậm đã. //
 
 Nghe qua thì con số ấy chẳng đáng gì. Cả một đời người tám mươi năm, Mặt Trăng cũng chỉ đi xa thêm được ba mét, bằng chiều ngang một căn phòng ngủ. // Mà lấy phòng ngủ ra đo chuyện vũ trụ thì hơi buồn cười, nên ta đổi sang thước địa lý. //
 
@@ -48,7 +48,7 @@ Cho nên tôi xin nói trước, phần còn lại của tập này là một ph
 
 Vậy nên ba chuyện sau đây đang xảy ra cùng lúc: // Mặt Trăng đang đi, nó đi rất chậm, và nó sẽ không biến mất trong đời của bất kỳ ai đang nghe tập này. // Rồi, nếu đêm mai nó không còn ở đó nữa, thì cái gì sẽ sập xuống? //
 
-Để trả lời, ta bắt đầu từ nước. //
+Để trả lời câu hỏi vừa rồi, chúng ta bắt đầu từ nước. //
 
 ## Thứ thứ nhất: nước
 
