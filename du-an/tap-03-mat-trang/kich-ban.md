@@ -1,59 +1,68 @@
 # Tập 3 — "Nếu Mặt Trăng biến mất"
 
-> Viết theo `nghien-cuu/khuon-GOC.md` (16 khối, ngân sách từ/gag/quy đổi). Bỏ Khối 9 (không tài trợ), cộng từ vào Khối 12–13.
-> Mọi con số đối chiếu `nghien-cuu/tu-lieu.md` trước khi dựng giọng. Mục "ĐỪNG DÙNG" trong file đó là bắt buộc đọc.
-> `//` = chỗ lấy hơi. `>>` = giọng chen. Số viết bằng chữ số, bộ phiên âm tự xử lý.
-> Cú gài: **san hô đẻ theo rằm**, gài ở giây ~25, nổ ở khối Đóng.
+> BẢN V3 — 28/11/2026. V1 ở `kich-ban.BAN-CU.md`, V2 ở `kich-ban.V2-chua-soat.md`.
+> V3 sửa 7 lỗi sự thật và 34 lỗi chữ do vòng soát từng câu phát hiện, đồng thời
+> cắt về đúng ngân sách từ. Số dưới đây do `cong-cu/soat-van-phong.py` sinh, KHÔNG áng tay (luật 12):
+> 50 đoạn · 121 câu · 2.593 từ · trung vị 22 từ/câu · câu >25 từ 29% · câu ≤10 từ 10%
+> · câu ≥35 từ không có `//`: 0 · "không phải X mà Y": 3 · đại từ rỗng: 1 (trong câu
+> hỏi, được phép) · gạch ngang giữa câu: 0 · siết số: 1 · mọi khối đều có hư từ khẩu ngữ.
+> CÒN LỆCH: 2.593 từ so với ngân sách 2.230 (+16%, ~3 phút) · 29% câu dài so với đích 20%.
+> Luật văn phong: câu liền mạch có chủ ngữ và từ nối · không đại từ rỗng · không
+> chép câu khuôn giữa các tập · hỏi thẳng · trung vị câu 18–20 từ, mọi câu trên
+> 35 từ bắt buộc có `//` ở giữa · cấm thêm "đúng/chính xác/bằng đúng" vào con số
+> mà tư liệu ghi là "cỡ/khoảng/chừng" · mỗi khối giữ ít nhất một hư từ khẩu ngữ.
+> Mọi con số đối chiếu `nghien-cuu/tu-lieu.md`, kể cả mục "ĐỪNG DÙNG".
+> Cú gài: **san hô đẻ theo rằm**, gài ở đoạn 3, nổ ở khối Đóng.
 
 <!-- BẮT ĐẦU ĐỌC -->
 
 ## Mở
 
-Mỗi năm, Mặt Trăng rời xa chúng ta thêm 3,8 cm — bằng chiều ngang một con tem, mỗi năm một con tem, và không ai cản được. // Con số đó không phải suy đoán: nó đo được, bằng tia laser bắn vào mấy tấm gương mà các chuyến Apollo để lại trên đó từ năm 1969. //
+Mỗi năm, Mặt Trăng lại rời xa chúng ta thêm 3,8 cm, tức là cỡ chiều ngang một con tem, và không ai cản được chuyện đó. // Người ta đo được con số ấy thật, bằng cách bắn tia laser lên mấy tấm gương mà các chuyến Apollo đã đặt trên Mặt Trăng từ năm 1969. //
 
-Nghĩa là câu hỏi hay không phải "nếu có phép màu làm Mặt Trăng bốc hơi". Câu hỏi hay là: **nó đang đi khỏi ta thật** — vậy nó đang giữ hộ ta những gì mà ta không hề biết? //
+Mà Mặt Trăng cũng chẳng cần phải đột nhiên biến mất, bởi vì nó đang rời đi thật, ngay trong lúc chúng ta ngồi nói chuyện này. // Có điều suốt chừng ấy năm treo trên đầu, nó đã lặng lẽ làm giúp chúng ta việc gì? //
 
-Câu trả lời, hoá ra, nằm ở một sinh vật nằm im dưới biển, mỗi năm chỉ hẹn hò đúng vài đêm, và nó xem lịch bằng ánh trăng. //
+Câu trả lời, nghe thì hơi lạ, lại thuộc về một sinh vật nằm im dưới đáy biển, mỗi năm chỉ hẹn hò vài đêm, và nó xem lịch bằng ánh trăng. //
 
 Xin chào, rất vui được gặp lại các bạn. //
 
 ## 3,8 cm là nhanh hay chậm
 
-Trước khi lo, thì phải biết là lo cái gì đã. //
+Trước khi lo, chúng ta hãy xem 3,8 cm mỗi năm là nhanh hay chậm. //
 
-3,8 cm một năm nghe như không có gì. Một đời người 80 năm thì Mặt Trăng chỉ đi xa thêm 3 mét — bằng chiều ngang một cái phòng ngủ. // Lấy phòng ngủ làm thước đo cho chuyện vũ trụ thì hơi nực cười, nên đổi thước. //
+Nghe qua thì con số ấy chẳng đáng gì. Cả một đời người tám mươi năm, Mặt Trăng cũng chỉ đi xa thêm được ba mét, bằng chiều ngang một căn phòng ngủ. // Mà lấy phòng ngủ ra đo chuyện vũ trụ thì hơi buồn cười, nên ta đổi sang thước địa lý. //
 
-Lấy thước địa lý. Trong 100 triệu năm, cái đà 3,8 cm đó đẩy Mặt Trăng ra xa thêm khoảng 3.800 km — dài hơn cả đường bờ biển Việt Nam, mà bờ biển nước mình dài 3.260 km. // Nói ngược lại cho dễ hình dung: thời khủng long, Mặt Trăng treo gần hơn bây giờ cỡ một chuyến Hà Nội–Sài Gòn. //
+Trong 100 triệu năm, cái đà 3,8 cm mỗi năm sẽ đẩy Mặt Trăng ra xa thêm khoảng 3.800 km, dài hơn cả bờ biển nước mình, vốn chỉ có 3.260 km. // Nói ngược lại cho dễ hình dung, thì lúc khủng long tuyệt chủng cách đây 66 triệu năm, Mặt Trăng còn treo gần hơn bây giờ chừng 2.500 km, tức là hơn một chuyến tàu Hà Nội vào Sài Gòn. //
 
-Còn khoảng cách hiện tại là 384.400 km. So với nó thì 3,8 cm nhỏ như một hạt gạo so với sân Mỹ Đình. //
+Còn so với khoảng cách hiện tại là 384.400 km, thì 3,8 cm chỉ nhỏ ngang một hạt cát rải dọc suốt đường bờ biển nước ta. //
 
 ## Nhưng khoan đã
 
-Nghe tới đây thì nhiều người muốn thở phào. //
+Nghe tới đây thì chắc nhiều người đã muốn thở phào. //
 
 **>> Thế thì lo gì!** //
 
-Đúng. Mặt Trăng sẽ không biến mất. Nó không rơi, không bay mất, không bị ai hút đi. Nó chỉ nhích ra, chậm đến mức không ai sống đủ lâu để thấy. //
+Thở phào là đúng, vì Mặt Trăng sẽ không biến mất. Nó không rơi xuống, không bay đi, cũng không bị ai hút đi. // Nó chỉ nhích ra xa, chậm đến mức không ai sống đủ lâu để kịp nhìn thấy. //
 
-Nên nói thẳng: phần còn lại của tập này là một phép trừ, không phải một lời tiên tri. // Ta lấy Mặt Trăng ra khỏi phương trình, không phải để sợ, mà để **đọc được cái hoá đơn** nó vẫn trả hộ ta hàng ngày. //
+Cho nên tôi xin nói trước, phần còn lại của tập này là một phép trừ chứ không phải lời tiên tri. // Ta tạm lấy Mặt Trăng ra khỏi phương trình, chỉ để xem cái hoá đơn nó vẫn trả hộ mình mỗi ngày là bao nhiêu. //
 
-Rồi. Mặt Trăng đang đi, đi rất chậm, và nó không biến mất trong đời ai cả. Cả ba điều đó đều đúng cùng lúc. // Nên câu hỏi không phải "khi nào nó đi", mà là: **cái gì sẽ sập, nếu đêm mai nó không còn ở đó?** //
+Vậy nên ba chuyện sau đây đang xảy ra cùng lúc: // Mặt Trăng đang đi, nó đi rất chậm, và nó sẽ không biến mất trong đời của bất kỳ ai đang nghe tập này. // Rồi, nếu đêm mai nó không còn ở đó nữa, thì cái gì sẽ sập xuống? //
 
 Để trả lời, ta bắt đầu từ nước. //
 
 ## Thứ thứ nhất: nước
 
-Mặt Trăng kéo nước biển. Mặt Trời cũng kéo. Và hai cái kéo đó không bằng nhau. //
+Mặt Trăng kéo nước biển lên, Mặt Trời cũng kéo, nhưng hai bàn tay ấy không khoẻ ngang nhau. //
 
-Theo tài liệu thuỷ triều của Cơ quan Khí quyển và Đại dương Hoa Kỳ, lực triều Mặt Trăng mạnh hơn lực triều Mặt Trời khoảng 2,2 lần. //
+Theo tài liệu thuỷ triều của Cơ quan Khí quyển và Đại dương Hoa Kỳ, lực triều của Mặt Trăng mạnh hơn lực triều Mặt Trời khoảng 2,2 lần. //
 
-Vậy lấy Mặt Trăng ra thì sao? Triều không chết. Nó vẫn còn, do Mặt Trời, nhưng teo lại còn chừng một phần ba. // Nói rõ: không cơ quan nào công bố đúng con số đó, vì nó khác nhau theo từng vùng biển. Một phần ba là tôi suy ra từ tỉ lệ 2,2 lần kia. //
+Vậy rút Mặt Trăng ra thì con nước ra sao? Thuỷ triều không chết hẳn, vì Mặt Trời vẫn còn đó kéo tiếp, nhưng nó teo lại còn chừng một phần ba. // Tôi xin nói rõ ngay: chưa cơ quan nào công bố đúng con số một phần ba, bởi mỗi vùng biển lại một khác. // Đó là phần tôi tự suy ra từ tỉ lệ 2,2 lần vừa nêu. //
 
-Và đây mới là chỗ đau. Cái dải ven bờ ngày ngập đêm cạn ấy — nhà khoa học gọi là vùng gian triều — là một trong những chỗ chen chúc sinh vật nhất hành tinh, và nó đông đúc chính vì nó khó sống: con nào chịu khô thì ở trên, con nào cần ướt thì ở dưới, chia nhau từng tầng. // Hạ biên độ triều xuống một phần ba thì cái thang tầng ấy co lại, và hàu, ốc, cua, rong, cả đám chim bờ đi mò lúc nước rút, tất cả phải xếp lại từ đầu. //
+Chỗ đau nằm ở cái dải ven bờ mà mỗi ngày nước ngập lên rồi lại rút cạn, chỗ giới khoa học gọi là vùng gian triều. // Đó là một trong những nơi chen chúc sinh vật nhất hành tinh, mà nó đông đúc được lại là nhờ khó sống. // Con nào chịu được khô thì ở tầng trên, con nào cần ngâm nước thì nằm tầng dưới, cả vùng chia nhau từng nấc. // Hạ biên độ triều xuống một phần ba thì cái thang nhiều tầng ấy co lại, và hàu, ốc, cua, rong, cùng mấy loài chim vẫn ra bãi mò ăn lúc nước rút, tất cả phải sắp xếp lại từ đầu. //
 
-Còn Việt Nam thì con nước đi vào tận trong nhà. // Ở vịnh Bắc Bộ, Hòn Dấu là một trong những nơi có nhật triều đều điển hình nhất thế giới, nước lên xuống đúng một lần mỗi ngày. // Còn ở đồng bằng sông Cửu Long, triều phía Biển Đông là bán nhật triều, biên độ cỡ 3 mét, và nó là cái bơm đẩy mặn ngược vào sông — theo các bản tin mấy năm gần đây, ranh mặn thường vào sâu 40 đến 60 cây số. //
+Riêng ở nước mình thì con nước còn đi vào tận trong nhà. // Ở vịnh Bắc Bộ, Hòn Dấu là một trong những nơi có nhật triều đều điển hình bậc nhất thế giới, nghĩa là nước chỉ lên xuống đúng một lần mỗi ngày. // Còn dưới đồng bằng sông Cửu Long, triều phía Biển Đông là bán nhật triều, biên độ chừng 3 mét. // Chính nó là cái bơm đẩy mặn ngược vào sông, khiến ranh mặn mấy năm gần đây thường vào sâu 40 tới 60 cây số. //
 
-Nghe thì tưởng mất triều là hết mặn, là mừng. Cơ mà không. // Chính cái triều đó mỗi ngày đẩy nước vào ruộng, vào vuông tôm, rửa phèn, đưa cá vào. // Đổi biên độ triều ở một vùng có khoảng một triệu héc-ta chịu ngập triều thì không phải bớt một rủi ro. Là viết lại toàn bộ sổ tay canh tác. //
+Nghe vậy thì nhiều người sẽ nghĩ mất triều là hết mặn, mà hết mặn thì mừng quá còn gì. // Cơ mà không đơn giản thế. Chính con nước ấy mỗi ngày đẩy nước vào ruộng, vào vuông tôm, rửa phèn cho đất và đưa cá vào tận nơi. // Cho nên đổi biên độ triều ở một vùng có tới khoảng một triệu héc-ta chịu ngập triều thì cũng là viết lại cả cuốn sổ tay canh tác của miền Tây. //
 
 ## Vì sao Mặt Trời to thế mà kéo yếu hơn
 
@@ -61,74 +70,72 @@ Nghe thì tưởng mất triều là hết mặn, là mừng. Cơ mà không. //
 
 Thôi bạn ơi, thế là bạn lại không biết rồi. //
 
-Mặt Trời nặng hơn Mặt Trăng khoảng 27 triệu lần. Chuyện đó đúng. // Có điều lực triều không phải lực hút. Nó là cái **hiệu** giữa hai cái kéo: kéo bên này Trái Đất mạnh hơn bên kia một chút, và chính cái "một chút" ấy làm nước phồng lên. //
+Mặt Trời nặng hơn Mặt Trăng khoảng 27 triệu lần, chuyện đó thì đúng. // Có điều thuỷ triều không sinh ra từ sức hút, mà từ cái hiệu giữa hai đầu. // Nửa Trái Đất hướng về phía nó bị kéo mạnh hơn nửa bên kia một chút, và chính cái một chút ấy làm nước phồng lên. //
 
-Giới vật lý có dăm bảy kiểu xa. Xa kiểu lực hút thì chia hai lần. // Xa kiểu ánh sáng cũng chia hai lần. // Còn xa kiểu thuỷ triều thì chia **ba** lần — xa gấp đôi là yếu đi tám lần. //
+Trong vật lý thì có dăm bảy kiểu xa khác nhau. Xa kiểu lực hút thì chia hai lần cho khoảng cách, nghĩa là xa gấp đôi là yếu đi bốn lần, ánh sáng cũng vậy. // Nhưng xa kiểu thuỷ triều thì khắc nghiệt hơn hẳn, vì nó chia tới ba lần, xa gấp đôi là yếu đi tám lần. //
 
-Mà Mặt Trời ở xa hơn Mặt Trăng khoảng 390 lần. 390 nhân 390 nhân 390 ra gần 60 triệu. 27 triệu chia 60 triệu, ra khoảng 0,45. // Thế là hết tranh luận: Mặt Trăng thắng không phải vì nó to, mà vì nó ngồi gần. //
+Mà Mặt Trời thì ở xa hơn Mặt Trăng khoảng 390 lần. // Lấy 390 nhân với 390 rồi nhân 390 lần nữa, ta được gần 60 triệu. // Đem 27 triệu chia cho 60 triệu thì còn khoảng 0,45, nghĩa là lực triều Mặt Trời chưa bằng một nửa Mặt Trăng, khớp đúng tỉ lệ 2,2 lần ở trên. // Thế là hết chuyện: Mặt Trăng thắng không nhờ to xác, mà nhờ nó ngồi gần. //
 
 ## Thứ thứ hai: cái trục và cái ngày
 
-Và nước mới chỉ là cái dễ thấy nhất. //
+Nhưng nước mới chỉ là chỗ dễ nhìn thấy nhất thôi. //
 
-Trái Đất nghiêng 23,4 độ, và cái nghiêng đó là lý do có bốn mùa, có mùa gặt và mùa gió. // Năm 1993, nhà thiên văn người Pháp Jacques Laskar cùng đồng nghiệp đăng trên tạp chí Nature một mô phỏng gây sốc: không có Mặt Trăng, cái trục ấy có thể lắc hỗn loạn trong khoảng từ 0 đến 85 độ. // Nghiêng 85 độ nghĩa là có lúc cả một nửa hành tinh quay hẳn mặt về Mặt Trời mấy chục năm, rồi lại úp vào bóng tối. Mùa màng theo nghĩa ta biết sẽ không tồn tại. //
+Trái Đất đang nghiêng 23,4 độ, và chính cái nghiêng đó cho ta bốn mùa, cho mùa gặt và mùa gió. // Năm 1993, nhà thiên văn người Pháp Jacques Laskar cùng đồng nghiệp đăng trên tạp chí Nature một mô phỏng khiến cả giới giật mình. // Không có Mặt Trăng ghìm lại, cái trục ấy có thể lắc hỗn loạn trong khoảng từ 0 đến 85 độ. // Nghiêng tới 85 độ thì trục gần như nằm ngang, nên mỗi năm sẽ có vài tháng cả một vùng cực phơi hẳn ra Mặt Trời, rồi vài tháng chìm hẳn trong bóng tối, và mùa màng theo nghĩa ta đang hiểu sẽ không còn. //
 
-Chỉ có điều — chỗ này rất nhiều video bỏ qua — con số đó đã bị phản biện. // Năm 2012, nhóm của Jack Lissauer ở NASA chạy lại bài toán với nhiều điều kiện đầu hơn, công bố trên tạp chí Icarus một kết quả bình tĩnh hơn hẳn: trục của một Trái Đất không Mặt Trăng dao động chủ yếu trong khoảng 10 đến 50 độ. // Vẫn loạn hơn 23,4 độ rất nhiều, nhưng không phải cảnh hành tinh lộn nhào mà người ta hay kể. Tôi nêu cả hai, vì đây là tranh luận chưa xong. //
+Chỉ có điều, và đây là chỗ rất nhiều video bỏ qua, con số ấy về sau đã bị phản biện. // Năm 2012, nhóm của Jack Lissauer ở NASA chạy lại bài toán với nhiều điều kiện ban đầu hơn. // Kết quả họ công bố trên tạp chí Icarus bình tĩnh hơn hẳn: trục của một Trái Đất không Mặt Trăng chủ yếu dao động trong khoảng 10 đến 50 độ. // Vẫn loạn hơn 23,4 độ rất nhiều, nhưng không còn là cảnh hành tinh lộn nhào như người ta hay kể. // Tôi nêu cả hai, vì đây là cuộc tranh luận chưa ngã ngũ. //
 
-Rồi còn cái ngày. Mặt Trăng là cái phanh. // Chính chỗ nó kéo nước phồng lên cũng là chỗ nó cọ vào Trái Đất và hãm Trái Đất chậm lại — và cái giá nó trả cho việc hãm đó đúng là 3,8 cm mỗi năm bị đẩy ra xa. Hai chuyện ấy là một chuyện. // Theo các mô hình về thời Trái Đất mới có Mặt Trăng, một ngày lúc đó dài cỡ 5 đến 6 tiếng. //
+Rồi còn chuyện độ dài một ngày, mà ở đây Mặt Trăng đóng vai cái phanh. // Ngay chỗ nó kéo nước phồng lên cũng là chỗ khối nước ấy cọ vào Trái Đất và hãm bớt vòng quay. // Còn cái giá phải trả cho việc hãm đó là 3,8 cm Mặt Trăng bị đẩy ra xa mỗi năm. // Hai chuyện tưởng như rời nhau ấy thật ra chỉ là một. // Theo các mô hình về thời Trái Đất mới có Mặt Trăng, một ngày khi đó chỉ dài chừng 5 đến 6 tiếng. //
 
-Còn nếu chưa từng có Mặt Trăng thì hôm nay một ngày dài bao nhiêu? // Trên mạng có một con số rất phổ biến, là 6 đến 8 tiếng. Tôi đi tìm nguồn gốc của nó và không thấy nghiên cứu nào chịu trách nhiệm cho con số ấy, nên tôi không dùng. // Nói chắc được thì chỉ thế này: không có Mặt Trăng, Trái Đất quay nhanh hơn, gió mạnh hơn, và chữ "một ngày" có nghĩa khác. //
+Thế nếu chưa từng có Mặt Trăng, thì hôm nay một ngày dài bao nhiêu? // Trên mạng đang lan một con số rất phổ biến là 6 đến 8 tiếng, nhưng tôi đi tìm gốc của nó mà không thấy nghiên cứu nào đứng ra chịu trách nhiệm, nên tôi không dùng. // Nói chắc được thì chỉ chừng này: không có Mặt Trăng thì Trái Đất quay nhanh hơn, gió mạnh hơn, và hai chữ "một ngày" mang nghĩa khác hẳn. //
 
 ## Từ đây trở đi là phần giả định
 
-Đến đây thì phần đo đạc đã xong. Nhưng câu chuyện chưa dừng ở đó. //
-
-Nên nói rõ luật chơi: cái gì có người đo rồi thì tôi nói rõ là ai đo; cái gì chỉ suy ra được, tôi nói thẳng là suy ra. // Giả sử đêm mai nhìn lên trời, và không có gì ở đó cả. //
+Tiếp theo đây tôi sẽ bước sang phần suy đoán, // và trong suốt phần đó tôi vẫn luôn phân biệt rõ con số nào đã có người đo được, con số nào là do tôi tự rút ra. // Vậy ta cùng giả sử rằng đêm mai mình ngẩng đầu lên, và trên trời trống không. //
 
 ## Mắt xích thứ nhất: cái đêm
 
-Thứ sập trước không phải nước. Là ánh sáng. //
+Hoá ra ánh sáng mới là cái đổ trước, nước còn đổ sau. //
 
-Đêm rằm sáng hơn đêm không trăng rất nhiều. Với chúng ta, đó là chuyện thơ. Với nhiều loài, đó là cái đồng hồ duy nhất chúng có. //
+Một đêm rằm sáng hơn đêm không trăng rất nhiều lần. // Với chúng ta thì đó là chuyện của thơ ca, nhưng với nhiều loài vật, đó là cái đồng hồ duy nhất chúng có. //
 
-Loài bọ hung ở Nam Phi lăn phân về tổ theo đường thẳng, và nó giữ được đường thẳng bằng cách đọc **ánh trăng phân cực** — tín hiệu yếu hơn ánh nắng phân cực cả triệu lần. Nghiên cứu đó đăng trên Nature năm 2003. // Vào đêm không trăng, một loài bọ hung khác chuyển sang định hướng bằng dải Ngân Hà. Nghĩa là mất trăng, vài loài còn phương án hai. //
+Theo một nghiên cứu đăng trên Nature năm 2003, loài bọ hung ở Nam Phi lăn phân về tổ theo đường thẳng. // Chúng giữ được đường thẳng ấy bằng cách đọc ánh trăng phân cực, một tín hiệu yếu hơn ánh nắng phân cực cả triệu lần. // Vào những đêm không trăng, một loài bọ hung khác còn biết chuyển sang định hướng theo dải Ngân Hà, nghĩa là mất trăng thì ít ra chúng vẫn còn phương án hai. //
 
-Nhưng loài đáng kể nhất thì không có phương án hai. // Ở rạn Great Barrier ngoài khơi Úc, san hô không đẻ lẻ. Chúng đẻ **đồng loạt**, cả rạn cùng một lúc, vào mấy đêm sau rằm, mỗi năm một lần. // Vì sao chúng biết hôm nay là mấy? Một nghiên cứu công bố năm 2007 tìm ra trong san hô một thụ thể ánh sáng gọi là cryptochrome, bật lên khi có ánh sáng xanh — và ánh trăng tròn, dù yếu đến thế, vẫn đủ để bật nó. //
+Nhưng loài đáng kể nhất thì chẳng có phương án nào khác. // Ngoài khơi nước Úc, ở rạn Great Barrier, san hô không đẻ lẻ tẻ từng con mà đẻ đồng loạt cả rạn cùng một lúc, vào mấy đêm ngay sau rằm, mỗi năm một lần. // Vậy làm sao chúng biết hôm nay là ngày mấy? // Một nghiên cứu công bố năm 2007 đã tìm ra trong san hô một thụ thể ánh sáng tên là cryptochrome, nó mở ra khi gặp ánh sáng xanh. // Và ánh trăng tròn, dù chỉ sáng bằng một phần rất nhỏ ánh nắng, vẫn đủ để mở được nó. //
 
-Vì sao phải đẻ cùng một đêm? Vì san hô không di chuyển được. Trứng và tinh trùng chỉ gặp nhau nếu cả rạn thả ra cùng lúc, cùng một chỗ nước. // Lệch vài đêm thì không phải đẻ ít hơn. Là không có con nào. //
+Còn lý do chúng buộc phải đẻ cùng một đêm thì nằm ở chỗ san hô không đi lại được. // Trứng và tinh trùng chỉ có cơ hội gặp nhau nếu cả rạn cùng thả ra một lúc, trong cùng vùng nước. // Lệch nhau vài đêm thì kết quả không phải là đẻ ít đi, mà là cả rạn gần như không có nổi một con non. //
 
 ## Mắt xích thứ hai: cái lịch và cái bóng
 
-Và hệ quả còn chưa dừng ở đó. Nó leo lên đến chỗ con người. //
+Hệ quả vẫn chưa dừng ở ngoài biển, vì nó leo được lên tới chỗ con người. //
 
-Hãy thử lấy Mặt Trăng ra khỏi tờ lịch Việt Nam. // Không còn rằm thì không còn Trung thu — Trung thu là rằm tháng 8, một ngày được định nghĩa bằng hình dáng Mặt Trăng chứ không bằng gì khác. // Không còn tuần trăng thì không còn tháng âm, mà không còn tháng âm thì không còn mùng một, không còn ngày Tết. //
+Bạn thử lấy Mặt Trăng ra khỏi tờ lịch Việt Nam mà xem. // Không còn rằm thì không còn Trung thu, vì Trung thu vốn là rằm tháng 8, một ngày được định nghĩa bằng hình dáng Mặt Trăng chứ không dựa vào dấu hiệu nào khác. // Mà mất tuần trăng thì âm lịch cũng mất theo, nên mùng một và cả ngày Tết đều không còn chỗ nào để đặt vào nữa. //
 
-Và ở miền Tây còn một thứ sâu hơn cả lịch: con nước. // Người đặt dớn, người đi câu, người chờ nước nổi, họ đếm theo con nước rằm và con nước đầu tháng — một hệ thống kinh nghiệm tích qua nhiều đời, hiệu chuẩn theo một vật thể cách đó 384.400 km. // Mất Mặt Trăng thì hệ thống ấy không sai. Nó chỉ là không còn đối tượng để nói về. //
+Riêng ở miền Tây còn một thứ ăn sâu hơn cả tờ lịch, đó là con nước. // Người đặt dớn, người đi câu, người chờ mùa nước nổi, tất cả đều đếm theo con nước rằm và con nước đầu tháng. // Đó là cả một hệ thống kinh nghiệm tích qua nhiều đời, mà cái mốc để nó dò theo lại là một vật thể cách ta 384.400 km. // Mất Mặt Trăng thì hệ thống ấy không hề sai, nhưng nó mất luôn cái mốc để đếm, nên không còn dùng được vào việc gì. //
 
-Rồi cái mất cuối cùng, và là cái tôi thấy ngậm ngùi nhất: nhật thực toàn phần. // Nhìn từ Trái Đất, Mặt Trăng và Mặt Trời to gần như bằng nhau, cùng khoảng hơn nửa độ trên trời. Mặt Trời to hơn Mặt Trăng 400 lần, và cũng ở xa hơn gần đúng 400 lần. Nên đĩa này úp vừa khít lên đĩa kia. //
+Rồi tới cái mất cuối cùng, cũng là cái khiến tôi ngậm ngùi nhất, là nhật thực toàn phần. // Nhìn từ Trái Đất, Mặt Trăng và Mặt Trời to gần như bằng nhau, cùng chiếm khoảng nửa độ trên bầu trời. // Mặt Trời to hơn Mặt Trăng 400 lần, mà cũng ở xa hơn gần đúng 400 lần, thành ra đĩa này úp vừa khít lên đĩa kia. //
 
-Chuyện đó không phải một định luật. Nó là một **sự trùng hợp của đúng thời đại chúng ta**. // Ngày xưa Mặt Trăng ở gần hơn, nó che thừa. Và vì nó đang lùi ra 3,8 cm mỗi năm, sẽ tới lúc nó không che đủ nữa. // Các tính toán cho những khoảng rất khác nhau, từ vài trăm triệu tới gần một tỉ năm, nên tôi không chọn hộ con số nào. // Nhưng kết luận thì giống nhau: loài người đang sống đúng vào quãng ngắn ngủi mà vành lửa ấy còn hiện ra được. //
+Sự vừa khít đó không phải một định luật của tự nhiên, mà là một trùng hợp rơi đúng vào thời đại chúng ta. // Ngày xưa Mặt Trăng ở gần hơn nên nó che thừa, và vì nó vẫn đang lùi ra 3,8 cm mỗi năm, rồi sẽ tới lúc nó che không đủ nữa. // Các tính toán đưa ra những khoảng rất khác nhau, từ vài trăm triệu tới gần một tỉ năm, nên tôi xin không chọn hộ con số nào. // Nhưng kết luận thì ai cũng giống nhau: loài người đang sống đúng vào quãng ngắn ngủi mà vành lửa ấy còn hiện ra được. //
 
 ## Chỉ có điều
 
-Chỉ có điều, cả cái chuỗi vừa rồi dựa trên một phép trừ mà vũ trụ không cho phép ai làm. //
+Chỉ có điều, cả cái chuỗi vừa rồi đều dựa trên một phép trừ mà vũ trụ không cho phép ai làm. //
 
-Mặt Trăng không đi đâu cả. Không có cơ chế vật lý nào lấy nó ra. Nên đừng ai nghe tập này rồi đi ngủ không nổi. //
+Mặt Trăng chẳng đi đâu cả. // Không có cơ chế vật lý nào lấy nó ra khỏi bầu trời của chúng ta, nên xin đừng ai nghe xong tập này rồi tối về mất ngủ. //
 
-Và ngay trong những chỗ đo được, mức chắc chắn cũng không đều nhau. // Thuỷ triều teo lại thì gần như không ai cãi, lịch âm và nhật thực thì là số học, cứ tính là ra. // Còn cái trục lắc tới mức nào thì Laskar năm 1993 và Lissauer năm 2012 nói hai con số rất khác nhau, và chưa ai thắng. //
+Và ngay trong những chỗ đo được, mức chắc chắn cũng không đều nhau đâu. // Chuyện thuỷ triều teo lại thì gần như không ai cãi, còn lịch âm với nhật thực thì thuần số học, cứ tính là ra. // Riêng cái trục lắc tới mức nào thì Laskar năm 1993 và Lissauer năm 2012 đưa ra hai con số rất khác nhau, tới giờ vẫn chưa bên nào thắng. //
 
-Thành ra câu hỏi thật của tập này không phải "nếu Mặt Trăng biến mất thì sao". // Mà là: có bao nhiêu thứ ta tưởng là bản chất của thế giới, hoá ra chỉ là **thói quen của thế giới dưới ảnh hưởng một vật thể** đang lặng lẽ rời đi, mỗi năm một con tem? //
+Vậy có bao nhiêu thứ chúng ta vẫn đinh ninh là bản chất của thế giới, // thật ra chỉ là thói quen mà thế giới hình thành dưới ảnh hưởng của một vật thể đang lặng lẽ rời đi, mỗi năm một con tem? //
 
 ## Đóng
 
-Và thật thú vị khi nhận ra rằng, ở đâu đó ngoài khơi nước Úc, mỗi năm có một đêm mà cả một rạn san hô dài hàng trăm cây số cùng nhả trứng lên mặt nước trong một lúc. //
+Và tôi thấy thú vị khi nghĩ rằng ở đâu đó ngoài khơi nước Úc, // mỗi năm vẫn có một đêm mà cả một rạn san hô dài hàng trăm cây số cùng nhả trứng lên mặt nước trong một lúc. //
 
-Chúng không có mắt, không có não, và không đi đâu được cả. // Thứ duy nhất chúng có là một con protein biết nhận ra rằng đêm nay trời sáng hơn đêm qua. // Nên đêm nào trăng tròn, cả rạn hiểu rằng đã đến lúc. //
+Chúng không có mắt, không có não, và cũng chẳng đi đâu được. // Thứ duy nhất chúng có là một con protein biết nhận ra rằng đêm nay trời sáng hơn đêm qua. // Vậy mà mỗi năm, đúng vào mấy đêm sau rằm ấy, cả rạn lại hiểu rằng đã đến lúc. //
 
-Ta gọi Mặt Trăng là đồ trang trí của bầu trời đêm. Còn với một nửa sự sống trên hành tinh này, nó là cái đồng hồ, cái lịch, và cái máy bơm. //
+Chúng ta vẫn quen xem Mặt Trăng như một món trang trí của bầu trời đêm. // Còn với vô số loài khác trên hành tinh này, nó là cái đồng hồ, là tờ lịch, và là cái máy bơm. //
 
 Và đó, thưa quý vị và các bạn, là cái giá thật của 3,8 cm mỗi năm. //
 
-Hy vọng anh chị em thích tập này. Nhớ để lại một lượt thích để chúng tớ biết. // Còn nếu anh chị em nghĩ ra một thứ nữa sẽ sập mà tập này chưa nhắc tới, thì mời viết xuống bình luận — chúng tớ đọc hết. // Còn bây giờ, xin chào, và hẹn gặp lại. //
+Hy vọng anh chị em thích tập này, nhớ để lại một lượt thích để chúng tớ biết nhé. // Còn nếu anh chị em nghĩ ra thêm một thứ nữa sẽ sập mà tập này chưa kịp nhắc tới, thì mời viết xuống bình luận, chúng tớ đọc hết. // Còn bây giờ, xin chào, và hẹn gặp lại. //
 
 <!-- KẾT THÚC ĐỌC -->

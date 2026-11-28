@@ -44,6 +44,7 @@ body{font-family:-apple-system,"SF Pro Display",system-ui,"Helvetica Neue",Arial
 .lop.ov{inset:-14%}   /* lớp có camera: nới ra để đẩy/lia không lộ mép */
 .lop > svg{position:absolute;inset:0;width:100%;height:100%}
 .lop > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.lop > video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 /* HUD = chữ, KHÔNG bị camera biến đổi */
 .hud{position:absolute;inset:0;pointer-events:none}
 .tx{position:absolute;opacity:0;will-change:opacity,transform}
@@ -1313,6 +1314,51 @@ ANIM.c14 = root => {
    đụng vào file của nhau. Mỗi khối ghi đúng MỘT file canh/khoi-N.js
    và chỉ gọi DANGKY({...}). Không ai sửa file này.
    ============================================================ */
+/* ============================================================
+   VIDEO THẬT TRONG CẢNH — thêm 28/11/2026
+   Ảnh tĩnh làm cảnh chết; cảnh nói về sinh vật thì phải có nó cử động.
+   VID() trả về một .lop chứa <video>. Dùng y như IMG():
+       VID("k1-san-ho.mp4", 0.35, { tu:2.4, dai:6.0, toc:0.6, pos:"50% 40%" })
+   · tu   giây bắt đầu trong clip (mặc định 0)
+   · dai  lấy bao nhiêu giây của clip; hết thì quay lại đầu (mặc định cả clip)
+   · toc  tốc độ phát so với thời gian cảnh (0.6 = chậm lại, điện ảnh hơn)
+   KHÔNG tự play: ở chế độ dựng video, thời gian là ẢO, nên phải TUA tới đúng
+   giây rồi chụp. Tự play thì mỗi lần dựng ra một kết quả khác.
+   ============================================================ */
+window.VID = (f, sau, o) => { o = o || {};
+  return `<div class="lop" data-sau="${sau || 0}"><video src="video/${f}" muted playsinline preload="auto"`
+       + ` data-tu="${o.tu || 0}" data-dai="${o.dai || 0}" data-toc="${o.toc || 1}"`
+       + ` style="object-position:${o.pos || "50% 50%"}${o.loc ? ";filter:" + o.loc : ""}"></video></div>`;
+};
+/* Đặt mọi video của cảnh đang hiện về đúng giây của nó.
+   Chế độ ẢO: tua cứng (tất định, dựng lại lần nào cũng ra một hình).
+   Chế độ THẬT (xem trong studio): để trình duyệt tự phát, chỉ nắn khi lệch quá
+   0,25 giây — tua từng khung lúc xem trực tiếp thì hình giật. */
+function nhipVideo(s, lt) {
+  s.querySelectorAll("video").forEach(v => {
+    const tu = +v.dataset.tu || 0, toc = +v.dataset.toc || 1;
+    const dai = (+v.dataset.dai) || (isFinite(v.duration) && v.duration ? v.duration - tu : 0);
+    const dich = dai > 0 ? tu + ((lt * toc) % dai) : tu + lt * toc;
+    if (ST.virtual) { v.pause(); if (Math.abs(v.currentTime - dich) > 0.01) v.currentTime = dich; }
+    else {
+      if (v.paused) { v.currentTime = dich; v.playbackRate = toc; v.play().catch(() => {}); }
+      else if (Math.abs(v.currentTime - dich) > 0.25) v.currentTime = dich;
+    }
+  });
+}
+/* Bộ dựng gọi hàm này SAU __frame và CHỜ nó, rồi mới chụp. Nếu chụp ngay thì
+   khung đầu của mỗi cảnh có video ra hình của giây cũ — lỗi câm, chỉ thấy bằng mắt. */
+window.__khungSanSang = () => Promise.all([
+  ...[...document.querySelectorAll(".canh.active img")]
+      .filter(i => !i.complete || !i.naturalWidth).map(i => i.decode().catch(() => {})),
+  ...[...document.querySelectorAll(".canh.active video")].map(v => v.readyState >= 2 && !v.seeking
+      ? Promise.resolve()
+      : new Promise(ok => { const xong = () => ok();
+          v.addEventListener("seeked", xong, { once: true });
+          v.addEventListener("loadeddata", xong, { once: true });
+          setTimeout(xong, 1500); })),
+]);
+
 const CANH_DK = [];
 function DANGKY(o){ CANH_DK.push(o); }
 </script>
@@ -1397,6 +1443,8 @@ function draw(){
   const DUR = ST.dur || 13;
   if (ST.upd) ST.upd({ t: lt, step, dur: DUR, u: cl(lt / DUR, 0, 1),
     since: k => k === 0 ? lt : (ST.reveals[k - 1] === undefined ? -1e9 : t - ST.reveals[k - 1]) });
+  nhipVideo(s, lt);
+  if (ST.mo) nhipVideo(ST.mo.el, t - ST.mo.t);     /* cảnh đang hoà ra cũng phải chạy tiếp */
   const p = says(ST.cur)[step];
   document.getElementById("notes").textContent = p ? p.textContent : "";
 }
