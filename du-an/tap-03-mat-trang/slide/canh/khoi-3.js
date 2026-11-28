@@ -94,6 +94,18 @@ const NENS = {
   /* SỬA 28/11 · k3c08: sơ đồ sóng xám-lam trên nền trắng xanh gần như không có
      độ tương phản. Nền mới lấy đỉnh #1B4E68 như bản soát chỉ định. */
   lanhT: "radial-gradient(120% 98% at 30% 20%, #2C6B8C 0%, #1B4E68 34%, #103449 70%, #08202E 100%)",
+  /* SỬA 28/11 vòng ba · ĐO MÀU. Năm nền tối tôi vừa thêm (`lanhT` `bien` và ba
+     cảnh `lanh2`) đều nằm trong họ lam, nên tuy chữa được độ tương phản thì lại
+     đẩy khối 3 từ **5 dải sắc độ ≥ 5 % xuống đúng 4** — chạm sàn §12, không còn
+     dư một dải nào. Đo trên 192 khung chụp thẳng từ trang bằng đúng thuật toán
+     của `dung/do-mau.py`: lơ 30,7 % + lam 24,8 % = 55,5 % cho riêng họ lam, dải
+     ngọc tụt còn 4,90 %. Hai nền dưới đây kéo lại hai họ màu KHÁC HẲN, theo
+     đúng kinh nghiệm khối 2 báo: chỗ ăn tiền là đổi hẳn nền sang tông khác họ,
+     không phải chỉnh `filter`. */
+  /* mận sâu — cho k3c18, đủ tối để quả cầu ảnh thật ngồi được, khác họ lam */
+  man:  "radial-gradient(120% 98% at 34% 22%, #5B2A49 0%, #43203A 32%, #2C1527 68%, #190C17 100%)",
+  /* đất nung sâu — cho k3c22 chặng A, kéo dải hổ phách/đỏ lên */
+  dat:  "radial-gradient(118% 96% at 30% 20%, #8A4A2C 0%, #6B3621 32%, #4A2415 68%, #2E1510 100%)",
   /* SỬA 28/11 · k3c11: nền kem gần trắng, chữ xám trên kem, đọc không ra.
      Nền mới đi từ #F0E2C4 xuống #D8C49A như bản soát chỉ định. */
   kem: "radial-gradient(118% 96% at 32% 20%, #E6D8B6 0%, #D9C69A 32%, #C8AF80 68%, #BCA272 100%)",
@@ -1245,15 +1257,16 @@ DANGKY({ id: "k3c18", steps: 0, say: [CAU[17]],
      Thử `lanh2` trước thì quả cầu đọc tốt, NHƯNG k3c19 và k3c20 ngay sau cũng
      dùng `lanh2`, thành BA CẢNH LIỀN NHAU CÙNG MỘT TẤM NỀN — phạm luật L6
      ("không quá hai cảnh liền nhau dùng chung một tấm nền"). Đã đếm bằng máy
-     trên cả 32 cảnh của khối, chỉ chỗ này phạm. Nên chặng A dùng `bien`:
-     đủ tối để quả cầu ảnh thật ngồi được, và khác họ màu với `lanh2`. */
-  html: NEN("bien", "k3c18-a") + SV(0.16, "nen", "k3c18-a2") +
+     trên cả 32 cảnh của khối, chỉ chỗ này phạm. Nên chặng A dùng `man` (mận
+     sâu): đủ tối để quả cầu ảnh thật ngồi được, khác hẳn họ màu với `lanh2`
+     ngay sau, và kéo dải tím/đỏ-tím lên — xem ghi chú đo màu ở bảng NENS. */
+  html: NEN("man", "k3c18-a") + SV(0.16, "nen", "k3c18-a2") +
         IMG("k3c18-b", "k3-trang-canh.jpg", 0.3, { loc: "contrast(1.1) saturate(.92) brightness(1.5)" }) +
         SV(0.82, "ve") +
         '<div class="hud">' + nguon("k3c18-ng", "Ảnh: W. carter · CC0") + '</div>',
   anim: root => {
     const N = sv(root, "nen"), V = sv(root, "ve");
-    const nhip = chatLieu(N, "k3c18", "#9FD6EE", 10);
+    const nhip = chatLieu(N, "k3c18", "#E9A8D2", 10);
     const gA = el("g", {}, V);
     /* quỹ đạo: #A4B1AA cũ hợp nền kem, trên nền `lanh2` lam thì chìm hẳn */
     el("ellipse", { cx: 566, cy: 364, rx: 384, ry: 154, fill: "none", stroke: "#CFE6F2",
@@ -1492,23 +1505,25 @@ DANGKY({ id: "k3c22", steps: 0, say: [CAU[21]],
   /* SỬA 28/11, vòng hai: đo được chặng A có trung vị độ sáng 0,93 — vượt hẳn
      trần 0,82 của luật L9, tức nhạt hơn cả k3c19 trước khi sửa. Nền `lanh`
      đổi sang `lanh2`. k3c21 ngay trước là ảnh dải Ngân Hà nên không thành
-     chuỗi ba cảnh cùng nền. */
-  html: NEN("lanh2", "k3c22-a") + SV(0.16, "nen", "k3c22-mo") +
+     chuỗi ba cảnh cùng nền. VÒNG BA: đổi tiếp sang `dat` (đất nung sâu) — vừa
+     giữ độ sáng trong ngưỡng, vừa kéo dải hổ phách/đỏ lên thay vì thêm một nền
+     lam nữa. k3c21 trước là ảnh dải Ngân Hà, k3c23 sau là rạn xanh ngọc. */
+  html: NEN("dat", "k3c22-a") + SV(0.16, "nen", "k3c22-mo") +
         VI("k3c22-b", "k3-trangmoc.mp4", 0.3, { tu: 0.4, dai: 7.2, toc: .6, loc: "contrast(1.08) saturate(1.06) brightness(1.06)" }) +
         SV(0.8, "ve") +
         '<div class="hud">' + nguon("k3c22-ng", "Video: Vườn quốc gia Joshua Tree, Mỹ (NPS) · Phạm vi công cộng") + '</div>',
   anim: root => {
     const N = sv(root, "nen"), V = sv(root, "ve");
-    const nhip = chatLieu(N, "k3c22", "#4E7A94", 11);
+    const nhip = chatLieu(N, "k3c22", "#F0B98A", 11);
     const gA = el("g", {}, V);
     const goc = [[186, 452], [456, 530], [792, 522], [1050, 440]];
-    const soi = goc.map(() => el("path", { d: "", fill: "none", stroke: "#8794A0",
+    const soi = goc.map(() => el("path", { d: "", fill: "none", stroke: "#F2DCC2",
       "stroke-width": 2.6, "stroke-dasharray": "9 8", opacity: 0 }, gA));
     const mtA = diaMT(gA, "k3c22", 740, 162, 92);
     const vat = [];
     { const g = el("g", { opacity: 0 }, gA);      /* sóng = con nước */
       el("path", { d: "M-80,0 q40,-34 80,0 q40,34 80,0 M-80,36 q40,-34 80,0 q40,34 80,0",
-        fill: "none", stroke: BIEN, "stroke-width": 10, "stroke-linecap": "round" }, g);
+        fill: "none", stroke: "#7FD4F0", "stroke-width": 10, "stroke-linecap": "round" }, g);
       set(g, { transform: "translate(" + goc[0][0] + " " + goc[0][1] + ")" }); vat.push(g); }
     { const g = el("g", { opacity: 0 }, gA);      /* tờ lịch */
       el("rect", { x: -70, y: -58, width: 140, height: 116, rx: 10, fill: "#FFFFFF",
@@ -1517,14 +1532,16 @@ DANGKY({ id: "k3c22", steps: 0, say: [CAU[21]],
       pha(g, 0, 14, 25, .5, "#2F3A46", "#E4E7E2");
       set(g, { transform: "translate(" + goc[1][0] + " " + goc[1][1] + ")" }); vat.push(g); }
     { const g = el("g", { opacity: 0 }, gA);      /* nhánh san hô */
-      el("ellipse", { cx: 0, cy: 62, rx: 86, ry: 14, fill: "#8E4536", opacity: .32 }, g);
-      el("path", { d: "M0,62 L0,6", fill: "none", stroke: "#B2563F", "stroke-width": 20,
+      /* nền chặng A nay là đất nung; nhánh san hô màu #B2563F chìm hẳn vào nền.
+         Đổi sang hồng san hô sáng, có bóng tối phía dưới cho tách khỏi nền. */
+      el("ellipse", { cx: 0, cy: 62, rx: 86, ry: 14, fill: "#2A1008", opacity: .45 }, g);
+      el("path", { d: "M0,62 L0,6", fill: "none", stroke: "#FF9E86", "stroke-width": 20,
         "stroke-linecap": "round" }, g);
       for (let i = 0; i < 5; i++) {
         const a = (-1 + i * .5) * .62;            /* xoè đều sang hai bên */
         el("path", { d: "M0,10 Q" + (46 * Math.sin(a)).toFixed(1) + "," + (-34 - 8 * Math.abs(i - 2)) +
           " " + (94 * Math.sin(a)).toFixed(1) + "," + (-16 - 74 * Math.cos(a)).toFixed(1),
-          fill: "none", stroke: i % 2 ? SANHO : "#C96650",
+          fill: "none", stroke: i % 2 ? "#FFB7A2" : "#FF9178",
           "stroke-width": (16 - Math.abs(i - 2) * 2).toFixed(1), "stroke-linecap": "round" }, g);
       }
       set(g, { transform: "translate(" + goc[2][0] + " " + goc[2][1] + ")" }); vat.push(g); }
@@ -1906,9 +1923,14 @@ DANGKY({ id: "k3c29", steps: 0, say: [CAU[28]],
    đặt trong một nút bấm có bóng, trên nền ẢNH RẠN THẬT. Không một nét vẽ tay nào. */
 DANGKY({ id: "k3c30", steps: 0, say: [CAU[29]],
   /* SỬA 28/11 · NÊN SỬA: ảnh rạn nền bị đẩy bão hoà tới mức xanh neon — khung
-     rực rỡ bất thường duy nhất cả tập, trông như lỗi bộ lọc. saturate về 1,05
-     và hue-rotate(10deg) để kéo về lam-lục tự nhiên. */
-  html: IMG("k3c30-a", "k3-ran.jpg", 0.24, { loc: "contrast(1.06) saturate(.68) hue-rotate(-10deg) brightness(1.04)" }) +
+     rực rỡ bất thường duy nhất cả tập, đo được trung vị bão hoà 0,91, vượt hẳn
+     trần 0,78. Bản soát đề nghị saturate 1,05 + hue-rotate(10deg) "để kéo về
+     lam-lục tự nhiên". THỬ RỒI MỚI CHỐT: hue-rotate(+10deg) đẩy ảnh này SANG
+     LAM chứ không sang lam-lục (CSS hue-rotate là một ma trận xấp xỉ, không
+     phải phép cộng sắc độ), nên phải quay NGƯỢC. Với hue-rotate(-30deg)
+     saturate(.5): bão hoà 0,60, và tỉ lệ điểm thuộc dải ngọc 150–180 tăng từ
+     10,8 % lên 15,7 % — vừa hết neon vừa trả lại một ít màu ngọc cho cả tập. */
+  html: IMG("k3c30-a", "k3-ran.jpg", 0.24, { loc: "contrast(1.06) hue-rotate(-30deg) saturate(.5) brightness(1.04)" }) +
         SV(0.86, "ve") +
         /* dòng nguồn cũ gộp hai lời ghi công thành MỘT dòng dài 1.147 px, chạy
            gần hết chiều ngang khung (đo bằng getBoundingClientRect()). Rút gọn

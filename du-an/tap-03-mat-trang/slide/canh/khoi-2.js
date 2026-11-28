@@ -754,7 +754,7 @@ DANGKY({
      Ngân Hà; đếm bằng máy mới thấy, nhìn thì không. Đổi cảnh cuối sang nền
      chuyển sắc tông MẬN, vừa phá cụm vừa thêm một dải màu cho khối (mục F),
      và đây là cú chốt của bộ ba nên đổi nền ở đúng chỗ chốt là có nghĩa. */
-  html: K2.nen("#3A2340", "#190E20", "#070409") + K2.troi(.08) +
+  html: K2.nen("#4C2956", "#211029", "#09040D") + K2.troi(.08) +
         K2.ve(.8) + K2.toi(".9"),
   anim: root => {
     K2.rac(root);
@@ -1383,7 +1383,7 @@ DANGKY({
   id: "k2c22", steps: 0, say: [S[21]],
   /* nền lệch khỏi navy của c23/c24: luật L6 cấm quá hai cảnh liền dùng chung
      một tấm nền, mà c22–c23–c24 trước đây là ba cảnh cùng một màu y hệt. */
-  html: K2.nen("#143634", "#07201F", "#040C0C") + K2.troi(.08) + K2.ve(.76) + K2.toi(".9") +
+  html: K2.nen("#1F6560", "#0A2E2B", "#04100F") + K2.troi(.08) + K2.ve(.76) + K2.toi(".9") +
         '<div class="hud">' + K2.nguon("k2c22-ng",
           "Lissauer, Barnes & Chambers · Icarus 217, 77 (2012)") + '</div>',
   anim: root => {
@@ -1549,7 +1549,7 @@ DANGKY({
    ═══════════════════════════════════════════════════════════════════ */
 DANGKY({
   id: "k2c25", steps: 0, say: [S[24]],
-  html: K2.nen("#2A2233", "#140E1C", "#06040A") + K2.troi(.08) + K2.ve(.78) + K2.toi(".9"),
+  html: K2.nen("#4A3A5C", "#1E1528", "#07050C") + K2.troi(.08) + K2.ve(.78) + K2.toi(".9"),
   anim: root => {
     K2.rac(root);
     const T = root.querySelector("svg.troi"); T.innerHTML = ""; sao(T, 140);
@@ -1909,7 +1909,7 @@ DANGKY({
 /* ---- k2c32 · câu 32 (8,7 s) · HAI CẮT CỨNG u=.36 và u=.72 · CHỮ 2/5 «6–8», 0 TỪ ---- */
 DANGKY({
   id: "k2c32", steps: 0, say: [S[31]],
-  html: K2.nen("#1A2436", "#0A1120", "#04070E") + K2.troi(.08) + K2.ve(.8) + K2.toi(".9"),
+  html: K2.nen("#4A3A2A", "#1C1510", "#070504") + K2.troi(.08) + K2.ve(.8) + K2.toi(".9"),
   anim: root => {
     K2.rac(root);
     const T = root.querySelector("svg.troi"); T.innerHTML = ""; sao(T, 140);

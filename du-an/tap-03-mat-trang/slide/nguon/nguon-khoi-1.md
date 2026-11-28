@@ -296,6 +296,67 @@ lớp đồ hoạ bên trong một chặng đã có, không thêm và không b�
 Đã đếm lại bằng tay trên bản mới: vẫn đúng 16 mốc, vẫn 41 lời gọi `DANGKY`
 (`python3 dung/soat-khoi.py` in ra “khối 1: 41 cảnh · 42 câu”).
 
+**Nhưng đếm tay không đủ** — một mốc cắt có thể còn nguyên trong bảng mà **không
+còn đổi hình**. Đúng chuyện đó xảy ra ở k1c41 trong chính vòng sửa này: nhịp 1
+đổi sang ảnh vệ tinh thì mốc cắt ở `u = 0,70` thành cắt từ `k1-cuulong.jpg` sang
+chính `k1-cuulong.jpg`. Đã chữa (xem §7d). *Bài học: sau mỗi vòng đổi tư liệu
+phải đếm lại bằng MÁY, không đếm lại bằng bảng.*
+
+### 6.2 Con số 57 nay là số ĐO, không phải số đếm từ mã
+
+Khối 2 chỉ ra (28/11) rằng §11.11 bảo đếm “lần đổi hình” = số `DANGKY` cộng số
+mốc cắt cứng, nhưng thứ đếm được từ mã là **số lời gọi hàm cắt**, không phải số
+lần khung hình thật sự đổi. Họ đo khối 2 và thấy **14 trên 29 mốc không đổi
+hình** (đều là mở dần sơ đồ trên một tấm nền không đổi — nhìn vẫn tốt, nhưng
+không phải một lần đổi hình), nên con số khai 16,5 lần/phút của họ thật ra là
+13,5. Lời khai sai đó **sống sót qua cả vòng soát độc lập**, vì người soát cũng
+đếm từ mã theo đúng §11.11.
+
+Tôi đã đo lại khối 1 bằng cách của họ: `scratchpad/do-moc-cat-k1.py` chụp khung
+ở `u − 0,055` và `u + 0,055` quanh **mọi** ngưỡng cắt tìm được trong mã, rồi tính
+chênh lệch mức xám trung bình; ≥ 12 mới tính là đổi hình thật (ngưỡng khối 2 đặt
+sau khi xem bằng mắt, tôi dùng chung để hai khối so sánh được). Khối 1 khai cắt
+bằng ba kiểu nên bộ đo dò cả ba: `const sau = c.u >= X`, `const ph = c.u < X ? …`,
+và riêng k1c01 cắt theo `c.since(1)` ở 1,8 s và 4,6 s (quy ra `u` theo thời lượng
+cảnh thật).
+
+**Kết quả: 16 trên 16 mốc đều đổi hình thật. Khai 57, đo được cũng 57 —
+13,5 lần/phút, trong dải 12–18.**
+
+| mốc thấp nhất | mốc cao nhất |
+|---|---|
+| k1c41 `u = 0,70` · lệch **33,2** | k1c25 `u = 0,68` · lệch **132,2** |
+
+Khối 1 không dính lỗi của khối 2 vì **mọi mốc cắt của khối này đều là đổi TƯ
+LIỆU** (ảnh → video → bản đồ), không có mốc nào là “mở dần sơ đồ”. Đúng một mốc
+từng hỏng là k1c41, và nó là mốc thấp nhất bảng trên chính vì nó vừa được chữa:
+trước khi chữa, hai bên mốc là cùng một tệp, cùng `pos`, chỉ khác `brightness`
+0,74 → 0,80.
+
+**Tôi ủng hộ đề nghị sửa §11.11 của khối 2:** “lần đổi hình” phải định nghĩa là
+*mốc mà khung trước và khung sau khác nhau ĐO ĐƯỢC*, không phải *mốc có gọi hàm
+cắt*. Và nói thêm một bậc: con số **49 lần đổi nền / 11,6 mỗi phút** ở §6.1 của
+tôi vẫn là số **đếm từ mã** (đếm lớp phủ kín khung). Nó tốt hơn đếm lời gọi hàm
+nhưng vẫn mù đúng cái bẫy k1c41 — hai lớp liên tiếp cùng một tệp chỉ khác
+`brightness` thì nó vẫn đếm là đổi. Con số đáng tin của khối 1 là **57 / 13,5
+mỗi phút đã đo bằng khung thật**; con số 11,6 chỉ nên đọc như một chỉ dấu.
+
+### 6.1 Luật L6 — đếm bằng máy
+
+Bộ đếm: `scratchpad/dem-nen-k1.py` (viết riêng cho khối 1; bản của khối 2 ở
+`dem-nen.py` lấy **lớp `.lop` đầu tiên** làm nền, mà khối 1 đặt `NEN("dem")` /
+`NEN("bien")` làm lớp đầu ở gần như mọi cảnh rồi **chồng ảnh phủ kín lên trên**
+— nên bản đó báo sáu cụm, **phần lớn là dương tính giả**). Bản của khối 1 lấy
+**danh sách theo thứ tự các lớp phủ kín khung** (IMG/VIDL/`<img>`/`<video>`/
+`bdVN`), bỏ qua `MO()` vì đó là nền mờ nằm sau ảnh chính, và chỉ rơi về gradient
+khi cảnh không có lớp nào như vậy. Hai cảnh liền nhau chỉ tính là chung nền khi
+danh sách **giống hệt**.
+
+Kết quả trên bản đã sửa: **không cụm nào quá 2 cảnh — ĐẠT L6**, và
+**49 lần đổi nền / 253,8 s = 11,6 mỗi phút** (L6 đòi tối thiểu 6).
+Chuỗi c15–c18 mà người soát chê nay là bốn nền khác nhau:
+`nen:dem` → `k1-traidat.jpg` → `k1-mattrang.jpg` → `nen:am`.
+
 ---
 
 ## 7. THỜI GIAN CHUẨN HOÁ (§15.6) — kiểm lại khi đổi giọng
@@ -398,7 +459,7 @@ Nguồn việc: `canh/SOAT-CANH.md` (28/11/2026). Mức **CHẶN** · **NÊN S�
 | k1c37 | **CHẶN** | (1) clip bãi cát biển Trắng, Nga minh hoạ cho sông Cửu Long (2) bản đồ ĐBSCL thành khối cam răng cưa | (1) Nhịp 2 dùng **`video/k3-bensong.mp4`** — đã `ffprobe`: 1280×720, 8,000 s, không dải đen, khai `dai:7,4` (bẫy 16.3). (2) Nền đổi sang **ảnh vệ tinh `k1-cuulong.jpg`**; ba mũi tên mặn, đường ranh mặn và chấm Cần Thơ nay vẽ trong **toạ độ khung hình**, bỏ hẳn `bdVN()`/`ngamL()`/`haloBD()`. Pill số liệu đổi thành nhãn “ranh mặn vào sâu 40 – 60 km” đặt cứng trong `.hud`. |
 | k1c38 | NÊN SỬA | clip ruộng khô có đồi núi và dừa, rõ ràng không phải ĐBSCL | Dùng **`video/k3-ghe-song.mp4`** (chợ nổi sông Cửu Long), `dai:7,4`, `pos "50% 55%"`. Không dùng `anh/k2-ruong-mekong.jpg` như người soát gợi ý — lý do ở §7e. |
 | k1c40 | *GỢI Ý* | ba mũi tên “nước vào ruộng” vẽ vắt ngang bầu trời; nhịp 2 trùng tấm của k1c10 | Mũi tên hạ xuống dải **y 420–564** để chạy trong mặt ruộng. Nhịp 2 đổi sang **`anh/k3-bentre.jpg`** (xuồng câu trên sông Bến Tre, CC0) — khớp hẳn với “đưa cá vào tận nơi” và không trùng cảnh nào. Người soát gợi ý `k1-cantho.jpg`, nhưng tấm đó đang dùng ở k1c34, chỉ cách 35 giây, nên đổi sang đó là **đẻ ra đúng lỗi trùng ảnh mà họ đang bắt**. |
-| k1c41 | NÊN SỬA | vùng tô phủ gần hết đa giác miền Nam kể cả phần cao ráo; đa giác răng cưa | Nền đổi sang **ảnh vệ tinh** ngay từ nhịp 1. Vùng tô là một `<path>` **vẽ tay theo ảnh**, chỉ phủ phần châu thổ dưới đường Tân An – Rạch Giá, có dải quét từ bắc xuống nam và viền vẽ dần. Giữ nguyên dòng “Vùng tô là chỉ thị”. Số đếm cũng ghim ở 1.000.000 khi `u > .80`. |
+| k1c41 | NÊN SỬA | vùng tô phủ gần hết đa giác miền Nam kể cả phần cao ráo; đa giác răng cưa | Nền đổi sang **ảnh vệ tinh** ngay từ nhịp 1. Vùng tô là một `<path>` **vẽ tay theo ảnh**, chỉ phủ phần châu thổ dưới đường Tân An – Rạch Giá, có dải quét từ bắc xuống nam và viền vẽ dần. Giữ nguyên dòng “Vùng tô là chỉ thị”. Số đếm cũng ghim ở 1.000.000 khi `u > .80`. **Vòng hai:** bộ đếm L6 bắt được là sau khi đổi nhịp 1 sang ảnh vệ tinh thì mốc cắt cứng ở `u = 0,70` hoá ra cắt từ `k1-cuulong.jpg` sang **chính nó**, cùng `pos`, chỉ khác brightness — cảnh đóng khối mất hẳn cú đổi hình mà §6 vẫn đếm là một mốc cắt. Nhịp 2 nay là khuôn hình khác thật: đẩy vào châu thổ (`pos "40% 64%"`), sáng và ấm hơn. Đo lại: hai khung lệch nhau 32,6 mức xám trung bình. |
 | k1c13 | *GỢI Ý* | “muốn thở phào” mà hình là mặt biển tĩnh | **Không làm.** Cảnh đã có cú lùi máy `z 1.14 → 1.02` — chính là cú “thở phào” mà họ đề nghị, chỉ khác nền. Đổi sang bản đồ của k1c12 sẽ thành hai cảnh bản đồ liền nhau, đi ngược luật L6 mà chính bản soát vừa rút ra. Mức GỢI Ý nên tôi để lại và nói rõ. |
 | **k1c22** | *(người soát không nêu — tôi tự bắt)* | cảnh dùng **cùng clip** `k1-bien-dem.mp4` với k1c03; sau khi kéo c03 về tông đêm thì c22 vẫn là biển xanh lơ giữa trưa, trong khi câu là “nếu **đêm mai** nó không còn ở đó” | Dùng **y hệt bộ lọc của k1c03**, và vệt trăng cũng đổi sang path mờ lắc theo sóng. Hai cảnh cùng clip nay cùng tông. |
 | **vùng an toàn 48 px** | **CHẶN** (luật L3) | mọi chữ phải nằm trong `x ∈ [48,1232]`, `y ∈ [48,672]` ở MỌI mốc `c.u` | Sửa ở **hằng số chung**: `NGUON`/`NGUONP` neo bằng **`bottom:48px`** chứ không bằng `top` (dòng nguồn dài xuống dòng thì dòng thứ hai rơi ra ngoài mà không ai thấy), cỡ chữ 13 → 15 px, `max-width:1040px`; `NAMO` hạ `top` xuống 56 (chữ 46 px/line-height 1 tràn ~4 px lên trên hộp dòng). Thêm hàm **`ghimPIN()`** kẹp nhãn địa danh vào vùng an toàn, dùng ở k1c11 và k1c35. Kẹp riêng pill của k1c01 và k1c02. **Đo thật, không ước lượng:** script chụp đo `getClientRects()` của một `Range` phủ nội dung từng phần tử `.tx` và từng `<text>` SVG — đo **vệt chữ**, không đo cái hộp (một div `left:0;right:0;text-align:center` có hộp rộng 1280 px nhưng chữ nằm giữa). Chạy 41 cảnh × 3 mốc: **0 vi phạm**. |
@@ -468,10 +529,29 @@ Mẫu: `<khẳng định> · ĐO hay ĐOÁN · <cách đo / vì sao đoán> · <
     thì phải chạy `md5`, không được nhìn tiền tố.
     *Đã xử lý:* tấm này nay chỉ còn ở **một cảnh duy nhất của khối 1** là k1c04
     nhịp 1; khối 2 giữ ở k2c45. Hai bên đã chốt với nhau.
-  * **`anh/k1-mattrang.jpg` và `anh/k2-mattrang.jpg` cùng MỘT ẢNH GỐC**
-    (`File:Moon_nearside_LRO_5000.jpg`, NASA/GSFC/ĐH bang Arizona, phạm vi công
-    cộng). Hai tệp là hai bản sao riêng, không trỏ chéo — khối 2 đề nghị giữ cách
-    này và khối 1 đồng ý, nhưng **phải khai**, không được nói “không dùng chung”.
+  * **`anh/k1-mattrang.jpg` và `anh/k2-mattrang.jpg` cũng TRÙNG TỪNG BYTE** —
+    `md5 a653acf806d04e0a444806e6d9f22bb2`, cùng 1920×1920, cùng tệp gốc
+    `File:Moon_nearside_LRO_5000.jpg` (NASA/GSFC/ĐH bang Arizona, phạm vi công cộng).
+    **Lần đầu tôi vẫn khai chưa đủ chặt**: viết “hai bản sao của cùng một ảnh gốc”,
+    tức là vẫn ngụ ý hai tệp khác nhau. Khối 2 chạy md5 và bắt được, 28/11. Đúng là
+    **một tệp, hai tên**. Hai khối vẫn giữ hai bản riêng (không trỏ chéo) để ai sửa
+    ảnh cũng không làm hỏng khối kia, nhưng **phải khai đúng mức**.
+  * **`anh/k1-cantho.jpg` và `anh/k2-chonoi.jpg` TRÙNG TỪNG BYTE** —
+    `md5 077ba50d799c5850e938b8d7da568541`. **Chưa ai trong ba khối nêu chỗ này**;
+    tôi tìm ra khi chạy `md5` cho TOÀN BỘ `anh/` và `video/` thay vì chỉ kiểm mấy
+    cặp người soát đã chỉ. Hiện **không gây lỗi trên màn hình**: khối 2 đã khai
+    `k2-chonoi.jpg` là tệp **không dùng ở cảnh nào** (§ cuối `nguon-khoi-2.md`),
+    nên ảnh chợ nổi Cần Thơ chỉ xuất hiện đúng một lần cả tập, ở **k1c34**.
+    Ghi lại để sau này không ai nhặt `k2-chonoi.jpg` lên mà tưởng là một ảnh khác.
+  * **Ngược lại, `anh/k1-traidat.jpg` và `anh/k2-traidat.jpg` KHÔNG trùng** —
+    md5 `8945705e…` và `70f7ad99…`, kích thước 1920×1921 và 1920×1920. Hai bản cắt
+    khác nhau của cùng ảnh Apollo 17. Ghi cả chỗ ĐÚNG để lần sau khỏi kiểm lại.
+
+  > **Cách kiểm, để khối khác chạy lại được trong một dòng:**
+  > `md5 -r anh/*.jpg video/*.mp4 | sort | awk '{print $1,$2}'` rồi gom theo mã băm.
+  > Chạy trên toàn kho ngày 28/11 ra **năm** cặp trùng byte (hai cặp của khối 1,
+  > một cặp k1–k2 chưa ai nêu, hai cặp clip san hô giữa khối 2 và khối 3).
+  > Kiểm từng cặp mà người soát chỉ thì không bao giờ ra hết.
   * **Ba tệp của khối 3 mà khối 1 nay ĐỌC CHUNG, không chép lại:**
     `anh/k3-ran-hardy.jpg` (k1c04 nhịp 2) · `video/k3-bensong.mp4` (k1c37 nhịp 2) ·
     `video/k3-ghe-song.mp4` (k1c38) · `anh/k3-bentre.jpg` (k1c40 nhịp 2).

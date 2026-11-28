@@ -2507,8 +2507,15 @@ DANGKY({
         IMG("k1-cuulong.jpg", 0.14, { pos:"46% 56%",
           filter:"contrast(1.2) saturate(1.32) brightness(.74)" }) +
         LM(0.68, 'id="k1c41-ve"') +
-        IMG("k1-cuulong.jpg", 0.30, { pos:"46% 56%",
-          filter:"contrast(1.2) saturate(1.32) brightness(.8)" }) +
+        /* VÁ 28/11 (vòng hai, bộ đếm L6 tự tôi chạy bắt được): sau khi đổi nhịp 1
+           từ bản đồ vẽ sang ảnh vệ tinh, MỐC CẮT CỨNG ở u = 0,70 hoá ra cắt từ
+           `k1-cuulong.jpg` sang... chính `k1-cuulong.jpg`, cùng `pos`, chỉ khác
+           brightness 0,74 → 0,80. Tức là cảnh đóng khối mất hẳn cú đổi hình, mà
+           §6 vẫn đếm nó là một mốc cắt. Nay nhịp 2 là một KHUÔN HÌNH KHÁC THẬT:
+           đẩy vào châu thổ (`pos "40% 64%"`), sáng hơn và ấm hơn, để cú đóng khối
+           nối sang tông lạnh của k2c01 vẫn còn một nhịp ấm. */
+        IMG("k1-cuulong.jpg", 0.30, { pos:"40% 64%",
+          filter:"contrast(1.24) saturate(1.42) brightness(.96)" }) +
         LM(0.96, 'id="k1c41-vien"') +
         `<div class="hud">` +
           SOTO("k1c41-s", "k1c41-sa", "héc-ta chịu ngập triều", "left:84px;top:96px", 104, "#FFF3DC") +

@@ -499,3 +499,64 @@ Các khung còn nằm ngoài ngưỡng đều là **tư liệu thật**, không 
 video nhật thực của NASA (nền trời đen, `k3c09` `k3c13` `k3c17`) và mặt sông Cửu Long
 xám đục (`k3c01` `k3c05` `k3c23`). Kéo chúng vào ngưỡng là nói sai về đoạn phim, nên
 để nguyên — nếu điều phối muốn đổi thì báo.
+
+
+---
+
+## 13. ĐO MÀU KHỐI 3 — và một lỗi do chính vòng sửa này gây ra
+
+Đo bằng **đúng thuật toán `dung/do-mau.py`** (bỏ điểm tối `v < 0,12` và điểm xám
+`s < 0,18`, chia 12 dải sắc độ 30°), chạy trên **192 khung chụp thẳng từ trang**
+(32 cảnh × 6 mốc `c.u`), không đo trên MP4 nên không dính sai số nén H.264.
+
+**Lỗi tự gây ra, bắt được rồi mới chữa.** Để chữa các cảnh bị chê nhạt, vòng sửa
+này thêm năm nền tối — `lanhT` (k3c08), `bien` (k3c18) và `lanh2` (k3c19, k3c20,
+k3c22). **Cả năm đều nằm trong họ lam.** Kết quả: độ tương phản tốt lên thật,
+nhưng khối 3 tụt từ **5 dải ≥ 5 % xuống đúng 4** — chạm sàn §12, không dư một dải.
+Riêng họ lam (lơ + lam) chiếm 55,5 %. Không công cụ nào báo; chỉ đo mới thấy.
+
+**Chữa theo đúng kinh nghiệm khối 2 báo: đổi hẳn nền sang tông KHÁC HỌ, không
+chỉnh `filter`.** Ba việc:
+
+| việc | trước | sau |
+|---|---|---|
+| k3c18 nền chặng A | `bien` (lam sâu) | **`man`** — mận sâu, kéo dải đỏ-tím lên |
+| k3c22 nền chặng A | `lanh2` (lam nhạt) | **`dat`** — đất nung sâu, kéo dải hổ phách/đỏ lên |
+| k3c30 lớp lọc ảnh rạn | `saturate(.68) hue-rotate(-10deg)` | **`hue-rotate(-30deg) saturate(.5)`** — trả lại màu ngọc |
+
+Chỗ k3c30 đáng ghi lại: bản soát đề nghị `hue-rotate(10deg)` "để kéo về lam-lục".
+**Thử thì thấy ngược:** `hue-rotate` của CSS là một ma trận xấp xỉ chứ không phải
+phép cộng sắc độ, và với tấm này góc DƯƠNG đẩy ảnh sang lam đậm hơn. Phải quay
+NGƯỢC −30° mới ra lam-lục. Tỉ lệ điểm thuộc dải ngọc của riêng cảnh đó đi từ
+10,8 % lên 15,7 %, mà trung vị bão hoà vẫn chỉ 0,60 (trần 0,78) nên không neon lại.
+
+### Số cuối cùng
+
+```
+192 khung · điểm ảnh có màu: 51,9 %
+   lơ 180–210      24,57 %      vàng–lục 60–90   3,86 %
+   lam 210–240     24,30 %      đỏ tím 300–330   2,98 %
+   hổ phách 30–60  19,57 %      lam–tím 240–270  2,43 %
+   đỏ 0–30         12,56 %      lục–lam 120–150  1,66 %
+   ngọc 150–180     5,14 %      hồng 330–360     1,12 %
+
+Dải cao nhất: 24,6 %  (trần ≤ 60 %)  ->  ĐẠT
+Số dải ≥ 5 %:  5      (sàn ≥ 4)      ->  ĐẠT, dư một dải
+```
+
+So với số của bản soát cho khối 3 (dải cao nhất 26,1 %, 5 dải): **dải cao nhất
+giảm còn 24,6 % và vẫn giữ đủ 5 dải**, tức vòng sửa này không làm hỏng phân bố màu
+mặc dù đã thêm năm nền tối. Họ lam từ 55,5 % (giữa vòng sửa) về **48,9 %**.
+
+### Luật L6 — đo TỪ KHUNG, không đọc mã
+
+Khối 2 cảnh báo đúng: bộ đếm nền đọc từ mã nguồn dễ cho **dương tính giả**, vì nó
+phải đoán chữ ký hàm của từng khối và vì nó lấy `.lop` đầu tiên làm "nền" — với
+khối 3 thì `NEN()` nằm dưới một tấm ảnh làm mờ, nên máy đếm cái gradient chứ không
+đếm tấm ảnh mà mắt thật sự nhìn thấy (k3c02 là đúng ca đó).
+Nên L6 được đo lại **từ 192 khung chụp**, đúng cách bản soát đề nghị: làm mờ mạnh
+(Gaussian 28 px) để bỏ lớp đồ hoạ, hạ xuống 12×7, rồi so khác biệt màu trung bình
+giữa các cảnh liền nhau, ngưỡng "cùng nền" = 14.
+**Kết quả: không cụm ba cảnh liền nhau nào dùng chung một tấm nền → ĐẠT.** Cặp duy
+nhất dùng chung nền là k3c14 → k3c15 (cùng ảnh dải Ngân Hà), tức hai cảnh, đúng
+mức tối đa luật cho phép.

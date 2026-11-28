@@ -203,12 +203,28 @@ chuyển cảnh bằng hoà hình 0,42 s, máy dò cảnh bỏ sót gần hết 
 | đại lượng | số |
 |---|---|
 | lời gọi `DANGKY` | **49** (bằng đúng số câu — một cảnh một câu) |
-| mốc **cắt cứng bên trong cảnh** (`K2.cat`) | **29** |
-| **tổng lần đổi hình** | **78** |
+| mốc gọi `K2.cat` trong mã | 29 |
+| trong đó **thật sự ĐỔI HÌNH** | **15** |
+| trong đó là **mở dần sơ đồ** trên cùng một nền | 14 — **không tính** |
+| **tổng lần đổi hình** | **64** |
 | độ dài khối | 283,62 s |
-| **mật độ** | **16,5 lần/phút** — trong dải 12–18 của Luật A |
+| **mật độ** | **13,5 lần/phút** — trong dải 12–18 của Luật A |
 
-Mục tiêu phiếu giao việc là 56–85, đạt ở mức 78.
+> **⚠ CON SỐ NÀY TỪNG BỊ KHAI VỐNG, SỬA 28/11.** Bản cũ đếm **cả 29** lời gọi
+> `K2.cat` là "lần đổi hình" và ra **78 · 16,5 lần/phút**. Sai, và sai theo đúng
+> kiểu §14 cảnh báo: đếm từ MÃ NGUỒN rồi tin luôn, không mở khung ra đối chiếu.
+> Khối 1 tìm ra loại lỗi này trước ở k1c41 (một mốc cắt "cắt từ ảnh X sang chính
+> ảnh X"), tôi kiểm cùng cách cho khối 2 và ra nặng hơn: **14 trên 29 mốc không
+> đổi hình**. Chúng không hỏng — chúng là **mở dần sơ đồ** trên một tấm nền không
+> đổi (một khối thành tám khối, vành quạt mở ra, cột thứ hai hiện lên…), đúng ý
+> đồ dựng, nhưng **không phải một lần đổi hình** và không được đếm như vậy.
+> Cách đo: chụp một khung ngay trước và ngay sau mỗi mốc (`u ± 0,055`), tính chênh
+> lệch điểm ảnh trung bình; ≥ 12 mới tính là đổi hình. 15 mốc đạt, cao nhất 94,5
+> (k2c33, sơ đồ → ảnh bão thật), thấp nhất trong nhóm đạt là 12,0 (k2c39).
+> Bộ đo ở `scratchpad/do-moc-cat.py`.
+>
+> **Số đã sửa vẫn ĐẠT** dải 12–18, nên không cảnh nào phải dựng thêm mốc cắt —
+> và cố nhét thêm mốc cho con số đẹp lại thì đúng là việc không được làm.
 
 **Vì sao 49 `DANGKY` chứ không phải 78:** bộ máy trang dựng dòng thời gian bằng cách
 ăn lần lượt từng câu cho từng cảnh (`soat-khoi.py → ve_thu`), nên **mỗi cảnh phải nuốt
@@ -348,7 +364,7 @@ lộ đúng như trước.
 | Khối 2 không dùng tệp nào của Pexels / Pixabay / Coverr; cả 22 tệp từ Wikimedia Commons | ĐO | liệt kê lại toàn bộ `K2.anh` và `K2.vid` trong mã nguồn | 28/11/2026 | chỉ khối 2 |
 | Kiểu vẽ Trái Đất / Mặt Trăng cả tập: **ảnh thật NASA**, hai cách dùng cho hai việc (đĩa thật khi đứng · bản đồ trải phẳng cắt tròn khi phải quay); ba lớp phủ rìa a/b/c dùng chung thông số | ĐO | khối 1 hỏi, khối 2 trả lời và đã sửa `K2.cau` + `K2.trang`; kiểm bằng 6 khung liên tiếp của k2c27 xem có mối nối không | 28/11/2026 | **khối 2 đề xuất, chờ khối 1 xác nhận** — nếu khối 1 thấy ba thông số phủ rìa không khớp cảnh của họ thì KHỐI 1 LÀ CHUẨN (14 cảnh ảnh thật, nhiều hơn), khối 2 chỉnh theo |
 | `k1-mattrang.jpg` và `k2-mattrang.jpg` là **cùng một ảnh gốc** (LRO WAC nearside mosaic, phạm vi công cộng); hai khối giữ hai bản sao riêng, không trỏ chéo | ĐO | so trang gốc Commons của hai tệp | 28/11/2026 | **mời khối 1 xác nhận** |
-| Tệp dùng chung với khối khác — **DÒNG CŨ SAI, ĐÃ VIẾT LẠI 28/11** | ĐO | Bản cũ khai "khối 2 không dùng chung tệp nào với khối 1 hay khối 3 … ba tệp khác nhau, ba nguồn khác nhau, đừng ai gộp". **Sai.** Người soát đối chiếu md5 và tôi đã chạy lại xác nhận: `anh/k2-sanho-de.jpg` và `anh/k1-sanho-de.jpg` **trùng nhau TỪNG BYTE**, md5 `96e8b79fe6ac2b70585352cc115410dc`, cùng 1920×1276, cùng gốc Commons `File:Coral_Spawning_(38797556434).jpg` — hai khối cùng tải bản thu nhỏ 1920 px của cùng một tệp NOAA. Chỉ `k3-sanho-de.jpg` (md5 khác) mới thật sự là tệp khác. Tiền tố tên tệp KHÔNG chứng minh được nội dung khác nhau, và cả ba file nguồn đã khai sai cùng một kiểu vì cùng suy từ tên tệp. **Nay khối 2 có đúng BỐN quan hệ dùng chung, khai hết:** (1) `k2-sanho-de.jpg` ≡ `k1-sanho-de.jpg` (trùng byte); (2) `anh/k3-ran-hardy.jpg` — khối 2 **trỏ thẳng** vào tệp của khối 3 ở k2c43, chủ tệp là khối 3, họ cam kết không xoá/đổi tên/cắt lại; (3) `video/k2-sanho-de2.mp4` và `video/k2-sanho-khoi.mp4` là **bản sao từng byte** của `video/k3-sanho-de.mp4` và `video/k3-sanho-khoi.mp4`; (4) `anh/k2-mattrang.jpg` ≡ `anh/k1-mattrang.jpg`, **trùng từng byte**, md5 `a653acf806d04e0a444806e6d9f22bb2`, cùng 1920×1920 — khối 1 báo sang là "hai bản sao của cùng một ảnh gốc", tôi chạy md5 thì thật ra còn chặt hơn thế: cùng một tệp. Đây là tấm Mặt Trăng của **mọi** đĩa Mặt Trăng trong tập, nên trùng là đúng, chỉ có lời khai cũ là sai. | 28/11/2026 | **khối 1 và khối 3 đã xác nhận**; người dựng khối 2 bản trước cũng tự chạy md5 và nhận là mình khai sai |
+| Tệp dùng chung với khối khác — **DÒNG CŨ SAI, ĐÃ VIẾT LẠI 28/11** | ĐO | Bản cũ khai "khối 2 không dùng chung tệp nào với khối 1 hay khối 3 … ba tệp khác nhau, ba nguồn khác nhau, đừng ai gộp". **Sai.** Người soát đối chiếu md5 và tôi đã chạy lại xác nhận: `anh/k2-sanho-de.jpg` và `anh/k1-sanho-de.jpg` **trùng nhau TỪNG BYTE**, md5 `96e8b79fe6ac2b70585352cc115410dc`, cùng 1920×1276, cùng gốc Commons `File:Coral_Spawning_(38797556434).jpg` — hai khối cùng tải bản thu nhỏ 1920 px của cùng một tệp NOAA. Chỉ `k3-sanho-de.jpg` (md5 khác) mới thật sự là tệp khác. Tiền tố tên tệp KHÔNG chứng minh được nội dung khác nhau, và cả ba file nguồn đã khai sai cùng một kiểu vì cùng suy từ tên tệp. **Nay khối 2 có đúng NĂM quan hệ dùng chung, khai hết:** (1) `k2-sanho-de.jpg` ≡ `k1-sanho-de.jpg` (trùng byte); (2) `anh/k3-ran-hardy.jpg` — khối 2 **trỏ thẳng** vào tệp của khối 3 ở k2c43, chủ tệp là khối 3, họ cam kết không xoá/đổi tên/cắt lại; (3) `video/k2-sanho-de2.mp4` và `video/k2-sanho-khoi.mp4` là **bản sao từng byte** của `video/k3-sanho-de.mp4` và `video/k3-sanho-khoi.mp4`; (4) `anh/k2-chonoi.jpg` ≡ `anh/k1-cantho.jpg`, **trùng từng byte**, md5 `077ba50d799c5850e938b8d7da568541` — khối 1 quét cả kho và tìm ra, tôi chạy lại xác nhận; hiện **không gây lỗi trên màn hình** vì bản V3 của khối 2 không cảnh nào gọi `k2-chonoi.jpg`, nên ảnh chợ nổi Cần Thơ chỉ xuất hiện một lần cả tập ở k1c34 — nhưng nếu khối 2 nhặt tệp đó lên dùng thì nó thành đúng cái lỗi rạn Hardy, phải báo khối 1 trước; (5) `anh/k2-mattrang.jpg` ≡ `anh/k1-mattrang.jpg`, **trùng từng byte**, md5 `a653acf806d04e0a444806e6d9f22bb2`, cùng 1920×1920 — khối 1 báo sang là "hai bản sao của cùng một ảnh gốc", tôi chạy md5 thì thật ra còn chặt hơn thế: cùng một tệp. Đây là tấm Mặt Trăng của **mọi** đĩa Mặt Trăng trong tập, nên trùng là đúng, chỉ có lời khai cũ là sai. | 28/11/2026 | **khối 1 và khối 3 đã xác nhận**; người dựng khối 2 bản trước cũng tự chạy md5 và nhận là mình khai sai |
 | Bản cắt rạn Hardy: cả tập dùng **một** bản duy nhất | ĐO | `anh/k2-gbr-khong.jpg` (1920×1440) và `anh/k3-ran-hardy.jpg` (1920×1080) là **cùng một ảnh gốc**, hai bản cắt khác nhau, nên md5 khác mà mắt thì thấy "hai cái rạn" trong cùng một tập. Đã chốt dùng bản 16:9 của khối 3 cho cả k2c43, k3c23 và k3c31. `k2-gbr-khong.jpg` còn trong kho nhưng không cảnh nào gọi. | 28/11/2026 | **khối 3 đã đồng ý**, khối 1 đã biết |
 | Thông số máy quay ở điểm nối | — | cảnh **cuối** của khối 2 (k2c49, giây 532,9–538,8) kết ở `x = +12, z = 1,20`, nền là clip rạn san hô **đã rút gần hết màu** (`saturate .42`). Khối 3 mở ngay sau đó, nên nếu khối 3 mở bằng một khung rực màu thì cú nối sẽ giật. | 28/11/2026 | **mời khối 3 xác nhận** |
 
@@ -486,13 +502,25 @@ mỗi 2 giây**, phủ trọn 285 giây của khối — chưa có MP4 bản V3 
 
 ```
                         trước (bản soát)   sau
-   dải cao nhất (lam)        64,5 %        48,4 %
+   dải cao nhất (lam)        64,5 %        38,4 %
    số dải ≥ 5 %                 4             5
-   điểm ảnh có màu                         62,3 %
+   điểm ảnh có màu           (không đo)    63,9 %
+
+   năm dải đầu sau khi sửa:
+      lam 38,4 %  ·  đỏ 20,7 %  ·  hổ phách 14,3 %  ·  lơ 8,7 %  ·  ngọc 5,5 %
 ```
 
-Dải lam giảm **16 điểm phần trăm**, và khối có thêm một dải thứ năm (ngọc 6,2 %).
-Nay khối 2 đạt cả hai ngưỡng **ngay cả khi đo riêng khối**, không chỉ khi đo cả tập.
+Dải lam giảm **26 điểm phần trăm** và khối có dải thứ năm. Nay khối 2 đạt cả hai
+ngưỡng **ngay cả khi đo riêng khối**, không chỉ khi đo cả tập.
+
+> **Con số này đi qua ba lần đo, ghi lại cả ba vì đường đi mới là bài học.**
+> Lần một, sau khi đổi năm nền: 48,4 % · 5 dải. Lần hai, sau khi đổi thêm hai nền
+> để phá cụm L6: 43,5 % · **4 dải**, dải thứ năm tụt về 4,95 % — tức một việc sửa
+> đúng ở chỗ khác lại kéo tụt chỗ này, và nếu chỉ đo một lần rồi khai thì đã khai
+> con số đẹp nhất chứ không phải con số thật. Lần ba là số ở trên, sau khi chữa
+> đúng nguyên nhân nói ở mục 8.13.
+> **Luật rút ra: đổi bất kỳ tấm nền nào thì phải đo lại CẢ HAI thứ — phân bố màu
+> và luật L6 — vì hai cái này kéo ngược nhau.**
 
 ### 8.6 Hai khối đánh giá ngược nhau về clip *Pocillopora* — quyết định và lý do
 
@@ -641,3 +669,72 @@ hơn thế: **13 trên 18 lời gọi** có biên dưới 0,2 giây, phần lớ
 trên một clip dài đúng 9,000 s). Ai cắt lại clip ngắn đi một khung là cảnh đứng hình,
 và `soat-khoi.py` vẫn báo SẠCH. Đã hạ `dai` ở chín lời gọi để **mọi clip có ít nhất
 0,2 giây biên**; chỗ hụt nhiều nhất chỉ mất 0,3 giây đuôi, không cảnh nào đổi nhịp.
+
+### 8.12 Vòng ba — hai việc do khối 1 kéo ra
+
+**(a) Cặp trùng byte thứ năm, và cách tìm đúng.** Khối 1 không kiểm từng cặp mà
+quét **cả kho** bằng một dòng:
+
+```
+md5 -r anh/*.jpg video/*.mp4 | sort
+```
+
+Tôi chạy lại: đúng **năm** cặp trùng từng byte trong toàn bộ tư liệu của tập, trong
+đó `anh/k1-cantho.jpg` ≡ `anh/k2-chonoi.jpg` là cặp **chưa ai nêu** — không người
+soát, không khối nào. Nó vô hại hôm nay chỉ vì khối 2 không dùng tệp đó.
+Bài học ghi cho tập sau: người soát bắt được hai cặp bằng cách đối chiếu những chỗ
+họ nghi; một dòng `md5` trên cả kho bắt được năm cặp trong một giây, và nó còn khai
+luôn chỗ **không** trùng (`k1-traidat` vs `k2-traidat`, khác md5, khác cả kích thước)
+để không ai mất công kiểm lại.
+
+**(b) Mốc cắt cứng "cắt sang chính nó".** Khối 1 tìm ra ở k1c41. Kiểm cùng cách cho
+khối 2 thì ra 14 chỗ, và nó làm sai con số mật độ của mục 5 — xem ô cảnh báo ở đó.
+Không cảnh nào hỏng, nhưng **lời khai thì hỏng**, và nó đã sống sót qua cả vòng soát
+độc lập vì người soát cũng đếm từ mã nguồn theo đúng §11.11 như tôi.
+**Đề nghị sửa §11.11 của hướng dẫn:** "lần đổi hình" phải định nghĩa là *mốc mà khung
+hình trước và sau khác nhau đo được*, không phải *mốc có gọi hàm cắt*. Hai khối kia
+đếm cùng cách cũ nên nhiều khả năng cũng đang khai vống; đã báo cả hai kèm bộ đo.
+
+### 8.13 Vòng bốn — đếm nền bằng KHUNG CHỤP, và bài học "đổi sắc chưa đủ"
+
+Khối 3 chỉ ra rằng bộ đếm L6 đọc-mã của tôi có hai điểm mù, và cái thứ hai là cái
+chết người: **nó không bao giờ bắt được hai cảnh dùng hai tệp khác nhau mà nhìn
+giống hệt nhau.** Họ đề xuất đo thẳng từ khung — làm mờ Gaussian 28 px để xoá lớp
+đồ hoạ, hạ xuống 12×7, so khác biệt màu giữa hai cảnh liền nhau, dưới 14/255 là
+cùng một tấm nền. Cách này không phụ thuộc chữ ký hàm của khối nào.
+
+Chạy trên khối 2 thì **bộ đếm đọc-mã đã cho tôi một kết luận SAI**: nó báo "ĐẠT",
+đo từ khung lại ra **ba cụm phạm luật** — `k2c10·c11·c12`, `k2c22·c23·c24·c25`
+(bốn cảnh), `k2c31·c32·c33`.
+
+**Vì sao: tôi đổi SẮC mà không đổi ĐỘ SÁNG.** Năm nền tôi thay ở mục 8.5 và 8.11
+nằm ở năm họ màu khác nhau thật — số đo phân bố màu chứng minh điều đó, dải lam
+tụt từ 64,5 % xuống 43,5 %. Nhưng cả năm đều **tối ngang nhau**, nên ở mức làm mờ
+28 px chúng gần như không phân biệt được: hai nền cách nhau chỉ 5,8–13,3 trên 255.
+Mắt người xem đọc một chuỗi khung tối na ná nhau, đúng cái mà người soát mô tả là
+*"khung nào cũng như khung nào"* — và phân bố sắc độ không nói lên điều đó.
+
+Chữa bằng cách nâng **độ sáng và độ no** của bốn nền, không đổi họ màu:
+`#3A2340 → #4C2956` (mận, k2c10) · `#143634 → #1F6560` (lục biển, k2c22) ·
+`#2A2233 → #4A3A5C` (mận xám, k2c25) · `#1A2436 → #4A3A2A` (graphite ấm, k2c32).
+Đo lại: **không cụm nào quá 2 cảnh**, số lần đổi nền giữa hai cảnh liền nhau từ
+**36/48 lên 41/48**. Và vì nền lục biển nay đủ sáng để đếm được, dải **ngọc lên
+5,50 %** — qua hẳn ngưỡng thay vì mấp mé 4,95 % như lần đo trước.
+
+Một chỗ phải lùi lại sau khi **chụp ra nhìn**: bản đầu tôi để k2c10 ở `#6B3472`,
+đo thì đạt hết, nhưng khung thật là một nền tím **chói** nuốt mất khối lập phương
+xanh nhạt — số đẹp mà hình xấu. Hạ về `#4C2956` thì vừa đạt vừa đọc được.
+
+**Hai bài học cho tập sau:**
+1. **Đếm nền phải đo từ khung, đừng đọc mã.** Bộ đếm đọc-mã cho khối 2 một kết
+   luận "ĐẠT" sai hoàn toàn. Bộ đo khung ở `scratchpad/dem-nen-khung.py`.
+2. **"Nền khác nhau" là khác cả SẮC lẫn ĐỘ SÁNG.** Năm nền năm họ màu mà cùng độ
+   sáng thì vẫn là một chuỗi khung giống nhau. Phân bố sắc độ của §12 **không**
+   thay được luật L6, và ngược lại — phải đo cả hai, mỗi lần đổi một tấm nền.
+
+Ghi nhận một chỗ khối 3 sửa giúp cả nhóm: bản soát khuyên dùng `hue-rotate` góc
+**dương** để kéo ảnh rạn "về lam-lục"; khối 3 thử thì ra **ngược** — `hue-rotate`
+của CSS là ma trận xấp xỉ chứ không phải phép cộng sắc độ. Khối 2 chỉ dùng
+`hue-rotate` đúng một chỗ (k2c20, **−26°**, kéo đồng lúa mì sang nâu cháy) và đã
+kiểm bằng mắt trên khung chụp nên dấu đúng; nhưng ai áp công thức của bản soát mà
+không đo lại thì dễ làm ảnh xanh thêm.
