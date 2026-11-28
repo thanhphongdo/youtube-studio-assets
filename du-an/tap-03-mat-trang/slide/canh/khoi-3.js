@@ -128,14 +128,14 @@ const VI = (id, f, sau, o) => VID(f, sau, o).replace('<div class="lop"', `<div c
 /* ─────────── chữ trên HUD ─────────── */
 /* VÙNG AN TOÀN 48 px (luật L3 của bản soát). Dòng nguồn cũ đặt ở top:664px, cao
    19,5 px → mép dưới 683,5 px, tức NGOÀI hộp an toàn y ≤ 672. Đo bằng
-   getBoundingClientRect() chứ không ước lượng. Nay top:650px → mép dưới 669,5 px.
+   getBoundingClientRect() chứ không ước lượng. Nay top:646px → mép dưới 665,5 px (646 là số chung cả tập, hợp đồng 16.10).
    Bề ngang cũng kẹp lại: left 66 px, max-width 1166 px → mép phải ≤ 1232 px. */
 /* dòng nguồn chỉ MỜ DẦN, không trượt lên: kh() mặc định nhích 12 px theo trục y,
    đủ để đẩy mép dưới ra ngoài hộp an toàn trong 0,4 s đầu — đo được bằng
    getBoundingClientRect() ở mốc đang hoà hình. */
 const khn = (id, t, a, b, f) => kh(id, t, a, b, f, 0);
 const nguon = (id, s, l) => `<div class="tx nho" id="${id}" style="left:${l === undefined ? 66 : l}px;` +
-  `top:650px;max-width:${1232 - (l === undefined ? 66 : l)}px">${s}</div>`;
+  `top:646px;max-width:${1232 - (l === undefined ? 66 : l)}px">${s}</div>`;
 const the = (id, s, mau, top, co) => `<div class="tx" id="${id}" style="left:0;top:${top === undefined ? 300 : top}px;` +
   `width:1280px;text-align:center;font:300 ${co || 56}px/1.14 ${F};letter-spacing:.26em;` +
   `color:${mau || TRANG};text-shadow:0 2px 24px rgba(3,8,13,.8)">${s}</div>`;
@@ -1237,16 +1237,27 @@ DANGKY({ id: "k3c17", steps: 0, say: [CAU[16]],
    A: một mũi tên đỏ cố kéo Mặt Trăng ra khỏi quỹ đạo, nó bật lại
    B: ảnh trăng rằm sau rặng cây — "tối về cứ ngủ cho ngon" */
 DANGKY({ id: "k3c18", steps: 0, say: [CAU[17]],
-  html: NEN("lanh", "k3c18-a") + SV(0.16, "nen", "k3c18-a2") +
+  /* SỬA 28/11, vòng hai — sau khi khối 2 thu mỏng vành khí quyển và tăng tối
+     rìa của `K2.cau()`. Chụp lại thì thấy: quả Trái Đất ảnh thật có một nửa
+     nằm trong bóng đêm (đúng vật lý), và trên nền `lanh` gần trắng nó đọc ra
+     như một CÁI LỖ ĐEN trên tờ giấy chứ không ra một hành tinh. Trên nền tối
+     của k3c16 thì cùng quả cầu ấy đọc rất tốt.
+     Thử `lanh2` trước thì quả cầu đọc tốt, NHƯNG k3c19 và k3c20 ngay sau cũng
+     dùng `lanh2`, thành BA CẢNH LIỀN NHAU CÙNG MỘT TẤM NỀN — phạm luật L6
+     ("không quá hai cảnh liền nhau dùng chung một tấm nền"). Đã đếm bằng máy
+     trên cả 32 cảnh của khối, chỉ chỗ này phạm. Nên chặng A dùng `bien`:
+     đủ tối để quả cầu ảnh thật ngồi được, và khác họ màu với `lanh2`. */
+  html: NEN("bien", "k3c18-a") + SV(0.16, "nen", "k3c18-a2") +
         IMG("k3c18-b", "k3-trang-canh.jpg", 0.3, { loc: "contrast(1.1) saturate(.92) brightness(1.5)" }) +
         SV(0.82, "ve") +
         '<div class="hud">' + nguon("k3c18-ng", "Ảnh: W. carter · CC0") + '</div>',
   anim: root => {
     const N = sv(root, "nen"), V = sv(root, "ve");
-    const nhip = chatLieu(N, "k3c18", "#6E93AB", 10);
+    const nhip = chatLieu(N, "k3c18", "#9FD6EE", 10);
     const gA = el("g", {}, V);
-    el("ellipse", { cx: 566, cy: 364, rx: 384, ry: 154, fill: "none", stroke: "#A4B1AA",
-      "stroke-width": 2.6, "stroke-dasharray": "10 9" }, gA);
+    /* quỹ đạo: #A4B1AA cũ hợp nền kem, trên nền `lanh2` lam thì chìm hẳn */
+    el("ellipse", { cx: 566, cy: 364, rx: 384, ry: 154, fill: "none", stroke: "#CFE6F2",
+      "stroke-width": 3, "stroke-dasharray": "10 9", opacity: .9 }, gA);
     cauTD(gA, "k3c18e", 566, 364, 78);
     const mt = diaMT(gA, "k3c18", 0, 0, 34);
     /* ── SỬA 28/11 · mức CHẶN ───────────────────────────────────────────────
@@ -1478,13 +1489,17 @@ DANGKY({ id: "k3c21", steps: 0, say: [CAU[20]],
    B: VIDEO THẬT trăng mọc trên sa mạc — "một vật thể đang lặng lẽ rời đi",
       kèm một ô vuông cỡ con tem để so (3,8 cm mỗi năm) */
 DANGKY({ id: "k3c22", steps: 0, say: [CAU[21]],
-  html: NEN("lanh", "k3c22-a") + SV(0.16, "nen", "k3c22-mo") +
+  /* SỬA 28/11, vòng hai: đo được chặng A có trung vị độ sáng 0,93 — vượt hẳn
+     trần 0,82 của luật L9, tức nhạt hơn cả k3c19 trước khi sửa. Nền `lanh`
+     đổi sang `lanh2`. k3c21 ngay trước là ảnh dải Ngân Hà nên không thành
+     chuỗi ba cảnh cùng nền. */
+  html: NEN("lanh2", "k3c22-a") + SV(0.16, "nen", "k3c22-mo") +
         VI("k3c22-b", "k3-trangmoc.mp4", 0.3, { tu: 0.4, dai: 7.2, toc: .6, loc: "contrast(1.08) saturate(1.06) brightness(1.06)" }) +
         SV(0.8, "ve") +
         '<div class="hud">' + nguon("k3c22-ng", "Video: Vườn quốc gia Joshua Tree, Mỹ (NPS) · Phạm vi công cộng") + '</div>',
   anim: root => {
     const N = sv(root, "nen"), V = sv(root, "ve");
-    const nhip = chatLieu(N, "k3c22", "#6E93AB", 11);
+    const nhip = chatLieu(N, "k3c22", "#4E7A94", 11);
     const gA = el("g", {}, V);
     const goc = [[186, 452], [456, 530], [792, 522], [1050, 440]];
     const soi = goc.map(() => el("path", { d: "", fill: "none", stroke: "#8794A0",

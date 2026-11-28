@@ -316,6 +316,21 @@ Mẫu: `<khẳng định> · ĐO hay ĐOÁN · <cách đo / vì sao đoán> · <
   |---|---|---|---|
   | `anh/k3-ran-hardy.jpg` (1920×1080) | `c16c90c9a939cf994ba692ef8a8964bf` | **k3c23 · k3c31** của khối 3, **k2c43** của khối 2, **k1c04** của khối 1 | **DÙNG CHUNG BA KHỐI** |
   | `anh/k2-gbr-khong.jpg` (1920×1440) | `2862a11f6976d14e6a47941412dd5f06` | **đã thôi dùng** | **cùng một ảnh gốc** với tấm trên, chỉ khác bản cắt |
+  | `anh/k3-bentre.jpg` | — | **k3c07 · k3c08** của khối 3, **k1c40** của khối 1 | **DÙNG CHUNG VỚI KHỐI 1** (khối 1 báo 28/11, thay `k1-bobien-vn.jpg` bị trùng với k1c10) |
+
+  **Lưu ý về `anh/k3-bentre.jpg` — một tấm, ba cảnh, hai sắc độ cố ý.** Khối 3
+  dùng tấm này hai lần cách nhau 6 giây với hai lớp lọc KHÁC NHAU, và đó là chủ ý
+  (một nhịp tối kiểu đêm, một nhịp sáng tự nhiên), không phải sơ suất:
+
+  | cảnh | lớp lọc | ý |
+  |---|---|---|
+  | k3c07 chặng A | `contrast(1.08) saturate(1.0) brightness(.84)` | hạ sáng cho đường triều hình sin nổi lên |
+  | k3c08 chặng B | `contrast(1.05) saturate(.98) brightness(1.02)` | ánh sáng tự nhiên, nhịp "hệ thống vẫn chạy" |
+
+  Khối 1 dùng ở k1c40, cách k3c07 tới 5,5 phút. Đã đề nghị khối 1 lấy **lớp lọc
+  của k3c08** (bản sáng tự nhiên), vì bản k3c07 bị hạ sáng cho một nhịp riêng;
+  nếu khối 1 lấy bản tối thì ba lần xuất hiện sẽ ra hai tấm ảnh khác nhau trong
+  mắt người xem — đúng cái lỗi §14 mà người soát bắt được ở rạn Hardy.
 
   Hai tệp là **CÙNG MỘT ẢNH GỐC** `File:Aerial_View_of_Hardy_Reef_-_2013.04_-_panoramio.jpg`
   (rheins, CC BY 3.0), cắt khác nhau. Trước bản sửa này cùng một rạn Hardy xuất
@@ -354,6 +369,9 @@ Mẫu: `<khẳng định> · ĐO hay ĐOÁN · <cách đo / vì sao đoán> · <
   sáng trung bình hàng y = 715 ra 63 / 61 / 100 trên thang 255). Khối 1 dùng
   `k3-ghe-song.mp4` cho **k1c37** thay clip bãi cát biển Trắng (Nga).
   **Khối 3 cam kết không xoá, không đổi tên, không bỏ clip nào trong ba tệp đó.**
+  Khối 1 chốt lại (28/11, sau khi chụp thử): `k3-bensong.mp4` cho **k1c37** vì nó
+  cho thấy mặt SÔNG rộng, hợp câu "cái bơm đẩy mặn ngược vào sông"; `k3-ghe-song.mp4`
+  cho **k1c38** vì nó là cận cảnh ghe dưa. Khác gợi ý ban đầu của khối 3 và hợp lý hơn.
 
 * **Hai clip san hô đẻ 1280×720 của khối 3 được khối 2 chép dùng.**
   `video/k3-sanho-de.mp4` và `video/k3-sanho-khoi.mp4`. Khối 2 chép sang

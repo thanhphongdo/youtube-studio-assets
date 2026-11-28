@@ -58,9 +58,9 @@ Theo tài liệu thuỷ triều của Cơ quan Khí quyển và Đại dương H
 
 Vậy rút Mặt Trăng ra thì con nước ra sao? Thuỷ triều không chết hẳn, vì Mặt Trời vẫn còn đó kéo tiếp, nhưng nó teo lại còn chừng một phần ba. // Tôi xin nói rõ ngay: chưa cơ quan nào công bố đúng con số một phần ba, bởi mỗi vùng biển lại một khác. // Đó là phần tôi tự suy ra từ tỉ lệ 2,2 lần vừa nêu. //
 
-Chỗ đau nằm ở cái dải ven bờ mà mỗi ngày nước ngập lên rồi lại rút cạn, chỗ giới khoa học gọi là vùng gian triều. // Đó là một trong những nơi chen chúc sinh vật nhất hành tinh, mà nó đông đúc được lại là nhờ khó sống. // Con nào chịu được khô thì ở tầng trên, con nào cần ngâm nước thì nằm tầng dưới, cả vùng chia nhau từng nấc. // Hạ biên độ triều xuống một phần ba thì cái thang nhiều tầng ấy co lại, và hàu, ốc, cua, rong, cùng mấy loài chim vẫn ra bãi mò ăn lúc nước rút, tất cả phải sắp xếp lại từ đầu. //
+Chỗ đau nằm ở cái dải ven bờ mà mỗi ngày nước ngập lên rồi lại rút cạn, chỗ giới khoa học gọi là vùng gian triều. // Đó là một trong những nơi chen chúc sinh vật nhất hành tinh, mà nó đông đúc được lại là nhờ khó sống. // Con nào chịu được khô thì ở tầng trên, con nào cần ngâm nước thì nằm tầng dưới, cả vùng chia nhau từng nấc. // Hạ biên độ triều, tức khoảng cách giữa lúc nước cao nhất và lúc thấp nhất, xuống còn một phần ba thì cái thang nhiều tầng ấy co lại, và hàu, ốc, cua, rong, cùng mấy loài chim vẫn ra bãi mò ăn lúc nước rút, tất cả phải sắp xếp lại từ đầu. //
 
-Riêng ở nước mình thì con nước còn đi vào tận trong nhà. // Ở vịnh Bắc Bộ, Hòn Dấu là một trong những nơi có nhật triều đều điển hình bậc nhất thế giới, nghĩa là nước chỉ lên xuống đúng một lần mỗi ngày. // Còn dưới đồng bằng sông Cửu Long, triều phía Biển Đông là bán nhật triều, biên độ chừng 3 mét. // Chính nó là cái bơm đẩy mặn ngược vào sông, khiến ranh mặn mấy năm gần đây thường vào sâu 40 tới 60 cây số. //
+Riêng ở nước mình thì con nước còn đi vào tận trong nhà. // Ở vịnh Bắc Bộ, Hòn Dấu là một trong những nơi có nhật triều đều điển hình bậc nhất thế giới, nghĩa là nước chỉ lên xuống đúng một lần mỗi ngày. // Còn dưới đồng bằng sông Cửu Long, triều phía Biển Đông là bán nhật triều, nghĩa là mỗi ngày nước lên xuống hai lần, với biên độ chừng 3 mét. // Chính nó là cái bơm đẩy mặn ngược vào sông, khiến ranh mặn mấy năm gần đây thường vào sâu 40 tới 60 cây số. //
 
 Nghe vậy thì nhiều người sẽ nghĩ mất triều là hết mặn, mà hết mặn thì mừng quá còn gì. // Cơ mà không đơn giản thế. Chính con nước ấy mỗi ngày đẩy nước vào ruộng, vào vuông tôm, rửa phèn cho đất và đưa cá vào tận nơi. // Cho nên đổi biên độ triều ở một vùng có tới khoảng một triệu héc-ta chịu ngập triều thì cũng là viết lại cả cuốn sổ tay canh tác của miền Tây. //
 
@@ -70,7 +70,7 @@ Nghe vậy thì nhiều người sẽ nghĩ mất triều là hết mặn, mà h
 
 Thôi bạn ơi, thế là bạn lại không biết rồi. //
 
-Mặt Trời nặng hơn Mặt Trăng khoảng 27 triệu lần, chuyện đó thì đúng. // Có điều thuỷ triều không sinh ra từ sức hút, mà từ cái hiệu giữa hai đầu. // Nửa Trái Đất hướng về phía nó bị kéo mạnh hơn nửa bên kia một chút, và chính cái một chút ấy làm nước phồng lên. //
+Mặt Trời nặng hơn Mặt Trăng khoảng 27 triệu lần, chuyện đó thì đúng. // Có điều thuỷ triều không sinh ra từ sức hút, mà từ chênh lệch sức hút giữa hai phía của Trái Đất. // Nửa Trái Đất hướng về phía nó bị kéo mạnh hơn nửa bên kia một chút, và chính cái một chút ấy làm nước phồng lên. //
 
 Trong vật lý thì có dăm bảy kiểu xa khác nhau. Xa kiểu lực hút thì chia hai lần cho khoảng cách, nghĩa là xa gấp đôi là yếu đi bốn lần, ánh sáng cũng vậy. // Nhưng xa kiểu thuỷ triều thì khắc nghiệt hơn hẳn, vì nó chia tới ba lần, xa gấp đôi là yếu đi tám lần. //
 
@@ -98,9 +98,9 @@ Hoá ra ánh sáng mới là cái đổ trước, nước còn đổ sau. //
 
 Một đêm rằm sáng hơn đêm không trăng rất nhiều lần. // Với chúng ta thì đó là chuyện của thơ ca, nhưng với nhiều loài vật, đó là cái đồng hồ duy nhất chúng có. //
 
-Theo một nghiên cứu đăng trên Nature năm 2003, loài bọ hung ở Nam Phi lăn phân về tổ theo đường thẳng. // Chúng giữ được đường thẳng ấy bằng cách đọc ánh trăng phân cực, một tín hiệu yếu hơn ánh nắng phân cực cả triệu lần. // Vào những đêm không trăng, một loài bọ hung khác còn biết chuyển sang định hướng theo dải Ngân Hà, nghĩa là mất trăng thì ít ra chúng vẫn còn phương án hai. //
+Theo một nghiên cứu đăng trên Nature năm 2003, loài bọ hung ở Nam Phi lăn phân về tổ theo đường thẳng. // Chúng giữ được đường thẳng ấy bằng cách đọc ánh trăng phân cực, tức thứ ánh sáng rung theo một hướng nhất định, một tín hiệu yếu hơn ánh nắng phân cực cả triệu lần. // Vào những đêm không trăng, một loài bọ hung khác còn biết chuyển sang định hướng theo dải Ngân Hà, nghĩa là mất trăng thì ít ra chúng vẫn còn phương án hai. //
 
-Nhưng loài đáng kể nhất thì chẳng có phương án nào khác. // Ngoài khơi nước Úc, ở rạn Great Barrier, san hô không đẻ lẻ tẻ từng con mà đẻ đồng loạt cả rạn cùng một lúc, vào mấy đêm ngay sau rằm, mỗi năm một lần. // Vậy làm sao chúng biết hôm nay là ngày mấy? // Một nghiên cứu công bố năm 2007 đã tìm ra trong san hô một thụ thể ánh sáng tên là cryptochrome, nó mở ra khi gặp ánh sáng xanh. // Và ánh trăng tròn, dù chỉ sáng bằng một phần rất nhỏ ánh nắng, vẫn đủ để mở được nó. //
+Nhưng loài đáng kể nhất thì chẳng có phương án nào khác. // Ngoài khơi nước Úc, ở rạn Great Barrier, san hô không đẻ lẻ tẻ từng con mà đẻ đồng loạt cả rạn cùng một lúc, vào mấy đêm ngay sau rằm, mỗi năm một lần. // Vậy làm sao chúng biết hôm nay là ngày mấy? // Một nghiên cứu công bố năm 2007 đã tìm ra trong san hô một cảm biến ánh sáng tên là cryptochrome, nó mở ra khi gặp ánh sáng xanh. // Và ánh trăng tròn, dù chỉ sáng bằng một phần rất nhỏ ánh nắng, vẫn đủ để mở được nó. //
 
 Còn lý do chúng buộc phải đẻ cùng một đêm thì nằm ở chỗ san hô không đi lại được. // Trứng và tinh trùng chỉ có cơ hội gặp nhau nếu cả rạn cùng thả ra một lúc, trong cùng vùng nước. // Lệch nhau vài đêm thì kết quả không phải là đẻ ít đi, mà là cả rạn gần như không có nổi một con non. //
 

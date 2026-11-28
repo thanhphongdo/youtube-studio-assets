@@ -348,7 +348,7 @@ lộ đúng như trước.
 | Khối 2 không dùng tệp nào của Pexels / Pixabay / Coverr; cả 22 tệp từ Wikimedia Commons | ĐO | liệt kê lại toàn bộ `K2.anh` và `K2.vid` trong mã nguồn | 28/11/2026 | chỉ khối 2 |
 | Kiểu vẽ Trái Đất / Mặt Trăng cả tập: **ảnh thật NASA**, hai cách dùng cho hai việc (đĩa thật khi đứng · bản đồ trải phẳng cắt tròn khi phải quay); ba lớp phủ rìa a/b/c dùng chung thông số | ĐO | khối 1 hỏi, khối 2 trả lời và đã sửa `K2.cau` + `K2.trang`; kiểm bằng 6 khung liên tiếp của k2c27 xem có mối nối không | 28/11/2026 | **khối 2 đề xuất, chờ khối 1 xác nhận** — nếu khối 1 thấy ba thông số phủ rìa không khớp cảnh của họ thì KHỐI 1 LÀ CHUẨN (14 cảnh ảnh thật, nhiều hơn), khối 2 chỉnh theo |
 | `k1-mattrang.jpg` và `k2-mattrang.jpg` là **cùng một ảnh gốc** (LRO WAC nearside mosaic, phạm vi công cộng); hai khối giữ hai bản sao riêng, không trỏ chéo | ĐO | so trang gốc Commons của hai tệp | 28/11/2026 | **mời khối 1 xác nhận** |
-| Tệp dùng chung với khối khác — **DÒNG CŨ SAI, ĐÃ VIẾT LẠI 28/11** | ĐO | Bản cũ khai "khối 2 không dùng chung tệp nào với khối 1 hay khối 3 … ba tệp khác nhau, ba nguồn khác nhau, đừng ai gộp". **Sai.** Người soát đối chiếu md5 và tôi đã chạy lại xác nhận: `anh/k2-sanho-de.jpg` và `anh/k1-sanho-de.jpg` **trùng nhau TỪNG BYTE**, md5 `96e8b79fe6ac2b70585352cc115410dc`, cùng 1920×1276, cùng gốc Commons `File:Coral_Spawning_(38797556434).jpg` — hai khối cùng tải bản thu nhỏ 1920 px của cùng một tệp NOAA. Chỉ `k3-sanho-de.jpg` (md5 khác) mới thật sự là tệp khác. Tiền tố tên tệp KHÔNG chứng minh được nội dung khác nhau, và cả ba file nguồn đã khai sai cùng một kiểu vì cùng suy từ tên tệp. **Nay khối 2 có đúng ba quan hệ dùng chung, khai hết:** (1) `k2-sanho-de.jpg` ≡ `k1-sanho-de.jpg` (trùng byte); (2) `anh/k3-ran-hardy.jpg` — khối 2 **trỏ thẳng** vào tệp của khối 3 ở k2c43, chủ tệp là khối 3, họ cam kết không xoá/đổi tên/cắt lại; (3) `video/k2-sanho-de2.mp4` là **bản sao từng byte** của `video/k3-sanho-de.mp4`. | 28/11/2026 | **khối 1 và khối 3 đã xác nhận**; người dựng khối 2 bản trước cũng tự chạy md5 và nhận là mình khai sai |
+| Tệp dùng chung với khối khác — **DÒNG CŨ SAI, ĐÃ VIẾT LẠI 28/11** | ĐO | Bản cũ khai "khối 2 không dùng chung tệp nào với khối 1 hay khối 3 … ba tệp khác nhau, ba nguồn khác nhau, đừng ai gộp". **Sai.** Người soát đối chiếu md5 và tôi đã chạy lại xác nhận: `anh/k2-sanho-de.jpg` và `anh/k1-sanho-de.jpg` **trùng nhau TỪNG BYTE**, md5 `96e8b79fe6ac2b70585352cc115410dc`, cùng 1920×1276, cùng gốc Commons `File:Coral_Spawning_(38797556434).jpg` — hai khối cùng tải bản thu nhỏ 1920 px của cùng một tệp NOAA. Chỉ `k3-sanho-de.jpg` (md5 khác) mới thật sự là tệp khác. Tiền tố tên tệp KHÔNG chứng minh được nội dung khác nhau, và cả ba file nguồn đã khai sai cùng một kiểu vì cùng suy từ tên tệp. **Nay khối 2 có đúng BỐN quan hệ dùng chung, khai hết:** (1) `k2-sanho-de.jpg` ≡ `k1-sanho-de.jpg` (trùng byte); (2) `anh/k3-ran-hardy.jpg` — khối 2 **trỏ thẳng** vào tệp của khối 3 ở k2c43, chủ tệp là khối 3, họ cam kết không xoá/đổi tên/cắt lại; (3) `video/k2-sanho-de2.mp4` và `video/k2-sanho-khoi.mp4` là **bản sao từng byte** của `video/k3-sanho-de.mp4` và `video/k3-sanho-khoi.mp4`; (4) `anh/k2-mattrang.jpg` ≡ `anh/k1-mattrang.jpg`, **trùng từng byte**, md5 `a653acf806d04e0a444806e6d9f22bb2`, cùng 1920×1920 — khối 1 báo sang là "hai bản sao của cùng một ảnh gốc", tôi chạy md5 thì thật ra còn chặt hơn thế: cùng một tệp. Đây là tấm Mặt Trăng của **mọi** đĩa Mặt Trăng trong tập, nên trùng là đúng, chỉ có lời khai cũ là sai. | 28/11/2026 | **khối 1 và khối 3 đã xác nhận**; người dựng khối 2 bản trước cũng tự chạy md5 và nhận là mình khai sai |
 | Bản cắt rạn Hardy: cả tập dùng **một** bản duy nhất | ĐO | `anh/k2-gbr-khong.jpg` (1920×1440) và `anh/k3-ran-hardy.jpg` (1920×1080) là **cùng một ảnh gốc**, hai bản cắt khác nhau, nên md5 khác mà mắt thì thấy "hai cái rạn" trong cùng một tập. Đã chốt dùng bản 16:9 của khối 3 cho cả k2c43, k3c23 và k3c31. `k2-gbr-khong.jpg` còn trong kho nhưng không cảnh nào gọi. | 28/11/2026 | **khối 3 đã đồng ý**, khối 1 đã biết |
 | Thông số máy quay ở điểm nối | — | cảnh **cuối** của khối 2 (k2c49, giây 532,9–538,8) kết ở `x = +12, z = 1,20`, nền là clip rạn san hô **đã rút gần hết màu** (`saturate .42`). Khối 3 mở ngay sau đó, nên nếu khối 3 mở bằng một khung rực màu thì cú nối sẽ giật. | 28/11/2026 | **mời khối 3 xác nhận** |
 
@@ -588,3 +588,56 @@ nhận bẫy này đã suýt làm họ kết luận sai về một cảnh.
   lịch k2c44 chìm nghỉm trên mặt trăng sáng · cánh cửa trái k2c45 bị mép trái cắt
   khi cửa mở hết.
 * Đo màu riêng khối: **48,4 % dải cao nhất · 5 dải ≥ 5 %** (xem 8.5).
+
+### 8.11 Vòng hai — ba việc đến sau khi đã chụp kiểm xong lần một
+
+**(a) Dòng nguồn về `y = 646`.** Chốt 16.10 ban đầu là 650, nhưng đo mực chữ thì
+đáy rơi ở y ≈ 674, lố hộp an toàn 2–3 px. Điều phối đã sửa hợp đồng thành **646**
+cho cả ba khối; khối 2 đã đổi. Đo lại: **0 vi phạm**.
+
+**(b) Ba câu đổi chữ — chủ kênh bác thuật ngữ dùng mà không mở nghĩa.**
+Số câu không đổi nên `steps` và bản đồ cảnh giữ nguyên; `soat-khoi.py` đối chiếu
+`_chia-khoi.json` vẫn khớp 49/49. Chỗ nặng nhất là câu 6: *"cái hiệu giữa hai đầu"* —
+"hiệu" là từ toán học ném vào giữa một câu đang phải giải thích thứ khác. Lời mới là
+*"chênh lệch sức hút giữa hai phía của Trái Đất"*.
+**Hình phải đổi theo lời**, và chỗ này phơi ra một lỗi L1 có sẵn: hai cảnh dựng cơ
+chế lực triều **chưa bao giờ gọi tên** cái chúng đang vẽ. Nay k2c06 có hai nhãn
+**"phía gần"** / **"phía xa"** trên hai mũi tên dài ngắn khác nhau, và k2c07 gọi tên
+đoạn thừa ra giữa hai mũi tên là **"chênh lệch"** — đúng chữ mà lời dẫn nay dùng.
+
+**(c) Luật L6 — khối 2 từng phạm BA chỗ, nay sạch.** Khối 3 báo sang rằng họ suýt tự
+tạo một cụm ba cảnh khi đổi nền, và khuyên đếm bằng máy sau khi sửa. Làm theo thì ra
+**ba cụm**, trong đó **một cụm do chính vòng sửa này gây ra**:
+
+| cụm | vì sao | chữa |
+|---|---|---|
+| k2c08 · c09 · c10 | ba cảnh liền dùng chung clip dải Ngân Hà — có từ bản dựng đầu, bản soát không nêu | k2c10 (cú chốt của bộ ba) đổi sang nền chuyển sắc tông **mận** |
+| k2c11 · c12 · c13 | ba cảnh liền cùng `#13293F` — cũng có sẵn | k2c13 (kết quả phép chia) đổi sang **nâu ô-liu** |
+| k2c47 · c48 · c49 | **tôi tự gây ra** khi thay clip san hô vào bốn cảnh liền nhau | k2c47 đổi sang `video/k2-sanho-khoi.mp4`, bản sao clip thứ hai của khối 3, cùng nguồn NOAA cùng nơi quay |
+
+Bài học, ghi cho các tập sau: **vá chỗ này thủng chỗ kia.** Phá một chuỗi nền dài thì
+phải đếm lại toàn khối, vì cảnh vừa đổi có thể khớp với hàng xóm mới. Mắt không bắt
+được — cả ba cụm trên đều phải đếm bằng máy mới thấy. Bộ đếm trích tấm nền của từng
+cảnh từ mã nguồn theo thứ tự rồi tìm cụm lặp; chạy trong một lệnh.
+Hai nền mới cũng kéo thêm hai dải màu vào khối, nên nó đỡ luôn mục F.
+
+**(d) Quả cầu trên nền giấy sáng.** Khối 3 báo sang: vành khí quyển mỏng lại làm lộ
+ra chuyện trước đó nó đang che giúp — trên nền SÁNG, nửa đêm của quả cầu đọc ra như
+**một cái lỗ đen trên tờ giấy**. Chụp k2c21 ra nhìn thì đúng y vậy. **Không sửa hàm
+dùng chung** (khối 3 đang gọi chéo nó ở 12 chỗ): chỉ hạ độ mờ lớp bóng của riêng cảnh
+này xuống 0,3 qua `dat.bong` mà hàm vẫn trả về, và phóng đĩa từ R = 106 lên **R = 134**.
+Chụp lại: ra một hành tinh, không còn là một cái chấm tối.
+
+**Khối 1 đã chốt không gọi chéo** — họ không có cảnh nào cho thiên thể quay nên giữ
+hai hàm riêng dùng ảnh ĐĨA thật, và xác nhận hai thông số mới của khối 2 không chạm
+tới cảnh nào của họ. Vậy quyền đổi `K2.cau()` / `K2.trang()` nay nằm giữa **khối 2 và
+khối 3**, và vì khối 3 gọi chéo nên **đổi chữ ký là phải báo họ trước**.
+
+**(e) Biên an toàn của `data-dai` — bẫy §16.3, nới cho cả khối.** Bản soát chạy
+`ffprobe` và kết luận đúng là **không clip nào** có `tu + dai > thời lượng`, nhưng có
+ghi thêm rằng hai chỗ sát tới mức "không còn biên an toàn". Đo lại toàn khối thì nặng
+hơn thế: **13 trên 18 lời gọi** có biên dưới 0,2 giây, phần lớn chỉ 0,04–0,08 s, và
+**một chỗ biên đúng bằng 0** (k2c46, `k2-trang-may.mp4`, `tu 3,0 + dai 6,0 = 9,000`
+trên một clip dài đúng 9,000 s). Ai cắt lại clip ngắn đi một khung là cảnh đứng hình,
+và `soat-khoi.py` vẫn báo SẠCH. Đã hạ `dai` ở chín lời gọi để **mọi clip có ít nhất
+0,2 giây biên**; chỗ hụt nhiều nhất chỉ mất 0,3 giây đuôi, không cảnh nào đổi nhịp.

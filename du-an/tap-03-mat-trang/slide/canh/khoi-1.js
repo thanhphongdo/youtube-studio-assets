@@ -64,11 +64,11 @@ const AT = { T:48, B:672, L:48, R:48, B2:60 };
 /* ĐIỀU PHỐI CHỐT 28/11 (hợp đồng 16.10): dòng nguồn của CẢ BA KHỐI đặt ở y = 650.
    Khối 1 trước đây ở 688, khối 2 ở 676, khối 3 ở 664 — không khối nào bị cắt chữ,
    nhưng chân khung so le khi xem liền mạch, và cả ba đều ngoài vùng an toàn 48 px.
-   Chữ 15 px line-height 1,25 -> cao 19 px -> chân chữ ở 669, vừa trong hộp y ≤ 672.
-   Biên đó chỉ còn 3 px, nên MỌI lời gọi kh() cho dòng nguồn phải truyền dy = 0:
+   Chữ 15 px line-height 1,25 -> cao 19 px -> chân chữ ở 665, trong hộp y ≤ 672.
+   Biên đó vẫn mỏng, nên MỌI lời gọi kh() cho dòng nguồn phải truyền dy = 0:
    kh() mặc định nhích chữ XUỐNG 12 px lúc nó hiện ra, đủ để đẩy chân chữ ra ngoài.
    `max-width` để dòng nguồn dài xuống dòng vẫn không chạm mép trái/phải. */
-const YNG = 650;
+const YNG = 646;   /* hợp đồng 16.10, điều phối sửa 28/11: 650 làm mực chữ chạm 674 */
 const NGUON = (id, s, mau) => `<div class="tx" id="${id}" style="left:${AT.L}px;top:${YNG}px;`+
   `max-width:1040px;font:400 15px/1.25 ${F};color:${mau||C.mo}">${s}</div>`;
 const NGUONP = (id, s, mau) => `<div class="tx" id="${id}" style="right:${AT.R}px;top:${YNG}px;`+
@@ -1318,8 +1318,11 @@ DANGKY({
   id: "k1c17", steps: 0,
   say: ["Nó chỉ nhích ra xa, chậm đến mức không ai sống đủ lâu để kịp nhìn thấy."],
   html: NEN("dem") +
+        /* VÁ 28/11: c17 là cảnh duy nhất còn giữ nền bề mặt Mặt Trăng trong chuỗi
+           c15–c18. Đo trung vị độ sáng khung giữa cảnh được 0,067 — gần như đen
+           (ngưỡng người soát đề xuất ở luật L9 là 0,18–0,82). Nâng lên 0,42. */
         IMG("k1-mattrang.jpg", 0.10, { pos:"62% 40%",
-          filter:"contrast(1.18) saturate(.5) brightness(.26)" }) +
+          filter:"contrast(1.14) saturate(.6) brightness(.42)" }) +
         LM(0.14, 'id="k1c17-sao"') + LM(0.56, 'id="k1c17-ve"') + LM(0.95, 'id="k1c17-vien"') +
         `<div class="hud">` +
           NHAN("k1c17-n1", "một đời người", "left:0;right:0;top:534px;text-align:center", "#CBD6DC", 23) +
@@ -1913,7 +1916,8 @@ DANGKY({
     set(nhS, { "font-weight":700, "letter-spacing":"0.08em" });
     /* thẻ kết quả */
     const gKQ = el("g", { opacity:0 }, g);
-    el("rect", { x:426, y:424, width:430, height:82, rx:8, fill:"#7A3A12" }, gKQ);
+    /* thẻ phải RỘNG HƠN vệt chữ: 26 ký tự ở cỡ 34 px ra ~442 px, tràn khỏi thẻ 430 px */
+    el("rect", { x:362, y:424, width:558, height:82, rx:8, fill:"#7A3A12" }, gKQ);
     const kq = so(gKQ, 641, 484, "bỏ Mặt Trăng → còn 1 / 3,2", 34, "#FFF3DC");
     set(kq, { "letter-spacing":"0.03em" });
     vien(svV, "k1c29", .48);
@@ -2093,7 +2097,7 @@ DANGKY({
    sơ đồ co tầng → VIDEO THẬT bàn tay đầy ốc → ảnh thật chim bờ kiếm ăn ═════ */
 DANGKY({
   id: "k1c33", steps: 0,
-  say: ["Hạ biên độ triều xuống một phần ba thì cái thang nhiều tầng ấy co lại, và hàu, ốc, cua, rong, cùng mấy loài chim vẫn ra bãi mò ăn lúc nước rút, tất cả phải sắp xếp lại từ đầu."],
+  say: ["Hạ biên độ triều, tức khoảng cách giữa lúc nước cao nhất và lúc thấp nhất, xuống còn một phần ba thì cái thang nhiều tầng ấy co lại, và hàu, ốc, cua, rong, cùng mấy loài chim vẫn ra bãi mò ăn lúc nước rút, tất cả phải sắp xếp lại từ đầu."],
   html: NEN("bien") + VIDL("k1-bai-da-tren.mp4", 0.20, { tu:2.0, dai:6.6, toc:0.45,
           pos:"50% 50%", loc:"contrast(1.14) saturate(1.1) brightness(.52)" }) +
         LM(0.68, 'id="k1c33-ve"') +
@@ -2263,7 +2267,7 @@ DANGKY({
 /* ═════ CẢNH 36 — ĐBSCL: BÁN NHẬT TRIỀU, BIÊN ĐỘ ~3 M · 219,7 → 225,4s ═════ */
 DANGKY({
   id: "k1c36", steps: 0,
-  say: ["Còn dưới đồng bằng sông Cửu Long, triều phía Biển Đông là bán nhật triều, biên độ chừng ba mét."],
+  say: ["Còn dưới đồng bằng sông Cửu Long, triều phía Biển Đông là bán nhật triều, nghĩa là mỗi ngày nước lên xuống hai lần, với biên độ chừng ba mét."],
   html: NEN("bien") + IMG("k1-cuulong.jpg", 0.28, { pos:"46% 56%",
           filter:"contrast(1.2) saturate(1.3) brightness(.74)" }) +
         LM(0.72, 'id="k1c36-ve"') + LM(0.96, 'id="k1c36-vien"') +

@@ -121,6 +121,31 @@ hiện 2–3,5 giây rồi tắt, không bao giờ hai dòng cùng lúc.
 
 ---
 
+## 2b. PHONG CÁCH TRÁI ĐẤT / MẶT TRĂNG — đã chốt với khối 2 ngày 28/11
+
+Bản soát (§1 đối chiếu chéo) gọi đây là **lỗi nặng nhất cả tập**: người xem gặp
+bốn Mặt Trăng và ba Trái Đất khác nhau trong một tập 12 phút. Tôi đã nhắn hỏi
+người dựng khối 2 trước khi đụng vào cảnh nào, và **cả tập nay còn đúng hai cách
+vẽ, không chỏi nhau vì dùng cho hai việc khác nhau**:
+
+| việc | cách vẽ | khối nào dùng |
+|---|---|---|
+| thiên thể **ĐỨNG**, nhìn như một vật ngoài không gian | **ảnh ĐĨA thật** cắt tròn — `k1-traidat.jpg` (Blue Marble, Apollo 17) và `k1-mattrang.jpg` (LRO WAC) | **khối 1, cả 15 cảnh** (14 cảnh cũ + k1c16 mới) — giữ nguyên, không đổi gì |
+| thiên thể **PHẢI QUAY** hoặc nghiêng lắc theo sơ đồ | đĩa tròn tô bằng **bản đồ NASA trải phẳng** `k2-traidat-phang.jpg`, cuộn ngang trong `<clipPath>` tròn | khối 2 (`K2.cau`) và khối 3 gọi chéo |
+
+Khối 2 giải thích lý do kỹ thuật và tôi thấy hợp lý: 16 trên 19 cảnh có quả cầu
+của họ cho Trái Đất **quay**, mà một tấm ảnh đĩa thì cuộn sẽ lòi mép đen; ảnh
+trải phẳng nối vòng liền mạch nên quay bao lâu cũng không có đường ghép. Cả hai
+đều là ảnh NASA thật, cùng tông — **không còn quả cầu vector vẽ tay ở đâu trong
+tập**, đó mới là điều người soát đòi.
+
+**Khối 1 không phải sửa một cảnh nào.** Khối 2 đã nói rõ: nếu thông số lớp phủ
+rìa của họ không khớp cảnh của tôi thì **khối 1 là chuẩn** và họ chỉnh theo. Tôi
+đã chụp lại 15 cảnh có thiên thể của khối 1 và xem: đĩa vẫn đúng tông, không cần
+đòi ai đổi gì. Khối 1 **không gọi chéo** `K2.cau()` / `K2.trang()` — nếu sau này
+có gọi thì chỉ được gọi **trong `anim()`**, vì `khoi-1.js` nạp TRƯỚC `khoi-2.js`
+và gọi ở thân file lúc nạp sẽ làm chết im lặng cả khối.
+
 ## 3. HÌNH TỰ DỰNG — và lý do không có tư liệu thật
 
 Theo §15.1, chỉ được tự dựng khi (a) tìm không ra tư liệu thật, hoặc (b) thuộc
@@ -196,6 +221,50 @@ Mọi chữ còn lại là **kết cấu**: nhãn trục của biểu đồ, nh�
 đồ, pill số liệu, và dòng ghi nguồn ảnh. Không chỗ nào chép lại lời dẫn lên
 màn hình, không gạch đầu dòng, không bảng số liệu.
 
+**Nhãn kết cấu thêm trong vòng sửa 28/11** (đều là nhãn của sơ đồ, không ăn vào
+hạn mức chữ biên tập — đúng yêu cầu của luật L1 “nhãn, hoặc là bỏ”):
+k1c06 “chậm?” · “nhanh?” · “3,8 cm / năm” — k1c16 “rơi xuống” · “bay đi” ·
+“bị kéo đi” — k1c20 và k1c21 “đang đi” · “rất chậm” · “vẫn còn đó” (và “một nấc”,
+“80 năm” trong thẻ) — k1c29 “Mặt Trăng” · “Mặt Trời” · “bỏ Mặt Trăng → còn 1 / 3,2”
+— k1c32 “hà” · “ốc” · “rong” · “vẹm” — k1c37 “CẦN THƠ” · “ranh mặn vào sâu 40 – 60 km”
+— k1c11 “Hà Nội – Sài Gòn ≈ 1.730 km” · “2.500 km Mặt Trăng lùi ra”.
+
+### 5.1 Vùng an toàn 48 px — ĐO, không ước lượng
+
+Hợp đồng mục 16.10 (điều phối chốt 28/11, sửa lại cùng ngày): **dòng nguồn của cả
+ba khối đặt ở y = 646** — khối 2 đo ra ở 650 thì mực chữ chạm y ≈ 674, lố hộp an
+toàn 2–3 px. Khối 1 trước ở 688, nay **646**, cỡ chữ 13 → 15 px, `max-width:1040px`.
+Luật L3 của bản soát: mọi chữ phải nằm trong hộp `x ∈ [48, 1232]`,
+`y ∈ [48, 672]` ở **mọi** mốc `c.u`.
+
+Cách đo của tôi, để ai cũng chạy lại được:
+* lấy **`Range.getClientRects()`** phủ nội dung từng phần tử `.tx` và từng
+  `<text>` SVG — đo **vệt chữ**, KHÔNG đo cái hộp. Một `div`
+  `left:0;right:0;text-align:center` có hộp rộng đúng 1.280 px nên đo hộp sẽ
+  báo vi phạm giả ở hơn một nửa số cảnh (tôi đã dính đúng bẫy này ở lần đo đầu);
+* bỏ qua phần tử có `opacity < 0,04`, kể cả khi lớp cha mới là lớp bị tắt;
+* lấy **phần tử CUỐI** của `querySelectorAll(".canh.active")` — trong 0,42 giây
+  hoà hình đầu cảnh có **hai** thẻ `.canh.active` và `querySelector` trả về cảnh
+  CŨ (bẫy khối 2 báo, hợp đồng 16.11);
+* đo ở **24 mốc** `c.u` từ 0,04 tới 0,96, vì phần lớn vi phạm là do **máy quay
+  đẩy chữ ra**, không phải do toạ độ tĩnh sai.
+
+**Kết quả: 41 cảnh × 24 mốc = 984 phép đo, 0 vi phạm.**
+Sáu chỗ đã phải sửa mới sạch, ghi lại để khối khác khỏi mò:
+1. `NGUON`/`NGUONP` ở `top:688` — chân chữ rơi tới y ≈ 705.
+2. `NAMO` ở `top:48` — chữ 46 px với `line-height:1` **tràn ~4 px lên trên hộp
+   dòng**, nên đỉnh chữ ra y = 44 dù thuộc tính `top` đúng bằng 48. Hạ xuống 56.
+3. `kh()` **nhích chữ XUỐNG 12 px** trong lúc nó mờ dần vào. Ở y = 650 thì chân
+   chữ chạm 681. Phải truyền `dy = 0` cho **cả 36** lời gọi `kh()` của dòng nguồn.
+4. Pill `k1c02-p` chạy theo Mặt Trăng, tới cuối cảnh thì mép phải ra 1.242 —
+   kẹp tâm pill ở tối đa x = 1.118.
+5. Nhãn địa danh `PIN` neo ở `(-50 %, -100 %)` nên hộp chữ nằm **bên trên** điểm
+   ghim; ở k1c11 khung cuối “HÀ NỘI” ra hẳn ngoài mép trên (đỉnh y = −1,4).
+   Thêm hàm **`ghimPIN()`** kẹp điểm ghim vào `y ≥ 48 + chiều cao hộp`.
+6. Pill `k1c01-p2` được bật mờ trong lúc còn ở x ≈ −7.900 (điểm giữa khe Trái
+   Đất – Mặt Trăng chưa vào khung). Không ai thấy, nhưng vẫn là chữ sống ngoài
+   khung — nay tắt hẳn khi nó ra ngoài hộp.
+
 ---
 
 ## 6. BẢNG MỐC CẮT CỨNG BÊN TRONG CẢNH (để đếm mật độ)
@@ -221,6 +290,11 @@ màn hình, không gạch đầu dòng, không bảng số liệu.
 | **Tổng** | **16** | |
 
 41 + 16 = **57 lần đổi hình / 253,8 s = 13,5 mỗi phút.**
+
+**Vòng sửa 28/11 không làm đổi con số này**: mọi thay đổi là đổi TƯ LIỆU hoặc
+lớp đồ hoạ bên trong một chặng đã có, không thêm và không bớt mốc cắt cứng nào.
+Đã đếm lại bằng tay trên bản mới: vẫn đúng 16 mốc, vẫn 41 lời gọi `DANGKY`
+(`python3 dung/soat-khoi.py` in ra “khối 1: 41 cảnh · 42 câu”).
 
 ---
 

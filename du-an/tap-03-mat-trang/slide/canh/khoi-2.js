@@ -39,7 +39,7 @@ const S = [
   "Vô lý.",
   "Thôi bạn ơi, thế là bạn lại không biết rồi.",
   "Mặt Trời nặng hơn Mặt Trăng khoảng hai mươi bảy triệu lần, chuyện đó thì đúng.",
-  "Có điều thuỷ triều không sinh ra từ sức hút, mà từ cái hiệu giữa hai đầu.",
+  "Có điều thuỷ triều không sinh ra từ sức hút, mà từ chênh lệch sức hút giữa hai phía của Trái Đất.",
   "Nửa Trái Đất hướng về phía nó bị kéo mạnh hơn nửa bên kia một chút, và chính cái một chút ấy làm nước phồng lên.",
   "Trong vật lý thì có dăm bảy kiểu xa khác nhau.",
   "Xa kiểu lực hút thì chia hai lần cho khoảng cách, nghĩa là xa gấp đôi là yếu đi bốn lần, ánh sáng cũng vậy.",
@@ -73,12 +73,12 @@ const S = [
   "Một đêm rằm sáng hơn đêm không trăng rất nhiều lần.",
   "Với chúng ta thì đó là chuyện của thơ ca, nhưng với nhiều loài vật, đó là cái đồng hồ duy nhất chúng có.",
   "Theo một nghiên cứu đăng trên Nature năm hai nghìn không trăm linh ba, loài bọ hung ở Nam Phi lăn phân về tổ theo đường thẳng.",
-  "Chúng giữ được đường thẳng ấy bằng cách đọc ánh trăng phân cực, một tín hiệu yếu hơn ánh nắng phân cực cả triệu lần.",
+  "Chúng giữ được đường thẳng ấy bằng cách đọc ánh trăng phân cực, tức thứ ánh sáng rung theo một hướng nhất định, một tín hiệu yếu hơn ánh nắng phân cực cả triệu lần.",
   "Vào những đêm không trăng, một loài bọ hung khác còn biết chuyển sang định hướng theo dải Ngân Hà, nghĩa là mất trăng thì ít ra chúng vẫn còn phương án hai.",
   "Nhưng loài đáng kể nhất thì chẳng có phương án nào khác.",
   "Ngoài khơi nước Úc, ở rạn Great Barrier, san hô không đẻ lẻ tẻ từng con mà đẻ đồng loạt cả rạn cùng một lúc, vào mấy đêm ngay sau rằm, mỗi năm một lần.",
   "Vậy làm sao chúng biết hôm nay là ngày mấy?",
-  "Một nghiên cứu công bố năm hai nghìn không trăm linh bảy đã tìm ra trong san hô một thụ thể ánh sáng tên là cryptochrome, nó mở ra khi gặp ánh sáng xanh.",
+  "Một nghiên cứu công bố năm hai nghìn không trăm linh bảy đã tìm ra trong san hô một cảm biến ánh sáng tên là cryptochrome, nó mở ra khi gặp ánh sáng xanh.",
   "Và ánh trăng tròn, dù chỉ sáng bằng một phần rất nhỏ ánh nắng, vẫn đủ để mở được nó.",
   "Còn lý do chúng buộc phải đẻ cùng một đêm thì nằm ở chỗ san hô không đi lại được.",
   "Trứng và tinh trùng chỉ có cơ hội gặp nhau nếu cả rạn cùng thả ra một lúc, trong cùng vùng nước.",
@@ -139,11 +139,11 @@ K2.troi = sau =>
   '"><svg class="troi" viewBox="0 0 1280 720" style="overflow:visible"></svg></div>';
 /* dòng nguồn / dẫn nghiên cứu, góc dưới phải — luôn đứng một mình (§8).
    VÙNG AN TOÀN 48 px (luật L3) + chốt điều phối 16.10: cả ba khối đặt dòng
-   nguồn ở y = 650. Bản cũ đặt right:36px top:676px, tức mép dưới chữ rơi vào y ≈ 692 — ngoài hộp [48,672] ở CẢ 25
+   nguồn ở y = 646. Bản cũ đặt right:36px top:676px, tức mép dưới chữ rơi vào y ≈ 692 — ngoài hộp [48,672] ở CẢ 25
    cảnh có dòng nguồn. Đo thật bằng getBoundingClientRect() trên 10 mốc c.u,
    không ước lượng. Sửa một dòng ở đây là sửa cả 25 chỗ. */
 K2.nguon = (id, s) =>
-  '<div class="tx" id="' + id + '" style="left:auto;right:48px;top:650px;' +
+  '<div class="tx" id="' + id + '" style="left:auto;right:48px;top:646px;' +
   'font:400 13px/1.35 system-ui;letter-spacing:.012em;color:#8CA6B8;text-align:right;' +
   'text-shadow:0 1px 4px rgba(3,8,13,1),0 2px 12px rgba(3,8,13,.95)">' + s + '</div>';
 
@@ -357,7 +357,7 @@ K2.lop = (root, id) => root.querySelector("#" + id);
 /* ---- k2c01 · câu 1 (2,1 s) · VIDEO Mặt Trăng quay (LRO) bị chặn lại ---- */
 DANGKY({
   id: "k2c01", steps: 0, say: [S[0]],
-  html: K2.vid("k2-trang-quay.mp4", .38, { tu: 1.0, dai: 7.0, toc: .55,
+  html: K2.vid("k2-trang-quay.mp4", .38, { tu: 1.0, dai: 6.8, toc: .55,
           loc: "contrast(1.1) saturate(.9) brightness(.9)" }) +
         K2.ve(.82) + K2.toi(".82"),
   anim: root => {
@@ -433,7 +433,7 @@ DANGKY({
 /* ---- k2c04 · câu 4 (3,8 s) · VIDEO Trái Đất quay thật (DSCOVR) ---- */
 DANGKY({
   id: "k2c04", steps: 0, say: [S[3]],
-  html: K2.vid("k2-traidat-quay.mp4", .34, { tu: 0, dai: 4.5, toc: .5,
+  html: K2.vid("k2-traidat-quay.mp4", .34, { tu: 0, dai: 4.3, toc: .5,
           loc: "contrast(1.1) saturate(1.08) brightness(.92)" }) +
         K2.ve(.8) + K2.toi(".84"),
   anim: root => {
@@ -502,9 +502,16 @@ DANGKY({
       "stroke-linecap": "round", fill: "none" }, V);
     const x2 = el("path", { d: "M876,282 L700,452", stroke: DO, "stroke-width": 13,
       "stroke-linecap": "round", fill: "none" }, V);
-    /* thay vào đó: hai mũi tên dài ngắn khác nhau, cùng một độ cao */
+    /* thay vào đó: hai mũi tên dài ngắn khác nhau, cùng một độ cao.
+       SỬA 28/11 theo lời mới: chủ kênh bác chữ "cái hiệu giữa hai đầu" vì là từ
+       toán học ném vào giữa một câu đang phải giải thích thứ khác. Lời nay là
+       "chênh lệch sức hút giữa HAI PHÍA của Trái Đất", nên hai mũi tên phải
+       được GỌI TÊN hai phía ấy — không để người xem tự đoán (luật L1). */
     const g1 = K2.ten(V, CX + R - 8, CY - 96, CX + R + 196, CY - 96, LA, 6);
     const g2 = K2.ten(V, CX - R + 8, CY - 96, CX - R + 104, CY - 96, LA, 6);
+    const nG = K2.chuNho(V, CX + R + 96, CY - 118, "phía gần", LA, 20);
+    const nX = K2.chuNho(V, CX - R + 56, CY - 118, "phía xa", LA, 20);
+    op(nG, 0); op(nX, 0);
     return c => {
       cam(root, { t: c.t, x: lerp(22, -18, ez(c.u)), z: lerp(1.03, 1.13, ez(c.u)) });
       K2.xoay(dat, c.t * 16);
@@ -516,6 +523,8 @@ DANGKY({
       const v = ezo(cl((c.u - .42) / .34, 0, 1));
       K2.veDan(g1.than, v); K2.veDan(g2.than, v);
       op(g1.dau, ez((v - .86) / .12)); op(g2.dau, ez((v - .86) / .12));
+      op(nG, ez((c.u - .56) / .1).toFixed(3));
+      op(nX, ez((c.u - .62) / .1).toFixed(3));
     };
   }
 });
@@ -582,6 +591,9 @@ DANGKY({
     const hieu = el("path", { d: "M" + (CX - R + 112) + "," + (YA - 54) + " L" +
       (CX + R + 206) + "," + (YA - 54), stroke: LA, "stroke-width": 5,
       fill: "none", "stroke-linecap": "round" }, gso);
+    /* đoạn thừa ra giữa hai mũi tên CHÍNH LÀ cái mà lời dẫn gọi là "chênh lệch
+       sức hút giữa hai phía" — trước đây nó không có tên trên hình (luật L1) */
+    K2.chuNho(gso, (CX + 159), YA - 74, "chênh lệch", LA, 20);
     const bien = el("g", {}, V);
     const s1 = song(bien, 646, 18, 230, "#12465F");
     const s2 = song(bien, 672, 12, 170, "#1E6D92");
@@ -627,7 +639,7 @@ DANGKY({
 /* ---- k2c08 · câu 8 (3,5 s) · ba kiểu xa, ba ô còn trống ---- */
 DANGKY({
   id: "k2c08", steps: 0, say: [S[7]],
-  html: K2.vid("k2-nganha.mp4", .2, { tu: 0, dai: 4.6, toc: .35,
+  html: K2.vid("k2-nganha.mp4", .2, { tu: 0, dai: 4.3, toc: .35,
           loc: "contrast(1.2) saturate(1.1) brightness(.62)" }) +
         K2.ve(.8) + K2.toi(".86"),
   anim: root => {
@@ -692,7 +704,7 @@ DANGKY({
        hình, đổi màu và đổi nguồn — để thấy "ánh sáng cũng vậy". ---- */
 DANGKY({
   id: "k2c09", steps: 0, say: [S[8]],
-  html: K2.vid("k2-nganha.mp4", .2, { tu: 1.2, dai: 3.4, toc: .3,
+  html: K2.vid("k2-nganha.mp4", .2, { tu: 1.2, dai: 3.2, toc: .3,
           loc: "contrast(1.2) saturate(1.05) brightness(.5)" }) +
         K2.ve(.8) + K2.toi(".9"),
   anim: root => {
@@ -738,10 +750,15 @@ DANGKY({
 /* ---- k2c10 · câu 10 (6,8 s) · CẮT CỨNG u=.46 — chia BA lần: 1 khối ▸ 8 khối ---- */
 DANGKY({
   id: "k2c10", steps: 0, say: [S[9]],
-  html: K2.vid("k2-nganha.mp4", .2, { tu: 2.0, dai: 2.6, toc: .28,
-          loc: "contrast(1.22) saturate(1.0) brightness(.44)" }) +
-        K2.ve(.8) + K2.toi(".92"),
+  /* LUẬT L6 — k2c08·c09·c10 trước đây là BA cảnh liền nhau cùng một clip dải
+     Ngân Hà; đếm bằng máy mới thấy, nhìn thì không. Đổi cảnh cuối sang nền
+     chuyển sắc tông MẬN, vừa phá cụm vừa thêm một dải màu cho khối (mục F),
+     và đây là cú chốt của bộ ba nên đổi nền ở đúng chỗ chốt là có nghĩa. */
+  html: K2.nen("#3A2340", "#190E20", "#070409") + K2.troi(.08) +
+        K2.ve(.8) + K2.toi(".9"),
   anim: root => {
+    K2.rac(root);
+    const T = root.querySelector("svg.troi"); T.innerHTML = ""; sao(T, 150);
     const V = root.querySelector("svg.ve"); V.innerHTML = "";
     const A = 58, Bq = 66, OX = 640, OY = 498;
     const P = (i, j, k) => [OX + (i - j) * A, OY + (i + j) * A * .5 - k * Bq];
@@ -901,7 +918,10 @@ DANGKY({
    ═══════════════════════════════════════════════════════════════════ */
 DANGKY({
   id: "k2c13", steps: 0, say: [S[12]],
-  html: K2.nen("#13293F", "#071020", "#04070E") + K2.troi(.08) + K2.ve(.7) + K2.toi(".92") +
+  /* LUẬT L6 — c11·c12·c13 trước cùng một nền. Đổi cảnh này, vì nó là KẾT 'UẢ
+     của phép chia mà cả cụm đang đi tới; tông nâu ô-liu ấm cũng kéo thêm một
+     dải màu vào khối (mục F). */
+  html: K2.nen("#33301F", "#16150D", "#060604") + K2.troi(.08) + K2.ve(.7) + K2.toi(".9") +
     '<div class="hud">' +
     '<div class="tx" id="k2c13-ps" style="left:0;top:150px;width:1280px;display:flex;' +
          'align-items:center;justify-content:center;gap:30px">' +
@@ -1120,7 +1140,7 @@ DANGKY({
         K2.ve(.76) + K2.toi(".86") +
         '<div class="hud">' +
         K2.nguon("k2c18-ng", "Laskar, Joutel & Robutel · Nature 361, 615 (1993)") +
-        '<div class="tx" id="k2c18-ng2" style="left:auto;right:48px;top:628px;' +
+        '<div class="tx" id="k2c18-ng2" style="left:auto;right:48px;top:624px;' +
           'font:400 13px/1.35 system-ui;color:#8CA6B8;text-align:right;' +
           'text-shadow:0 1px 4px rgba(3,8,13,1)">' +
           'Dải Ngân Hà trên đài thiên văn Paranal · ESO / H.H. Heyer · CC BY 4.0</div></div>',
@@ -1315,7 +1335,7 @@ DANGKY({
   anim: root => {
     K2.rac(root);
     const V = root.querySelector("svg.ve"); V.innerHTML = "";
-    const CX = 640, CY = 446, R = 106, RQ = 288;
+    const CX = 640, CY = 446, R = 134, RQ = 288;
     /* trên nền giấy sáng thì nét bạc TR biến mất — cả cảnh này đổi sang nâu
        sẫm. Dải Laskar giữ cam san hô vì nó vẫn đọc được trên giấy. */
     const NAU = "#50301C", DAM = "#8A3B22";
@@ -1329,6 +1349,14 @@ DANGKY({
     }
     const gE = el("g", {}, V);
     const dat = K2.cau(gE, "k2c21", CX, CY, R);
+    /* QUẢ CẦU TRÊN NỀN GIẤY SÁNG — chỗ khối 3 vừa báo sang và tôi chụp ra xác
+       nhận ở chính cảnh này. Lớp (a) bóng ngày–đêm kéo nửa phải đĩa về gần đen;
+       trên nền TỐI nửa tối ấy hoà vào nền và đĩa đọc rất đẹp, nhưng trên nền
+       giấy sáng thì cùng quả cầu ấy đọc ra như MỘT CÁI LỖ ĐEN TRÊN TỜ GIẤY.
+       Không sửa hàm dùng chung (khối 3 đang gọi chéo nó ở 12 chỗ) — chỉ hạ độ
+       mờ lớp bóng của RIÊNG cảnh này qua `dat.bong` mà hàm vẫn trả về, và phóng
+       đĩa to lên cho nó ra một hành tinh chứ không phải một cái chấm. */
+    dat.bong.style.opacity = ".3";
     K2.truc(gE, CX, CY, R + 178, NAU);
     return c => {
       const k = K2.cat(c.u, .5);
@@ -1584,7 +1612,7 @@ DANGKY({
 /* ---- k2c26 · câu 26 (4,7 s) · VIDEO Trái Đất quay thật + nét hãm ---- */
 DANGKY({
   id: "k2c26", steps: 0, say: [S[25]],
-  html: K2.vid("k2-traidat-quay.mp4", .34, { tu: 0, dai: 4.5, toc: .9,
+  html: K2.vid("k2-traidat-quay.mp4", .34, { tu: 0, dai: 4.3, toc: .9,
           loc: "contrast(1.12) saturate(1.1) brightness(.88)" }) +
         K2.ve(.82) + K2.toi(".86"),
   anim: root => {
@@ -1766,7 +1794,7 @@ DANGKY({
 /* ---- k2c30 · câu 30 (6,2 s) · CẮT CỨNG u=.42 — mặt đồng hồ 24 giờ co còn 5–6 ---- */
 DANGKY({
   id: "k2c30", steps: 0, say: [S[29]],
-  html: K2.id(K2.vid("k2-traidat-quay.mp4", .24, { tu: 0, dai: 4.5, toc: 1.6,
+  html: K2.id(K2.vid("k2-traidat-quay.mp4", .24, { tu: 0, dai: 4.3, toc: 1.6,
           loc: "contrast(1.08) saturate(1.0) brightness(.46)" }), "k2c30-V") +
         K2.ve(.8) + K2.toi(".9") +
         '<div class="hud">' +
@@ -2098,7 +2126,7 @@ DANGKY({
 /* ---- k2c35 · câu 35 (6,1 s) · VIDEO trăng trong mây — rồi trăng biến mất ---- */
 DANGKY({
   id: "k2c35", steps: 0, say: [S[34]],
-  html: K2.id(K2.vid("k2-nganha.mp4", .26, { tu: 0, dai: 4.6, toc: .34,
+  html: K2.id(K2.vid("k2-nganha.mp4", .26, { tu: 0, dai: 4.3, toc: .34,
           loc: "contrast(1.22) saturate(1.1) brightness(.82)" }), "k2c35-B") +
         K2.id(K2.vid("k2-trang-may.mp4", .3, { tu: .5, dai: 8.0, toc: .6,
           loc: "contrast(1.18) saturate(.92) brightness(.9)" }), "k2c35-A") +
@@ -2219,7 +2247,7 @@ DANGKY({
         K2.ve(.86) + K2.toi(".88") +
         '<div class="hud">' +
         K2.nguon("k2c38-ng1", "Joos de Momper · «Làng dưới trăng tròn» · phạm vi công cộng") +
-        '<div class="tx" id="k2c38-ng2" style="left:48px;right:auto;top:650px;' +
+        '<div class="tx" id="k2c38-ng2" style="left:48px;right:auto;top:646px;' +
           'font:400 13px/1.35 system-ui;color:#8CA6B8;text-shadow:0 1px 4px rgba(3,8,13,1)">' +
           'Cua còng trên bãi triều, vịnh Suncheon · lumoplank · CC0</div></div>',
   anim: root => {
@@ -2260,7 +2288,7 @@ DANGKY({
 /* ---- k2c39 · câu 39 (6,8 s) · CẮT CỨNG u=.5 — VIDEO bọ hung lăn phân thật ---- */
 DANGKY({
   id: "k2c39", steps: 0, say: [S[38]],
-  html: K2.id(K2.vid("k2-bohung.mp4", .4, { tu: 0, dai: 9.0, toc: .8,
+  html: K2.id(K2.vid("k2-bohung.mp4", .4, { tu: 0, dai: 8.7, toc: .8,
           loc: "contrast(1.18) saturate(.86) brightness(.58)" }), "k2c39-V") +
         K2.ve(.84) + K2.toi(".86") +
         '<div class="hud">' + K2.nguon("k2c39-ng",
@@ -2354,7 +2382,7 @@ DANGKY({
   id: "k2c41", steps: 0, say: [S[40]],
   html: K2.id(K2.anh("k2-bohung2.jpg", .44,
           "contrast(1.24) saturate(.74) brightness(.44)", "54% 50%"), "k2c41-A") +
-        K2.id(K2.vid("k2-nganha.mp4", .24, { tu: 0, dai: 4.6, toc: .4,
+        K2.id(K2.vid("k2-nganha.mp4", .24, { tu: 0, dai: 4.3, toc: .4,
           loc: "contrast(1.22) saturate(1.12) brightness(.8)" }), "k2c41-B") +
         K2.ve(.82) + K2.toi(".88") +
         '<div class="hud">' + K2.nguon("k2c41-ng",
@@ -2402,7 +2430,7 @@ DANGKY({
 /* ---- k2c42 · câu 42 (3,7 s) · VIDEO rạn Great Barrier thật ---- */
 DANGKY({
   id: "k2c42", steps: 0, say: [S[41]],
-  html: K2.vid("k2-ran-gbr.mp4", .34, { tu: 0, dai: 8.0, toc: .55,
+  html: K2.vid("k2-ran-gbr.mp4", .34, { tu: 0, dai: 7.8, toc: .55,
           loc: "contrast(1.1) saturate(1.1) brightness(.84)" }) +
         K2.ve(.84) + K2.toi(".82") +
         '<div class="hud">' + K2.nguon("k2c42-ng",
@@ -2449,7 +2477,7 @@ DANGKY({
         K2.ve(.86) + K2.toi(".86") +
         '<div class="hud">' +
         K2.nguon("k2c43-ng1", "Hardy Reef, rạn Great Barrier, 'ueensland · rheins · CC BY 3.0") +
-        '<div class="tx" id="k2c43-ng2" style="left:48px;right:auto;top:650px;' +
+        '<div class="tx" id="k2c43-ng2" style="left:48px;right:auto;top:646px;' +
           'font:400 13px/1.35 system-ui;color:#8CA6B8;text-shadow:0 1px 4px rgba(3,8,13,1)">' +
           'San hô nhả trứng — khu bảo tồn biển Flower Garden Banks, vịnh Mexico · NOAA · phạm vi công cộng</div></div>',
   anim: root => {
@@ -2491,7 +2519,7 @@ DANGKY({
 /* ---- k2c44 · câu 44 (3,4 s) · làm sao chúng biết hôm nay là ngày mấy? ---- */
 DANGKY({
   id: "k2c44", steps: 0, say: [S[43]],
-  html: K2.vid("k2-trang-quay.mp4", .3, { tu: 2.0, dai: 6.0, toc: .4,
+  html: K2.vid("k2-trang-quay.mp4", .3, { tu: 2.0, dai: 5.8, toc: .4,
           loc: "contrast(1.1) saturate(.86) brightness(.88)" }) +
         K2.ve(.86) + K2.toi(".9"),
   anim: root => {
@@ -2552,7 +2580,7 @@ DANGKY({
         K2.ve(.84) + K2.toi(".88") +
         '<div class="hud">' +
         K2.nguon("k2c45-ng1", "Cận cảnh polyp san hô sừng hươu · NOAA · phạm vi công cộng") +
-        '<div class="tx" id="k2c45-ng2" style="left:48px;right:auto;top:650px;' +
+        '<div class="tx" id="k2c45-ng2" style="left:48px;right:auto;top:646px;' +
           'font:400 13px/1.35 system-ui;color:#8CA6B8;text-shadow:0 1px 4px rgba(3,8,13,1)">' +
           'San hô phóng trứng, khu bảo tồn Flower Garden Banks · NOAA · phạm vi công cộng</div></div>',
   anim: root => {
@@ -2616,7 +2644,7 @@ DANGKY({
 /* ---- k2c46 · câu 46 (6,1 s) · CẮT CỨNG u=.46 · CHỮ 3/5 (0 từ) — nắng vs trăng rằm ---- */
 DANGKY({
   id: "k2c46", steps: 0, say: [S[45]],
-  html: K2.id(K2.vid("k2-trang-may.mp4", .3, { tu: 3.0, dai: 6.0, toc: .55,
+  html: K2.id(K2.vid("k2-trang-may.mp4", .3, { tu: 3.0, dai: 5.7, toc: .55,
           loc: "contrast(1.2) saturate(.94) brightness(.95)" }), "k2c46-A") +
         K2.id(K2.anh("k2-sanho-canh.jpg", .42,
           "contrast(1.12) saturate(1.14) brightness(.76)", "46% 54%"), "k2c46-B") +
@@ -2683,7 +2711,7 @@ DANGKY({
   id: "k2c47", steps: 0, say: [S[46]],
   /* clip đổi sang bản NOAA 1280×720 (xem k2c43). Cảnh này trước KHÔSan hô nhả trứng — khu bảo tồn biển Flower Garden Banks, vịnh Mexico · NOAA · phạm vi công cộng có dòng
      nguồn trên hình dù chiếu gần 5 giây clip thật — nay có, và nêu nơi quay. */
-  html: K2.vid("k2-sanho-de2.mp4", .38, { tu: 2.0, dai: 6.5, toc: .5,
+  html: K2.vid("k2-sanho-khoi.mp4", .38, { tu: .6, dai: 6.4, toc: .5,
           loc: "contrast(1.12) saturate(1.1) brightness(.8)" }) +
         K2.ve(.84) + K2.toi(".88") +
         '<div class="hud">' + K2.nguon("k2c47-ng", "San hô nhả trứng — khu bảo tồn biển Flower Garden Banks, vịnh Mexico · NOAA · phạm vi công cộng") + '</div>',
@@ -2746,7 +2774,7 @@ DANGKY({
   id: "k2c49", steps: 0, say: [S[48]],
   html: K2.id(K2.vid("k2-sanho-de2.mp4", .36, { tu: 1.0, dai: 7.6, toc: .4,
           loc: "contrast(1.12) saturate(1.0) brightness(.64)" }), "k2c49-A") +
-        K2.id(K2.vid("k2-ran-gbr.mp4", .34, { tu: 4.0, dai: 4.0, toc: .4,
+        K2.id(K2.vid("k2-ran-gbr.mp4", .34, { tu: 4.0, dai: 3.8, toc: .4,
           loc: "contrast(1.1) saturate(.42) brightness(.46)" }), "k2c49-B") +
         K2.ve(.82) + K2.toi(".92"),
   anim: root => {

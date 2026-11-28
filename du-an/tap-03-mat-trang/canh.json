@@ -1,6 +1,6 @@
 {
   "phien_ban": 1,
-  "tong_thoi_luong": 746.734,
+  "tong_thoi_luong": 754.294,
   "canh": [
     {
       "id": "k1c01",
@@ -671,14 +671,14 @@
       "idx": 32,
       "khoi": 1,
       "t0": 199.852,
-      "t1": 210.674,
+      "t1": 213.362,
       "buoc": 0,
       "muc": "Thứ thứ nhất: nước",
       "loi": [
         {
           "t0": 199.852,
-          "t1": 210.124,
-          "text": "Hạ biên độ triều xuống một phần ba thì cái thang nhiều tầng ấy co lại, và hàu, ốc, cua, rong, cùng mấy loài chim vẫn ra bãi mò ăn lúc nước rút, tất cả phải sắp xếp lại từ đầu."
+          "t1": 212.812,
+          "text": "Hạ biên độ triều, tức khoảng cách giữa lúc nước cao nhất và lúc thấp nhất, xuống còn một phần ba thì cái thang nhiều tầng ấy co lại, và hàu, ốc, cua, rong, cùng mấy loài chim vẫn ra bãi mò ăn lúc nước rút, tất cả phải sắp xếp lại từ đầu."
         }
       ],
       "anh": [
@@ -693,14 +693,14 @@
       "so": 34,
       "idx": 33,
       "khoi": 1,
-      "t0": 210.674,
-      "t1": 214.582,
+      "t0": 213.362,
+      "t1": 217.27,
       "buoc": 0,
       "muc": "Thứ thứ nhất: nước",
       "loi": [
         {
-          "t0": 210.674,
-          "t1": 214.322,
+          "t0": 213.362,
+          "t1": 217.01,
           "text": "Riêng ở nước mình thì con nước còn đi vào tận trong nhà."
         }
       ],
@@ -714,14 +714,14 @@
       "so": 35,
       "idx": 34,
       "khoi": 1,
-      "t0": 214.582,
-      "t1": 222.234,
+      "t0": 217.27,
+      "t1": 224.922,
       "buoc": 0,
       "muc": "Thứ thứ nhất: nước",
       "loi": [
         {
-          "t0": 214.582,
-          "t1": 221.974,
+          "t0": 217.27,
+          "t1": 224.662,
           "text": "Ở vịnh Bắc Bộ, Hòn Dấu là một trong những nơi có nhật triều đều điển hình bậc nhất thế giới, nghĩa là nước chỉ lên xuống đúng một lần mỗi ngày."
         }
       ],
@@ -735,15 +735,15 @@
       "so": 36,
       "idx": 35,
       "khoi": 1,
-      "t0": 222.234,
-      "t1": 227.99,
+      "t0": 224.922,
+      "t1": 232.742,
       "buoc": 0,
       "muc": "Thứ thứ nhất: nước",
       "loi": [
         {
-          "t0": 222.234,
-          "t1": 227.73,
-          "text": "Còn dưới đồng bằng sông Cửu Long, triều phía Biển Đông là bán nhật triều, biên độ chừng ba mét."
+          "t0": 224.922,
+          "t1": 232.482,
+          "text": "Còn dưới đồng bằng sông Cửu Long, triều phía Biển Đông là bán nhật triều, nghĩa là mỗi ngày nước lên xuống hai lần, với biên độ chừng ba mét."
         }
       ],
       "anh": [
@@ -756,14 +756,14 @@
       "so": 37,
       "idx": 36,
       "khoi": 1,
-      "t0": 227.99,
-      "t1": 234.876,
+      "t0": 232.742,
+      "t1": 239.628,
       "buoc": 0,
       "muc": "Thứ thứ nhất: nước",
       "loi": [
         {
-          "t0": 227.99,
-          "t1": 234.326,
+          "t0": 232.742,
+          "t1": 239.078,
           "text": "Chính nó là cái bơm đẩy mặn ngược vào sông, khiến ranh mặn mấy năm gần đây thường vào sâu bốn mươi tới sáu mươi cây số."
         }
       ],
@@ -778,14 +778,14 @@
       "so": 38,
       "idx": 37,
       "khoi": 1,
-      "t0": 234.876,
-      "t1": 240.272,
+      "t0": 239.628,
+      "t1": 245.024,
       "buoc": 0,
       "muc": "Thứ thứ nhất: nước",
       "loi": [
         {
-          "t0": 234.876,
-          "t1": 240.012,
+          "t0": 239.628,
+          "t1": 244.764,
           "text": "Nghe vậy thì nhiều người sẽ nghĩ mất triều là hết mặn, mà hết mặn thì mừng quá còn gì."
         }
       ],
@@ -799,14 +799,14 @@
       "so": 39,
       "idx": 38,
       "khoi": 1,
-      "t0": 240.272,
-      "t1": 242.884,
+      "t0": 245.024,
+      "t1": 247.636,
       "buoc": 0,
       "muc": "Thứ thứ nhất: nước",
       "loi": [
         {
-          "t0": 240.272,
-          "t1": 242.624,
+          "t0": 245.024,
+          "t1": 247.376,
           "text": "Cơ mà không đơn giản thế."
         }
       ],
@@ -820,14 +820,14 @@
       "so": 40,
       "idx": 39,
       "khoi": 1,
-      "t0": 242.884,
-      "t1": 249.312,
+      "t0": 247.636,
+      "t1": 254.064,
       "buoc": 0,
       "muc": "Thứ thứ nhất: nước",
       "loi": [
         {
-          "t0": 242.884,
-          "t1": 249.052,
+          "t0": 247.636,
+          "t1": 253.804,
           "text": "Chính con nước ấy mỗi ngày đẩy nước vào ruộng, vào vuông tôm, rửa phèn cho đất và đưa cá vào tận nơi."
         }
       ],
@@ -842,14 +842,14 @@
       "so": 41,
       "idx": 40,
       "khoi": 1,
-      "t0": 249.312,
-      "t1": 257.768,
+      "t0": 254.064,
+      "t1": 262.52,
       "buoc": 0,
       "muc": "Thứ thứ nhất: nước",
       "loi": [
         {
-          "t0": 249.312,
-          "t1": 256.368,
+          "t0": 254.064,
+          "t1": 261.12,
           "text": "Cho nên đổi biên độ triều ở một vùng có tới khoảng một triệu héc-ta chịu ngập triều thì cũng là viết lại cả cuốn sổ tay canh tác của miền Tây."
         }
       ],
@@ -863,14 +863,14 @@
       "so": 42,
       "idx": 41,
       "khoi": 2,
-      "t0": 257.768,
-      "t1": 259.9,
+      "t0": 262.52,
+      "t1": 264.652,
       "buoc": 0,
       "muc": "Vì sao Mặt Trời to thế mà kéo yếu hơn",
       "loi": [
         {
-          "t0": 257.768,
-          "t1": 259.64,
+          "t0": 262.52,
+          "t1": 264.392,
           "text": ">> Khoan đã."
         }
       ],
@@ -884,14 +884,14 @@
       "so": 43,
       "idx": 42,
       "khoi": 2,
-      "t0": 259.9,
-      "t1": 263.784,
+      "t0": 264.652,
+      "t1": 268.536,
       "buoc": 0,
       "muc": "Vì sao Mặt Trời to thế mà kéo yếu hơn",
       "loi": [
         {
-          "t0": 259.9,
-          "t1": 263.524,
+          "t0": 264.652,
+          "t1": 268.276,
           "text": "Mặt Trời nặng gấp bao nhiêu lần Mặt Trăng mà kéo yếu hơn?"
         }
       ],
@@ -906,14 +906,14 @@
       "so": 44,
       "idx": 43,
       "khoi": 2,
-      "t0": 263.784,
-      "t1": 266.206,
+      "t0": 268.536,
+      "t1": 270.958,
       "buoc": 0,
       "muc": "Vì sao Mặt Trời to thế mà kéo yếu hơn",
       "loi": [
         {
-          "t0": 263.784,
-          "t1": 265.656,
+          "t0": 268.536,
+          "t1": 270.408,
           "text": "Vô lý."
         }
       ],
@@ -927,14 +927,14 @@
       "so": 45,
       "idx": 44,
       "khoi": 2,
-      "t0": 266.206,
-      "t1": 270.02,
+      "t0": 270.958,
+      "t1": 274.772,
       "buoc": 0,
       "muc": "Vì sao Mặt Trời to thế mà kéo yếu hơn",
       "loi": [
         {
-          "t0": 266.206,
-          "t1": 269.47,
+          "t0": 270.958,
+          "t1": 274.222,
           "text": "Thôi bạn ơi, thế là bạn lại không biết rồi."
         }
       ],
@@ -948,14 +948,14 @@
       "so": 46,
       "idx": 45,
       "khoi": 2,
-      "t0": 270.02,
-      "t1": 274.6,
+      "t0": 274.772,
+      "t1": 279.352,
       "buoc": 0,
       "muc": "Vì sao Mặt Trời to thế mà kéo yếu hơn",
       "loi": [
         {
-          "t0": 270.02,
-          "t1": 274.34,
+          "t0": 274.772,
+          "t1": 279.092,
           "text": "Mặt Trời nặng hơn Mặt Trăng khoảng hai mươi bảy triệu lần, chuyện đó thì đúng."
         }
       ],
@@ -969,15 +969,15 @@
       "so": 47,
       "idx": 46,
       "khoi": 2,
-      "t0": 274.6,
-      "t1": 279.468,
+      "t0": 279.352,
+      "t1": 284.964,
       "buoc": 0,
       "muc": "Vì sao Mặt Trời to thế mà kéo yếu hơn",
       "loi": [
         {
-          "t0": 274.6,
-          "t1": 279.208,
-          "text": "Có điều thuỷ triều không sinh ra từ sức hút, mà từ cái hiệu giữa hai đầu."
+          "t0": 279.352,
+          "t1": 284.704,
+          "text": "Có điều thuỷ triều không sinh ra từ sức hút, mà từ chênh lệch sức hút giữa hai phía của Trái Đất."
         }
       ],
       "anh": [],
@@ -988,14 +988,14 @@
       "so": 48,
       "idx": 47,
       "khoi": 2,
-      "t0": 279.468,
-      "t1": 286.21,
+      "t0": 284.964,
+      "t1": 291.706,
       "buoc": 0,
       "muc": "Vì sao Mặt Trời to thế mà kéo yếu hơn",
       "loi": [
         {
-          "t0": 279.468,
-          "t1": 285.66,
+          "t0": 284.964,
+          "t1": 291.156,
           "text": "Nửa Trái Đất hướng về phía nó bị kéo mạnh hơn nửa bên kia một chút, và chính cái một chút ấy làm nước phồng lên."
         }
       ],
@@ -1010,14 +1010,14 @@
       "so": 49,
       "idx": 48,
       "khoi": 2,
-      "t0": 286.21,
-      "t1": 289.758,
+      "t0": 291.706,
+      "t1": 295.254,
       "buoc": 0,
       "muc": "Vì sao Mặt Trời to thế mà kéo yếu hơn",
       "loi": [
         {
-          "t0": 286.21,
-          "t1": 289.498,
+          "t0": 291.706,
+          "t1": 294.994,
           "text": "Trong vật lý thì có dăm bảy kiểu xa khác nhau."
         }
       ],
@@ -1031,14 +1031,14 @@
       "so": 50,
       "idx": 49,
       "khoi": 2,
-      "t0": 289.758,
-      "t1": 296.21,
+      "t0": 295.254,
+      "t1": 301.706,
       "buoc": 0,
       "muc": "Vì sao Mặt Trời to thế mà kéo yếu hơn",
       "loi": [
         {
-          "t0": 289.758,
-          "t1": 295.95,
+          "t0": 295.254,
+          "t1": 301.446,
           "text": "Xa kiểu lực hút thì chia hai lần cho khoảng cách, nghĩa là xa gấp đôi là yếu đi bốn lần, ánh sáng cũng vậy."
         }
       ],
@@ -1052,20 +1052,18 @@
       "so": 51,
       "idx": 50,
       "khoi": 2,
-      "t0": 296.21,
-      "t1": 303.048,
+      "t0": 301.706,
+      "t1": 308.544,
       "buoc": 0,
       "muc": "Vì sao Mặt Trời to thế mà kéo yếu hơn",
       "loi": [
         {
-          "t0": 296.21,
-          "t1": 302.498,
+          "t0": 301.706,
+          "t1": 307.994,
           "text": "Nhưng xa kiểu thuỷ triều thì khắc nghiệt hơn hẳn, vì nó chia tới ba lần, xa gấp đôi là yếu đi tám lần."
         }
       ],
-      "anh": [
-        "video/k2-nganha.mp4"
-      ],
+      "anh": [],
       "thumb": "thumb/k2c10.jpg"
     },
     {
@@ -1073,14 +1071,14 @@
       "so": 52,
       "idx": 51,
       "khoi": 2,
-      "t0": 303.048,
-      "t1": 307.076,
+      "t0": 308.544,
+      "t1": 312.572,
       "buoc": 0,
       "muc": "Vì sao Mặt Trời to thế mà kéo yếu hơn",
       "loi": [
         {
-          "t0": 303.048,
-          "t1": 306.816,
+          "t0": 308.544,
+          "t1": 312.312,
           "text": "Mà Mặt Trời thì ở xa hơn Mặt Trăng khoảng ba trăm chín mươi lần."
         }
       ],
@@ -1092,14 +1090,14 @@
       "so": 53,
       "idx": 52,
       "khoi": 2,
-      "t0": 307.076,
-      "t1": 313.216,
+      "t0": 312.572,
+      "t1": 318.712,
       "buoc": 0,
       "muc": "Vì sao Mặt Trời to thế mà kéo yếu hơn",
       "loi": [
         {
-          "t0": 307.076,
-          "t1": 312.956,
+          "t0": 312.572,
+          "t1": 318.452,
           "text": "Lấy ba trăm chín mươi nhân với ba trăm chín mươi rồi nhân ba trăm chín mươi lần nữa, ta được gần sáu mươi triệu."
         }
       ],
@@ -1111,14 +1109,14 @@
       "so": 54,
       "idx": 53,
       "khoi": 2,
-      "t0": 313.216,
-      "t1": 322.164,
+      "t0": 318.712,
+      "t1": 327.66,
       "buoc": 0,
       "muc": "Vì sao Mặt Trời to thế mà kéo yếu hơn",
       "loi": [
         {
-          "t0": 313.216,
-          "t1": 321.904,
+          "t0": 318.712,
+          "t1": 327.4,
           "text": "Đem hai mươi bảy triệu chia cho sáu mươi triệu thì còn khoảng không phẩy bốn năm, nghĩa là lực triều Mặt Trời chưa bằng một nửa Mặt Trăng, khớp đúng tỉ lệ hai phẩy hai lần ở trên."
         }
       ],
@@ -1130,14 +1128,14 @@
       "so": 55,
       "idx": 54,
       "khoi": 2,
-      "t0": 322.164,
-      "t1": 324.32,
+      "t0": 327.66,
+      "t1": 329.816,
       "buoc": 0,
       "muc": "Vì sao Mặt Trời to thế mà kéo yếu hơn",
       "loi": [
         {
-          "t0": 322.164,
-          "t1": 324.06,
+          "t0": 327.66,
+          "t1": 329.556,
           "text": "Thế là hết chuyện:"
         }
       ],
@@ -1151,14 +1149,14 @@
       "so": 56,
       "idx": 55,
       "khoi": 2,
-      "t0": 324.32,
-      "t1": 329.512,
+      "t0": 329.816,
+      "t1": 335.008,
       "buoc": 0,
       "muc": "Vì sao Mặt Trời to thế mà kéo yếu hơn",
       "loi": [
         {
-          "t0": 324.32,
-          "t1": 328.112,
+          "t0": 329.816,
+          "t1": 333.608,
           "text": "Mặt Trăng thắng không nhờ to xác, mà nhờ nó ngồi gần."
         }
       ],
@@ -1170,14 +1168,14 @@
       "so": 57,
       "idx": 56,
       "khoi": 2,
-      "t0": 329.512,
-      "t1": 333.374,
+      "t0": 335.008,
+      "t1": 338.87,
       "buoc": 0,
       "muc": "Thứ thứ hai: cái trục và cái ngày",
       "loi": [
         {
-          "t0": 329.512,
-          "t1": 332.824,
+          "t0": 335.008,
+          "t1": 338.32,
           "text": "Nhưng nước mới chỉ là chỗ dễ nhìn thấy nhất thôi."
         }
       ],
@@ -1191,14 +1189,14 @@
       "so": 58,
       "idx": 57,
       "khoi": 2,
-      "t0": 333.374,
-      "t1": 339.97,
+      "t0": 338.87,
+      "t1": 345.466,
       "buoc": 0,
       "muc": "Thứ thứ hai: cái trục và cái ngày",
       "loi": [
         {
-          "t0": 333.374,
-          "t1": 339.71,
+          "t0": 338.87,
+          "t1": 345.206,
           "text": "Trái Đất đang nghiêng hai mươi ba phẩy bốn độ, và chính cái nghiêng đó cho ta bốn mùa, cho mùa gặt và mùa gió."
         }
       ],
@@ -1212,14 +1210,14 @@
       "so": 59,
       "idx": 58,
       "khoi": 2,
-      "t0": 339.97,
-      "t1": 347.406,
+      "t0": 345.466,
+      "t1": 352.902,
       "buoc": 0,
       "muc": "Thứ thứ hai: cái trục và cái ngày",
       "loi": [
         {
-          "t0": 339.97,
-          "t1": 347.146,
+          "t0": 345.466,
+          "t1": 352.642,
           "text": "Năm một nghìn chín trăm chín mươi ba, nhà thiên văn người Pháp Jacques Laskar cùng đồng nghiệp đăng trên tạp chí Nature một mô phỏng khiến cả giới giật mình."
         }
       ],
@@ -1233,14 +1231,14 @@
       "so": 60,
       "idx": 59,
       "khoi": 2,
-      "t0": 347.406,
-      "t1": 353.258,
+      "t0": 352.902,
+      "t1": 358.754,
       "buoc": 0,
       "muc": "Thứ thứ hai: cái trục và cái ngày",
       "loi": [
         {
-          "t0": 347.406,
-          "t1": 352.998,
+          "t0": 352.902,
+          "t1": 358.494,
           "text": "Không có Mặt Trăng ghìm lại, cái trục ấy có thể lắc hỗn loạn trong khoảng từ không đến tám mươi lăm độ."
         }
       ],
@@ -1252,14 +1250,14 @@
       "so": 61,
       "idx": 60,
       "khoi": 2,
-      "t0": 353.258,
-      "t1": 364.152,
+      "t0": 358.754,
+      "t1": 369.648,
       "buoc": 0,
       "muc": "Thứ thứ hai: cái trục và cái ngày",
       "loi": [
         {
-          "t0": 353.258,
-          "t1": 363.602,
+          "t0": 358.754,
+          "t1": 369.098,
           "text": "Nghiêng tới tám mươi lăm độ thì trục gần như nằm ngang, nên mỗi năm sẽ có vài tháng cả một vùng cực phơi hẳn ra Mặt Trời, rồi vài tháng chìm hẳn trong bóng tối, và mùa màng theo nghĩa ta đang hiểu sẽ không còn."
         }
       ],
@@ -1273,14 +1271,14 @@
       "so": 62,
       "idx": 61,
       "khoi": 2,
-      "t0": 364.152,
-      "t1": 370.34,
+      "t0": 369.648,
+      "t1": 375.836,
       "buoc": 0,
       "muc": "Thứ thứ hai: cái trục và cái ngày",
       "loi": [
         {
-          "t0": 364.152,
-          "t1": 370.08,
+          "t0": 369.648,
+          "t1": 375.576,
           "text": "Chỉ có điều, và đây là chỗ rất nhiều video bỏ qua, con số ấy về sau đã bị phản biện."
         }
       ],
@@ -1292,14 +1290,14 @@
       "so": 63,
       "idx": 62,
       "khoi": 2,
-      "t0": 370.34,
-      "t1": 376.888,
+      "t0": 375.836,
+      "t1": 382.384,
       "buoc": 0,
       "muc": "Thứ thứ hai: cái trục và cái ngày",
       "loi": [
         {
-          "t0": 370.34,
-          "t1": 376.628,
+          "t0": 375.836,
+          "t1": 382.124,
           "text": "Năm hai nghìn không trăm mười hai, nhóm của Jack Lissauer ở NASA chạy lại bài toán với nhiều điều kiện ban đầu hơn."
         }
       ],
@@ -1311,14 +1309,14 @@
       "so": 64,
       "idx": 63,
       "khoi": 2,
-      "t0": 376.888,
-      "t1": 384.516,
+      "t0": 382.384,
+      "t1": 390.012,
       "buoc": 0,
       "muc": "Thứ thứ hai: cái trục và cái ngày",
       "loi": [
         {
-          "t0": 376.888,
-          "t1": 384.256,
+          "t0": 382.384,
+          "t1": 389.752,
           "text": "Kết quả họ công bố trên tạp chí Icarus bình tĩnh hơn hẳn: trục của một Trái Đất không Mặt Trăng chủ yếu dao động trong khoảng mười đến năm mươi độ."
         }
       ],
@@ -1330,14 +1328,14 @@
       "so": 65,
       "idx": 64,
       "khoi": 2,
-      "t0": 384.516,
-      "t1": 390.896,
+      "t0": 390.012,
+      "t1": 396.392,
       "buoc": 0,
       "muc": "Thứ thứ hai: cái trục và cái ngày",
       "loi": [
         {
-          "t0": 384.516,
-          "t1": 390.636,
+          "t0": 390.012,
+          "t1": 396.132,
           "text": "Vẫn loạn hơn hai mươi ba phẩy bốn độ rất nhiều, nhưng không còn là cảnh hành tinh lộn nhào như người ta hay kể."
         }
       ],
@@ -1349,14 +1347,14 @@
       "so": 66,
       "idx": 65,
       "khoi": 2,
-      "t0": 390.896,
-      "t1": 395.334,
+      "t0": 396.392,
+      "t1": 400.83,
       "buoc": 0,
       "muc": "Thứ thứ hai: cái trục và cái ngày",
       "loi": [
         {
-          "t0": 390.896,
-          "t1": 394.784,
+          "t0": 396.392,
+          "t1": 400.28,
           "text": "Tôi nêu cả hai, vì đây là cuộc tranh luận chưa ngã ngũ."
         }
       ],
@@ -1368,14 +1366,14 @@
       "so": 67,
       "idx": 66,
       "khoi": 2,
-      "t0": 395.334,
-      "t1": 400.034,
+      "t0": 400.83,
+      "t1": 405.53,
       "buoc": 0,
       "muc": "Thứ thứ hai: cái trục và cái ngày",
       "loi": [
         {
-          "t0": 395.334,
-          "t1": 399.774,
+          "t0": 400.83,
+          "t1": 405.27,
           "text": "Rồi còn chuyện độ dài một ngày, mà ở đây Mặt Trăng đóng vai cái phanh."
         }
       ],
@@ -1389,14 +1387,14 @@
       "so": 68,
       "idx": 67,
       "khoi": 2,
-      "t0": 400.034,
-      "t1": 405.574,
+      "t0": 405.53,
+      "t1": 411.07,
       "buoc": 0,
       "muc": "Thứ thứ hai: cái trục và cái ngày",
       "loi": [
         {
-          "t0": 400.034,
-          "t1": 405.314,
+          "t0": 405.53,
+          "t1": 410.81,
           "text": "Ngay chỗ nó kéo nước phồng lên cũng là chỗ khối nước ấy cọ vào Trái Đất và hãm bớt vòng quay."
         }
       ],
@@ -1408,14 +1406,14 @@
       "so": 69,
       "idx": 68,
       "khoi": 2,
-      "t0": 405.574,
-      "t1": 411.306,
+      "t0": 411.07,
+      "t1": 416.802,
       "buoc": 0,
       "muc": "Thứ thứ hai: cái trục và cái ngày",
       "loi": [
         {
-          "t0": 405.574,
-          "t1": 411.046,
+          "t0": 411.07,
+          "t1": 416.542,
           "text": "Còn cái giá phải trả cho việc hãm đó là ba phẩy tám cm Mặt Trăng bị đẩy ra xa mỗi năm."
         }
       ],
@@ -1429,14 +1427,14 @@
       "so": 70,
       "idx": 69,
       "khoi": 2,
-      "t0": 411.306,
-      "t1": 414.95,
+      "t0": 416.802,
+      "t1": 420.446,
       "buoc": 0,
       "muc": "Thứ thứ hai: cái trục và cái ngày",
       "loi": [
         {
-          "t0": 411.306,
-          "t1": 414.69,
+          "t0": 416.802,
+          "t1": 420.186,
           "text": "Hai chuyện tưởng như rời nhau ấy thật ra chỉ là một."
         }
       ],
@@ -1448,14 +1446,14 @@
       "so": 71,
       "idx": 70,
       "khoi": 2,
-      "t0": 414.95,
-      "t1": 421.116,
+      "t0": 420.446,
+      "t1": 426.612,
       "buoc": 0,
       "muc": "Thứ thứ hai: cái trục và cái ngày",
       "loi": [
         {
-          "t0": 414.95,
-          "t1": 420.566,
+          "t0": 420.446,
+          "t1": 426.062,
           "text": "Theo các mô hình về thời Trái Đất mới có Mặt Trăng, một ngày khi đó chỉ dài chừng năm đến sáu tiếng."
         }
       ],
@@ -1469,14 +1467,14 @@
       "so": 72,
       "idx": 71,
       "khoi": 2,
-      "t0": 421.116,
-      "t1": 425.576,
+      "t0": 426.612,
+      "t1": 431.072,
       "buoc": 0,
       "muc": "Thứ thứ hai: cái trục và cái ngày",
       "loi": [
         {
-          "t0": 421.116,
-          "t1": 425.316,
+          "t0": 426.612,
+          "t1": 430.812,
           "text": "Thế nếu chưa từng có Mặt Trăng, thì hôm nay một ngày dài bao nhiêu?"
         }
       ],
@@ -1490,14 +1488,14 @@
       "so": 73,
       "idx": 72,
       "khoi": 2,
-      "t0": 425.576,
-      "t1": 434.308,
+      "t0": 431.072,
+      "t1": 439.804,
       "buoc": 0,
       "muc": "Thứ thứ hai: cái trục và cái ngày",
       "loi": [
         {
-          "t0": 425.576,
-          "t1": 434.048,
+          "t0": 431.072,
+          "t1": 439.544,
           "text": "Trên mạng đang lan một con số rất phổ biến là sáu đến tám tiếng, nhưng tôi đi tìm gốc của nó mà không thấy nghiên cứu nào đứng ra chịu trách nhiệm, nên tôi không dùng."
         }
       ],
@@ -1509,14 +1507,14 @@
       "so": 74,
       "idx": 73,
       "khoi": 2,
-      "t0": 434.308,
-      "t1": 443.316,
+      "t0": 439.804,
+      "t1": 448.812,
       "buoc": 0,
       "muc": "Thứ thứ hai: cái trục và cái ngày",
       "loi": [
         {
-          "t0": 434.308,
-          "t1": 441.916,
+          "t0": 439.804,
+          "t1": 447.412,
           "text": "Nói chắc được thì chỉ chừng này: không có Mặt Trăng thì Trái Đất quay nhanh hơn, gió mạnh hơn, và hai chữ \"một ngày\" mang nghĩa khác hẳn."
         }
       ],
@@ -1530,14 +1528,14 @@
       "so": 75,
       "idx": 74,
       "khoi": 2,
-      "t0": 443.316,
-      "t1": 452.024,
+      "t0": 448.812,
+      "t1": 457.52,
       "buoc": 0,
       "muc": "Từ đây trở đi là phần giả định",
       "loi": [
         {
-          "t0": 443.316,
-          "t1": 451.764,
+          "t0": 448.812,
+          "t1": 457.26,
           "text": "Tiếp theo đây tôi sẽ bước sang phần suy đoán, và trong suốt phần đó tôi vẫn luôn phân biệt rõ con số nào đã có người đo được, con số nào là do tôi tự rút ra."
         }
       ],
@@ -1551,14 +1549,14 @@
       "so": 76,
       "idx": 75,
       "khoi": 2,
-      "t0": 452.024,
-      "t1": 458.152,
+      "t0": 457.52,
+      "t1": 463.648,
       "buoc": 0,
       "muc": "Từ đây trở đi là phần giả định",
       "loi": [
         {
-          "t0": 452.024,
-          "t1": 456.752,
+          "t0": 457.52,
+          "t1": 462.248,
           "text": "Vậy ta cùng giả sử rằng đêm mai mình ngẩng đầu lên, và trên trời trống không."
         }
       ],
@@ -1573,14 +1571,14 @@
       "so": 77,
       "idx": 76,
       "khoi": 2,
-      "t0": 458.152,
-      "t1": 462.686,
+      "t0": 463.648,
+      "t1": 468.182,
       "buoc": 0,
       "muc": "Mắt xích thứ nhất: cái đêm",
       "loi": [
         {
-          "t0": 458.152,
-          "t1": 462.136,
+          "t0": 463.648,
+          "t1": 467.632,
           "text": "Hoá ra ánh sáng mới là cái đổ trước, nước còn đổ sau."
         }
       ],
@@ -1594,14 +1592,14 @@
       "so": 78,
       "idx": 77,
       "khoi": 2,
-      "t0": 462.686,
-      "t1": 466.258,
+      "t0": 468.182,
+      "t1": 471.754,
       "buoc": 0,
       "muc": "Mắt xích thứ nhất: cái đêm",
       "loi": [
         {
-          "t0": 462.686,
-          "t1": 465.998,
+          "t0": 468.182,
+          "t1": 471.494,
           "text": "Một đêm rằm sáng hơn đêm không trăng rất nhiều lần."
         }
       ],
@@ -1616,14 +1614,14 @@
       "so": 79,
       "idx": 78,
       "khoi": 2,
-      "t0": 466.258,
-      "t1": 473.048,
+      "t0": 471.754,
+      "t1": 478.544,
       "buoc": 0,
       "muc": "Mắt xích thứ nhất: cái đêm",
       "loi": [
         {
-          "t0": 466.258,
-          "t1": 472.498,
+          "t0": 471.754,
+          "t1": 477.994,
           "text": "Với chúng ta thì đó là chuyện của thơ ca, nhưng với nhiều loài vật, đó là cái đồng hồ duy nhất chúng có."
         }
       ],
@@ -1638,14 +1636,14 @@
       "so": 80,
       "idx": 79,
       "khoi": 2,
-      "t0": 473.048,
-      "t1": 479.86,
+      "t0": 478.544,
+      "t1": 485.356,
       "buoc": 0,
       "muc": "Mắt xích thứ nhất: cái đêm",
       "loi": [
         {
-          "t0": 473.048,
-          "t1": 479.6,
+          "t0": 478.544,
+          "t1": 485.096,
           "text": "Theo một nghiên cứu đăng trên Nature năm hai nghìn không trăm linh ba, loài bọ hung ở Nam Phi lăn phân về tổ theo đường thẳng."
         }
       ],
@@ -1659,15 +1657,15 @@
       "so": 81,
       "idx": 80,
       "khoi": 2,
-      "t0": 479.86,
-      "t1": 486.096,
+      "t0": 485.356,
+      "t1": 493.608,
       "buoc": 0,
       "muc": "Mắt xích thứ nhất: cái đêm",
       "loi": [
         {
-          "t0": 479.86,
-          "t1": 485.836,
-          "text": "Chúng giữ được đường thẳng ấy bằng cách đọc ánh trăng phân cực, một tín hiệu yếu hơn ánh nắng phân cực cả triệu lần."
+          "t0": 485.356,
+          "t1": 493.348,
+          "text": "Chúng giữ được đường thẳng ấy bằng cách đọc ánh trăng phân cực, tức thứ ánh sáng rung theo một hướng nhất định, một tín hiệu yếu hơn ánh nắng phân cực cả triệu lần."
         }
       ],
       "anh": [
@@ -1681,14 +1679,14 @@
       "so": 82,
       "idx": 81,
       "khoi": 2,
-      "t0": 486.096,
-      "t1": 494.446,
+      "t0": 493.608,
+      "t1": 501.958,
       "buoc": 0,
       "muc": "Mắt xích thứ nhất: cái đêm",
       "loi": [
         {
-          "t0": 486.096,
-          "t1": 493.896,
+          "t0": 493.608,
+          "t1": 501.408,
           "text": "Vào những đêm không trăng, một loài bọ hung khác còn biết chuyển sang định hướng theo dải Ngân Hà, nghĩa là mất trăng thì ít ra chúng vẫn còn phương án hai."
         }
       ],
@@ -1703,14 +1701,14 @@
       "so": 83,
       "idx": 82,
       "khoi": 2,
-      "t0": 494.446,
-      "t1": 498.162,
+      "t0": 501.958,
+      "t1": 505.674,
       "buoc": 0,
       "muc": "Mắt xích thứ nhất: cái đêm",
       "loi": [
         {
-          "t0": 494.446,
-          "t1": 497.902,
+          "t0": 501.958,
+          "t1": 505.414,
           "text": "Nhưng loài đáng kể nhất thì chẳng có phương án nào khác."
         }
       ],
@@ -1724,14 +1722,14 @@
       "so": 84,
       "idx": 83,
       "khoi": 2,
-      "t0": 498.162,
-      "t1": 507.086,
+      "t0": 505.674,
+      "t1": 514.598,
       "buoc": 0,
       "muc": "Mắt xích thứ nhất: cái đêm",
       "loi": [
         {
-          "t0": 498.162,
-          "t1": 506.826,
+          "t0": 505.674,
+          "t1": 514.338,
           "text": "Ngoài khơi nước Úc, ở rạn Great Barrier, san hô không đẻ lẻ tẻ từng con mà đẻ đồng loạt cả rạn cùng một lúc, vào mấy đêm ngay sau rằm, mỗi năm một lần."
         }
       ],
@@ -1746,14 +1744,14 @@
       "so": 85,
       "idx": 84,
       "khoi": 2,
-      "t0": 507.086,
-      "t1": 510.466,
+      "t0": 514.598,
+      "t1": 517.978,
       "buoc": 0,
       "muc": "Mắt xích thứ nhất: cái đêm",
       "loi": [
         {
-          "t0": 507.086,
-          "t1": 510.206,
+          "t0": 514.598,
+          "t1": 517.718,
           "text": "Vậy làm sao chúng biết hôm nay là ngày mấy?"
         }
       ],
@@ -1767,15 +1765,15 @@
       "so": 86,
       "idx": 85,
       "khoi": 2,
-      "t0": 510.466,
-      "t1": 518.79,
+      "t0": 517.978,
+      "t1": 526.35,
       "buoc": 0,
       "muc": "Mắt xích thứ nhất: cái đêm",
       "loi": [
         {
-          "t0": 510.466,
-          "t1": 518.53,
-          "text": "Một nghiên cứu công bố năm hai nghìn không trăm linh bảy đã tìm ra trong san hô một thụ thể ánh sáng tên là cryptochrome, nó mở ra khi gặp ánh sáng xanh."
+          "t0": 517.978,
+          "t1": 526.09,
+          "text": "Một nghiên cứu công bố năm hai nghìn không trăm linh bảy đã tìm ra trong san hô một cảm biến ánh sáng tên là cryptochrome, nó mở ra khi gặp ánh sáng xanh."
         }
       ],
       "anh": [
@@ -1789,14 +1787,14 @@
       "so": 87,
       "idx": 86,
       "khoi": 2,
-      "t0": 518.79,
-      "t1": 524.884,
+      "t0": 526.35,
+      "t1": 532.444,
       "buoc": 0,
       "muc": "Mắt xích thứ nhất: cái đêm",
       "loi": [
         {
-          "t0": 518.79,
-          "t1": 524.334,
+          "t0": 526.35,
+          "t1": 531.894,
           "text": "Và ánh trăng tròn, dù chỉ sáng bằng một phần rất nhỏ ánh nắng, vẫn đủ để mở được nó."
         }
       ],
@@ -1811,19 +1809,19 @@
       "so": 88,
       "idx": 87,
       "khoi": 2,
-      "t0": 524.884,
-      "t1": 529.8,
+      "t0": 532.444,
+      "t1": 537.36,
       "buoc": 0,
       "muc": "Mắt xích thứ nhất: cái đêm",
       "loi": [
         {
-          "t0": 524.884,
-          "t1": 529.54,
+          "t0": 532.444,
+          "t1": 537.1,
           "text": "Còn lý do chúng buộc phải đẻ cùng một đêm thì nằm ở chỗ san hô không đi lại được."
         }
       ],
       "anh": [
-        "video/k2-sanho-de2.mp4"
+        "video/k2-sanho-khoi.mp4"
       ],
       "thumb": "thumb/k2c47.jpg"
     },
@@ -1832,14 +1830,14 @@
       "so": 89,
       "idx": 88,
       "khoi": 2,
-      "t0": 529.8,
-      "t1": 535.412,
+      "t0": 537.36,
+      "t1": 542.972,
       "buoc": 0,
       "muc": "Mắt xích thứ nhất: cái đêm",
       "loi": [
         {
-          "t0": 529.8,
-          "t1": 535.152,
+          "t0": 537.36,
+          "t1": 542.712,
           "text": "Trứng và tinh trùng chỉ có cơ hội gặp nhau nếu cả rạn cùng thả ra một lúc, trong cùng vùng nước."
         }
       ],
@@ -1853,14 +1851,14 @@
       "so": 90,
       "idx": 89,
       "khoi": 2,
-      "t0": 535.412,
-      "t1": 542.788,
+      "t0": 542.972,
+      "t1": 550.348,
       "buoc": 0,
       "muc": "Mắt xích thứ nhất: cái đêm",
       "loi": [
         {
-          "t0": 535.412,
-          "t1": 541.388,
+          "t0": 542.972,
+          "t1": 548.948,
           "text": "Lệch nhau vài đêm thì kết quả không phải là đẻ ít đi, mà là cả rạn gần như không có nổi một con non."
         }
       ],
@@ -1875,14 +1873,14 @@
       "so": 91,
       "idx": 90,
       "khoi": 3,
-      "t0": 542.788,
-      "t1": 548.018,
+      "t0": 550.348,
+      "t1": 555.578,
       "buoc": 0,
       "muc": "Mắt xích thứ hai: cái lịch và cái bóng",
       "loi": [
         {
-          "t0": 542.788,
-          "t1": 547.468,
+          "t0": 550.348,
+          "t1": 555.028,
           "text": "Hệ quả vẫn chưa dừng ở ngoài biển, vì nó leo được lên tới chỗ con người."
         }
       ],
@@ -1896,14 +1894,14 @@
       "so": 92,
       "idx": 91,
       "khoi": 3,
-      "t0": 548.018,
-      "t1": 551.926,
+      "t0": 555.578,
+      "t1": 559.486,
       "buoc": 0,
       "muc": "Mắt xích thứ hai: cái lịch và cái bóng",
       "loi": [
         {
-          "t0": 548.018,
-          "t1": 551.666,
+          "t0": 555.578,
+          "t1": 559.226,
           "text": "Bạn thử lấy Mặt Trăng ra khỏi tờ lịch Việt Nam mà xem."
         }
       ],
@@ -1917,14 +1915,14 @@
       "so": 93,
       "idx": 92,
       "khoi": 3,
-      "t0": 551.926,
-      "t1": 560.106,
+      "t0": 559.486,
+      "t1": 567.666,
       "buoc": 0,
       "muc": "Mắt xích thứ hai: cái lịch và cái bóng",
       "loi": [
         {
-          "t0": 551.926,
-          "t1": 559.846,
+          "t0": 559.486,
+          "t1": 567.406,
           "text": "Không còn rằm thì không còn Trung thu, vì Trung thu vốn là rằm tháng tám, một ngày được định nghĩa bằng hình dáng Mặt Trăng chứ không dựa vào dấu hiệu nào khác."
         }
       ],
@@ -1939,14 +1937,14 @@
       "so": 94,
       "idx": 93,
       "khoi": 3,
-      "t0": 560.106,
-      "t1": 566.776,
+      "t0": 567.666,
+      "t1": 574.336,
       "buoc": 0,
       "muc": "Mắt xích thứ hai: cái lịch và cái bóng",
       "loi": [
         {
-          "t0": 560.106,
-          "t1": 566.226,
+          "t0": 567.666,
+          "t1": 573.786,
           "text": "Mà mất tuần trăng thì âm lịch cũng mất theo, nên mùng một và cả ngày Tết đều không còn chỗ nào để đặt vào nữa."
         }
       ],
@@ -1960,14 +1958,14 @@
       "so": 95,
       "idx": 94,
       "khoi": 3,
-      "t0": 566.776,
-      "t1": 571.644,
+      "t0": 574.336,
+      "t1": 579.204,
       "buoc": 0,
       "muc": "Mắt xích thứ hai: cái lịch và cái bóng",
       "loi": [
         {
-          "t0": 566.776,
-          "t1": 571.384,
+          "t0": 574.336,
+          "t1": 578.944,
           "text": "Riêng ở miền Tây còn một thứ ăn sâu hơn cả tờ lịch, đó là con nước."
         }
       ],
@@ -1981,14 +1979,14 @@
       "so": 96,
       "idx": 95,
       "khoi": 3,
-      "t0": 571.644,
-      "t1": 578.624,
+      "t0": 579.204,
+      "t1": 586.184,
       "buoc": 0,
       "muc": "Mắt xích thứ hai: cái lịch và cái bóng",
       "loi": [
         {
-          "t0": 571.644,
-          "t1": 578.364,
+          "t0": 579.204,
+          "t1": 585.924,
           "text": "Người đặt dớn, người đi câu, người chờ mùa nước nổi, tất cả đều đếm theo con nước rằm và con nước đầu tháng."
         }
       ],
@@ -2003,14 +2001,14 @@
       "so": 97,
       "idx": 96,
       "khoi": 3,
-      "t0": 578.624,
-      "t1": 586.636,
+      "t0": 586.184,
+      "t1": 594.196,
       "buoc": 0,
       "muc": "Mắt xích thứ hai: cái lịch và cái bóng",
       "loi": [
         {
-          "t0": 578.624,
-          "t1": 586.376,
+          "t0": 586.184,
+          "t1": 593.936,
           "text": "Đó là cả một hệ thống kinh nghiệm tích qua nhiều đời, mà cái mốc để nó dò theo lại là một vật thể cách ta ba trăm tám mươi tư nghìn bốn trăm ki-lô-mét."
         }
       ],
@@ -2024,14 +2022,14 @@
       "so": 98,
       "idx": 97,
       "khoi": 3,
-      "t0": 586.636,
-      "t1": 593.618,
+      "t0": 594.196,
+      "t1": 601.178,
       "buoc": 0,
       "muc": "Mắt xích thứ hai: cái lịch và cái bóng",
       "loi": [
         {
-          "t0": 586.636,
-          "t1": 593.068,
+          "t0": 594.196,
+          "t1": 600.628,
           "text": "Mất Mặt Trăng thì hệ thống ấy không hề sai, nhưng nó mất luôn cái mốc để đếm, nên không còn dùng được vào việc gì."
         }
       ],
@@ -2045,14 +2043,14 @@
       "so": 99,
       "idx": 98,
       "khoi": 3,
-      "t0": 593.618,
-      "t1": 599.158,
+      "t0": 601.178,
+      "t1": 606.718,
       "buoc": 0,
       "muc": "Mắt xích thứ hai: cái lịch và cái bóng",
       "loi": [
         {
-          "t0": 593.618,
-          "t1": 598.898,
+          "t0": 601.178,
+          "t1": 606.458,
           "text": "Rồi tới cái mất cuối cùng, cũng là cái khiến tôi ngậm ngùi nhất, là nhật thực toàn phần."
         }
       ],
@@ -2066,14 +2064,14 @@
       "so": 100,
       "idx": 99,
       "khoi": 3,
-      "t0": 599.158,
-      "t1": 605.178,
+      "t0": 606.718,
+      "t1": 612.738,
       "buoc": 0,
       "muc": "Mắt xích thứ hai: cái lịch và cái bóng",
       "loi": [
         {
-          "t0": 599.158,
-          "t1": 604.918,
+          "t0": 606.718,
+          "t1": 612.478,
           "text": "Nhìn từ Trái Đất, Mặt Trăng và Mặt Trời to gần như bằng nhau, cùng chiếm khoảng nửa độ trên bầu trời."
         }
       ],
@@ -2087,14 +2085,14 @@
       "so": 101,
       "idx": 100,
       "khoi": 3,
-      "t0": 605.178,
-      "t1": 612.856,
+      "t0": 612.738,
+      "t1": 620.416,
       "buoc": 0,
       "muc": "Mắt xích thứ hai: cái lịch và cái bóng",
       "loi": [
         {
-          "t0": 605.178,
-          "t1": 612.306,
+          "t0": 612.738,
+          "t1": 619.866,
           "text": "Mặt Trời to hơn Mặt Trăng bốn trăm lần, mà cũng ở xa hơn gần đúng bốn trăm lần, thành ra đĩa này úp vừa khít lên đĩa kia."
         }
       ],
@@ -2108,14 +2106,14 @@
       "so": 102,
       "idx": 101,
       "khoi": 3,
-      "t0": 612.856,
-      "t1": 619.02,
+      "t0": 620.416,
+      "t1": 626.58,
       "buoc": 0,
       "muc": "Mắt xích thứ hai: cái lịch và cái bóng",
       "loi": [
         {
-          "t0": 612.856,
-          "t1": 618.76,
+          "t0": 620.416,
+          "t1": 626.32,
           "text": "Sự vừa khít đó không phải một định luật của tự nhiên, mà là một trùng hợp rơi đúng vào thời đại chúng ta."
         }
       ],
@@ -2130,14 +2128,14 @@
       "so": 103,
       "idx": 102,
       "khoi": 3,
-      "t0": 619.02,
-      "t1": 627.392,
+      "t0": 626.58,
+      "t1": 634.952,
       "buoc": 0,
       "muc": "Mắt xích thứ hai: cái lịch và cái bóng",
       "loi": [
         {
-          "t0": 619.02,
-          "t1": 627.132,
+          "t0": 626.58,
+          "t1": 634.692,
           "text": "Ngày xưa Mặt Trăng ở gần hơn nên nó che thừa, và vì nó vẫn đang lùi ra ba phẩy tám cm mỗi năm, rồi sẽ tới lúc nó che không đủ nữa."
         }
       ],
@@ -2152,14 +2150,14 @@
       "so": 104,
       "idx": 103,
       "khoi": 3,
-      "t0": 627.392,
-      "t1": 634.588,
+      "t0": 634.952,
+      "t1": 642.148,
       "buoc": 0,
       "muc": "Mắt xích thứ hai: cái lịch và cái bóng",
       "loi": [
         {
-          "t0": 627.392,
-          "t1": 634.328,
+          "t0": 634.952,
+          "t1": 641.888,
           "text": "Các tính toán đưa ra những khoảng rất khác nhau, từ vài trăm triệu tới gần một tỉ năm, nên tôi xin không chọn hộ con số nào."
         }
       ],
@@ -2173,14 +2171,14 @@
       "so": 105,
       "idx": 104,
       "khoi": 3,
-      "t0": 634.588,
-      "t1": 642.06,
+      "t0": 642.148,
+      "t1": 649.62,
       "buoc": 0,
       "muc": "Mắt xích thứ hai: cái lịch và cái bóng",
       "loi": [
         {
-          "t0": 634.588,
-          "t1": 640.66,
+          "t0": 642.148,
+          "t1": 648.22,
           "text": "Nhưng kết luận thì ai cũng giống nhau: loài người đang sống đúng vào quãng ngắn ngủi mà vành lửa ấy còn hiện ra được."
         }
       ],
@@ -2195,14 +2193,14 @@
       "so": 106,
       "idx": 105,
       "khoi": 3,
-      "t0": 642.06,
-      "t1": 648.034,
+      "t0": 649.62,
+      "t1": 655.594,
       "buoc": 0,
       "muc": "Chỉ có điều",
       "loi": [
         {
-          "t0": 642.06,
-          "t1": 647.484,
+          "t0": 649.62,
+          "t1": 655.044,
           "text": "Chỉ có điều, cả cái chuỗi vừa rồi đều dựa trên một phép trừ mà vũ trụ không cho phép ai làm."
         }
       ],
@@ -2214,14 +2212,14 @@
       "so": 107,
       "idx": 106,
       "khoi": 3,
-      "t0": 648.034,
-      "t1": 650.622,
+      "t0": 655.594,
+      "t1": 658.182,
       "buoc": 0,
       "muc": "Chỉ có điều",
       "loi": [
         {
-          "t0": 648.034,
-          "t1": 650.362,
+          "t0": 655.594,
+          "t1": 657.922,
           "text": "Mặt Trăng chẳng đi đâu cả."
         }
       ],
@@ -2235,14 +2233,14 @@
       "so": 108,
       "idx": 107,
       "khoi": 3,
-      "t0": 650.622,
-      "t1": 657.94,
+      "t0": 658.182,
+      "t1": 665.5,
       "buoc": 0,
       "muc": "Chỉ có điều",
       "loi": [
         {
-          "t0": 650.622,
-          "t1": 657.39,
+          "t0": 658.182,
+          "t1": 664.95,
           "text": "Không có cơ chế vật lý nào lấy nó ra khỏi bầu trời của chúng ta, nên xin đừng ai nghe xong tập này rồi tối về mất ngủ."
         }
       ],
@@ -2256,14 +2254,14 @@
       "so": 109,
       "idx": 108,
       "khoi": 3,
-      "t0": 657.94,
-      "t1": 662.352,
+      "t0": 665.5,
+      "t1": 669.912,
       "buoc": 0,
       "muc": "Chỉ có điều",
       "loi": [
         {
-          "t0": 657.94,
-          "t1": 662.092,
+          "t0": 665.5,
+          "t1": 669.652,
           "text": "Và ngay trong những chỗ đo được, mức chắc chắn cũng không đều nhau đâu."
         }
       ],
@@ -2275,14 +2273,14 @@
       "so": 110,
       "idx": 109,
       "khoi": 3,
-      "t0": 662.352,
-      "t1": 668.876,
+      "t0": 669.912,
+      "t1": 676.436,
       "buoc": 0,
       "muc": "Chỉ có điều",
       "loi": [
         {
-          "t0": 662.352,
-          "t1": 668.616,
+          "t0": 669.912,
+          "t1": 676.176,
           "text": "Chuyện thuỷ triều teo lại thì gần như không ai cãi, còn lịch âm với nhật thực thì thuần số học, cứ tính là ra."
         }
       ],
@@ -2296,14 +2294,14 @@
       "so": 111,
       "idx": 110,
       "khoi": 3,
-      "t0": 668.876,
-      "t1": 678.306,
+      "t0": 676.436,
+      "t1": 685.866,
       "buoc": 0,
       "muc": "Chỉ có điều",
       "loi": [
         {
-          "t0": 668.876,
-          "t1": 677.756,
+          "t0": 676.436,
+          "t1": 685.316,
           "text": "Riêng cái trục lắc tới mức nào thì Laskar năm một nghìn chín trăm chín mươi ba và Lissauer năm hai nghìn không trăm mười hai đưa ra hai con số rất khác nhau, tới giờ vẫn chưa bên nào thắng."
         }
       ],
@@ -2317,14 +2315,14 @@
       "so": 112,
       "idx": 111,
       "khoi": 3,
-      "t0": 678.306,
-      "t1": 689.138,
+      "t0": 685.866,
+      "t1": 696.698,
       "buoc": 0,
       "muc": "Chỉ có điều",
       "loi": [
         {
-          "t0": 678.306,
-          "t1": 687.738,
+          "t0": 685.866,
+          "t1": 695.298,
           "text": "Vậy có bao nhiêu thứ chúng ta vẫn đinh ninh là bản chất của thế giới, thật ra chỉ là thói quen mà thế giới hình thành dưới ảnh hưởng của một vật thể đang lặng lẽ rời đi, mỗi năm một con tem?"
         }
       ],
@@ -2338,14 +2336,14 @@
       "so": 113,
       "idx": 112,
       "khoi": 3,
-      "t0": 689.138,
-      "t1": 698.208,
+      "t0": 696.698,
+      "t1": 705.768,
       "buoc": 0,
       "muc": "Đóng",
       "loi": [
         {
-          "t0": 689.138,
-          "t1": 697.658,
+          "t0": 696.698,
+          "t1": 705.218,
           "text": "Và tôi thấy thú vị khi nghĩ rằng ở đâu đó ngoài khơi nước Úc, mỗi năm vẫn có một đêm mà cả một rạn san hô dài hàng trăm cây số cùng nhả trứng lên mặt nước trong một lúc."
         }
       ],
@@ -2360,14 +2358,14 @@
       "so": 114,
       "idx": 113,
       "khoi": 3,
-      "t0": 698.208,
-      "t1": 702.452,
+      "t0": 705.768,
+      "t1": 710.012,
       "buoc": 0,
       "muc": "Đóng",
       "loi": [
         {
-          "t0": 698.208,
-          "t1": 702.192,
+          "t0": 705.768,
+          "t1": 709.752,
           "text": "Chúng không có mắt, không có não, và cũng chẳng đi đâu được."
         }
       ],
@@ -2381,14 +2379,14 @@
       "so": 115,
       "idx": 114,
       "khoi": 3,
-      "t0": 702.452,
-      "t1": 707.8,
+      "t0": 710.012,
+      "t1": 715.36,
       "buoc": 0,
       "muc": "Đóng",
       "loi": [
         {
-          "t0": 702.452,
-          "t1": 707.54,
+          "t0": 710.012,
+          "t1": 715.1,
           "text": "Thứ duy nhất chúng có là một con protein biết nhận ra rằng đêm nay trời sáng hơn đêm qua."
         }
       ],
@@ -2403,14 +2401,14 @@
       "so": 116,
       "idx": 115,
       "khoi": 3,
-      "t0": 707.8,
-      "t1": 713.582,
+      "t0": 715.36,
+      "t1": 721.142,
       "buoc": 0,
       "muc": "Đóng",
       "loi": [
         {
-          "t0": 707.8,
-          "t1": 713.032,
+          "t0": 715.36,
+          "t1": 720.592,
           "text": "Vậy mà mỗi năm, đúng vào mấy đêm sau rằm ấy, cả rạn lại hiểu rằng đã đến lúc."
         }
       ],
@@ -2424,14 +2422,14 @@
       "so": 117,
       "idx": 116,
       "khoi": 3,
-      "t0": 713.582,
-      "t1": 717.898,
+      "t0": 721.142,
+      "t1": 725.458,
       "buoc": 0,
       "muc": "Đóng",
       "loi": [
         {
-          "t0": 713.582,
-          "t1": 717.638,
+          "t0": 721.142,
+          "t1": 725.198,
           "text": "Chúng ta vẫn quen xem Mặt Trăng như một món trang trí của bầu trời đêm."
         }
       ],
@@ -2445,14 +2443,14 @@
       "so": 118,
       "idx": 117,
       "khoi": 3,
-      "t0": 717.898,
-      "t1": 724.784,
+      "t0": 725.458,
+      "t1": 732.344,
       "buoc": 0,
       "muc": "Đóng",
       "loi": [
         {
-          "t0": 717.898,
-          "t1": 724.234,
+          "t0": 725.458,
+          "t1": 731.794,
           "text": "Còn với vô số loài khác trên hành tinh này, nó là cái đồng hồ, là tờ lịch, và là cái máy bơm."
         }
       ],
@@ -2464,14 +2462,14 @@
       "so": 119,
       "idx": 118,
       "khoi": 3,
-      "t0": 724.784,
-      "t1": 730.782,
+      "t0": 732.344,
+      "t1": 738.342,
       "buoc": 0,
       "muc": "Đóng",
       "loi": [
         {
-          "t0": 724.784,
-          "t1": 730.232,
+          "t0": 732.344,
+          "t1": 737.792,
           "text": "Và đó, thưa quý vị và các bạn, là cái giá thật của ba phẩy tám cm mỗi năm."
         }
       ],
@@ -2485,14 +2483,14 @@
       "so": 120,
       "idx": 119,
       "khoi": 3,
-      "t0": 730.782,
-      "t1": 735.938,
+      "t0": 738.342,
+      "t1": 743.498,
       "buoc": 0,
       "muc": "Đóng",
       "loi": [
         {
-          "t0": 730.782,
-          "t1": 735.678,
+          "t0": 738.342,
+          "t1": 743.238,
           "text": "Hy vọng anh chị em thích tập này, nhớ để lại một lượt thích để chúng tớ biết nhé."
         }
       ],
@@ -2506,14 +2504,14 @@
       "so": 121,
       "idx": 120,
       "khoi": 3,
-      "t0": 735.938,
-      "t1": 743.206,
+      "t0": 743.498,
+      "t1": 750.766,
       "buoc": 0,
       "muc": "Đóng",
       "loi": [
         {
-          "t0": 735.938,
-          "t1": 742.946,
+          "t0": 743.498,
+          "t1": 750.506,
           "text": "Còn nếu anh chị em nghĩ ra thêm một thứ nữa sẽ sập mà tập này chưa kịp nhắc tới, thì mời viết xuống bình luận, chúng tớ đọc hết."
         }
       ],
@@ -2528,14 +2526,14 @@
       "so": 122,
       "idx": 121,
       "khoi": 3,
-      "t0": 743.206,
-      "t1": 746.734,
+      "t0": 750.766,
+      "t1": 754.294,
       "buoc": 0,
       "muc": "Đóng",
       "loi": [
         {
-          "t0": 743.206,
-          "t1": 746.734,
+          "t0": 750.766,
+          "t1": 754.294,
           "text": "Còn bây giờ, xin chào, và hẹn gặp lại."
         }
       ],
